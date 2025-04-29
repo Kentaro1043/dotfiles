@@ -24,12 +24,24 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
+    # Custom packages
+    # Accessible through 'nix build', 'nix shell', etc
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+
+    # Formatter for your nix files, available through 'nix fmt'
+    # Other options beside 'alejandra' include 'nixpkgs-fmt'
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
+    # Your custom packages and modifications, exported as overlays
     overlays = import ./overlays {inherit inputs;};
+
+    # Reusable home-manager modules you might want to export
+    # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
 
+
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "kentaro@kentaro-win" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;

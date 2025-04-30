@@ -54,6 +54,9 @@
   home.packages = with pkgs; [ 
     hello
 
+    # node version management
+    volta
+
     # yaml linter
     yamllint
 

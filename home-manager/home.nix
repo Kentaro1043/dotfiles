@@ -62,6 +62,16 @@
     kustomize-sops
   ];
 
+  home.file = {
+    ".gitconfig" = {
+      text = ''
+        [user]
+          name = Kentaro1043
+          email = 71170923+Kentaro1043@users.noreply.github.com
+      '';
+    };
+  };
+
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;

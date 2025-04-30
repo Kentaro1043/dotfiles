@@ -54,6 +54,9 @@
   home.packages = with pkgs; [ 
     hello
 
+    # yaml linter
+    yamllint
+
     # Kubernetes related packages
     kubectl
     kustomize

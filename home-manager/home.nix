@@ -56,6 +56,8 @@
 
     # node version management
     volta
+    # node linter
+    biome
 
     # yaml linter
     yamllint

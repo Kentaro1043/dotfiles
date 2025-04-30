@@ -53,6 +53,13 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
     hello
+
+    # Kubernetes related packages
+    kubectl
+    kustomize
+    sops
+    age
+    kustomize-sops
   ];
 
   # Enable home-manager and git

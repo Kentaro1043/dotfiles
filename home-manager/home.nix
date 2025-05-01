@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    # ./nvim.nix
+    ./zsh.nix
   ];
 
   nixpkgs = {

@@ -12,4 +12,8 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
   };
+
+  home.sessionVariables = {
+    SHELL = "/home/kentaro/.nix-profile/bin/zsh";
+  };
 }

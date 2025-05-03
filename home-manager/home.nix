@@ -35,6 +35,9 @@
     # general
     git
     keychain
+    
+    # shell
+    powerline-fonts
 
     # node version management
     volta

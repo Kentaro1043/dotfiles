@@ -12,6 +12,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    shellAliases = {
+      ll = "ls -l";
+    };
+
     initExtra = ''
       # Enable keychain
       eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`

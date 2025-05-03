@@ -11,6 +11,11 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
+    initExtra = ''
+      # Enable keychain
+      eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
+    '';
   };
 
   home.sessionVariables = {

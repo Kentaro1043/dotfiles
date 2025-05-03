@@ -46,6 +46,9 @@
     sops
     age
     kustomize-sops
+
+    # Python
+    uv
   ];
 
 

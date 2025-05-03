@@ -32,6 +32,10 @@
   home.packages = with pkgs; [ 
     hello
 
+    # general
+    git
+    keychain
+
     # node version management
     volta
     # node linter

@@ -12,6 +12,11 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    oh-my-zsh = {
+      enable = true;
+      theme = "robbyrussell";
+    };
+
     shellAliases = {
       ll = "ls -l";
     };

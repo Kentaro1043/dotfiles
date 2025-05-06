@@ -20,10 +20,10 @@
       theme = "agnoster";
     };
 
-    initExtra = ''
-      # Enable keychain
-      eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
-    '';
+    #initExtra = ''
+    #  # Enable keychain
+    #  eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
+    #'';
 
     envExtra = ''
       # Disable user@hostname for agnoster theme
@@ -33,9 +33,5 @@
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"
     '';
-  };
-
-  home.sessionVariables = {
-    SHELL = "/home/kentaro/.nix-profile/bin/zsh";
   };
 }

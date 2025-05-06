@@ -7,6 +7,7 @@
   ...
 }: {
   imports = [
+    ./bash.nix
     ./zsh.nix
   ];
 
@@ -26,6 +27,10 @@
   home = {
     username = "kentaro";
     homeDirectory = if pkgs.stdenv.isDarwin then "/Users/kentaro" else "/home/kentaro";
+
+    sessionVariables = {
+      SHELL = "/bin/bash";
+    };
   };
 
 

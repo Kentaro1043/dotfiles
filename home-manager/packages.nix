@@ -12,6 +12,7 @@
     # general
     git
     keychain
+    oci-cli
     
     # shell
     powerline-fonts

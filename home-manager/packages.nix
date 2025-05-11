@@ -12,6 +12,7 @@
     # general
     git
     keychain
+    typst
     oci-cli
     
     # shell

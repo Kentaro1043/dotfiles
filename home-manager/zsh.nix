@@ -37,14 +37,14 @@
 
     envExtra = ''
       # Disable user@hostname for agnoster theme
-      DEFAULT_USER="kentaro"
+      export DEFAULT_USER="kentaro"
 
       # Typst font
-      export TYPST_FONT_PATHS=${ pkgs.noto-fonts }/share/fonts/noto
+      export TYPST_FONT_PATHS=${pkgs.noto-fonts}/share/fonts/noto:${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 
       # Enable Volta
-      VOLTA_HOME="$HOME/.volta"
-      PATH="$VOLTA_HOME/bin:$PATH"
+      export VOLTA_HOME="$HOME/.volta"
+      export PATH="$VOLTA_HOME/bin:$PATH"
     '';
   };
 }

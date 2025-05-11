@@ -20,22 +20,22 @@
       theme = "agnoster";
     };
 
-    #initExtra = ''
-    #  # Enable keychain
-    #  eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
-    #'';
-
-    envExtra = ''
-      # Disable user@hostname for agnoster theme
-      export DEFAULT_USER="kentaro"
+    initExtra = ''
+      ## Enable keychain
+      #eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
 
       # Load plugins
       # zsh-you-should-use
       source ${ pkgs.zsh-you-should-use }/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
+    '';
+
+    envExtra = ''
+      # Disable user@hostname for agnoster theme
+      DEFAULT_USER="kentaro"
 
       # Enable Volta
-      export VOLTA_HOME="$HOME/.volta"
-      export PATH="$VOLTA_HOME/bin:$PATH"
+      VOLTA_HOME="$HOME/.volta"
+      PATH="$VOLTA_HOME/bin:$PATH"
     '';
   };
 }

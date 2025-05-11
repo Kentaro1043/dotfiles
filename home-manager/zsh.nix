@@ -18,6 +18,13 @@
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
+      plugins = [
+        "git"
+        "docker"
+        "docker-compose"
+        "kubectl"
+        "helm"
+      ];
     };
 
     initExtra = ''

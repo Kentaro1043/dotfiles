@@ -17,6 +17,7 @@
     
     # shell
     powerline-fonts
+    zsh-you-should-use
 
     # node version management
     volta

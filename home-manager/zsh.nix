@@ -23,7 +23,6 @@
         "docker"
         "docker-compose"
         "kubectl"
-        "helm"
       ];
     };
 
@@ -39,6 +38,9 @@
     envExtra = ''
       # Disable user@hostname for agnoster theme
       DEFAULT_USER="kentaro"
+
+      # Typst font
+      export TYPST_FONT_PATHS=${ pkgs.noto-fonts }/share/fonts/noto
 
       # Enable Volta
       VOLTA_HOME="$HOME/.volta"

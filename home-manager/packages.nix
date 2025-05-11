@@ -14,6 +14,9 @@
     keychain
     typst
     oci-cli
+
+    # fonts
+    noto-fonts
     
     # shell
     powerline-fonts

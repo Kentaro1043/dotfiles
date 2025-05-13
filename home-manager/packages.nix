@@ -44,4 +44,7 @@
     # Python
     uv
   ];
+
+  # Enable font
+  fonts.fontconfig.enable = true;
 }

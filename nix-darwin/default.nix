@@ -12,4 +12,17 @@
       };
     };
   };
+
+  homebrew = {
+    enable = true;
+    onActivation = {
+      autoUpdate = false;
+      autoUpgrade = false;
+      cleanup = "zap";
+    };
+    casks = [
+      "iterm2"
+      "vivaldi"
+    ];
+  };
 }

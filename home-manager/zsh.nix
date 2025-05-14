@@ -32,7 +32,7 @@
 
       # Load plugins
       # zsh-you-should-use
-      source ${ pkgs.zsh-you-should-use }/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
+      source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
     '';
 
     envExtra = ''

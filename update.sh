@@ -1,3 +1,1 @@
-#!/bin/bash
-
-home-manager switch --flake .#kentaro@$(cat /etc/hostname)
+home-manager switch --flake .#kentaro@$(hostname | sed 's/\.local$//')

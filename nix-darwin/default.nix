@@ -13,6 +13,13 @@
     };
   };
 
+  fonts.packages = with pkgs; [
+    powerline-fonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+  ];
+
   homebrew = {
     enable = true;
     onActivation = {

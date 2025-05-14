@@ -35,7 +35,6 @@
     # Kubernetes related packages
     kubectl
     kustomize
-    helm
     sops
     age
     kustomize-sops

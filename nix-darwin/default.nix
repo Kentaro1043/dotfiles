@@ -2,10 +2,12 @@
   nix.enable = false;
 
   system = {
-    dock = {
-      autohide = true;
-      show-recents = false;
-      orientation = "left";
+    defaults = {
+      dock = {
+        autohide = true;
+        show-recents = false;
+        orientation = "left";
+      };
     };
   };
 }

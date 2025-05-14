@@ -38,6 +38,15 @@
           email = 71170923+Kentaro1043@users.noreply.github.com
       '';
     };
+
+    ".ssh/config" = {
+      text = ''
+        Host github.com
+          IdentityFile ~/.ssh/id_ed25519
+          User git
+          AddKeysToAgent yes
+      '';
+    };
   };
 
   programs.home-manager.enable = true;

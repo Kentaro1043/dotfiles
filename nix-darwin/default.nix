@@ -23,6 +23,7 @@
     casks = [
       "iterm2"
       "vivaldi"
+      "visual-studio-code"
     ];
   };
 }

@@ -50,6 +50,7 @@
     };
 
     darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       modules = [
         ./nix-darwin
       ];

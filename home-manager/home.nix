@@ -23,7 +23,7 @@
     homeDirectory = if pkgs.stdenv.isDarwin then "/Users/kentaro" else "/home/kentaro";
 
     sessionVariables = {
-      SHELL = "/bin/bash";
+      SHELL = "${pkgs.bash}/bin/bash";
     };
   };
 

@@ -39,6 +39,9 @@
       # Disable user@hostname for agnoster theme
       export DEFAULT_USER="kentaro"
 
+      # Change SHELL
+      export SHELL="${pkgs.zsh}/bin/zsh"
+
       # Typst font
       export TYPST_FONT_PATHS=${pkgs.noto-fonts}/share/fonts/noto:${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 

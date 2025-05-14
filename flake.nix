@@ -9,12 +9,17 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nix-darwin
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nix-darwin,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -42,6 +47,12 @@
           ./home-manager/home.nix
         ];
       };
+    };
+
+    darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
+      modules = [
+        ./nix-darwin
+      ];
     };
   };
 }

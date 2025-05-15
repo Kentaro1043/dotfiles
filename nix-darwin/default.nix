@@ -43,6 +43,7 @@
       "iterm2"
       "vivaldi"
       "visual-studio-code"
+      "google-japanese-ime"
     ];
   };
 }

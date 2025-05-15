@@ -22,6 +22,7 @@
     powerline-fonts
     zsh-abbr
     zsh-you-should-use
+    zsh-nix-shell
 
     # node version management
     volta

@@ -10,6 +10,16 @@
         show-recents = false;
         orientation = "bottom";
       };
+
+      finder = {
+        AppleShowAllExtensions = true;
+        FXEnableExtensionChangeWarning = false;
+        FXPreferredViewStyle = "clmv";
+        FXRemoveOldTrashItems = true;
+        NewWindowTarget = "Home";
+        ShowPathbar = true;
+        ShowStatusBar = true;
+      };
     };
   };
 

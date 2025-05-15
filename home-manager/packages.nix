@@ -29,6 +29,9 @@
     # node linter
     biome
 
+    # Scala
+    scala
+
     # yaml linter
     yamllint
 

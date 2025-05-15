@@ -23,6 +23,7 @@
     zsh-abbr
     zsh-you-should-use
     zsh-nix-shell
+    nix-zsh-completions
 
     # node version management
     volta

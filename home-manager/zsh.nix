@@ -37,7 +37,8 @@
       source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
       # zsh-nix-shell
       source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
-
+      # nix-zsh-completions
+      source ${pkgs.nix-zsh-completions}/share/zsh/plugins/nix/init.zsh
     '';
 
     envExtra = ''

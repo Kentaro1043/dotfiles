@@ -42,6 +42,7 @@
     casks = [
       "iterm2"
       "vivaldi"
+      "discord"
       "visual-studio-code"
       "google-japanese-ime"
     ];

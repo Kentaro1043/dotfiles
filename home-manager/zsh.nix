@@ -52,8 +52,10 @@
       # nix-zsh-completions
       source ${pkgs.nix-zsh-completions}/share/zsh/plugins/nix/init.zsh
 
-      # Enable brew
-      eval "$(/opt/homebrew/bin/brew shellenv)"
+      # Enable brew when on macOS
+      if [ -d /opt/homebrew ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+      fi
     '';
 
     shellAliases = {

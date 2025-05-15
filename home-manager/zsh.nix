@@ -31,6 +31,8 @@
       #eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
 
       # Load plugins
+      # zsh-abbr
+      source ${pkgs.zsh-abbr}/share/zsh/zsh-abbr/zsh-abbr.plugin.zsh
       # zsh-you-should-use
       source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
     '';

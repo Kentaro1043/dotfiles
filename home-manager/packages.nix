@@ -20,6 +20,7 @@
 
     # shell
     powerline-fonts
+    zsh-abbr
     zsh-you-should-use
 
     # node version management

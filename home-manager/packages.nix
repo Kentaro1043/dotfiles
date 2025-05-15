@@ -31,6 +31,7 @@
 
     # Scala
     scala
+    scalafmt
 
     # yaml linter
     yamllint

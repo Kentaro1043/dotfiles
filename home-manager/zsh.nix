@@ -20,7 +20,8 @@
       theme = "agnoster";
       plugins =
         [
-          #"keychain"
+          "keychain"
+          "gpg-agent"
           "ssh"
           "sudo"
           "git"
@@ -38,10 +39,13 @@
         ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];
     };
 
-    initExtra = ''
-      ## Enable keychain
-      #eval `keychain --eval --agents ssh ~/.ssh/id_ed25519`
+    initExtraFirst = ''
+      zstyle :omz:plugins:keychain agents gpg,ssh
+      zstyle :omz:plugins:keychain identities id_ed25519
+      zstyle :omz:plugins:keychain options --quiet --noask
+    '';
 
+    initExtra = ''
       # Load plugins
       # zsh-abbr
       source ${pkgs.zsh-abbr}/share/zsh/zsh-abbr/zsh-abbr.plugin.zsh

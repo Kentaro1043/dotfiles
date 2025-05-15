@@ -18,12 +18,24 @@
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [
-        "git"
-        "docker"
-        "docker-compose"
-        "kubectl"
-      ];
+      plugins =
+        [
+          #"keychain"
+          "ssh"
+          "sudo"
+          "git"
+          "git-auto-fetch"
+          "gitignore"
+          "git-prompt"
+          "vscode"
+          "docker"
+          "docker-compose"
+          "kubectl"
+          "golang"
+          "volta"
+        ]
+        ++ lib.optionals pkgs.stdenv.isDarwin ["iterm2" "macos"]
+        ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];
     };
 
     initExtra = ''
@@ -43,6 +55,11 @@
       # Enable brew
       eval "$(/opt/homebrew/bin/brew shellenv)"
     '';
+
+    shellAliases = {
+      update = "home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
+      darwin = "darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
+    };
 
     envExtra = ''
       # Disable user@hostname for agnoster theme

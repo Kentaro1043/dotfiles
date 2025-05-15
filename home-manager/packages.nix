@@ -7,8 +7,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    hello
-
     # general
     git
     keychain

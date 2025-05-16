@@ -11,6 +11,8 @@
         orientation = "bottom";
       };
 
+      NSGlobalDomain.AppleShowAllExtensions = true;
+
       finder = {
         AppleShowAllExtensions = true;
         FXEnableExtensionChangeWarning = false;

@@ -9,6 +9,7 @@
   imports = [
     ./bash.nix
     ./zsh.nix
+    ./git.nix
     ./packages.nix
   ];
 
@@ -31,14 +32,6 @@
   };
 
   home.file = {
-    ".gitconfig" = {
-      text = ''
-        [user]
-          name = Kentaro1043
-          email = 71170923+Kentaro1043@users.noreply.github.com
-      '';
-    };
-
     ".ssh/config" = {
       text = ''
         Host github.com
@@ -50,7 +43,6 @@
   };
 
   programs.home-manager.enable = true;
-  programs.git.enable = true;
 
   systemd.user.startServices = "sd-switch";
 

@@ -13,6 +13,7 @@
       keychain
       typst
       oci-cli
+      gh
 
       # fonts
       noto-fonts

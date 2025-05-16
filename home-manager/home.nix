@@ -10,6 +10,7 @@
     ./bash.nix
     ./zsh.nix
     ./git.nix
+    ./ssh.nix
     ./packages.nix
   ];
 
@@ -31,16 +32,8 @@
     };
   };
 
-  home.file = {
-    ".ssh/config" = {
-      text = ''
-        Host github.com
-          IdentityFile ~/.ssh/id_ed25519
-          User git
-          AddKeysToAgent yes
-      '';
-    };
-  };
+  #home.file = {
+  #};
 
   programs.home-manager.enable = true;
 

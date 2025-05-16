@@ -10,6 +10,7 @@
     [
       # general
       git
+      gnumake
       keychain
       typst
       oci-cli

@@ -6,48 +6,55 @@
   pkgs,
   ...
 }: {
-  home.packages = with pkgs; [
-    # general
-    git
-    keychain
-    typst
-    oci-cli
+  home.packages = with pkgs;
+    [
+      # general
+      git
+      keychain
+      typst
+      oci-cli
 
-    # fonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
+      # fonts
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
 
-    # shell
-    powerline-fonts
-    zsh-abbr
-    zsh-you-should-use
-    zsh-nix-shell
-    nix-zsh-completions
+      # shell
+      powerline-fonts
+      zsh-abbr
+      zsh-you-should-use
+      zsh-nix-shell
+      nix-zsh-completions
 
-    # node version management
-    volta
-    # node linter
-    biome
+      # node version management
+      volta
+      # node linter
+      biome
 
-    # Scala
-    scala
-    scalafmt
+      # Scala
+      scala
+      scalafmt
 
-    # yaml linter
-    yamllint
+      # yaml linter
+      yamllint
 
-    # Kubernetes related packages
-    kubectl
-    kustomize
-    sops
-    age
-    kustomize-sops
-    kubeconform
+      # Kubernetes related packages
+      kubectl
+      kustomize
+      sops
+      age
+      kustomize-sops
+      kubeconform
 
-    # Python
-    uv
-  ];
+      # Python
+      uv
+    ]
+    ++ lib.optionals pkgs.stdenv.isDarwin [
+      # Docker
+      # Disable on Linux because I use Docker Desktop on Windows
+      docker
+      colima
+    ];
 
   # Enable font
   fonts.fontconfig.enable = true;

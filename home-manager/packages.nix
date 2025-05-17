@@ -47,6 +47,7 @@
       age
       kustomize-sops
       kubeconform
+      k3d
 
       # Python
       uv

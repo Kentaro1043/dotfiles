@@ -7,6 +7,7 @@
   ...
 }: {
   imports = [
+    ./files/file.nix
     ./bash.nix
     ./zsh.nix
     ./git.nix
@@ -32,9 +33,6 @@
       SHELL = "${pkgs.bash}/bin/bash";
     };
   };
-
-  #home.file = {
-  #};
 
   programs.home-manager.enable = true;
 

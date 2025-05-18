@@ -11,6 +11,7 @@
     ./zsh.nix
     ./git.nix
     ./ssh.nix
+    ./texlive.nix
     ./packages.nix
   ];
 

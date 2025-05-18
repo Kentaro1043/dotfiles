@@ -14,6 +14,7 @@
         (tpkgs)
         scheme-full
         noto
+        ipaex
         ;
     };
   };

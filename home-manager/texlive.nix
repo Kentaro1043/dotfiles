@@ -10,7 +10,11 @@
     enable = true;
     packageSet = pkgs.texlive;
     extraPackages = tpkgs: {
-      inherit (tpkgs) scheme-full;
+      inherit
+        (tpkgs)
+        scheme-full
+        noto
+        ;
     };
   };
 }

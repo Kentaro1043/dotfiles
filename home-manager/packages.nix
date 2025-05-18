@@ -28,6 +28,9 @@
       zsh-nix-shell
       nix-zsh-completions
 
+      # tex
+      tex-fmt
+
       # node version management
       volta
       # node linter

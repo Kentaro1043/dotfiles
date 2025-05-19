@@ -47,7 +47,13 @@
 
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {
+          inherit
+            inputs
+            outputs
+            ;
+          pkgs-unstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+        };
         modules = [
           ./home-manager/home.nix
         ];

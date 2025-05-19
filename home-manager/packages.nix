@@ -10,6 +10,7 @@
     [
       # general
       git
+      git-filter-repo
       gnumake
       keychain
       typst

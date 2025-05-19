@@ -40,6 +40,9 @@
       # python
       pkgs-unstable.uv
 
+      # Rust
+      rustup
+
       # node version management
       volta
       # node linter

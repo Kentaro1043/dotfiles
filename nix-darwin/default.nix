@@ -48,6 +48,7 @@
       "visual-studio-code"
       "google-japanese-ime"
       "box-drive"
+      "adobe-acrobat-reader"
     ];
   };
 }

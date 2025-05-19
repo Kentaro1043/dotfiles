@@ -36,7 +36,6 @@
       # C/C++
       libgcc
       gdb
-      gccgo
       graphviz
 
       # python

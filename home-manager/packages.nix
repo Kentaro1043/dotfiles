@@ -33,6 +33,10 @@
       # tex
       tex-fmt
 
+      # C/C++
+      libgcc
+      gdb
+
       # python
       pkgs-unstable.uv
 

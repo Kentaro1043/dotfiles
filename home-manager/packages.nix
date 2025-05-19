@@ -30,6 +30,9 @@
       zsh-nix-shell
       nix-zsh-completions
 
+      # nix
+      alejandra
+
       # tex
       tex-fmt
 

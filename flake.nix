@@ -18,6 +18,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     nix-darwin,
     ...
@@ -28,13 +29,17 @@
       "aarch64-darwin"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
+    forAllSystems-unstable = nixpkgs-unstable.lib.genAttrs systems;
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
     homeConfigurations = {
       "kentaro@kentaro-win" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+        };
         modules = [
           ./home-manager/home.nix
         ];

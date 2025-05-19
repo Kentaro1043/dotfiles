@@ -4,6 +4,7 @@
   lib,
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }: {
   home.packages = with pkgs;
@@ -32,6 +33,9 @@
       # tex
       tex-fmt
 
+      # python
+      pkgs-unstable.uv
+
       # node version management
       volta
       # node linter
@@ -52,9 +56,6 @@
       kustomize-sops
       kubeconform
       k3d
-
-      # Python
-      uv
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

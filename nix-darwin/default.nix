@@ -49,6 +49,7 @@
       "google-japanese-ime"
       "box-drive"
       "adobe-acrobat-reader"
+      "slack"
     ];
   };
 }

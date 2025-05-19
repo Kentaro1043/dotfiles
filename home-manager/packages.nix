@@ -37,6 +37,7 @@
       libgcc
       gdb
       gccgo
+      graphviz
 
       # python
       pkgs-unstable.uv

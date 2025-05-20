@@ -37,6 +37,8 @@
       tex-fmt
 
       # C/C++
+      gcc
+      llvm
       graphviz
 
       # python
@@ -73,7 +75,6 @@
       colima
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
-      libgcc
       gdb
       gccgo
     ];

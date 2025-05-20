@@ -81,7 +81,6 @@
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb
-      gccgo
     ];
 
   # Enable font

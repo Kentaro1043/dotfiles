@@ -40,8 +40,10 @@
       gcc
       llvm
       graphviz
-      boost
-      ac-library
+      boost.out
+      boost.dev
+      ac-library.out
+      ac-library.dev
 
       # python
       pkgs-unstable.uv

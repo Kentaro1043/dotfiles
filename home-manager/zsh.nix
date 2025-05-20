@@ -77,6 +77,10 @@
       # Typst font
       export TYPST_FONT_PATHS=${pkgs.noto-fonts}/share/fonts/noto:${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 
+      # C/C++
+      export C_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
+      export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
+
       # Enable Volta
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"

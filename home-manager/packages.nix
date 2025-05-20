@@ -37,9 +37,6 @@
       tex-fmt
 
       # C/C++
-      libgcc
-      gdb
-      gccgo
       graphviz
 
       # python
@@ -74,6 +71,11 @@
       # Disable on Linux because I use Docker Desktop on Windows
       docker
       colima
+    ]
+    ++ lib.optionals pkgs.stdenv.isLinux [
+      libgcc
+      gdb
+      gccgo
     ];
 
   # Enable font

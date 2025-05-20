@@ -40,6 +40,8 @@
       gcc
       llvm
       graphviz
+      boost
+      ac-library
 
       # python
       pkgs-unstable.uv
@@ -67,6 +69,9 @@
       kustomize-sops
       kubeconform
       k3d
+
+      # kyopro
+      online-judge-tools
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

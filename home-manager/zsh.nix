@@ -74,8 +74,9 @@
       # Change SHELL
       export SHELL="${pkgs.zsh}/bin/zsh"
 
-      # Typst font
-      export TYPST_FONT_PATHS=${pkgs.noto-fonts}/share/fonts/noto:${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
+      ## Typst font
+      ## known issue: https://github.com/typst/typst/issues/185
+      #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 
       # C/C++
       export C_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"

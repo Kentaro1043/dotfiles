@@ -14,14 +14,15 @@
       git-filter-repo
       gnumake
       keychain
-      typst
       oci-cli
       gh
 
       # fonts
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
+      #noto-fonts-cjk-sans
+      #noto-fonts-cjk-serif
+      #source-han-sans
+      #source-han-sans-vf-otf
+      #source-han-sans-vf-ttf
 
       # shell
       powerline-fonts
@@ -29,6 +30,9 @@
       zsh-you-should-use
       zsh-nix-shell
       nix-zsh-completions
+
+      # typst
+      typst
 
       # nix
       alejandra

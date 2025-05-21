@@ -34,6 +34,9 @@
       # typst
       typst
 
+      # marp
+      marp-cli
+
       # nix
       alejandra
 

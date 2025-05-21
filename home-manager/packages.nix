@@ -36,6 +36,7 @@
 
       # marp
       marp-cli
+      chromium
 
       # nix
       alejandra

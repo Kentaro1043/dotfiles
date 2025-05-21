@@ -85,6 +85,11 @@
       # Enable Volta
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"
+
+      # Marp
+      if [ "$(uname)" = "Linux" ]; then
+        export CHROME_PATH="${pkgs.chromium}/bin/chromium"
+      fi
     '';
   };
 }

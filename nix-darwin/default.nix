@@ -50,6 +50,8 @@
       "box-drive"
       "adobe-acrobat-reader"
       "slack"
+      "claude"
+      "github-mcp-server"
     ];
   };
 }

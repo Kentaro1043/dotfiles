@@ -35,9 +35,6 @@
       # typst
       typst
 
-      # marp
-      marp-cli
-
       # nix
       alejandra
 
@@ -91,6 +88,9 @@
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb
+
+      # marp
+      marp-cli
       chromium
     ];
 

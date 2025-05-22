@@ -41,6 +41,9 @@
       upgrade = false;
       cleanup = "zap";
     };
+    brews = [
+      "github-mcp-server"
+    ];
     casks = [
       "iterm2"
       "vivaldi"
@@ -50,8 +53,8 @@
       "box-drive"
       "adobe-acrobat-reader"
       "slack"
+      "chatgpt"
       "claude"
-      "github-mcp-server"
     ];
   };
 }

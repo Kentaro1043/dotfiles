@@ -65,6 +65,7 @@
     shellAliases = {
       update = "home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
       darwin = "darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
+      dt = "code ~/source/repos/github.com/Kentaro1043/dotfiles";
     };
 
     envExtra =

@@ -67,29 +67,29 @@
       darwin = "darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
     };
 
-    envExtra = ''
-      # Disable user@hostname for agnoster theme
-      export DEFAULT_USER="kentaro"
+    envExtra =
+      ''
+        # Disable user@hostname for agnoster theme
+        export DEFAULT_USER="kentaro"
 
-      # Change SHELL
-      export SHELL="${pkgs.zsh}/bin/zsh"
+        # Change SHELL
+        export SHELL="${pkgs.zsh}/bin/zsh"
 
-      ## Typst font
-      ## known issue: https://github.com/typst/typst/issues/185
-      #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
+        ## Typst font
+        ## known issue: https://github.com/typst/typst/issues/185
+        #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 
-      # C/C++
-      export C_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
-      export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
+        # C/C++
+        export C_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
+        export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
 
-      # Enable Volta
-      export VOLTA_HOME="$HOME/.volta"
-      export PATH="$VOLTA_HOME/bin:$PATH"
-
-      # Marp
-      if [ "$(uname)" = "Linux" ]; then
+        # Enable Volta
+        export VOLTA_HOME="$HOME/.volta"
+        export PATH="$VOLTA_HOME/bin:$PATH"
+      ''
+      + lib.optionalString pkgs.stdenv.isLinux ''
+        # Marp
         export CHROME_PATH="${pkgs.chromium}/bin/chromium"
-      fi
-    '';
+      '';
   };
 }

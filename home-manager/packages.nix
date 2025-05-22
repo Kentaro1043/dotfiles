@@ -37,7 +37,6 @@
 
       # marp
       marp-cli
-      chromium
 
       # nix
       alejandra
@@ -92,6 +91,7 @@
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb
+      chromium
     ];
 
   # Enable font

@@ -44,6 +44,7 @@
       # C/C++
       gcc
       llvm
+      clang-tools
       graphviz
       boost.out
       boost.dev

@@ -81,8 +81,10 @@
         #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
 
         # C/C++
-        export C_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
-        export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include"
+        export GCC_PKG_PATH=${builtins.readFile "${pkgs.gcc}/nix-support/orig-cc"}
+        export LIBC_PKG_PATH=${builtins.readFile "${pkgs.gcc}/nix-support/orig-libc"}
+        export C_INCLUDE_PATH="$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:${pkgs.apple-sdk}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$LIBC_PKG_PATH/include"
+        export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}//${pkgs.stdenv.hostPlatform.config}:$GCC_PKG_PATH/include/c++//backward:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:${pkgs.apple-sdk}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$LIBC_PKG_PATH/include"
 
         # Enable Volta
         export VOLTA_HOME="$HOME/.volta"

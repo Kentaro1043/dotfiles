@@ -1,0 +1,6 @@
+contest_directory = "{contest_id}"
+problem_directory = "{problem_id}"
+
+[templates]
+"main.cpp" = "main.cpp"
+"generate.py" = "generate.py"

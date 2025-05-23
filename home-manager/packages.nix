@@ -53,6 +53,7 @@
 
       # python
       pkgs-unstable.uv
+      yapf
 
       # Rust
       rustup

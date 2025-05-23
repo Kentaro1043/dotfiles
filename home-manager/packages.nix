@@ -79,6 +79,7 @@
 
       # kyopro
       online-judge-tools
+      online-judge-template-generator
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

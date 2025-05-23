@@ -23,7 +23,7 @@
 // #include <atcoder/string>
 // #include <atcoder/math>
 // #include <atcoder/convolution>
-// c#include <atcoder/modint>
+// #include <atcoder/modint>
 // #include <atcoder/dsu>
 // #include <atcoder/maxflow>
 // #include <atcoder/mincostflow>
@@ -41,6 +41,7 @@ typedef long long ll;
 // typedef modint998244353 mint;
 
 ${cplusplus.declare_constants(data)}
+
 ${cplusplus.return_type(data)} solve(${cplusplus.formal_arguments(data)})
 {
     

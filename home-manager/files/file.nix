@@ -8,5 +8,7 @@
 }: {
   home.file = {
     ".latexmkrc".source = ./.latexmkrc;
+
+    ".clang-format".source = ./.clang-format;
   };
 }

@@ -43,7 +43,7 @@ typedef long long ll;
 ${cplusplus.declare_constants(data)}
 ${cplusplus.return_type(data)} solve(${cplusplus.formal_arguments(data)})
 {
-    // TOOD
+    
 }
 
 int main(void)

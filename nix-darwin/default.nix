@@ -55,6 +55,7 @@
       "slack"
       "chatgpt"
       "claude"
+      "obsidian"
     ];
   };
 }

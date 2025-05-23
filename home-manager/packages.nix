@@ -16,6 +16,7 @@
       keychain
       oci-cli
       gh
+      time
 
       # fonts
       noto-fonts

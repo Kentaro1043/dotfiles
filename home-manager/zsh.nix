@@ -39,28 +39,33 @@
         ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];
     };
 
-    initExtraFirst = ''
-      zstyle :omz:plugins:keychain agents gpg,ssh
-      zstyle :omz:plugins:keychain identities id_ed25519
-      zstyle :omz:plugins:keychain options --quiet --noask
-    '';
+    initContent = let
+      zshConfigEarlyInit = lib.mkOrder 500 ''
+        zstyle :omz:plugins:keychain agents gpg,ssh
+        zstyle :omz:plugins:keychain identities id_ed25519
+        zstyle :omz:plugins:keychain options --quiet --noask
+      '';
+      zshConfig = lib.mkOrder 1000 ''
+        # Load plugins
+        # zsh-abbr
+        source ${pkgs.zsh-abbr}/share/zsh/zsh-abbr/zsh-abbr.plugin.zsh
+        # zsh-you-should-use
+        source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
+        # zsh-nix-shell
+        source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
+        # nix-zsh-completions
+        source ${pkgs.nix-zsh-completions}/share/zsh/plugins/nix/init.zsh
 
-    initExtra = ''
-      # Load plugins
-      # zsh-abbr
-      source ${pkgs.zsh-abbr}/share/zsh/zsh-abbr/zsh-abbr.plugin.zsh
-      # zsh-you-should-use
-      source ${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh
-      # zsh-nix-shell
-      source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
-      # nix-zsh-completions
-      source ${pkgs.nix-zsh-completions}/share/zsh/plugins/nix/init.zsh
-
-      # Enable brew when on macOS
-      if [ -d /opt/homebrew ]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      fi
-    '';
+        # Enable brew when on macOS
+        if [ -d /opt/homebrew ]; then
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
+      '';
+    in
+      lib.mkMerge [
+        zshConfigEarlyInit
+        zshConfig
+      ];
 
     shellAliases = {
       update = "home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')";

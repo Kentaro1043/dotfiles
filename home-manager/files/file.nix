@@ -11,6 +11,9 @@
 
     ".clang-format".source = ./.clang-format;
 
+    # .vimrc
+    ".vim_runtime".source = "${pkgs.amix-vimrc}";
+
     # online-judge-tools
     "${
       if pkgs.stdenv.isDarwin

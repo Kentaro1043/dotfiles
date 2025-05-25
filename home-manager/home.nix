@@ -10,6 +10,7 @@
     ./files/file.nix
     ./bash.nix
     ./zsh.nix
+    ./vim.nix
     ./git.nix
     ./ssh.nix
     ./texlive.nix

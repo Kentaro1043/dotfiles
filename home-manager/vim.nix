@@ -8,22 +8,16 @@
 }: {
   programs.vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [
-      ack-vim
-      bufexplorer
-      ctrlp-vim
-      goyo-vi
-      lightline-vim
-      nerdtree
-      ale
-      vim-commentary
-      vim-expand-region
-      vim-fugitive
-      vim-indent-object
-      vim-multiple-cursors
-      vim-indent-guides
-      editorconfig-vim
-      copilot-vim
-    ];
+    extraConfig = ''
+      set runtimepath+=~/.vim_runtime
+
+      source ~/.vim_runtime/vimrcs/basic.vim
+      source ~/.vim_runtime/vimrcs/filetypes.vim
+      source ~/.vim_runtime/vimrcs/plugins_config.vim
+      source ~/.vim_runtime/vimrcs/extended.vim
+
+      set background=dark
+      colorscheme solarized
+    '';
   };
 }

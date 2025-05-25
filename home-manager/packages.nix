@@ -4,7 +4,6 @@
   lib,
   config,
   pkgs,
-  pkgs-unstable,
   ...
 }: {
   home.packages = with pkgs;
@@ -53,7 +52,7 @@
       ac-library.dev
 
       # python
-      pkgs-unstable.uv
+      unstable.uv
       yapf
 
       # Rust

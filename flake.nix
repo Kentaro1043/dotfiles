@@ -33,12 +33,13 @@
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
+    overlays = import ./overlays {inherit inputs;};
+
     homeConfigurations = {
       "kentaro@kentaro-win" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
           inherit inputs outputs;
-          pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
         };
         modules = [
           ./home-manager/home.nix
@@ -52,7 +53,6 @@
             inputs
             outputs
             ;
-          pkgs-unstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
         };
         modules = [
           ./home-manager/home.nix

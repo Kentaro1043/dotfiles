@@ -80,6 +80,14 @@
       kubeconform
       k3d
 
+      # Radio
+      # https://nixos.wiki/wiki/GNU_Radio
+      (gnuradio.override {
+        extraPackages = with gnuradioPackages; [
+          osmosdr
+        ];
+      })
+
       # kyopro
       online-judge-tools
       online-judge-template-generator

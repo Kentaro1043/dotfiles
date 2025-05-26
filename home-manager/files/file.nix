@@ -12,7 +12,10 @@
     ".clang-format".source = ./.clang-format;
 
     # .vimrc
-    ".vim_runtime".source = "${pkgs.amix-vimrc}";
+    ".vim_runtime/autoload".source = "${pkgs.amix-vimrc}/autoload";
+    ".vim_runtime/sources_forked".source = "${pkgs.amix-vimrc}/sources_forked";
+    ".vim_runtime/sources_non_forked".source = "${pkgs.amix-vimrc}/sources_non_forked";
+    ".vim_runtime/vimrcs".source = "${pkgs.amix-vimrc}/vimrcs";
 
     # online-judge-tools
     "${

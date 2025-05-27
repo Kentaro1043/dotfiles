@@ -11,6 +11,7 @@
       # general
       git
       git-filter-repo
+      gh
       gnumake
       keychain
       oci-cli

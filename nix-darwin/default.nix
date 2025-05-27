@@ -57,7 +57,6 @@
       "chatgpt"
       "claude"
       "obsidian"
-      "airspy"
     ];
   };
 }

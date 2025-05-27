@@ -17,6 +17,7 @@
       oci-cli
       gh
       time
+      xterm
 
       # fonts
       noto-fonts

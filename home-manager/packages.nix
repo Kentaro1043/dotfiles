@@ -89,6 +89,7 @@
         ];
       })
       hackrf
+      soapyhackrf
 
       # kyopro
       online-judge-tools

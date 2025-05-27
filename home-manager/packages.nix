@@ -18,6 +18,7 @@
       gh
       time
       xterm
+      ffmpeg
 
       # fonts
       noto-fonts

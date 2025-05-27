@@ -87,6 +87,7 @@
           osmosdr
         ];
       })
+      hackrf
 
       # kyopro
       online-judge-tools

@@ -89,6 +89,7 @@
         ];
       })
       hackrf
+      soapyrtlsdr
       soapyhackrf
 
       # kyopro

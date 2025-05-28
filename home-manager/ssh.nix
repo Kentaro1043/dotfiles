@@ -28,6 +28,10 @@
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
       };
+      "libra.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
       "ict201.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";

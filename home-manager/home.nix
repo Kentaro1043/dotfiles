@@ -18,6 +18,7 @@
     ./htop.nix
     ./direnv.nix
     ./uv.nix
+    ./ruff.nix
     ./tex-fmt.nix
     ./yt-dlp.nix
     ./k9s.nix

@@ -14,6 +14,7 @@
     ./git.nix
     ./ssh.nix
     ./texlive.nix
+    ./kubecolor.nix
     ./packages.nix
   ];
 

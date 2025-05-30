@@ -44,6 +44,7 @@
       # C/C++
       gcc
       llvm
+      cmake
       clang-tools
       graphviz
       boost.out

@@ -15,6 +15,12 @@
     ./ssh.nix
     ./texlive.nix
     ./kubecolor.nix
+    ./htop.nix
+    ./direnv.nix
+    ./uv.nix
+    ./tex-fmt.nix
+    ./yt-dlp.nix
+    ./k9s.nix
     ./packages.nix
   ];
 

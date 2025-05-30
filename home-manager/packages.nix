@@ -41,9 +41,6 @@
       # nix
       alejandra
 
-      # tex
-      tex-fmt
-
       # C/C++
       gcc
       llvm
@@ -55,7 +52,6 @@
       ac-library.dev
 
       # python
-      unstable.uv
       yapf
 
       # Rust

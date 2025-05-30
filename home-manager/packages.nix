@@ -45,6 +45,7 @@
       gcc
       llvm
       cmake
+      spdlog
       clang-tools
       graphviz
       boost.out

@@ -95,9 +95,10 @@
         export C_INCLUDE_PATH="$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:$LIBC_PKG_PATH/include"
         export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}//${pkgs.stdenv.hostPlatform.config}:$GCC_PKG_PATH/include/c++//backward:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:$LIBC_PKG_PATH/include"
         export CMAKE_MODULE_PATH="${pkgs.spdlog.dev}/lib/cmake/spdlog:${pkgs.fmt.dev}/lib/cmake/fmt"
+        export LD_LIBRARY_PATH="${pkgs.gnuradio}/lib"
 
         # Python
-        export PYTHONPATH="${pkgs.gnuradio}/python3.11/site-packages"
+        export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages"
 
         # Enable Volta
         export VOLTA_HOME="$HOME/.volta"

@@ -46,6 +46,7 @@
       llvm
       cmake
       spdlog
+      spdlog.dev
       clang-tools
       graphviz
       boost.out

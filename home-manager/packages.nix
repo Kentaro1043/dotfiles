@@ -49,6 +49,7 @@
       spdlog.dev
       clang-tools
       graphviz
+      fmt.dev
       boost.out
       boost.dev
       ac-library.out

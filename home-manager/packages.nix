@@ -43,7 +43,7 @@
 
       # C/C++
       gcc
-      llvm
+      lldb
       cmake
       spdlog
       spdlog.dev

@@ -19,6 +19,7 @@
       time
       xterm
       ffmpeg-full
+      unstable.minio-client
 
       # fonts
       noto-fonts

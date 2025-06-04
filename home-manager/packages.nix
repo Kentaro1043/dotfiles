@@ -20,6 +20,7 @@
       xterm
       ffmpeg-full
       unstable.minio-client
+      ytdl-sub
 
       # fonts
       noto-fonts

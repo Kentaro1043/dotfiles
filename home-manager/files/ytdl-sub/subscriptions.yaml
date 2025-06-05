@@ -1,0 +1,9 @@
+__preset__:
+  overrides:
+    music_directory: "~/Music/library"
+
+Music:
+  = YouTube Music:
+    "天音かなた":
+      - "https://music.youtube.com/playlist?list=OLAK5uy_l9m0adpfCQKGMNL_WeJboTKAG--8Yq-fE" # きゅーぴっど。
+      - "https://music.youtube.com/playlist?list=OLAK5uy_lqWdb0ORl46pfLxAokEfo8kkJ7onKM7iI" # Knock it out!

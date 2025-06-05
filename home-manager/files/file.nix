@@ -17,6 +17,10 @@
     ".vim_runtime/sources_non_forked".source = "${pkgs.amix-vimrc}/sources_non_forked";
     ".vim_runtime/vimrcs".source = "${pkgs.amix-vimrc}/vimrcs";
 
+    # ytdl-sub
+    "Music/config.yaml".source = ./ytdl-sub/config.yaml;
+    "Music/subscriptions.yaml".source = ./ytdl-sub/subscriptions.yaml;
+
     # online-judge-tools
     "${
       if pkgs.stdenv.isDarwin

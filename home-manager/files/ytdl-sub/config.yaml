@@ -1,0 +1,21 @@
+configuration:
+  working_directory: "~/.var/ytdl-sub-working-directory"
+
+presets:
+  Music:
+    preset:
+      - "YouTube Releases"
+      - "Max MP3 Quality"
+    embed_thumbnail: True
+    ytdl_options:
+      extractor_args:
+        youtube:
+          lang:
+            - "ja"
+    overrides:
+      # プレイリストタイトルのうちアルバム名を抽出する
+      track_album: >-
+        { %regex_sub("^(Album - |アルバム - )", "", playlist_title) }
+
+      album_dir: "{track_album_sanitized}"
+      album_cover_path: "{artist_dir}/{album_dir}/cover.{thumbnail_ext}"

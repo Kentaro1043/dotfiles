@@ -73,6 +73,7 @@
       ojt = "oj test";
       ojs = "oj submit main.cpp";
       ojp = "oj-prepare";
+      sub = "ytdl-sub sub";
     };
 
     envExtra =

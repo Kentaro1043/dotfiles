@@ -8,20 +8,20 @@
 }: {
   imports = [
     ./files/file.nix
-    ./bash.nix
-    ./zsh.nix
-    ./vim.nix
-    ./git.nix
-    ./ssh.nix
-    ./texlive.nix
-    ./kubecolor.nix
-    ./htop.nix
-    ./direnv.nix
-    ./uv.nix
-    ./ruff.nix
-    ./tex-fmt.nix
-    ./yt-dlp.nix
-    ./k9s.nix
+    ./programs/bash.nix
+    ./programs/zsh.nix
+    ./programs/vim.nix
+    ./programs/git.nix
+    ./programs/ssh.nix
+    ./programs/texlive.nix
+    ./programs/kubecolor.nix
+    ./programs/htop.nix
+    ./programs/direnv.nix
+    ./programs/uv.nix
+    ./programs/ruff.nix
+    ./programs/tex-fmt.nix
+    ./programs/yt-dlp.nix
+    ./programs/k9s.nix
     ./packages.nix
   ];
 

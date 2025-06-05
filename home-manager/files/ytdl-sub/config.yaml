@@ -25,12 +25,12 @@ presets:
           lang:
             - "ja"
 
+    output_options:
+      thumbnail_name: ""
+
     overrides:
       # プレイリストタイトルのうちアルバム名を抽出する
       track_album: >-
         { %regex_sub("^(Album - |アルバム - )", "", playlist_title) }
 
       album_dir: "{track_album_sanitized}"
-
-      # カバー画像は無効化
-      album_cover_path: ""

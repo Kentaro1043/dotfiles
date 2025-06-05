@@ -1,7 +1,5 @@
 configuration:
   working_directory: "~/.var/ytdl-sub-working-directory"
-  persist_logs:
-    logs_directory: "~/.var/ytdl-sub-logs"
 
 presets:
   Music:

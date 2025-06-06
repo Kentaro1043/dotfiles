@@ -57,6 +57,7 @@
       "chatgpt"
       "claude"
       "obsidian"
+      "unity-hub"
     ];
   };
 }

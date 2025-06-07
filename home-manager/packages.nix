@@ -99,6 +99,9 @@
       # kyopro
       online-judge-tools
       online-judge-template-generator
+
+      # .NET
+      dotnet-sdk
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

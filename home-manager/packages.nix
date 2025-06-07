@@ -22,6 +22,7 @@
       unstable.minio-client
       ytdl-sub
       grafana
+      dig
 
       # fonts
       noto-fonts

@@ -21,6 +21,7 @@
       ffmpeg-full
       unstable.minio-client
       ytdl-sub
+      grafana
 
       # fonts
       noto-fonts

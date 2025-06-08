@@ -58,6 +58,7 @@
       "claude"
       "obsidian"
       "unity-hub"
+      "vlc"
     ];
   };
 }

@@ -34,5 +34,8 @@
       else ".config"
     }/online-judge-tools/template/main.cpp".source =
       ./main.cpp;
+
+    # gnuradio
+    ".gnuradio/config.conf".source = ./gnuradio/config.conf;
   };
 }

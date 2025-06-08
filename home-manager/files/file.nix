@@ -36,6 +36,6 @@
       ./main.cpp;
 
     # gnuradio
-    ".gnuradio/config.conf".source = ./gnuradio/config.conf;
+    ".config/gnuradio/config.conf".source = ./gnuradio/config.conf;
   };
 }

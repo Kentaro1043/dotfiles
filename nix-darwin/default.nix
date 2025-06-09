@@ -59,6 +59,7 @@
       "obsidian"
       "unity-hub"
       "vlc"
+      "tailscale"
     ];
   };
 }

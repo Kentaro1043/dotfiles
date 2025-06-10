@@ -48,6 +48,7 @@
 
       # C/C++
       gcc
+      libllvm
       lldb
       cmake
       spdlog

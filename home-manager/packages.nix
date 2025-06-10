@@ -23,6 +23,7 @@
       ytdl-sub
       grafana
       dig
+      time
 
       # fonts
       noto-fonts

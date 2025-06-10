@@ -56,6 +56,9 @@
         # nix-zsh-completions
         source ${pkgs.nix-zsh-completions}/share/zsh/plugins/nix/init.zsh
 
+        # Disable zsh time
+        disable -r time
+
         # Enable brew when on macOS
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -68,11 +71,16 @@
       ];
 
     shellAliases = {
+      # home-manager
       update = "home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
       darwin = "sudo darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
-      ojt = "oj test";
-      ojs = "oj submit main.cpp";
+
+      # kyopro
+      ojt = "oj test --gnu-time time";
+      ojs = "oj test --gnu-time time && oj submit main.cpp --yes";
       ojp = "oj-prepare";
+
+      # ytdl-sub
       sub = "ytdl-sub sub";
     };
 

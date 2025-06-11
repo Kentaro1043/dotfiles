@@ -60,6 +60,7 @@
       "unity-hub"
       "vlc"
       "tailscale"
+      "microsoft-office"
     ];
   };
 }

@@ -15,13 +15,11 @@
         user = "git";
         identityFile = "~/.ssh/id_ed25519";
       };
+
+      # traP
       "git.trap.jp" = {
         port = 2200;
         user = "git";
-        identityFile = "~/.ssh/id_ed25519";
-      };
-      "csc301.tokyotech.org" = {
-        user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
       };
       "c1-203.tokyotech.org" = {
@@ -29,6 +27,46 @@
         identityFile = "~/.ssh/id_ed25519";
       };
       "libra.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "taki-ws1.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "taki-ws2.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "taki-ws3.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "e505.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "s512.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "w933.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "s323.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "m011.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "s423.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "csc301.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
       };

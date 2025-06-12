@@ -40,6 +40,10 @@
       zsh-nix-shell
       nix-zsh-completions
 
+      # markdown
+      markdownlint-cli
+      markdownlint-cli2
+
       # typst
       typst
 

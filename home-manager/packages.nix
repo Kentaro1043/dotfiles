@@ -110,6 +110,9 @@
 
       # .NET
       dotnet-sdk
+
+      # Go
+      go
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

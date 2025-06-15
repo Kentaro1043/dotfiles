@@ -24,6 +24,7 @@
       grafana
       dig
       time
+      go-task
 
       # fonts
       noto-fonts

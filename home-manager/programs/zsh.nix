@@ -82,6 +82,9 @@
 
       # ytdl-sub
       sub = "ytdl-sub sub";
+
+      # reset launchpad
+      rst = "sudo find 2>/dev/null /private/var/folders/ -type d -name com.apple.dock.launchpad -exec rm -rf {} +; killall Dock";
     };
 
     envExtra =

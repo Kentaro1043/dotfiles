@@ -62,6 +62,7 @@
       "tailscale"
       "microsoft-office"
       "notion"
+      "google-chrome"
     ];
   };
 }

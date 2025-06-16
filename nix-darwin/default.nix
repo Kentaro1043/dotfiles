@@ -61,6 +61,7 @@
       "vlc"
       "tailscale"
       "microsoft-office"
+      "notion"
     ];
   };
 }

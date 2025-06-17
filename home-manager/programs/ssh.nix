@@ -42,6 +42,10 @@
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
       };
+      "taki-ws4.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
       "e505.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";

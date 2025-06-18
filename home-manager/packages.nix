@@ -68,6 +68,7 @@
 
       # python
       yapf
+      virtualenv
 
       # Rust
       rustup

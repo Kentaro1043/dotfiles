@@ -25,6 +25,7 @@
       dig
       time
       go-task
+      xc
 
       # fonts
       noto-fonts

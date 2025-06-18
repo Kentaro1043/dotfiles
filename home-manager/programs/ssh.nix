@@ -86,6 +86,10 @@
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
       };
+      "sce311.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+      };
     };
   };
 }

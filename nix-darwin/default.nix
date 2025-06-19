@@ -63,6 +63,7 @@
       "microsoft-office"
       "notion"
       "google-chrome"
+      "firefox"
     ];
   };
 }

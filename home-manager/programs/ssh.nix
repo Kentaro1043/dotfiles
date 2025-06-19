@@ -25,30 +25,37 @@
       "c1-203.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "libra.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "taki-ws1.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "taki-ws2.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "taki-ws3.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "taki-ws4.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "e505.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "s512.tokyotech.org" = {
         user = "kentaro1043";
@@ -57,38 +64,47 @@
       "w933.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "s323.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "m011.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "s423.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "csc301.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "ict201.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "ict202.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "ict203.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
       "sce311.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
       };
     };
   };

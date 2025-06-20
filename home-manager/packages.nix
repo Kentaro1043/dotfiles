@@ -26,6 +26,7 @@
       time
       go-task
       xc
+      mongosh
 
       # fonts
       noto-fonts

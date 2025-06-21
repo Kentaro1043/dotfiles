@@ -117,6 +117,7 @@
       # Go
       go
       golangci-lint
+      goose
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

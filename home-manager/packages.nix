@@ -27,6 +27,7 @@
       go-task
       xc
       mongosh
+      libwebp
 
       # fonts
       noto-fonts

@@ -64,6 +64,7 @@
       "notion"
       "google-chrome"
       "firefox"
+      "postman"
     ];
   };
 }

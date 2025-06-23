@@ -106,6 +106,26 @@
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
       };
+      "las211.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
+      };
+      "arc321.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
+      };
+      "eee101.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
+      };
+      "iee221.tokyotech.org" = {
+        user = "kentaro1043";
+        identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
+      };
     };
   };
 }

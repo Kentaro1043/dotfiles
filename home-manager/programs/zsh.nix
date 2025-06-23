@@ -125,6 +125,9 @@
         # C/C++ additional for macOS
         export C_INCLUDE_PATH="$C_INCLUDE_PATH:${pkgs.apple-sdk}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
         export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:${pkgs.apple-sdk}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+
+        # Rancher Desktop
+        export PATH="$HOME/.rd/bin:$PATH"
       '';
   };
 }

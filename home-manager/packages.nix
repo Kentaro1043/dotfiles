@@ -9,13 +9,9 @@
   home.packages = with pkgs;
     [
       # general
-      git
-      git-filter-repo
-      gh
       gnumake
       keychain
       oci-cli
-      gh
       time
       xterm
       ffmpeg-full
@@ -28,6 +24,12 @@
       xc
       mongosh
       libwebp
+
+      # Git
+      git
+      git-filter-repo
+      gh
+      act
 
       # fonts
       noto-fonts

@@ -65,6 +65,7 @@
       "google-chrome"
       "firefox"
       "postman"
+      "rancher"
     ];
   };
 }

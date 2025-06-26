@@ -25,6 +25,7 @@
       mongosh
       libwebp
       devbox
+      atlas
 
       # Git
       git

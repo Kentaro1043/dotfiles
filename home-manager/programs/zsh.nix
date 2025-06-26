@@ -59,6 +59,9 @@
         # Disable zsh time
         disable -r time
 
+        # Enable fnm
+        eval "$(fnm env --use-on-cd --shell zsh)"
+
         # Enable brew when on macOS
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"

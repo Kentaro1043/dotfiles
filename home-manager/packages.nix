@@ -24,6 +24,7 @@
       xc
       mongosh
       libwebp
+      devbox
 
       # Git
       git

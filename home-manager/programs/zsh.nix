@@ -113,6 +113,10 @@
         # Python
         export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages"
 
+        # Node
+        export BUN_INSTALL="$HOME/.bun"
+        export PATH="$BUN_INSTALL/bin:$PATH"
+
         # Go
         export GOPATH="$HOME/source/go"
         export PATH="$GOPATH/bin:$PATH"

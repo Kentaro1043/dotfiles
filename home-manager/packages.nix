@@ -79,7 +79,7 @@
       rustup
 
       # node version management
-      volta
+      fnm
       # node linter
       biome
 

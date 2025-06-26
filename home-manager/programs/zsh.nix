@@ -114,10 +114,6 @@
         export GOPATH="$HOME/source/go"
         export PATH="$GOPATH/bin:$PATH"
 
-        # Enable Volta
-        export VOLTA_HOME="$HOME/.volta"
-        export PATH="$VOLTA_HOME/bin:$PATH"
-
         # ksops
         export PATH="${pkgs.kustomize-sops}/lib/viaduct.ai/v1/ksops:$PATH"
       ''

@@ -9,23 +9,26 @@
   home.packages = with pkgs;
     [
       # general
-      gnumake
       keychain
-      oci-cli
       time
       xterm
       ffmpeg-full
-      unstable.minio-client
       ytdl-sub
       grafana
       dig
       time
-      go-task
-      xc
       mongosh
       libwebp
+
+      # general development
+      gnumake
+      oci-cli
+      unstable.minio-client
+      go-task
+      xc
       devbox
       atlas
+      direnv
 
       # Git
       git
@@ -57,6 +60,9 @@
 
       # nix
       alejandra
+
+      # PostgreSQL
+      postgresql
 
       # C/C++
       gcc

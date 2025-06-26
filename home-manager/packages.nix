@@ -82,6 +82,8 @@
       fnm
       # node linter
       biome
+      # Bun
+      bun
 
       # Scala
       scala

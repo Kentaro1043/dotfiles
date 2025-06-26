@@ -79,11 +79,11 @@
       rustup
 
       # node version management
-      fnm
+      unstable.fnm
       # node linter
       biome
       # Bun
-      bun
+      unstable.bun
 
       # Scala
       scala

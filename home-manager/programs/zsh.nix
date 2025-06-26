@@ -110,6 +110,10 @@
         # Python
         export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages"
 
+        # Go
+        export GOPATH="$HOME/source/go"
+        export PATH="$GOPATH/bin:$PATH"
+
         # Enable Volta
         export VOLTA_HOME="$HOME/.volta"
         export PATH="$VOLTA_HOME/bin:$PATH"

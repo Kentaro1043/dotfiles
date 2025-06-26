@@ -102,6 +102,9 @@
       kubeconform
       k3d
 
+      # Docker
+      hadolint
+
       # Radio
       # https://nixos.wiki/wiki/GNU_Radio
       (gnuradio.override {

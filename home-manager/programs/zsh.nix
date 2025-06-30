@@ -63,6 +63,13 @@
         # Enable fnm
         eval "$(fnm env --use-on-cd --shell zsh)"
 
+        # Change theme
+        function run_with_dracula {
+          printf "\033]50;SetProfile=Dracula\a"
+          "$@"
+          printf "\033]50;SetProfile=Default\a"
+        }
+
         # Enable brew when on macOS
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -86,6 +93,9 @@
 
       # ytdl-sub
       sub = "ytdl-sub sub";
+
+      # changing theme
+      gemini = "run_with_dracula gemini";
 
       # reset launchpad
       rst = "sudo find 2>/dev/null /private/var/folders/ -type d -name com.apple.dock.launchpad -exec rm -rf {} +; killall Dock";

@@ -89,7 +89,7 @@
       # node version management
       unstable.fnm
       # node linter
-      biome
+      unstable.biome
       # Bun
       unstable.bun
 

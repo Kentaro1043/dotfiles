@@ -19,6 +19,7 @@
       time
       mongosh
       libwebp
+      gemini-cli
 
       # general development
       gnumake

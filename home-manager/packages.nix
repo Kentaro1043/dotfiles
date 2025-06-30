@@ -14,7 +14,6 @@
       xterm
       ffmpeg-full
       ytdl-sub
-      grafana
       dig
       time
       mongosh

@@ -135,6 +135,14 @@
       golangci-lint
       goose
       gotools
+
+      # Ansible
+      ansible
+      ansible-lint
+      ansible-language-server
+      ansible-later
+      ansible-doctor
+      ansible-navigator
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # Docker

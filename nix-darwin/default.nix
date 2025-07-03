@@ -66,7 +66,6 @@
       "firefox"
       "postman"
       "rancher"
-      "termius"
     ];
   };
 }

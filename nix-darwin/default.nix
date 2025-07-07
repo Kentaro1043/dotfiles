@@ -66,7 +66,7 @@
       "firefox"
       "postman"
       "rancher"
-      "wireguard-tools"
+      "wireshark"
     ];
   };
 }

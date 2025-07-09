@@ -30,6 +30,7 @@
       atlas
       direnv
       envsubst
+      buf
 
       # Git
       git

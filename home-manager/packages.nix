@@ -137,6 +137,8 @@
       golangci-lint
       goose
       gotools
+      sqldef
+      evans
 
       # Ansible
       ansible

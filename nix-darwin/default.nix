@@ -66,6 +66,7 @@
       "firefox"
       "postman"
       "wireshark"
+      "lens"
     ];
   };
 }

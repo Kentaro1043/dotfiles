@@ -29,6 +29,7 @@
       devbox
       atlas
       direnv
+      envsubst
 
       # Git
       git

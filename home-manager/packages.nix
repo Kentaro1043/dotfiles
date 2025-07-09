@@ -110,6 +110,7 @@
       kustomize-sops
       kubeconform
       k3d
+      kubernetes-helm
 
       # Docker
       hadolint

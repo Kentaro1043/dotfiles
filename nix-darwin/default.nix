@@ -65,7 +65,6 @@
       "google-chrome"
       "firefox"
       "postman"
-      "rancher"
       "wireshark"
     ];
   };

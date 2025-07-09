@@ -152,7 +152,7 @@
       # Docker
       # Disable on Linux because I use Docker Desktop on Windows
       docker
-      colima
+      # colima
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb

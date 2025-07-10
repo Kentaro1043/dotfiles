@@ -101,6 +101,7 @@
 
       # yaml linter
       yamllint
+      yamlfmt
 
       # Kubernetes related packages
       kubectl

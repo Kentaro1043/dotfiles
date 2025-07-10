@@ -94,6 +94,7 @@
       unstable.biome
       # Bun
       unstable.bun
+      pnpm
 
       # Scala
       scala

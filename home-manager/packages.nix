@@ -94,6 +94,7 @@
       unstable.biome
       # Bun
       unstable.bun
+      pnpm
 
       # Scala
       scala
@@ -101,6 +102,7 @@
 
       # yaml linter
       yamllint
+      yamlfmt
 
       # Kubernetes related packages
       kubectl

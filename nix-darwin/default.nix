@@ -67,6 +67,7 @@
       "postman"
       "wireshark"
       "lens"
+      "jetbrains-toolbox"
     ];
   };
 }

@@ -68,6 +68,8 @@
       "wireshark"
       "lens"
       "jetbrains-toolbox"
+      "docker-desktop"
+      "gimp"
     ];
   };
 }

@@ -6,20 +6,9 @@ presets:
     preset:
       - "YouTube Releases"
       - "Max MP3 Quality"
+    embed_thumbnail: True
+    square_thumbnail: True
     ytdl_options:
-      postprocessors:
-        - key: "FFmpegThumbnailsConvertor"
-          format: "jpg"
-        - key: "EmbedThumbnail"
-      postprocessor_args:
-        - "-c:v"
-        - "mjpeg"
-        - "-qmin"
-        - "1"
-        - "-qscale:v"
-        - "1"
-        - "-vf"
-        - "crop=min(iw\\,ih):min(iw\\,ih)"
       extractor_args:
         youtube:
           lang:

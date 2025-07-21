@@ -19,6 +19,7 @@
       mongosh
       libwebp
       gemini-cli
+      runme
 
       # general development
       gnumake

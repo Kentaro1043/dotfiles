@@ -20,6 +20,8 @@
       libwebp
       gemini-cli
       runme
+      chroma
+      thefuck
 
       # general development
       gnumake

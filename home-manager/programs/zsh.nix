@@ -23,11 +23,12 @@
           "keychain"
           "gpg-agent"
           "ssh"
-          "sudo"
+          #"sudo"
           "git"
           "git-auto-fetch"
           "gitignore"
           "git-prompt"
+          "git-lfs"
           "vscode"
           "docker"
           "docker-compose"
@@ -35,6 +36,16 @@
           "golang"
           "volta"
           "direnv"
+          "bun"
+          "colorize"
+          "command-not-found"
+          "dotnet"
+          "fnm"
+          "gh"
+          "kube-ps1"
+          "terraform"
+          "themes"
+          "thefuck"
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin ["iterm2" "macos"]
         ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];
@@ -105,6 +116,9 @@
       ''
         # Disable user@hostname for agnoster theme
         export DEFAULT_USER="kentaro"
+
+        # zsh colorize plugin
+        export ZSH_COLORIZE_TOOL="chroma"
 
         # Change SHELL
         export SHELL="${pkgs.zsh}/bin/zsh"

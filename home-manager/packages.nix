@@ -117,6 +117,7 @@
 
       # Docker
       hadolint
+      dive
 
       # Radio
       # https://nixos.wiki/wiki/GNU_Radio

@@ -116,6 +116,8 @@
       kubeconform
       k3d
       kubernetes-helm
+      kube-linter
+      Kubeconform
 
       # Docker
       hadolint

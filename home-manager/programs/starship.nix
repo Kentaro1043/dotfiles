@@ -10,6 +10,9 @@
       sudo.disabled = false;
       kubernetes = {
         disabled = false;
+        detect_files = [
+          "kustomization.yaml"
+        ];
       };
     };
   };

@@ -93,10 +93,6 @@
       ];
 
     shellAliases = {
-      # home-manager
-      update = "home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
-      darwin = "sudo darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')";
-
       # kyopro
       ojt = "oj test --gnu-time time";
       ojs = "oj test --gnu-time time && oj submit main.cpp --yes";

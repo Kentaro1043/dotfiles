@@ -11,7 +11,7 @@
     enableCompletion = true;
     autosuggestion = {
       enable = true;
-      highlight = "fg=yellow";
+      #highlight = "fg=yellow";
     };
     syntaxHighlighting.enable = true;
 

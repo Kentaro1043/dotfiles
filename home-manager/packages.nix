@@ -22,6 +22,7 @@
       runme
       chroma
       thefuck
+      unimatrix
 
       # general development
       gnumake

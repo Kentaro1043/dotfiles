@@ -17,7 +17,7 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "agnoster";
+      #theme = "agnoster";
       plugins =
         [
           "keychain"

@@ -8,6 +8,9 @@
     enable = true;
     settings = {
       sudo.disabled = false;
+      kubernetes = {
+        disabled = false;
+      };
     };
   };
 }

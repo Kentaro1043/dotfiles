@@ -123,6 +123,7 @@
       # Docker
       hadolint
       dive
+      lazydocker
 
       # Radio
       # https://nixos.wiki/wiki/GNU_Radio

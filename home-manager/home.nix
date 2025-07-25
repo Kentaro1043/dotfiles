@@ -21,6 +21,7 @@
     ./programs/ruff.nix
     ./programs/tex-fmt.nix
     ./programs/yt-dlp.nix
+    ./programs/lazygit.nix
     ./programs/k9s.nix
     ./programs/starship.nix
     ./packages.nix

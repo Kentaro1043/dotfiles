@@ -1,11 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.vim = {
     enable = true;
     extraConfig = ''
@@ -17,7 +10,7 @@
       source ~/.vim_runtime/vimrcs/extended.vim
 
       set background=dark
-      colorscheme solarized
+      colorscheme dracula
     '';
   };
 }

@@ -2,8 +2,11 @@
   programs.neovim = {
     enable = true;
 
-    plugins = [
-      pkgs.vimPlugins.astrocore
+    plugins = with pkgs.vimPlugins; [
+      astrocore
+      astroui
+      astrotheme
+      astrolsp
     ];
   };
 }

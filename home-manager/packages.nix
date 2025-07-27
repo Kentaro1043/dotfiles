@@ -42,6 +42,12 @@
       gh
       act
 
+      # nvim
+      # AstroNvim
+      tree-sitter
+      bottom
+      ripgrep
+
       # fonts
       noto-fonts
       noto-fonts-cjk-sans

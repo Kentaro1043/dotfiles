@@ -12,6 +12,7 @@
     ./programs/zsh.nix
     ./programs/vim.nix
     ./programs/neovim.nix
+    ./programs/helix.nix
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/texlive.nix

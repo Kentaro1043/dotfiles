@@ -21,3 +21,11 @@ nix-darwinの設定更新
 ```shell
 sudo darwin-rebuild switch --flake .#$USER@$(hostname | sed 's/\.local$//')
 ```
+
+### Switch
+
+NixOSの設定更新
+
+```shell
+sudo nixos-rebuild switch --impure --flake .#$USER@$(hostname | sed 's/\.local$//')
+```

@@ -13,6 +13,9 @@
     # nix-darwin
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    # NixOS-WSL
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
   outputs = {
@@ -21,6 +24,7 @@
     nixpkgs-unstable,
     home-manager,
     nix-darwin,
+    nixos-wsl,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -65,6 +69,16 @@
       modules = [
         ./nix-darwin
       ];
+    };
+
+    nixosConfigurations = {
+      "kentaro@kentaro-win" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./nixos/configuration.nix
+        ];
+      };
     };
   };
 }

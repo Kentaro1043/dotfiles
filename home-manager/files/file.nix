@@ -27,13 +27,13 @@
       then "Library/Application Support"
       else ".config"
     }/online-judge-tools/prepare.config.toml".source =
-      ./prepare.config.toml;
+      ./oj/prepare.config.toml;
     "${
       if pkgs.stdenv.isDarwin
       then "Library/Application Support"
       else ".config"
     }/online-judge-tools/template/main.cpp".source =
-      ./main.cpp;
+      ./oj/main.cpp;
 
     # gnuradio
     ".config/gnuradio/config.conf".source = ./gnuradio/config.conf;

@@ -29,7 +29,7 @@
 
   networking.hostName = "kentaro-win";
 
-  # VSCode Remote workaround
+  # Workaround for VSCode Remote
   # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
   programs.nix-ld.enable = true;
   environment.systemPackages = [

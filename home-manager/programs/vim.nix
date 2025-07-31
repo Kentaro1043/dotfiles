@@ -1,15 +1,13 @@
-{...}: {
+{pkgs, ...}: {
   programs.vim = {
     enable = true;
+    plugins = with pkgs.vimPlugins; [
+      dracula-vim
+    ];
+    settings = {
+      background = "dark";
+    };
     extraConfig = ''
-      set runtimepath+=~/.vim_runtime
-
-      source ~/.vim_runtime/vimrcs/basic.vim
-      source ~/.vim_runtime/vimrcs/filetypes.vim
-      source ~/.vim_runtime/vimrcs/plugins_config.vim
-      source ~/.vim_runtime/vimrcs/extended.vim
-
-      set background=dark
       colorscheme dracula
     '';
   };

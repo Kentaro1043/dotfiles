@@ -3,6 +3,7 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       dracula-vim
+      nerdtree
     ];
     settings = {
       background = "dark";

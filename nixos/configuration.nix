@@ -27,10 +27,10 @@
     initialPassword = "password"; # Change this to a secure password
   };
 
-  secirity.sudo = {
+  security.sudo = {
     enable = true;
     wheelNeedsPassword = true;
-  }
+  };
 
   networking.hostName = "kentaro-win";
 

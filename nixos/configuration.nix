@@ -27,6 +27,11 @@
     initialPassword = "password"; # Change this to a secure password
   };
 
+  secirity.sudo = {
+    enable = true;
+    wheelNeedsPassword = true;
+  }
+
   networking.hostName = "kentaro-win";
 
   # Workaround for VSCode Remote

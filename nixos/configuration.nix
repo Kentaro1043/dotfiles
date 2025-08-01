@@ -34,6 +34,8 @@
 
   networking.hostName = "kentaro-win";
 
+  time.timeZone = "Asia/Tokyo";
+
   # Workaround for VSCode Remote
   # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
   programs.nix-ld.enable = true;

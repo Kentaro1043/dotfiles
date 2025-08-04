@@ -17,6 +17,7 @@
   wsl = {
     enable = true;
     defaultUser = "kentaro";
+    docker-desktop.enable = true;
   };
 
   users.users.kentaro = {

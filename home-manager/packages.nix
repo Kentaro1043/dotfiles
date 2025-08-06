@@ -90,6 +90,7 @@
       boost.dev
       ac-library.out
       ac-library.dev
+      libxcrypt
 
       # python
       yapf

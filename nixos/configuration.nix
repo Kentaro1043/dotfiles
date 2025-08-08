@@ -20,12 +20,20 @@
     docker-desktop.enable = true;
   };
 
+  sops = {
+    defaultSopsFile = ../secrets/secrets.enc.yaml;
+    age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+
+    # https://github.com/Mic92/sops-nix#setting-a-users-password
+    secrets.hashedPassword.neededForUsers = true;
+  };
+
   users.users.kentaro = {
     isNormalUser = true;
     home = "/home/kentaro";
     createHome = true;
     extraGroups = ["wheel"];
-    initialPassword = "password"; # Change this to a secure password
+    hashedPasswordFile = config.sops.secrets.hashedPassword.path;
   };
 
   security.sudo = {

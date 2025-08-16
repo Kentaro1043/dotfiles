@@ -23,6 +23,7 @@
       chroma
       thefuck
       unimatrix
+      netcat-gnu
 
       # general development
       gnumake

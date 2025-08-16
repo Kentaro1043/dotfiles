@@ -70,6 +70,7 @@
       "jetbrains-toolbox"
       "docker-desktop"
       "gimp"
+      "utm"
     ];
   };
 }

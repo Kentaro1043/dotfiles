@@ -24,6 +24,7 @@
       thefuck
       unimatrix
       netcat-gnu
+      nmap
 
       # general development
       gnumake

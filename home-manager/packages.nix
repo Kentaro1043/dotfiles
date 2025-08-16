@@ -25,6 +25,7 @@
       unimatrix
       netcat-gnu
       nmap
+      ssh-to-age
 
       # general development
       gnumake

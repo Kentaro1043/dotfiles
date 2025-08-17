@@ -117,7 +117,7 @@
         export ZSH_COLORIZE_TOOL="chroma"
 
         # Change SHELL
-        export SHELL="${pkgs.zsh}/bin/zsh"
+        #export SHELL="${pkgs.zsh}/bin/zsh"
 
         ## Typst font
         ## known issue: https://github.com/typst/typst/issues/185

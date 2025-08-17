@@ -27,6 +27,16 @@
     };
   };
 
+  programs = {
+    zsh = {
+      enable = true;
+    };
+  };
+
+  users.users.kentaro = {
+    shell = pkgs.zsh;
+  };
+
   fonts.packages = with pkgs; [
     powerline-fonts
     noto-fonts

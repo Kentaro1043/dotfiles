@@ -46,10 +46,6 @@
       if pkgs.stdenv.isDarwin
       then "/Users/kentaro"
       else "/home/kentaro";
-
-    sessionVariables = {
-      SHELL = "${pkgs.bash}/bin/bash";
-    };
   };
 
   programs.home-manager.enable = true;

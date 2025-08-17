@@ -27,6 +27,13 @@
     };
   };
 
+  environment = {
+    shells = with pkgs; [
+      zsh
+      bashInteractive
+    ];
+  };
+
   programs = {
     zsh = {
       enable = true;

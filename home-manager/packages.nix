@@ -172,10 +172,6 @@
       ansible-navigator
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
-      # Docker
-      # Disable on Linux because I use Docker Desktop on Windows
-      docker
-      # colima
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb

@@ -38,6 +38,7 @@
       direnv
       envsubst
       buf
+      tenv
 
       # Git
       git

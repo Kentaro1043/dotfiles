@@ -131,6 +131,7 @@
       kubernetes-helm
       kube-linter
       kubeconform
+      helm-docs
 
       # Docker
       hadolint

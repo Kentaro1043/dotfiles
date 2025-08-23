@@ -11,10 +11,6 @@
 
     ".clang-format".source = ./.clang-format;
 
-    # ytdl-sub
-    "Music/config.yaml".source = ./ytdl-sub/config.yaml;
-    "Music/subscriptions.yaml".source = ./ytdl-sub/subscriptions.yaml;
-
     # online-judge-tools
     "${
       if pkgs.stdenv.isDarwin

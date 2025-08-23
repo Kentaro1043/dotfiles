@@ -88,6 +88,7 @@
       "docker-desktop"
       "gimp"
       "utm"
+      "jellyfin-media-player"
     ];
   };
 }

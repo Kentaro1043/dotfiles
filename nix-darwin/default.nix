@@ -89,6 +89,7 @@
       "gimp"
       "utm"
       "jellyfin-media-player"
+      "steam"
     ];
   };
 }

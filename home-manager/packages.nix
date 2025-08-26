@@ -66,6 +66,7 @@
       zsh-you-should-use
       zsh-nix-shell
       nix-zsh-completions
+      shellcheck
 
       # markdown
       markdownlint-cli

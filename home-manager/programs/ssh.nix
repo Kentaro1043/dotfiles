@@ -26,19 +26,19 @@
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
       };
-      "private.oke-node1.kentaro1043.com" = {
+      "private.okenode1.kentaro1043.com" = {
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
-      "private.oke-node2.kentaro1043.com" = {
+      "private.okenode2.kentaro1043.com" = {
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
-      "private.oke-node3.kentaro1043.com" = {
+      "private.okenode3.kentaro1043.com" = {
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;

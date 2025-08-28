@@ -39,6 +39,7 @@
       envsubst
       buf
       tenv
+      google-cloud-sdk
 
       # Git
       git

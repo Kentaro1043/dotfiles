@@ -40,6 +40,7 @@
       buf
       tenv
       google-cloud-sdk
+      awscli2
 
       # Git
       git

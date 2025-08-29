@@ -59,8 +59,12 @@
       upgrade = true;
       cleanup = "zap";
     };
+    taps = [
+      "gcenx/wine"
+    ];
     brews = [
       "github-mcp-server"
+      "winetricks"
     ];
     casks = [
       "iterm2"
@@ -90,6 +94,7 @@
       "utm"
       "jellyfin-media-player"
       "steam"
+      "gcenx/wine/wine-crossover"
     ];
   };
 }

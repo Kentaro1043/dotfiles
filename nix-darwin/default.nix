@@ -61,10 +61,10 @@
     };
     taps = [
       "gcenx/wine"
+      "Sikarugir-App/sikarugir"
     ];
     brews = [
       "github-mcp-server"
-      "winetricks"
     ];
     casks = [
       "iterm2"
@@ -94,7 +94,7 @@
       "utm"
       "jellyfin-media-player"
       "steam"
-      "gcenx/wine/wine-crossover"
+      "Sikarugir-App/sikarugir/sikarugir"
     ];
   };
 }

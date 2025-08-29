@@ -31,6 +31,10 @@
           time_format = "%R";
         };
 
+        gcloud = {
+          disabled = true;
+        };
+
         # Dracula
         # https://draculatheme.com/starship
         aws.style = "bold #ffb86c";

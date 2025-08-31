@@ -17,6 +17,7 @@
       };
 
       "gce.kentaro1043.com" = {
+        port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;

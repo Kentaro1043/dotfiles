@@ -95,6 +95,7 @@
       "jellyfin-media-player"
       "steam"
       "Sikarugir-App/sikarugir/sikarugir"
+      "minecraft"
     ];
   };
 }

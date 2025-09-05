@@ -106,6 +106,9 @@
       # Rust
       rustup
 
+      # Java
+      jdk
+
       # node version management
       unstable.fnm
       # node linter

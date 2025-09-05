@@ -97,6 +97,7 @@
       "Sikarugir-App/sikarugir/sikarugir"
       "minecraft"
       "sidequest"
+      "curseforge"
     ];
   };
 }

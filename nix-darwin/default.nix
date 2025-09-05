@@ -96,6 +96,7 @@
       "steam"
       "Sikarugir-App/sikarugir/sikarugir"
       "minecraft"
+      "sidequest"
     ];
   };
 }

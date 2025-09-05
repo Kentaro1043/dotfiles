@@ -98,6 +98,7 @@
       "minecraft"
       "sidequest"
       "curseforge"
+      "modrinth"
     ];
   };
 }

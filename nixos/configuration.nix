@@ -52,4 +52,8 @@
   environment.systemPackages = [
     pkgs.wget
   ];
+
+  programs.zsh = {
+    enable = true;
+  };
 }

@@ -34,6 +34,7 @@
     createHome = true;
     extraGroups = ["wheel"];
     hashedPasswordFile = config.sops.secrets.hashedPassword.path;
+    shell = pkgs.zsh;
   };
 
   security.sudo = {

@@ -26,6 +26,7 @@
     ./programs/lazygit.nix
     ./programs/k9s.nix
     ./programs/starship.nix
+    ./programs/eza.nix
     ./packages.nix
   ];
 

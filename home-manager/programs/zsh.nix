@@ -119,6 +119,9 @@
         # Change SHELL
         #export SHELL="${pkgs.zsh}/bin/zsh"
 
+        # bat
+        export BAT_THEME="Dracula"
+
         ## Typst font
         ## known issue: https://github.com/typst/typst/issues/185
         #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk

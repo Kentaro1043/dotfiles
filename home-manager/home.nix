@@ -27,6 +27,7 @@
     ./programs/k9s.nix
     ./programs/starship.nix
     ./programs/eza.nix
+    ./programs/bat.nix
     ./packages.nix
   ];
 

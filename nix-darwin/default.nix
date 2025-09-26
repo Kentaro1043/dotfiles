@@ -99,6 +99,7 @@
       "sidequest"
       "curseforge"
       "modrinth"
+      "wifi-explorer"
     ];
   };
 }

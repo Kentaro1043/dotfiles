@@ -8,26 +8,17 @@
 }: {
   imports = [
     ./files/file.nix
-    ./programs/bash.nix
-    ./programs/zsh.nix
-    ./programs/vim.nix
-    ./programs/neovim.nix
-    ./programs/helix.nix
-    ./programs/git.nix
-    ./programs/ssh.nix
-    ./programs/texlive.nix
-    ./programs/kubecolor.nix
-    ./programs/htop.nix
-    ./programs/direnv.nix
-    ./programs/uv.nix
-    ./programs/ruff.nix
-    ./programs/tex-fmt.nix
-    ./programs/yt-dlp.nix
-    ./programs/lazygit.nix
-    ./programs/k9s.nix
-    ./programs/starship.nix
     ./programs/eza.nix
-    ./programs/bat.nix
+    ./programs/git.nix
+    ./programs/lazygit.nix
+    ./programs/neovim.nix
+    ./programs/ruff.nix
+    ./programs/ssh.nix
+    ./programs/starship.nix
+    ./programs/texlive.nix
+    ./programs/vim.nix
+    ./programs/zsh.nix
+    ./programs/others.nix
     ./packages.nix
   ];
 

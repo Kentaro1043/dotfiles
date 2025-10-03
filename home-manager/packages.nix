@@ -120,6 +120,7 @@
       # Scala
       scala
       scalafmt
+      metals
 
       # yaml linter
       yamllint

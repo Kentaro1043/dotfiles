@@ -5,7 +5,14 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  noto-fonts-cjk-sans-static = pkgs.unstable.noto-fonts-cjk-sans.override {
+    static = true;
+  };
+  noto-fonts-cjk-serif-static = pkgs.unstable.noto-fonts-cjk-serif.override {
+    static = true;
+  };
+in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -122,9 +129,9 @@
         # bat
         export BAT_THEME="Dracula"
 
-        ## Typst font
-        ## known issue: https://github.com/typst/typst/issues/185
-        #export TYPST_FONT_PATHS=${pkgs.noto-fonts-cjk-sans}/share/fonts/opentype/noto-cjk:${pkgs.noto-fonts-cjk-serif}/share/fonts/opentype/noto-cjk
+        # Typst font
+        # known issue: https://github.com/typst/typst/issues/185
+        export TYPST_FONT_PATHS=${noto-fonts-cjk-sans-static}/share/fonts/opentype/noto-cjk:${noto-fonts-cjk-serif-static}/share/fonts/opentype/noto-cjk
 
         # C/C++
         export GCC_PKG_PATH=${builtins.readFile "${pkgs.gcc}/nix-support/orig-cc"}

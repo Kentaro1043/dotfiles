@@ -142,7 +142,7 @@ in {
         export LD_LIBRARY_PATH="${pkgs.gnuradio}/lib:$LD_LIBRARY_PATH"
 
         # Python
-        export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.osmosdr}/lib/python3.11/site-packages"
+        export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
 
         # Node
         export BUN_INSTALL="$HOME/.bun"

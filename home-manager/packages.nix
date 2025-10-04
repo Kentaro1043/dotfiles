@@ -76,6 +76,7 @@
 
       # typst
       typst
+      tinymist
 
       # nix
       alejandra

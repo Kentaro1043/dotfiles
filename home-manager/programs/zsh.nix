@@ -107,6 +107,7 @@ in {
 
       # Python
       python = "uv run python";
+      python3 = "uv run python3";
 
       # ytdl-sub
       sub = "ytdl-sub sub";

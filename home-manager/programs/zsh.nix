@@ -105,6 +105,9 @@ in {
       ojs = "oj test --gnu-time time && oj submit main.cpp --yes";
       ojp = "oj-prepare";
 
+      # Python
+      python = "uv run python";
+
       # ytdl-sub
       sub = "ytdl-sub sub";
 

@@ -41,6 +41,7 @@
       tenv
       google-cloud-sdk
       awscli2
+      sshpass
 
       # Git
       git

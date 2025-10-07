@@ -21,7 +21,7 @@
         sudo.disabled = false;
 
         scala = {
-          detect_folders = "";
+          detect_folders = [];
         };
 
         kubernetes = {

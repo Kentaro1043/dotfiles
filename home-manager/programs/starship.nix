@@ -16,6 +16,8 @@
     settings =
       builtins.fromTOML (builtins.readFile ./bracketed-segments.toml)
       // {
+        command_timeout = 1000;
+
         sudo.disabled = false;
 
         kubernetes = {

@@ -157,6 +157,7 @@
       hackrf
       soapyrtlsdr
       soapyhackrf
+      dump1090
 
       # kyopro
       online-judge-tools

@@ -100,6 +100,7 @@
       "curseforge"
       "modrinth"
       "wifi-explorer"
+      "cubicsdr"
     ];
   };
 }

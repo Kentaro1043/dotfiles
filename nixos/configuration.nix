@@ -49,10 +49,12 @@
   # Workaround for VSCode Remote
   # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
   programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
     wget
     kmod
     usbutils
+    rtl-sdr
   ];
 
   programs.zsh = {

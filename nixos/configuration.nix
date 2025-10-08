@@ -32,7 +32,10 @@
     isNormalUser = true;
     home = "/home/kentaro";
     createHome = true;
-    extraGroups = ["wheel"];
+    extraGroups = [
+      "wheel"
+      "plugdev"
+    ];
     hashedPasswordFile = config.sops.secrets.hashedPassword.path;
     shell = pkgs.zsh;
   };
@@ -46,6 +49,10 @@
 
   time.timeZone = "Asia/Tokyo";
 
+  hardware = {
+    rtl-sdr.enable = true;
+  };
+
   # Workaround for VSCode Remote
   # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
   programs.nix-ld.enable = true;
@@ -54,7 +61,6 @@
     wget
     kmod
     usbutils
-    rtl-sdr
   ];
 
   programs.zsh = {

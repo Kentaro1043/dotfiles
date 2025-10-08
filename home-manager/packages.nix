@@ -159,6 +159,7 @@
       soapyhackrf
       dump1090
       sdrpp
+      airspy
 
       # kyopro
       online-judge-tools

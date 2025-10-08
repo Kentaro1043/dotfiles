@@ -154,6 +154,7 @@
           osmosdr
         ];
       })
+      gqrx
       hackrf
       soapyrtlsdr
       soapyhackrf
@@ -193,6 +194,9 @@
       # marp
       marp-cli
       chromium
+
+      # SDR(Macではhomebrewで入れる)
+      cubicsdr
     ];
 
   # Enable font

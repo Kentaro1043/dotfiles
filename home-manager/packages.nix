@@ -160,6 +160,7 @@
       dump1090
       sdrpp
       airspy
+      rtl-sdr
 
       # kyopro
       online-judge-tools

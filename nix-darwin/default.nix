@@ -101,6 +101,7 @@
       "modrinth"
       "wifi-explorer"
       "cubicsdr"
+      "airspy"
     ];
   };
 }

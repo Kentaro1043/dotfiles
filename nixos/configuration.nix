@@ -49,8 +49,10 @@
   # Workaround for VSCode Remote
   # https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
   programs.nix-ld.enable = true;
-  environment.systemPackages = [
-    pkgs.wget
+  environment.systemPackages = with pkgs; [
+    wget
+    kmod
+    usbutils
   ];
 
   programs.zsh = {

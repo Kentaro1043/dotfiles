@@ -42,6 +42,7 @@
       google-cloud-sdk
       awscli2
       sshpass
+      github-copilot-cli
 
       # Git
       git

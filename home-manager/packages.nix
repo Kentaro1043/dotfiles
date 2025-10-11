@@ -26,6 +26,9 @@
       netcat-gnu
       nmap
       ssh-to-age
+      jq
+      fzf
+      openssl
 
       # general development
       gnumake

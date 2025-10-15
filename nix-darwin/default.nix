@@ -103,6 +103,7 @@
       "cubicsdr"
       "warp"
       "flrig"
+      "fldigi"
     ];
   };
 }

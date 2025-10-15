@@ -102,6 +102,7 @@
       "wifi-explorer"
       "cubicsdr"
       "warp"
+      "flrig"
     ];
   };
 }

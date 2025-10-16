@@ -104,6 +104,7 @@
       "warp"
       "flrig"
       "fldigi"
+      "obs"
     ];
   };
 }

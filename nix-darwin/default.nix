@@ -105,6 +105,7 @@
       "flrig"
       "fldigi"
       "obs"
+      "blackhole-2ch"
     ];
   };
 }

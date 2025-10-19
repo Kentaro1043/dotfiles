@@ -109,6 +109,7 @@
       "distroav"
       "libndi"
       "ndi-tools"
+      "anydesk"
     ];
   };
 }

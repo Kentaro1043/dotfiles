@@ -106,6 +106,7 @@
       "fldigi"
       "obs"
       "blackhole-2ch"
+      "distroav"
     ];
   };
 }

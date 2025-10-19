@@ -107,6 +107,7 @@
       "obs"
       "blackhole-2ch"
       "distroav"
+      "libndi"
     ];
   };
 }

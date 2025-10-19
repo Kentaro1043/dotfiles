@@ -108,6 +108,7 @@
       "blackhole-2ch"
       "distroav"
       "libndi"
+      "ndi-tools"
     ];
   };
 }

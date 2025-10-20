@@ -166,6 +166,7 @@
       sdrpp
       airspy
       rtl-sdr
+      sdrangel
 
       # kyopro
       online-judge-tools

@@ -46,6 +46,7 @@
       awscli2
       sshpass
       github-copilot-cli
+      icecast
 
       # Git
       git
@@ -166,7 +167,7 @@
       sdrpp
       airspy
       rtl-sdr
-      sdrangel
+      # sdrangel
 
       # kyopro
       online-judge-tools

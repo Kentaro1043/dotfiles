@@ -46,7 +46,6 @@
       awscli2
       sshpass
       github-copilot-cli
-      janus-gateway
 
       # Git
       git

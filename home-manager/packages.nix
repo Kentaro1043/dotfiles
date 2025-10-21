@@ -157,6 +157,7 @@
       (gnuradio.override {
         extraPackages = with gnuradioPackages; [
           osmosdr
+          lora_sdr
         ];
       })
       gqrx

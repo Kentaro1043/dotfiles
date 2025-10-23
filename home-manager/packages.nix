@@ -169,6 +169,7 @@
       airspy
       rtl-sdr
       # sdrangel
+      wfview
 
       # kyopro
       online-judge-tools

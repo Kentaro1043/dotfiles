@@ -193,6 +193,10 @@
       ansible-later
       ansible-doctor
       ansible-navigator
+
+      # R
+      R
+      rstudio
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
     ]

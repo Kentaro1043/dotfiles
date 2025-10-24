@@ -76,6 +76,9 @@
       nix-zsh-completions
       shellcheck
 
+      # CTF
+      burpsuite
+
       # markdown
       markdownlint-cli
       markdownlint-cli2

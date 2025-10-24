@@ -106,6 +106,8 @@
       "fldigi"
       "obs"
       "blackhole-2ch"
+      "blackhole-16ch"
+      "blackhole-64ch"
       "distroav"
       "libndi"
       "ndi-tools"

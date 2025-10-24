@@ -65,6 +65,7 @@
     ];
     brews = [
       "github-mcp-server"
+      "r"
     ];
     casks = [
       "iterm2"
@@ -112,6 +113,7 @@
       "libndi"
       "ndi-tools"
       "anydesk"
+      "rstudio"
     ];
   };
 }

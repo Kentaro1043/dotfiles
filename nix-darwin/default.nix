@@ -115,6 +115,7 @@
       "anydesk"
       "rstudio"
       "chatgpt-atlas"
+      "loopback"
     ];
   };
 }

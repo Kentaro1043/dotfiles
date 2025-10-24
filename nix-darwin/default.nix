@@ -114,6 +114,7 @@
       "ndi-tools"
       "anydesk"
       "rstudio"
+      "chatgpt-atlas"
     ];
   };
 }

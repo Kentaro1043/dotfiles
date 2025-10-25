@@ -81,6 +81,8 @@
       # CTF
       stegsolve
       binwalk
+      steghide
+      stegseek
 
       # markdown
       markdownlint-cli

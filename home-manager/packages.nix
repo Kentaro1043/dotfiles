@@ -80,6 +80,7 @@
 
       # CTF
       stegsolve
+      binwalk
 
       # markdown
       markdownlint-cli

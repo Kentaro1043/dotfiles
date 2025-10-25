@@ -29,6 +29,8 @@
       jq
       fzf
       openssl
+      imagemagick
+      exiftool
 
       # general development
       gnumake
@@ -77,7 +79,7 @@
       shellcheck
 
       # CTF
-      burpsuite
+      stegsolve
 
       # markdown
       markdownlint-cli
@@ -212,6 +214,9 @@
 
       # SDR(Macではhomebrewで入れる)
       cubicsdr
+
+      # CTF
+      burpsuite
     ];
 
   # Enable font

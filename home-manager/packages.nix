@@ -153,6 +153,7 @@
       kube-linter
       kubeconform
       helm-docs
+      chart-testing
 
       # Docker
       hadolint

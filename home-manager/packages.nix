@@ -82,6 +82,7 @@
       stegsolve
       binwalk
       steghide
+      hash-identifier
 
       # markdown
       markdownlint-cli

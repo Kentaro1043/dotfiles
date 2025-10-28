@@ -117,6 +117,7 @@
       "rstudio"
       "chatgpt-atlas"
       "vb-cable"
+      "loopback"
     ];
   };
 }

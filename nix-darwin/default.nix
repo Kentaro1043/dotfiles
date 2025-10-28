@@ -66,6 +66,7 @@
     brews = [
       "github-mcp-server"
       "r"
+      "ghidra"
     ];
     casks = [
       "iterm2"
@@ -115,7 +116,6 @@
       "anydesk"
       "rstudio"
       "chatgpt-atlas"
-      "loopback"
     ];
   };
 }

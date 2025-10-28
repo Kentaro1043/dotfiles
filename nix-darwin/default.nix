@@ -116,6 +116,7 @@
       "anydesk"
       "rstudio"
       "chatgpt-atlas"
+      "vb-cable"
     ];
   };
 }

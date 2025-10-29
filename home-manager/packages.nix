@@ -155,6 +155,7 @@
       kubeconform
       helm-docs
       chart-testing
+      kind
 
       # Docker
       hadolint

@@ -31,7 +31,6 @@
       openssl
       imagemagick
       exiftool
-      gnupg
 
       # general development
       gnumake

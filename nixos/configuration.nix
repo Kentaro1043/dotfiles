@@ -67,7 +67,15 @@
     usbutils
   ];
 
-  programs.zsh = {
-    enable = true;
+  programs = {
+    zsh = {
+      enable = true;
+    };
+
+    gnupg = {
+      agent = {
+        enable = true;
+      };
+    };
   };
 }

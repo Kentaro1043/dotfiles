@@ -49,6 +49,7 @@
       sshpass
       github-copilot-cli
       icecast
+      pkg-config
 
       # Git
       git

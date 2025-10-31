@@ -120,6 +120,7 @@
       "vb-cable"
       "loopback"
       "virtualbox"
+      "docker-machine-driver-vmware"
     ];
   };
 }

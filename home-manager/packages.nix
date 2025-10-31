@@ -50,6 +50,10 @@
       github-copilot-cli
       icecast
       pkg-config
+      libconfig
+      libshout
+      fftw
+      lame
 
       # Git
       git

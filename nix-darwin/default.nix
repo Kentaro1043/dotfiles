@@ -68,6 +68,7 @@
       "r"
       "ghidra"
       "docker-machine"
+      "docker-machine-driver-vmware"
     ];
     casks = [
       "iterm2"
@@ -120,7 +121,6 @@
       "vb-cable"
       "loopback"
       "virtualbox"
-      "docker-machine-driver-vmware"
     ];
   };
 }

@@ -210,6 +210,7 @@
       rstudio
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
+      darwin.IOKitTools
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       gdb

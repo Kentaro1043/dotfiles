@@ -67,6 +67,7 @@
       "github-mcp-server"
       "r"
       "ghidra"
+      "docker-machine"
     ];
     casks = [
       "iterm2"
@@ -118,6 +119,7 @@
       "chatgpt-atlas"
       "vb-cable"
       "loopback"
+      "virtualbox"
     ];
   };
 }

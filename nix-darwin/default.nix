@@ -121,6 +121,7 @@
       "vb-cable"
       "loopback"
       "virtualbox"
+      "balenaetcher"
     ];
   };
 }

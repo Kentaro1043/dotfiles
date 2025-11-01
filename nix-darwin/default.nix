@@ -122,6 +122,7 @@
       "loopback"
       "virtualbox"
       "balenaetcher"
+      "teamviewer"
     ];
   };
 }

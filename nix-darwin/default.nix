@@ -123,6 +123,7 @@
       "virtualbox"
       "balenaetcher"
       "teamviewer"
+      "affinity"
     ];
   };
 }

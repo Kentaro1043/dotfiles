@@ -30,7 +30,7 @@
       fzf
       openssl
       imagemagick
-      exiftool
+      file
 
       # general development
       gnumake
@@ -60,6 +60,12 @@
       foremost
       ghidra
       john
+      hashcat
+      exiftool
+      stegsolve
+      binwalk
+      steghide
+      hash-identifier
 
       # Git
       git
@@ -88,12 +94,6 @@
       zsh-nix-shell
       nix-zsh-completions
       shellcheck
-
-      # CTF
-      stegsolve
-      binwalk
-      steghide
-      hash-identifier
 
       # markdown
       markdownlint-cli

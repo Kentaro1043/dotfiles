@@ -59,6 +59,7 @@
       sleuthkit
       foremost
       ghidra
+      john
 
       # Git
       git

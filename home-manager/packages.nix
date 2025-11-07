@@ -55,6 +55,10 @@
       fftw
       lame
 
+      # CTF
+      sleuthkit
+      foremost
+
       # Git
       git
       git-filter-repo

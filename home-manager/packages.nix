@@ -58,6 +58,7 @@
       # CTF
       sleuthkit
       foremost
+      ghidra
 
       # Git
       git

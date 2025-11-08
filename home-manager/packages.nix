@@ -66,6 +66,7 @@
       binwalk
       steghide
       hash-identifier
+      zsteg
 
       # Git
       git

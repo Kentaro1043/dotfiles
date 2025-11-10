@@ -17,6 +17,9 @@
     # NixOS-WSL
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
+    # Determine Nix
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+
     # sops-nix
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +32,7 @@
     home-manager,
     nix-darwin,
     nixos-wsl,
+    determinate,
     sops-nix,
     ...
   } @ inputs: let
@@ -69,6 +73,7 @@
     darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
       modules = [
+        determinate.darwinModules.default
         ./nix-darwin
       ];
     };

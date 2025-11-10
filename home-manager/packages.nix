@@ -54,6 +54,7 @@
       libshout
       fftw
       lame
+      qemu_full
 
       # CTF
       sleuthkit

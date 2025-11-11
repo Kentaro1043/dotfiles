@@ -185,8 +185,10 @@
       })
       gqrx
       hackrf
+      soapysdr
       soapyrtlsdr
       soapyhackrf
+      soapyremote
       dump1090
       sdrpp
       airspy

@@ -26,9 +26,9 @@
 
         kubernetes = {
           disabled = false;
-          detect_files = [
-            "kustomization.yaml"
-          ];
+          # detect_files = [
+          #   "kustomization.yaml"
+          # ];
         };
 
         time = {
@@ -38,7 +38,7 @@
         };
 
         gcloud = {
-          disabled = true;
+          disabled = false;
         };
 
         # Dracula

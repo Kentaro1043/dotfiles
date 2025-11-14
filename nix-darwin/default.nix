@@ -131,6 +131,7 @@
       "balenaetcher"
       "teamviewer"
       "affinity"
+      "azookey"
     ];
   };
 }

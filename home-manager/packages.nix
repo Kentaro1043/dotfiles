@@ -31,6 +31,7 @@
       openssl
       imagemagick
       file
+      magika
 
       # general development
       gnumake

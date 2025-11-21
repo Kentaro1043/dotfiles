@@ -132,6 +132,7 @@
       "teamviewer"
       "affinity"
       "azookey"
+      "zen"
     ];
   };
 }

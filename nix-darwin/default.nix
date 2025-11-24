@@ -116,6 +116,7 @@
       "affinity"
       "azookey"
       "zen"
+      "cloudflare-warp"
     ];
   };
 }

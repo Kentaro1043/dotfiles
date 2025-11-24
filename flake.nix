@@ -84,6 +84,7 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos/configuration.nix
+          determinate.nixosModules.default
           sops-nix.nixosModules.sops
         ];
       };

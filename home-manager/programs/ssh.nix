@@ -29,18 +29,21 @@
         forwardAgent = true;
       };
       "private.okenode1.kentaro1043.com" = {
+        port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
       "private.okenode2.kentaro1043.com" = {
+        port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
       "private.okenode3.kentaro1043.com" = {
+        port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;

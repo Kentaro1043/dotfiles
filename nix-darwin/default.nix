@@ -117,6 +117,7 @@
       "azookey"
       "zen"
       "cloudflare-warp"
+      "rekordbox"
     ];
   };
 }

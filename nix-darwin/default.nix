@@ -118,6 +118,7 @@
       "zen"
       "cloudflare-warp"
       "rekordbox"
+      "ghostty"
     ];
   };
 }

@@ -27,5 +27,12 @@
 
     # gnuradio
     ".config/gnuradio/config.conf".source = ./gnuradio/config.conf;
+
+    # Ghostty
+    # only for macOS
+    ".config/ghostty/config".source =
+      if pkgs.stdenv.isDarwin
+      then ./ghostty/config
+      else null;
   };
 }

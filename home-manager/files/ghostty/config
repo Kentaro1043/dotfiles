@@ -1,0 +1,7 @@
+theme = Dracula
+font-family = JetBrainsMono Nerd Font Mono
+
+# https://github.com/ghostty-org/ghostty/discussions/5203
+font-feature = -dlig
+
+font-size = 16

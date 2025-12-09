@@ -21,7 +21,6 @@
       gemini-cli
       runme
       chroma
-      thefuck
       unimatrix
       netcat-gnu
       nmap
@@ -184,13 +183,13 @@
           lora_sdr
         ];
       })
-      gqrx
+      # gqrx
       hackrf
       soapysdr
       soapyrtlsdr
       soapyhackrf
       soapyremote
-      dump1090
+      dump1090-fa
       sdrpp
       airspy
       rtl-sdr
@@ -215,14 +214,8 @@
       # Ansible
       ansible
       ansible-lint
-      ansible-language-server
-      ansible-later
       ansible-doctor
       ansible-navigator
-
-      # R
-      R
-      rstudio
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       darwin.IOKitTools

@@ -56,6 +56,7 @@
       fftw
       lame
       qemu_full
+      rclone
 
       # CTF
       sleuthkit

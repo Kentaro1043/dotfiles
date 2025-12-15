@@ -119,6 +119,7 @@
       "cloudflare-warp"
       "rekordbox"
       "ghostty"
+      "spotify"
     ];
   };
 }

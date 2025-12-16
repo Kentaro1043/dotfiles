@@ -120,6 +120,7 @@
       "rekordbox"
       "ghostty"
       "spotify"
+      "cyberduck"
     ];
   };
 }

@@ -57,6 +57,7 @@
       lame
       qemu_full
       rclone
+      awscli2
 
       # CTF
       sleuthkit

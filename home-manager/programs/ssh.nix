@@ -160,6 +160,14 @@
         identityFile = "~/.ssh/id_ed25519";
         forwardAgent = true;
       };
+
+      # JA1YAD
+      "sakura.musenken.net" = {
+        port = 61178;
+        user = "ja1yad";
+        identityFile = "~/.ssh/id_ed25519";
+        forwardAgent = true;
+      };
     };
   };
 }

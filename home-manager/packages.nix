@@ -130,6 +130,9 @@
       ac-library.dev
       libxcrypt
 
+      # RISC-V
+      rars
+
       # python
       yapf
       virtualenv

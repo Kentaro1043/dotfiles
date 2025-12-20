@@ -193,6 +193,7 @@
         port = 61178;
         user = "ja1yad";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
     };

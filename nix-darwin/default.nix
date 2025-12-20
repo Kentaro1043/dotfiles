@@ -119,6 +119,9 @@
       "cloudflare-warp"
       "rekordbox"
       "ghostty"
+      "spotify"
+      "cyberduck"
+      "netnewswire"
     ];
   };
 }

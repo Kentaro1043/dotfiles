@@ -55,6 +55,8 @@
       fftw
       lame
       qemu_full
+      rclone
+      awscli2
 
       # CTF
       sleuthkit
@@ -126,6 +128,9 @@
       ac-library.out
       ac-library.dev
       libxcrypt
+
+      # RISC-V
+      rars
 
       # python
       yapf

@@ -121,6 +121,7 @@
       "ghostty"
       "spotify"
       "cyberduck"
+      "netnewswire"
     ];
   };
 }

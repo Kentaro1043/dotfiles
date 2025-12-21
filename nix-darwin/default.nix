@@ -122,6 +122,7 @@
       "spotify"
       "cyberduck"
       "netnewswire"
+      "dbeaver-community"
     ];
   };
 }

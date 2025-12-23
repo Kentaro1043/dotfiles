@@ -13,6 +13,9 @@
     includes = [
       "conf.d/*"
     ];
+    extraConfig = ''
+      SetEnv TERM=xterm-256color
+    '';
     matchBlocks = {
       "github.com" = {
         user = "git";

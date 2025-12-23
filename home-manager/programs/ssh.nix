@@ -10,6 +10,9 @@
     enable = true;
     forwardAgent = true;
     addKeysToAgent = "yes";
+    includes = [
+      "~/.ssh/config.d/*"
+    ];
     matchBlocks = {
       "github.com" = {
         user = "git";

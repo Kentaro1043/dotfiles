@@ -11,7 +11,7 @@
     forwardAgent = true;
     addKeysToAgent = "yes";
     includes = [
-      "config.d/*"
+      "conf.d/*"
     ];
     matchBlocks = {
       "github.com" = {

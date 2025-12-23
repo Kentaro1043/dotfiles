@@ -11,7 +11,7 @@
     forwardAgent = true;
     addKeysToAgent = "yes";
     includes = [
-      "~/.ssh/config.d/*"
+      "config.d/*"
     ];
     matchBlocks = {
       "github.com" = {

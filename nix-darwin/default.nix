@@ -123,6 +123,7 @@
       "cyberduck"
       "netnewswire"
       "dbeaver-community"
+      "medis"
     ];
   };
 }

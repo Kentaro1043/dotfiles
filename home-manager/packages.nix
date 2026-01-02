@@ -69,6 +69,7 @@
       git-filter-repo
       gh
       act
+      lazygit
 
       # AI Tools
       gemini-cli
@@ -82,6 +83,7 @@
       rclone
       sops
       age
+      lazyssh
 
       ########
       # nvim #

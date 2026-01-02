@@ -18,13 +18,11 @@ in {
     enableCompletion = true;
     autosuggestion = {
       enable = true;
-      #highlight = "fg=yellow";
     };
     syntaxHighlighting.enable = true;
 
     oh-my-zsh = {
       enable = true;
-      #theme = "agnoster";
       plugins =
         [
           "keychain"
@@ -82,13 +80,6 @@ in {
         # Enable fnm
         eval "$(fnm env --use-on-cd --shell zsh)"
 
-        # Change theme
-        function run_with_dracula {
-          printf "\033]50;SetProfile=Dracula\a"
-          "$@"
-          printf "\033]50;SetProfile=Default\a"
-        }
-
         # Enable brew when on macOS
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -106,30 +97,14 @@ in {
       ojs = "oj test --gnu-time time && oj submit main.cpp --yes";
       ojp = "oj-prepare";
 
-      # Python
-      python = "uv run python";
-      python3 = "uv run python3";
-
-      # ytdl-sub
-      sub = "ytdl-sub sub";
-
-      # changing theme
-      gemini = "run_with_dracula gemini";
-
       # reset launchpad
       rst = "sudo find 2>/dev/null /private/var/folders/ -type d -name com.apple.dock.launchpad -exec rm -rf {} +; killall Dock";
     };
 
     envExtra =
       ''
-        # Disable user@hostname for agnoster theme
-        export DEFAULT_USER="kentaro"
-
         # zsh colorize plugin
         export ZSH_COLORIZE_TOOL="chroma"
-
-        # Change SHELL
-        #export SHELL="${pkgs.zsh}/bin/zsh"
 
         # bat
         export BAT_THEME="Dracula"

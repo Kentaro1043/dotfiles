@@ -8,8 +8,7 @@
 }: {
   programs.ssh = {
     enable = true;
-    forwardAgent = true;
-    addKeysToAgent = "yes";
+    enableDefaultConfig = false;
     includes = [
       "conf.d/*"
     ];
@@ -17,27 +16,36 @@
       SetEnv TERM=xterm-256color
     '';
     matchBlocks = {
+      "*" = {
+        addKeysToAgent = "yes";
+        forwardAgent = true;
+      };
+
       "github.com" = {
         user = "git";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
       };
 
       "gce.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "oci.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "private.okenode1.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
@@ -45,6 +53,7 @@
         port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
@@ -52,6 +61,7 @@
         port = 50022;
         user = "kentaro";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
@@ -60,110 +70,132 @@
       "git.trap.jp" = {
         port = 2200;
         user = "git";
+        addKeysToAgent = "yes";
         identityFile = "~/.ssh/id_ed25519";
       };
       "c1-203.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "libra.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "taki-ws1.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "taki-ws2.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "taki-ws3.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "taki-ws4.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "e505.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "s512.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
       };
       "w933.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "s323.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "m011.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "s423.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "csc301.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "ict201.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "ict202.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "ict203.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "sce311.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "las211.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "arc321.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "eee101.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
       "iee221.tokyotech.org" = {
         user = "kentaro1043";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
 
@@ -172,6 +204,7 @@
         port = 61178;
         user = "ja1yad";
         identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
         forwardAgent = true;
       };
     };

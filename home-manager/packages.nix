@@ -84,6 +84,7 @@
       sops
       age
       lazyssh
+      lazysql
 
       ########
       # nvim #

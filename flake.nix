@@ -4,14 +4,17 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-2505.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # for uhd
+    nixpkgs-fix-uhd.url = "github:nixos/nixpkgs/4199f186ecc15a2a56db94152f855606728aeace";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # nix-darwin
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # NixOS-WSL
@@ -28,7 +31,9 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-2505,
     nixpkgs-unstable,
+    nixpkgs-fix-uhd,
     home-manager,
     nix-darwin,
     nixos-wsl,
@@ -42,7 +47,9 @@
       "aarch64-darwin"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
+    forAllSystems-2505 = nixpkgs-2505.lib.genAttrs systems;
     forAllSystems-unstable = nixpkgs-unstable.lib.genAttrs systems;
+    forAllSystems-fix-uhd = nixpkgs-fix-uhd.lib.genAttrs systems;
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 

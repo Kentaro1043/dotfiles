@@ -8,57 +8,92 @@
 }: {
   home.packages = with pkgs;
     [
-      # general
-      keychain
+      ###########
+      # General #
+      ###########
       time
-      xterm
-      ffmpeg-full
-      ytdl-sub
-      dig
-      time
-      mongosh
-      libwebp
-      gemini-cli
-      runme
-      chroma
-      unimatrix
-      netcat-gnu
-      nmap
-      ssh-to-age
-      jq
-      fzf
-      openssl
-      imagemagick
       file
       magika
+      dig
+      netcat-gnu
+      nmap
+      openssl
 
-      # general development
+      #########
+      # Tools #
+      #########
+      imagemagick
+      libwebp
+      fftw
+      ffmpeg-full
+      lame
+      ytdl-sub
+      ssh-to-age
+      qemu_full
+
+      #########
+      # Shell #
+      #########
+      xterm
+      chroma
+      keychain
+      shellcheck
+      jq
+      fzf
+      # zsh related
+      zsh-abbr
+      zsh-you-should-use
+      zsh-nix-shell
+      nix-zsh-completions
+
+      #############
+      # Dev Tools #
+      #############
+      # Task runners
       gnumake
-      oci-cli
-      unstable.minio-client
-      go-task
       xc
+      go-task
+
+      # Cloud CLI
+      google-cloud-sdk
+      awscli2
+      oci-cli
+      minio-client
+
+      # Version Managers
       devbox
+      tenv
+
+      # Git
+      git
+      git-filter-repo
+      gh
+      act
+
+      # AI Tools
+      gemini-cli
+      github-copilot-cli
+
+      # Others
       atlas
       direnv
       envsubst
       buf
-      tenv
-      google-cloud-sdk
-      awscli2
-      sshpass
-      github-copilot-cli
-      icecast
-      pkg-config
-      libconfig
-      libshout
-      fftw
-      lame
-      qemu_full
       rclone
-      awscli2
+      sops
+      age
 
-      # CTF
+      ########
+      # nvim #
+      ########
+      # AstroNvim
+      tree-sitter
+      bottom
+      ripgrep
+
+      #######
+      # CTF #
+      #######
       sleuthkit
       foremost
       ghidra
@@ -71,56 +106,40 @@
       hash-identifier
       zsteg
 
-      # Git
-      git
-      git-filter-repo
-      gh
-      act
-
-      # nvim
-      # AstroNvim
-      tree-sitter
-      bottom
-      ripgrep
-
-      # fonts
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
-      #source-han-sans
-      #source-han-sans-vf-otf
-      #source-han-sans-vf-ttf
-
-      # shell
-      powerline-fonts
-      zsh-abbr
-      zsh-you-should-use
-      zsh-nix-shell
-      nix-zsh-completions
-      shellcheck
-
-      # markdown
+      ############
+      # markdown #
+      ############
       markdownlint-cli
       markdownlint-cli2
 
-      # typst
+      #########
+      # typst #
+      #########
       typst
       tinymist
 
-      # nix
+      #######
+      # nix #
+      #######
       alejandra
 
-      # PostgreSQL
+      ##############
+      # PostgreSQL #
+      ##############
       postgresql
 
-      # C/C++
+      #########
+      # C/C++ #
+      #########
+      clang-tools
       gcc
       libllvm
       lldb
       cmake
+      pkg-config
+      libconfig
       spdlog
       spdlog.dev
-      clang-tools
       graphviz
       fmt.dev
       boost.out
@@ -129,58 +148,75 @@
       ac-library.dev
       libxcrypt
 
-      # RISC-V
+      ##########
+      # RISC-V #
+      ##########
       rars
 
-      # python
+      ##########
+      # python #
+      ##########
+      python315
       yapf
       virtualenv
 
-      # Rust
+      ########
+      # Rust #
+      ########
       rustup
 
-      # Java
+      ########
+      # Java #
+      ########
       jdk
 
-      # node version management
-      unstable.fnm
-      # node linter
-      unstable.biome
-      # Bun
-      unstable.bun
+      ########
+      # Node #
+      ########
+      fnm
+      biome
+      bun
       pnpm
 
-      # Scala
+      #########
+      # Scala #
+      #########
       scala
       scalafmt
       metals
 
-      # yaml linter
+      ########
+      # yaml #
+      ########
       yamllint
       yamlfmt
       yq
 
-      # Kubernetes related packages
+      ##############
+      # Kubernetes #
+      ##############
       kubectl
       kustomize
-      sops
-      age
       kustomize-sops
       kubeconform
       k3d
       kubernetes-helm
       kube-linter
-      kubeconform
       helm-docs
       chart-testing
       kind
 
-      # Docker
+      ##########
+      # Docker #
+      ##########
       hadolint
       dive
       lazydocker
 
-      # Radio
+      #######
+      # SDR #
+      #######
+      # GUI App
       # https://nixos.wiki/wiki/GNU_Radio
       (gnuradio.override {
         extraPackages = with gnuradioPackages; [
@@ -188,27 +224,34 @@
           lora_sdr
         ];
       })
-      # gqrx
+      rtl-sdr
+      wfview
+      deprecated.dump1090
+      #sdrangel
+      #gqrx
+      #sdrpp
+      #airspy
+      # Driver
       hackrf
       soapysdr
       soapyrtlsdr
       soapyhackrf
       soapyremote
-      dump1090-fa
-      sdrpp
-      airspy
-      rtl-sdr
-      # sdrangel
-      wfview
 
-      # kyopro
+      ##########
+      # kyopro #
+      ##########
       online-judge-tools
       online-judge-template-generator
 
-      # .NET
+      ########
+      # .NET #
+      ########
       dotnet-sdk
 
-      # Go
+      ######
+      # Go #
+      ######
       go
       golangci-lint
       goose
@@ -216,7 +259,9 @@
       sqldef
       evans
 
-      # Ansible
+      ###########
+      # Ansible #
+      ###########
       ansible
       ansible-lint
       ansible-doctor
@@ -226,6 +271,7 @@
       darwin.IOKitTools
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
+      # Macではlldbを使用
       gdb
 
       # marp

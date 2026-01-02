@@ -26,6 +26,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      outputs.overlays.nixpkgs-2505-packages
       outputs.overlays.unstable-packages
     ];
     config = {

@@ -39,7 +39,7 @@
     };
     uv = {
       enable = true;
-      package = pkgs.unstable.uv;
+      package = pkgs.uv;
     };
     yt-dlp = {
       enable = true;

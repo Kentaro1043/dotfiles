@@ -30,9 +30,6 @@
 
     # Ghostty
     # only for macOS
-    ".config/ghostty/config".source =
-      if pkgs.stdenv.isDarwin
-      then ./ghostty/config
-      else null;
+    ".config/ghostty/config".source = ./ghostty/config;
   };
 }

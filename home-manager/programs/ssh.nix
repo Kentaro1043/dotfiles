@@ -9,7 +9,18 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
+    includes = [
+      "conf.d/*"
+    ];
+    extraConfig = ''
+      SetEnv TERM=xterm-256color
+    '';
     matchBlocks = {
+      "*" = {
+        addKeysToAgent = "yes";
+        forwardAgent = true;
+      };
+
       "github.com" = {
         user = "git";
         identityFile = "~/.ssh/id_ed25519";

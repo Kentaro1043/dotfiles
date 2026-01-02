@@ -50,7 +50,6 @@ in {
           "kube-ps1"
           "terraform"
           "themes"
-          "thefuck"
           "fzf"
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin ["iterm2" "macos"]

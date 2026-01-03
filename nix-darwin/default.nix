@@ -75,14 +75,11 @@
       "docker-machine-driver-vmware"
     ];
     casks = [
-      "iterm2"
       "discord"
       "visual-studio-code"
-      "google-japanese-ime"
       "box-drive"
       "adobe-acrobat-reader"
       "slack"
-      "chatgpt"
       "obsidian"
       "unity-hub"
       "vlc"

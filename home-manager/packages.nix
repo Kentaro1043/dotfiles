@@ -208,6 +208,7 @@
       helm-docs
       chart-testing
       kind
+      kubeshark
 
       ##########
       # Docker #

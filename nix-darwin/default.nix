@@ -121,6 +121,7 @@
       "netnewswire"
       "dbeaver-community"
       "medis"
+      "kubeterm"
     ];
   };
 }

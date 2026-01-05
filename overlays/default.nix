@@ -3,10 +3,13 @@
 
   modifications = final: prev: {
     uhd =
-      (import inputs.nixpkgs-fix-uhd {
-        system = final.system;
-        config.allowUnfree = true;
-      }).uhd;
+      if prev.stdenv.isDarwin
+      then
+        (import inputs.nixpkgs-fix-uhd {
+          system = final.system;
+          config.allowUnfree = true;
+        }).uhd
+      else prev.uhd;
   };
 
   unstable-packages = final: _prev: {

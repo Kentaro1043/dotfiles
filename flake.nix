@@ -26,6 +26,9 @@
     # sops-nix
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nixvim
+    nixvim.url = "github:nix-community/nixvim/nixos-25.11";
   };
 
   outputs = {
@@ -39,6 +42,7 @@
     nixos-wsl,
     determinate,
     sops-nix,
+    nixvim,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -62,6 +66,7 @@
           inherit inputs outputs;
         };
         modules = [
+          nixvim.homeModules.nixvim
           ./home-manager/home.nix
         ];
       };

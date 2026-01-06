@@ -11,7 +11,7 @@
     ./programs/eza.nix
     ./programs/git.nix
     ./programs/lazygit.nix
-    ./programs/neovim.nix
+    ./programs/nixvim.nix
     ./programs/ruff.nix
     ./programs/ssh.nix
     ./programs/starship.nix

@@ -51,6 +51,7 @@ in {
           "terraform"
           "themes"
           "fzf"
+          "mise"
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin ["iterm2" "macos"]
         ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];

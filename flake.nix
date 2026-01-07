@@ -77,6 +77,7 @@
           inherit inputs outputs;
         };
         modules = [
+          nixvim.homeModules.nixvim
           ./home-manager/home.nix
         ];
       };

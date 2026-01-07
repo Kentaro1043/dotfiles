@@ -126,10 +126,11 @@
       #######
       alejandra
 
-      ##############
-      # PostgreSQL #
-      ##############
+      #######
+      # SQL #
+      #######
       postgresql
+      sqlfluff
 
       #########
       # C/C++ #

@@ -63,6 +63,7 @@
       # Version Managers
       devbox
       tenv
+      mise
 
       # Git
       git

@@ -38,7 +38,7 @@
         };
 
         gcloud = {
-          disabled = false;
+          disabled = true;
         };
 
         # Dracula

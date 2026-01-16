@@ -75,6 +75,7 @@
       # AI Tools
       gemini-cli
       github-copilot-cli
+      opencode
 
       # Others
       atlas

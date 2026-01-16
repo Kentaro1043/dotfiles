@@ -2,6 +2,12 @@
   programs.nixvim = {
     enable = true;
 
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+      };
+    };
+
     plugins = {
       # UI
       noice.enable = true;
@@ -21,6 +27,7 @@
       # Assistants
       which-key.enable = true;
       gitsigns.enable = true;
+      copilot-vim.enable = true;
     };
 
     colorschemes.dracula = {

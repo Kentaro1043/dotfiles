@@ -76,6 +76,7 @@
       gemini-cli
       github-copilot-cli
       opencode
+      codex
 
       # Others
       atlas

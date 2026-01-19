@@ -44,5 +44,9 @@
     yt-dlp = {
       enable = true;
     };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 }

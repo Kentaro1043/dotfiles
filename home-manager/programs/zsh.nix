@@ -135,9 +135,6 @@ in {
         # Go
         export GOPATH="$HOME/source/go"
         export PATH="$GOPATH/bin:$PATH"
-
-        # ksops
-        export PATH="${pkgs.kustomize-sops}/lib/viaduct.ai/v1/ksops:$PATH"
       ''
       + lib.optionalString pkgs.stdenv.isLinux ''
         # Marp

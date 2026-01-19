@@ -8,11 +8,6 @@
     enable = true;
     enableZshIntegration = true;
 
-    # 何故か機能しない
-    #presets = [
-    #  "bracketed-segments"
-    #];
-
     # Downloaded preset from https://starship.rs/ja-JP/presets/bracketed-segments
     settings =
       builtins.fromTOML (builtins.readFile ./bracketed-segments.toml)

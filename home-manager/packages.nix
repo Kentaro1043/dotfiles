@@ -71,6 +71,7 @@
       gh
       act
       lazygit
+      ghq
 
       # AI Tools
       gemini-cli

@@ -6,6 +6,7 @@
 }: {
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
 
     # 何故か機能しない
     #presets = [

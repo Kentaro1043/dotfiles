@@ -16,6 +16,7 @@
       };
       pull.rebase = false;
       init.defaultBranch = "main";
+      ghq.root = "~/source/repos";
     };
   };
 }

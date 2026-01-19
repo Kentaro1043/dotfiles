@@ -52,6 +52,7 @@ in {
           "themes"
           "fzf"
           "mise"
+          "zoxide"
         ]
         ++ lib.optionals pkgs.stdenv.isDarwin ["iterm2" "macos"]
         ++ lib.optionals pkgs.stdenv.isLinux ["ubuntu"];
@@ -108,6 +109,9 @@ in {
 
         # bat
         export BAT_THEME="Dracula"
+
+        # zoxide
+        export ZOXIDE_CMD_OVERRIDE="cd"
 
         # Typst font
         # known issue: https://github.com/typst/typst/issues/185

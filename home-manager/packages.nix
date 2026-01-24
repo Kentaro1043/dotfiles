@@ -30,6 +30,7 @@
       ytdl-sub
       ssh-to-age
       qemu_full
+      zstd
 
       #########
       # Shell #

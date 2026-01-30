@@ -79,7 +79,6 @@
       github-copilot-cli
       opencode
       codex
-      ollama-cuda
 
       # Others
       atlas

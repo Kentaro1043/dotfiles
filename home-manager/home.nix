@@ -20,6 +20,7 @@
     ./programs/zsh.nix
     ./programs/others.nix
     ./packages.nix
+    ./services/ollama.nix
   ];
 
   nixpkgs = {

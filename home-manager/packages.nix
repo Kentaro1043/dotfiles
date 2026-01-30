@@ -77,8 +77,8 @@
       # AI Tools
       gemini-cli
       github-copilot-cli
-      opencode
-      codex
+      unstable.opencode
+      unstable.codex
 
       # Others
       atlas

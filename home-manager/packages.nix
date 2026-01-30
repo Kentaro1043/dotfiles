@@ -78,7 +78,6 @@
       gemini-cli
       github-copilot-cli
       unstable.opencode
-      unstable.codex
 
       # Others
       atlas

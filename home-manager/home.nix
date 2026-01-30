@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./files/file.nix
+    ./programs/codex.nix
     ./programs/eza.nix
     ./programs/git.nix
     ./programs/lazygit.nix

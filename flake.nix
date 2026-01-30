@@ -96,7 +96,7 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./nixos/configuration.nix
+          ./nixos/kentaro-win/configuration.nix
           determinate.nixosModules.default
           sops-nix.nixosModules.sops
         ];

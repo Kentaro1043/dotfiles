@@ -21,7 +21,7 @@
   };
 
   sops = {
-    defaultSopsFile = ../secrets/secrets.enc.yaml;
+    defaultSopsFile = ../../secrets/secrets.enc.yaml;
     age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
 
     # https://github.com/Mic92/sops-nix#setting-a-users-password

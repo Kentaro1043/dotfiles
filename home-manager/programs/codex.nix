@@ -1,4 +1,4 @@
-{pkgs,...}: {
+{pkgs, ...}: {
   programs.codex = {
     enable = true;
     package = pkgs.unstable.codex;

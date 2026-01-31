@@ -302,6 +302,7 @@
         ];
       })
       discord
+      ghostty
     ];
 
   # Enable font

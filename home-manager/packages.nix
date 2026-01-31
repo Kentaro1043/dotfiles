@@ -76,7 +76,6 @@
 
       # AI Tools
       gemini-cli
-      github-copilot-cli
       unstable.opencode
 
       # Others

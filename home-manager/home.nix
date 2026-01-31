@@ -32,7 +32,11 @@
       outputs.overlays.unstable-packages
     ];
     config = {
-      allowUnfree = true;
+      allowUnfree = false;
+      allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "zsh-abbr" # CC BY-NC-SA 4.0 + HIPPOCRATIC LICENSE 3.0
+        "stegsolve" # Cronos License
+      ];
     };
   };
 

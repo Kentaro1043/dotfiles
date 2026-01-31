@@ -298,6 +298,7 @@
         vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
           jnoortheen.nix-ide
+          dracula-theme.theme-dracula
         ];
       })
       discord

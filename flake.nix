@@ -71,6 +71,17 @@
         ];
       };
 
+      "kentaro@kentaro-desktop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+        };
+        modules = [
+          nixvim.homeModules.nixvim
+          ./home-manager/home.nix
+        ];
+      };
+
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {

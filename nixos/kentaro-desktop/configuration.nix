@@ -38,6 +38,8 @@
       type = "ibus";
       ibus.engines = with pkgs.ibus-engines; [
         anthy
+        mozc
+        mozc-ut
       ];
     };
   };

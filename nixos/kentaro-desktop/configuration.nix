@@ -35,20 +35,36 @@
 
     inputMethod = {
       enable = true;
-      type = "ibus";
-      ibus.engines = with pkgs.ibus-engines; [
-        anthy
-        mozc-ut
+      # type = "ibus"; # for GNOME
+      type = "fcitx5"; # for KDE
+      # ibus.engines = with pkgs.ibus-engines; [
+      #   anthy
+      #   mozc-ut
+      # ];
+      fcitx5.waylandFrontend = true;
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
       ];
     };
   };
 
   # X11
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    exportConfiguration = true;
+  };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+
+    # To use Wayland (Experimental for SDDM)
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
+  };
 
   # Keymap
   services.xserver.xkb = {

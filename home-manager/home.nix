@@ -38,6 +38,7 @@
           "zsh-abbr" # CC BY-NC-SA 4.0 + HIPPOCRATIC LICENSE 3.0
           "stegsolve" # Cronos License
           "burpsuite" # unfree
+          "discord" # unfree
         ];
     };
   };

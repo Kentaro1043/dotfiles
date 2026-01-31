@@ -292,6 +292,10 @@
 
       # CTF
       burpsuite
+
+      # GUI apps
+      vscodium
+      discord
     ];
 
   # Enable font

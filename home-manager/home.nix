@@ -22,7 +22,7 @@
     ./programs/others.nix
     ./packages.nix
     ./services/ollama.nix
-    ./nixos/dconf.nix
+    # ./nixos/dconf.nix # for GNOME
   ];
 
   nixpkgs = {

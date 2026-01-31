@@ -6,13 +6,10 @@
   pkgs,
   lib,
   ...
-}: let
-  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
-in {
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    (import "${home-manager}/nixos")
   ];
 
   # Bootloader.
@@ -101,6 +98,7 @@ in {
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
     git
+    home-manager
   ];
 
   nix.settings.experimental-features = "nix-command flakes";

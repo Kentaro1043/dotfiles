@@ -32,6 +32,14 @@
       LC_TELEPHONE = "ja_JP.UTF-8";
       LC_TIME = "ja_JP.UTF-8";
     };
+
+    inputMethod = {
+      enable = true;
+      type = "ibus";
+      ibus.engines = with pkgs.ibus-engines; [
+        anthy
+      ];
+    };
   };
 
   # X11
@@ -69,11 +77,11 @@
   # Fonts
   fonts = {
     fonts = with pkgs; [
+      noto-fonts
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
-      migu
-      noto-fonts
       noto-fonts-monochrome-emoji
+      nerd-fonts.jetbrains-mono
     ];
     fontDir.enable = true;
     fontconfig = {

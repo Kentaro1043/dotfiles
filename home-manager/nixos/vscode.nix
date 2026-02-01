@@ -1,13 +1,22 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }:
 lib.mkIf pkgs.stdenv.isLinux
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package =
+      # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526
+      pkgs.vscodium.overrideAttrs (
+        final: prev: {
+          preFixup =
+            prev.preFixup
+            + "gappsWrapperArgs+=( --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.gcc.cc.lib]} )";
+        }
+      );
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         # Editor

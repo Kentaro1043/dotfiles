@@ -9,8 +9,9 @@ lib.mkIf pkgs.stdenv.isLinux
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
       dracula-theme.theme-dracula
+      eamodio.gitlens
+      jnoortheen.nix-ide
     ];
   };
 }

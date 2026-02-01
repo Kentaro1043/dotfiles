@@ -18,6 +18,7 @@
       netcat-gnu
       nmap
       openssl
+      coreutils-full
 
       #########
       # Tools #

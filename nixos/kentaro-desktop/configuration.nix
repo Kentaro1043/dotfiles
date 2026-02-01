@@ -137,6 +137,7 @@
   environment.systemPackages = with pkgs; [
     git
     home-manager
+    openvpn
   ];
 
   nix.settings.experimental-features = "nix-command flakes";

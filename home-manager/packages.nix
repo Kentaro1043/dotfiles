@@ -236,7 +236,7 @@
       })
       rtl-sdr
       wfview
-      deprecated.dump1090
+      dump1090-fa
       #sdrangel
       #gqrx
       #sdrpp

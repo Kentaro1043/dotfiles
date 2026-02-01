@@ -1,9 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}:
+lib.mkIf pkgs.stdenv.isDarwin {
   services.ollama = {
     enable = true;
-    package =
-      if pkgs.stdenv.isLinux
-      then pkgs.ollama-cuda
-      else pkgs.ollama;
+    package = pkgs.unstable.ollama;
+    acceleration = null;
   };
 }

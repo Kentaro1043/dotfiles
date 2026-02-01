@@ -120,6 +120,7 @@
       "dbeaver-community"
       "medis"
       "vscodium"
+      "openvpn"
     ];
   };
 }

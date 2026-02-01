@@ -22,6 +22,7 @@
     ./programs/others.nix
     ./packages.nix
     ./services/ollama.nix
+    ./nixos/packages.nix
     # ./nixos/dconf.nix # for GNOME
   ];
 

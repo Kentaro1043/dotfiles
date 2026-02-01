@@ -73,6 +73,7 @@
     brews = [
       "docker-machine"
       "docker-machine-driver-vmware"
+      "openvpn"
     ];
     casks = [
       "discord"
@@ -120,7 +121,6 @@
       "dbeaver-community"
       "medis"
       "vscodium"
-      "openvpn"
     ];
   };
 }

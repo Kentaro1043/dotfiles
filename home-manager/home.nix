@@ -7,7 +7,10 @@
   ...
 }: {
   imports = [
+    # Files
     ./files/file.nix
+
+    # Programs
     ./programs/codex.nix
     ./programs/eza.nix
     ./programs/git.nix
@@ -20,10 +23,16 @@
     ./programs/vim.nix
     ./programs/zsh.nix
     ./programs/others.nix
-    ./packages.nix
+
+    # Service
     ./services/ollama.nix
+
+    # NixOS
     ./nixos/packages.nix
+    ./nixos/vscode.nix
     # ./nixos/dconf.nix # for GNOME
+
+    ./packages.nix
   ];
 
   nixpkgs = {

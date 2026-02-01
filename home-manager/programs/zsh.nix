@@ -117,14 +117,6 @@ in {
         # known issue: https://github.com/typst/typst/issues/185
         export TYPST_FONT_PATHS=${noto-fonts-cjk-sans-static}/share/fonts/opentype/noto-cjk:${noto-fonts-cjk-serif-static}/share/fonts/opentype/noto-cjk
 
-        # C/C++
-        export GCC_PKG_PATH=${builtins.readFile "${pkgs.gcc}/nix-support/orig-cc"}
-        export LIBC_PKG_PATH=${builtins.readFile "${pkgs.gcc}/nix-support/orig-libc"}
-        export C_INCLUDE_PATH="$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:$LIBC_PKG_PATH/include$C_INCLUDE_PATH"
-        export CPLUS_INCLUDE_PATH="${pkgs.ac-library.dev}/include:${pkgs.boost.dev}/include:${pkgs.graphviz}/include:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}:$GCC_PKG_PATH/include/c++/${pkgs.gcc.version}//${pkgs.stdenv.hostPlatform.config}:$GCC_PKG_PATH/include/c++//backward:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include:$GCC_PKG_PATH/include:$GCC_PKG_PATH/lib/gcc/${pkgs.stdenv.hostPlatform.config}/${pkgs.gcc.version}/include-fixed:$LIBC_PKG_PATH/include:$CPLUS_INCLUDE_PATH"
-        export CMAKE_MODULE_PATH="${pkgs.spdlog.dev}/lib/cmake/spdlog:${pkgs.fmt.dev}/lib/cmake/fmt"
-        export LD_LIBRARY_PATH="${pkgs.gnuradio}/lib:$LD_LIBRARY_PATH"
-
         # Python
         export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
 

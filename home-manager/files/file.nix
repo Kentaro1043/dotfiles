@@ -31,5 +31,8 @@
     # Ghostty
     # only for macOS
     ".config/ghostty/config".source = ./ghostty/config;
+
+    # Continue VSCode Extention
+    ".continue/config.yaml".source = ./continue/config.yaml;
   };
 }

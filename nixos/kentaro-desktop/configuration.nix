@@ -1,9 +1,25 @@
 {
+  outputs,
   config,
   pkgs,
   lib,
   ...
 }: {
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
+    config = {
+      allowUnfree = false;
+      allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+          "nvidia-x11" # unfreeRedistributable
+          "nvidia-settings" # unfreeRedistributable
+        ];
+    };
+  };
+
   imports = [
     ./hardware-configuration.nix
   ];
@@ -52,6 +68,7 @@
   services.xserver = {
     enable = true;
     exportConfiguration = true;
+    videoDrivers = ["nvidia"];
   };
 
   # Enable the GNOME Desktop Environment.

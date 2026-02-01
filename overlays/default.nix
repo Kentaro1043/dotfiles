@@ -15,14 +15,7 @@
   unstable-packages = final: _prev: {
     unstable = import inputs.nixpkgs-unstable {
       system = final.system;
-      config.allowUnfree = false;
-    };
-  };
-
-  nixpkgs-2505-packages = final: _prev: {
-    deprecated = import inputs.nixpkgs-2505 {
-      system = final.system;
-      config.allowUnfree = false;
+      config = final.config;
     };
   };
 }

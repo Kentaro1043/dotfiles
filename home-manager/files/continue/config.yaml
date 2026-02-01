@@ -9,9 +9,9 @@ models:
       - chat
       - edit
       - apply
-  - name: Qwen2.5-Coder 7B
+  - name: Qwen2.5-Coder 7B Instruct
     provider: ollama
-    model: qwen2.5-coder:7b
+    model: qwen2.5-coder:7b-instruct
     roles:
       - chat
       - edit

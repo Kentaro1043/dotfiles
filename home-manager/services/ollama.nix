@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   services.ollama = {
     enable = true;
-    package = pkgs.unstable.ollama;
+    package =
+      if pkgs.stdenv.isLinux
+      then pkgs.ollama-cuda
+      else pkgs.ollama;
   };
 }

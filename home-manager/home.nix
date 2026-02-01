@@ -50,6 +50,10 @@
           "stegsolve" # Cronos License
           "burpsuite" # unfree
           "discord" # unfree
+          "cuda_cudart" # CUDA EULA
+          "cuda_nvcc" # CUDA EULA
+          "cuda_cccl" # CUDA EULA
+          "libcublas" # CUDA EULA
         ];
     };
   };

@@ -5,21 +5,7 @@
   config,
   pkgs,
   ...
-}: let
-  unfreeList = [
-    "zsh-abbr" # CC BY-NC-SA 4.0 + HIPPOCRATIC LICENSE 3.0
-    "stegsolve" # Cronos License
-    "burpsuite" # unfree
-    "discord" # unfree
-    "cuda_cudart" # CUDA EULA
-    "cuda_nvcc" # CUDA EULA
-    "cuda_cccl" # CUDA EULA
-    "libcublas" # CUDA EULA
-    "nvidia-x11" # unfreeRedistributable
-  ];
-  myAllowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) unfreeList;
-in {
+}: {
   imports = [
     # Files
     ./files/file.nix
@@ -57,7 +43,13 @@ in {
     ];
     config = {
       allowUnfree = false;
-      allowUnfreePredicate = myAllowUnfreePredicate;
+      allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+          "zsh-abbr" # CC BY-NC-SA 4.0 + HIPPOCRATIC LICENSE 3.0
+          "stegsolve" # Cronos License
+          "burpsuite" # unfree
+          "discord" # unfree
+        ];
     };
   };
 

@@ -9,6 +9,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      outputs.overlays.unstable-packages
     ];
     config = {
       allowUnfree = false;
@@ -16,12 +17,18 @@
         builtins.elem (lib.getName pkg) [
           "nvidia-x11" # unfreeRedistributable
           "nvidia-settings" # unfreeRedistributable
+          "cuda_cudart" # CUDA EULA
+          "cuda_nvcc" # CUDA EULA
+          "cuda_cccl" # CUDA EULA
+          "libcublas" # CUDA EULA
+          "nvidia-x11" # unfreeRedistributable
         ];
     };
   };
 
   imports = [
     ./hardware-configuration.nix
+    ./services/ollama.nix
   ];
 
   # OS

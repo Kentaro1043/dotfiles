@@ -29,6 +29,7 @@
   imports = [
     ./hardware-configuration.nix
     ./services/ollama.nix
+    ./services/tailscale.nix
   ];
 
   # OS

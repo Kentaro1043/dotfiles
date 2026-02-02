@@ -141,7 +141,6 @@
       #########
       clang-tools
       gcc
-      pkgsCross.riscv64.buildPackages.gcc
       libllvm
       lldb
       cmake

@@ -316,6 +316,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-fix-dump1090": {
+      "locked": {
+        "lastModified": 1751753239,
+        "narHash": "sha256-6jwgvFRC4vt02QezKr+b5tstwco0/GLnVUs9mLquPek=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9318efde7bb08b14d3e45f0ddc9fe4df8f936ad5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9318efde7bb08b14d3e45f0ddc9fe4df8f936ad5",
+        "type": "github"
+      }
+    },
     "nixpkgs-fix-uhd": {
       "locked": {
         "lastModified": 1757808619,
@@ -478,6 +494,7 @@
         "nix-darwin": "nix-darwin",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_4",
+        "nixpkgs-fix-dump1090": "nixpkgs-fix-dump1090",
         "nixpkgs-fix-uhd": "nixpkgs-fix-uhd",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",

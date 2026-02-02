@@ -7,6 +7,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # for uhd
     nixpkgs-fix-uhd.url = "github:nixos/nixpkgs/4199f186ecc15a2a56db94152f855606728aeace";
+    # for dump1090-fa
+    nixpkgs-fix-dump1090.url = "github:nixos/nixpkgs/9318efde7bb08b14d3e45f0ddc9fe4df8f936ad5";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.11";

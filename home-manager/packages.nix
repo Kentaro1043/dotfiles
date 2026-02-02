@@ -77,6 +77,7 @@
 
       # AI Tools
       unstable.gemini-cli
+      unstable.qwen-code
 
       # Others
       atlas

@@ -16,6 +16,7 @@
     ./programs/git.nix
     ./programs/lazygit.nix
     ./programs/nixvim.nix
+    ./programs/opencode.nix
     ./programs/ruff.nix
     ./programs/ssh.nix
     ./programs/starship.nix

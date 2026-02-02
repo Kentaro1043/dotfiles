@@ -76,8 +76,7 @@
       ghq
 
       # AI Tools
-      gemini-cli
-      unstable.opencode
+      unstable.gemini-cli
 
       # Others
       atlas

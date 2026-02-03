@@ -160,6 +160,7 @@
       # RISC-V #
       ##########
       rars
+      pkgsCross.riscv64.glibc.dev
 
       ##########
       # python #

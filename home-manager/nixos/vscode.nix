@@ -18,6 +18,7 @@ lib.mkIf pkgs.stdenv.isLinux
         }
       );
     profiles.default = {
+      userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
       extensions = with pkgs.vscode-extensions;
         [
           # Editor

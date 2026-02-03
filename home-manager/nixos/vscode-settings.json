@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Dracula Theme",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "nix.formatterPath": "alejandra",
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    "nixd": {
+      "formatting": {
+        "command": [
+          "alejandra"
+        ]
+      }
+    },
+    "nixpkgs": {
+      "expr": "import (builtins.getFlake \"${workspaceFolder}\").inputs.nixpkgs { }"
+    }
+  }
+}

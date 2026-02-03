@@ -29,6 +29,7 @@ lib.mkIf pkgs.stdenv.isLinux
 
         # Languages
         jnoortheen.nix-ide
+        llvm-vs-code-extensions.vscode-clangd
       ];
     };
   };

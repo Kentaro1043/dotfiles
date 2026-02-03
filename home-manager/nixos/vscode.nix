@@ -18,19 +18,28 @@ lib.mkIf pkgs.stdenv.isLinux
         }
       );
     profiles.default = {
-      extensions = with pkgs.vscode-extensions; [
-        # Editor
-        dracula-theme.theme-dracula
-        eamodio.gitlens
+      extensions = with pkgs.vscode-extensions;
+        [
+          # Editor
+          dracula-theme.theme-dracula
+          eamodio.gitlens
 
-        # AI
-        continue.continue
-        rooveterinaryinc.roo-cline
+          # AI
+          continue.continue
+          rooveterinaryinc.roo-cline
 
-        # Languages
-        jnoortheen.nix-ide
-        llvm-vs-code-extensions.vscode-clangd
-      ];
+          # Languages
+          jnoortheen.nix-ide
+          llvm-vs-code-extensions.vscode-clangd
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "qwen-code-vscode-ide-companion";
+            publisher = "qwenlm";
+            version = "0.9.0";
+            sha256 = "sha256-x/1VTGaVvFytGc3p4PFOifP3PoIWMiDyuEyw0KhVH/g=";
+          }
+        ];
     };
   };
 }

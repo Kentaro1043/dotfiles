@@ -2,6 +2,7 @@
   "editor.formatOnSave": true,
   "workbench.colorTheme": "Dracula Theme",
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "nix.formatterPath": "alejandra",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nixd",

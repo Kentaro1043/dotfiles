@@ -129,6 +129,7 @@
       # nix #
       #######
       alejandra
+      nixd
 
       #######
       # SQL #

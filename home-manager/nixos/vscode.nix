@@ -17,6 +17,10 @@ lib.mkIf pkgs.stdenv.isLinux
             + "gappsWrapperArgs+=( --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.gcc.cc.lib]} )";
         }
       );
+    # Don't work
+    #argvSettings = {
+    #  "locale" = "ja";
+    #};
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
       extensions = with pkgs.vscode-extensions;
@@ -43,4 +47,6 @@ lib.mkIf pkgs.stdenv.isLinux
         ];
     };
   };
+  # Runtime Config
+  home.file.".vscode-oss/argv.json".source = ./vscode-argv.json;
 }

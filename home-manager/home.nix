@@ -7,31 +7,10 @@
   ...
 }: {
   imports = [
-    # Files
-    ./files/file.nix
-
-    # Programs
-    ./programs/codex.nix
-    ./programs/eza.nix
-    ./programs/git.nix
-    ./programs/lazygit.nix
-    ./programs/nixvim.nix
-    ./programs/opencode.nix
-    ./programs/ruff.nix
-    ./programs/ssh.nix
-    ./programs/starship.nix
-    ./programs/texlive.nix
-    ./programs/vim.nix
-    ./programs/vscode.nix
-    ./programs/zsh.nix
-    ./programs/others.nix
-
-    # Service
-    ./services/ollama.nix
-
-    # NixOS
-    ./nixos/packages.nix
-    # ./nixos/dconf.nix # for GNOME
+    ./files
+    ./programs
+    ./services
+    ./nixos
 
     ./packages.nix
   ];

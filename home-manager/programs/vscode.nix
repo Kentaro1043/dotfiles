@@ -41,6 +41,12 @@
             version = "0.9.0";
             sha256 = "sha256-x/1VTGaVvFytGc3p4PFOifP3PoIWMiDyuEyw0KhVH/g=";
           }
+          {
+            name = "opencode";
+            publisher = "sst-dev";
+            version = "0.0.13";
+            sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ=";
+          }
         ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

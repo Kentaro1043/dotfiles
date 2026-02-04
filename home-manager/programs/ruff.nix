@@ -1,11 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.ruff = {
     enable = true;
     package = pkgs.unstable.ruff;

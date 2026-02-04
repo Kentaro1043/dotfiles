@@ -1,11 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.texlive = {
     enable = true;
     packageSet = pkgs.texlive;

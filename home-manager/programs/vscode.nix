@@ -42,6 +42,8 @@
             sha256 = "sha256-x/1VTGaVvFytGc3p4PFOifP3PoIWMiDyuEyw0KhVH/g=";
           }
         ];
+      enableExtensionUpdateCheck = false;
+      enableMcpIntegration = true;
     };
   };
   # Runtime Config

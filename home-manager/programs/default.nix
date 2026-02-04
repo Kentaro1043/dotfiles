@@ -4,6 +4,7 @@
     ./eza.nix
     ./git.nix
     ./lazygit.nix
+    ./mcp.nix
     ./nixvim.nix
     ./opencode.nix
     ./ruff.nix

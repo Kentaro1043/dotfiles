@@ -9,5 +9,6 @@ lib.mkIf pkgs.stdenv.isLinux
     # GUI apps
     discord
     ghostty
+    spotify
   ];
 }

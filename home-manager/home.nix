@@ -27,6 +27,7 @@
           "stegsolve" # Cronos License
           "burpsuite" # unfree
           "discord" # unfree
+          "spotify" # unfree
         ];
     };
   };

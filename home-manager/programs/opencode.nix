@@ -20,6 +20,12 @@
             "deepseek-v3.1:671b-cloud" = {
               name = "deepseek-v3.1:671b-cloud";
             };
+            "gpt-oss:20b-cloud" = {
+              name = "gpt-oss:20b-cloud";
+            };
+            "gpt-oss:120b-cloud" = {
+              name = "gpt-oss:120b-cloud";
+            };
           };
         };
       };

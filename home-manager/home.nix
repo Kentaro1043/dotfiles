@@ -22,6 +22,7 @@
     ./programs/starship.nix
     ./programs/texlive.nix
     ./programs/vim.nix
+    ./programs/vscode.nix
     ./programs/zsh.nix
     ./programs/others.nix
 
@@ -30,7 +31,6 @@
 
     # NixOS
     ./nixos/packages.nix
-    ./nixos/vscode.nix
     # ./nixos/dconf.nix # for GNOME
 
     ./packages.nix

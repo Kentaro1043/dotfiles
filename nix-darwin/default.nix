@@ -118,7 +118,6 @@
       "netnewswire"
       "dbeaver-community"
       "medis"
-      "vscodium"
     ];
   };
 }

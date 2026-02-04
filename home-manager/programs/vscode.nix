@@ -3,9 +3,7 @@
   pkgs,
   config,
   ...
-}:
-lib.mkIf pkgs.stdenv.isLinux
-{
+}: {
   programs.vscode = {
     enable = true;
     package =

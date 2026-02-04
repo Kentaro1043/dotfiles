@@ -1,4 +1,8 @@
-{...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.mcp = {
     enable = true;
     servers = {
@@ -11,12 +15,17 @@
       };
       filesystem = {
         command = "npx";
-        args = [
-          "-y"
-          "@modelcontextprotocol/server-filesystem"
-          "/home/kentaro/source/repos"
-          "/Users/kentaro/source/repos"
-        ];
+        args =
+          [
+            "-y"
+            "@modelcontextprotocol/server-filesystem"
+          ]
+          ++ lib.optionals pkgs.stdenv.isDarwin [
+            "/Users/kentaro/source/repos"
+          ]
+          ++ lib.optionals pkgs.stdenv.isLinux [
+            "/home/kentaro/source/repos"
+          ];
       };
       fetch = {
         command = "uvx";

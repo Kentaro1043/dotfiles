@@ -27,5 +27,6 @@
     themes = {
       dracula = ./opencode-dracula.json;
     };
+    enableMcpIntegration = true;
   };
 }

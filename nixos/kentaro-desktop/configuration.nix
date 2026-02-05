@@ -21,12 +21,15 @@
           "cuda_cccl" # CUDA EULA
           "libcublas" # CUDA EULA
           "nvidia-x11" # unfreeRedistributable
+          "steam" # unfreeRedistributable
+          "steam-unwrapped" # unfreeRedistributable
         ];
     };
   };
 
   imports = [
     ./hardware-configuration.nix
+    ./programs/steam.nix
     ./services/ollama.nix
     ./services/tailscale.nix
   ];

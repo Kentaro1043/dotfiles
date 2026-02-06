@@ -26,6 +26,9 @@
             "gpt-oss:120b-cloud" = {
               name = "gpt-oss:120b-cloud";
             };
+            "qwen3-coder-next" = {
+              name = "qwen3-coder-next:cloud";
+            };
           };
         };
       };

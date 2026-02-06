@@ -1,0 +1,16 @@
+{
+  "$version": 2,
+  "ide": {
+    "hasSeenNudge": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "openai",
+      "apiKey": "placeholder",
+      "baseUrl": "http://localhost:11434/v1"
+    }
+  },
+  "model": {
+    "name": "qwen3-coder-next:cloud"
+  }
+}

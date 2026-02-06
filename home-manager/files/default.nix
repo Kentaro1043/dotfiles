@@ -27,5 +27,8 @@
 
     # Continue VSCode Extention
     ".continue/config.yaml".source = ./continue/config.yaml;
+
+    # Qwen Code
+    ".qwen/settings.json".source = ./qwen/qwen-settings.json;
   };
 }

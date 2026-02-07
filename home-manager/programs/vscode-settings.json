@@ -18,5 +18,8 @@
     "nixpkgs": {
       "expr": "import (builtins.getFlake \"${workspaceFolder}\").inputs.nixpkgs { }"
     }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

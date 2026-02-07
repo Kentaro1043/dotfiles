@@ -25,7 +25,6 @@
           # Editor
           dracula-theme.theme-dracula
           eamodio.gitlens
-          prettier.prettier-vscode
 
           # AI
           continue.continue
@@ -38,6 +37,9 @@
           jnoortheen.nix-ide
           llvm-vs-code-extensions.vscode-clangd
           redhat.vscode-yaml
+        ]
+        ++ [
+          pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

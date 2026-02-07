@@ -30,9 +30,13 @@
           continue.continue
           rooveterinaryinc.roo-cline
 
+          # Platform
+          ms-kubernetes-tools.vscode-kubernetes-tools
+
           # Languages
           jnoortheen.nix-ide
           llvm-vs-code-extensions.vscode-clangd
+          redhat.vscode-yaml
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

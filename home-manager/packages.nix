@@ -274,6 +274,11 @@
       ansible-lint
       ansible-doctor
       ansible-navigator
+
+      ###############
+      # Other tools #
+      ###############
+      unstable.protonplus
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       darwin.IOKitTools

@@ -25,6 +25,7 @@
           # Editor
           dracula-theme.theme-dracula
           eamodio.gitlens
+          prettier.prettier-vscode
 
           # AI
           continue.continue

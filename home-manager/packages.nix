@@ -29,6 +29,7 @@
       ssh-to-age
       qemu_full
       zstd
+      prettier
 
       #########
       # Shell #

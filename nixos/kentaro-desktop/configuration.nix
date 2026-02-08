@@ -29,7 +29,7 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./programs/steam.nix
+    ./programs
     ./services/ollama.nix
     ./services/tailscale.nix
   ];

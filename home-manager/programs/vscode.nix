@@ -29,7 +29,6 @@
           # AI
           continue.continue
           rooveterinaryinc.roo-cline
-          anthropic.claude-code # Unfree
 
           # Platform
           ms-kubernetes-tools.vscode-kubernetes-tools
@@ -41,6 +40,7 @@
         ]
         ++ [
           pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
+          pkgs.unstable.vscode-extensions.anthropic.claude-code # Unfree
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

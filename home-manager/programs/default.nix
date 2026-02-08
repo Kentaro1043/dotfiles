@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./claude-code.nix
     ./codex.nix
     ./eza.nix
     ./git.nix

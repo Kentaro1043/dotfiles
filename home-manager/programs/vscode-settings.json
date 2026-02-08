@@ -10,16 +10,22 @@
   "nix.serverSettings": {
     "nixd": {
       "formatting": {
-        "command": [
-          "alejandra"
-        ]
+        "command": ["alejandra"]
       }
     },
     "nixpkgs": {
       "expr": "import (builtins.getFlake \"${workspaceFolder}\").inputs.nixpkgs { }"
     }
   },
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/continuedev/continue/refs/heads/main/extensions/vscode/config_schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
   "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

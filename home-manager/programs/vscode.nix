@@ -24,6 +24,7 @@
         [
           # Editor
           dracula-theme.theme-dracula
+          pkief.material-icon-theme
           eamodio.gitlens
 
           # AI

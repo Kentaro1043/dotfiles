@@ -118,6 +118,7 @@
       "netnewswire"
       "dbeaver-community"
       "medis"
+      "claude-code"
     ];
   };
 }

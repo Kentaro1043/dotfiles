@@ -28,8 +28,8 @@
           "burpsuite" # unfree
           "discord" # unfree
           "spotify" # unfree
-          "claude-code" # unfree
-          "vscode-extension-anthropic-claude-code" # unfree
+          # "claude-code" # unfree
+          # "vscode-extension-anthropic-claude-code" # unfree
         ];
     };
   };

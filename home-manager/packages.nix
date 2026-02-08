@@ -154,6 +154,11 @@
       ac-library.out
       ac-library.dev
       libxcrypt
+      libxml2.dev
+      libxslt.dev
+      libffi.out
+      libffi.dev
+      libffi.info
 
       ##########
       # RISC-V #
@@ -163,7 +168,7 @@
       ##########
       # python #
       ##########
-      python315
+      python314
       yapf
       virtualenv
 

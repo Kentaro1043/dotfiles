@@ -114,6 +114,9 @@ in {
         # known issue: https://github.com/typst/typst/issues/185
         export TYPST_FONT_PATHS=${noto-fonts-cjk-sans-static}/share/fonts/opentype/noto-cjk:${noto-fonts-cjk-serif-static}/share/fonts/opentype/noto-cjk
 
+        # C/C++
+        export PKG_CONFIG_PATH=${pkgs.libffi.dev}/lib/pkgconfig
+
         # Python
         export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
 

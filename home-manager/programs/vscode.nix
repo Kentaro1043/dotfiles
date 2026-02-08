@@ -28,7 +28,7 @@
 
           # AI
           continue.continue
-          rooveterinaryinc.roo-cline
+          # rooveterinaryinc.roo-cline
 
           # Platform
           ms-kubernetes-tools.vscode-kubernetes-tools

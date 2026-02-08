@@ -29,6 +29,7 @@
           # AI
           continue.continue
           rooveterinaryinc.roo-cline
+          anthropic.claude-code # Unfree
 
           # Platform
           ms-kubernetes-tools.vscode-kubernetes-tools

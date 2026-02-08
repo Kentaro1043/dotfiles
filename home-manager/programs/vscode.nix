@@ -40,7 +40,6 @@
         ]
         ++ [
           pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
-          # pkgs.unstable.vscode-extensions.anthropic.claude-code # Unfree
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

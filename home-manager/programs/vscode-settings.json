@@ -1,6 +1,7 @@
 {
   "editor.formatOnSave": true,
   "workbench.colorTheme": "Dracula Theme",
+  "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "git.confirmSync": false,

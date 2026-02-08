@@ -33,6 +33,12 @@
           "mcp-server-fetch"
         ];
       };
+      ddg-search = {
+        command = "uvx";
+        args = [
+          "duckduckgo-mcp-server"
+        ];
+      };
       sequential-thinking = {
         command = "npx";
         args = [

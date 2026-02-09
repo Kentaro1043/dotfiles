@@ -165,6 +165,7 @@
     git
     home-manager
     openvpn
+    kdePackages.bluedevil
   ];
 
   nix.settings.experimental-features = "nix-command flakes";

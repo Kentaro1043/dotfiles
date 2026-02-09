@@ -165,6 +165,8 @@
     git
     home-manager
     openvpn
+    bluez
+    kdePackages.bluez-qt
     kdePackages.bluedevil
   ];
 

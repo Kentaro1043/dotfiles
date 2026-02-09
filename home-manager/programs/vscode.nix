@@ -47,8 +47,8 @@
           {
             name = "qwen-code-vscode-ide-companion";
             publisher = "qwenlm";
-            version = "0.9.1";
-            sha256 = "sha256-zGFP2/xsiFIGJK8SMi39HRvrZWqCdWxvdwXJPLb4tSc=";
+            version = "0.10.0";
+            sha256 = "sha256-RHq5d/6xr9llhVnWjc1+1kZ6MnKJa3RrokC9+HqW5qk=";
           }
           {
             name = "opencode";

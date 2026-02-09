@@ -10,5 +10,6 @@ lib.mkIf pkgs.stdenv.isLinux
     discord
     ghostty
     spotify
+    joplin-desktop
   ];
 }

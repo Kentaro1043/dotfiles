@@ -122,6 +122,7 @@
       #########
       typst
       tinymist
+      typstyle
 
       #######
       # nix #

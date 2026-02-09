@@ -38,6 +38,7 @@
           jnoortheen.nix-ide
           llvm-vs-code-extensions.vscode-clangd
           redhat.vscode-yaml
+          myriad-dreamin.tinymist
         ]
         ++ [
           pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない

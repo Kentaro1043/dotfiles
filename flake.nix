@@ -30,19 +30,21 @@
 
     # nixvim
     nixvim.url = "github:nix-community/nixvim/nixos-25.11";
+
+    # nix-vscode-extensions
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
-    nixpkgs-fix-uhd,
     home-manager,
     nix-darwin,
     nixos-wsl,
     determinate,
     sops-nix,
     nixvim,
+    nix-vscode-extensions,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -51,8 +53,6 @@
       "aarch64-darwin"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
-    forAllSystems-unstable = nixpkgs-unstable.lib.genAttrs systems;
-    forAllSystems-fix-uhd = nixpkgs-fix-uhd.lib.genAttrs systems;
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
@@ -84,7 +84,7 @@
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
-          inherit inputs outputs;
+          inherit inputs outputs nix-vscode-extensions;
         };
         modules = [
           nixvim.homeModules.nixvim

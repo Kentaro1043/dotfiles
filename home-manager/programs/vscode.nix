@@ -43,33 +43,13 @@
           golang.go
         ]
         ++ [
-          pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
+          pkgs.nix-vscode-extensions.vscode-marketplace.qwenlm.qwen-code-vscode-ide-companion
+          pkgs.nix-vscode-extensions.vscode-marketplace.sst-dev.opencode
+          pkgs.nix-vscode-extensions.vscode-marketplace.vivaxy.vscode-conventional-commits
+          pkgs.nix-vscode-extensions.vscode-marketplace.jetpack-io.devbox
         ]
-        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            name = "qwen-code-vscode-ide-companion";
-            publisher = "qwenlm";
-            version = "0.10.0";
-            sha256 = "sha256-RHq5d/6xr9llhVnWjc1+1kZ6MnKJa3RrokC9+HqW5qk=";
-          }
-          {
-            name = "opencode";
-            publisher = "sst-dev";
-            version = "0.0.13";
-            sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ=";
-          }
-          {
-            name = "vscode-conventional-commits";
-            publisher = "vivaxy";
-            version = "1.27.0";
-            sha256 = "sha256-yZ3pVBJGcwSNlN7LvFppAuNomxlQDTvA42kUpsZLj7Y=";
-          }
-          {
-            name = "devbox";
-            publisher = "jetpack-io";
-            version = "0.1.8";
-            sha256 = "sha256-2t18JIcjZT4+TDGPLGroLHujl9jtv0/DvOFKW0GNUc0=";
-          }
+        ++ [
+          pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
         ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

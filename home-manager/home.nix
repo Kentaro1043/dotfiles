@@ -2,6 +2,7 @@
   outputs,
   lib,
   pkgs,
+  nix-vscode-extensions,
   ...
 }: {
   imports = [
@@ -18,6 +19,7 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+      nix-vscode-extensions.overlays.default
     ];
     config = {
       allowUnfree = false;

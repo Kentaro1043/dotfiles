@@ -78,6 +78,9 @@ in {
         # Enable fnm
         eval "$(fnm env --use-on-cd --shell zsh)"
 
+        # flux completion
+        command -v flux >/dev/null && . <(flux completion zsh)
+
         # Enable brew when on macOS
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"

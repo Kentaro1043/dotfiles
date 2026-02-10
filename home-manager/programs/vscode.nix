@@ -47,6 +47,7 @@
           pkgs.nix-vscode-extensions.vscode-marketplace.sst-dev.opencode
           pkgs.nix-vscode-extensions.vscode-marketplace.vivaxy.vscode-conventional-commits
           pkgs.nix-vscode-extensions.vscode-marketplace.jetpack-io.devbox
+          pkgs.nix-vscode-extensions.vscode-marketplace.astral-sh.ty
         ]
         ++ [
           pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない

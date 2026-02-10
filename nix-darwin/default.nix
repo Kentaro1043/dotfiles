@@ -119,6 +119,7 @@
       "dbeaver-community"
       "medis"
       "claude-code"
+      "freelens"
     ];
   };
 }

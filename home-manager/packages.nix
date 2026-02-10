@@ -219,6 +219,7 @@
       chart-testing
       kind
       kubeshark
+      fluxcd
 
       ##########
       # Docker #

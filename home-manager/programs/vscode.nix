@@ -38,7 +38,9 @@
           jnoortheen.nix-ide
           llvm-vs-code-extensions.vscode-clangd
           redhat.vscode-yaml
+          redhat.ansible
           myriad-dreamin.tinymist
+          golang.go
         ]
         ++ [
           pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
@@ -55,6 +57,18 @@
             publisher = "sst-dev";
             version = "0.0.13";
             sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ=";
+          }
+          {
+            name = "vscode-conventional-commits";
+            publisher = "vivaxy";
+            version = "1.27.0";
+            sha256 = "sha256-yZ3pVBJGcwSNlN7LvFppAuNomxlQDTvA42kUpsZLj7Y=";
+          }
+          {
+            name = "devbox";
+            publisher = "jetpack-io";
+            version = "0.1.8";
+            sha256 = "sha256-2t18JIcjZT4+TDGPLGroLHujl9jtv0/DvOFKW0GNUc0=";
           }
         ];
       enableExtensionUpdateCheck = false;

@@ -120,6 +120,7 @@
       "medis"
       "claude-code"
       "freelens"
+      "pycharm"
     ];
   };
 }

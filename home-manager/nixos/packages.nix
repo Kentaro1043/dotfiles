@@ -11,5 +11,7 @@ lib.mkIf pkgs.stdenv.isLinux
     ghostty
     spotify
     joplin-desktop
+    jetbrains.pycharm-oss
+    rpi-imager
   ];
 }

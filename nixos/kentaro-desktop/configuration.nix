@@ -43,6 +43,10 @@
     hostName = "kentaro-desktop";
     networkmanager.enable = true;
   };
+  services.avahi = {
+    enable = true;
+    openFirewall = true;
+  };
   time.timeZone = "Asia/Tokyo";
   i18n = {
     defaultLocale = "ja_JP.UTF-8";
@@ -151,7 +155,7 @@
   users.users.kentaro = {
     isNormalUser = true;
     description = "Kentaro";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [
       #  thunderbird
@@ -169,6 +173,9 @@
     kdePackages.bluez-qt
     kdePackages.bluedevil
   ];
+  virtualisation.docker = {
+    enable = true;
+  };
 
   nix.settings.experimental-features = "nix-command flakes";
 

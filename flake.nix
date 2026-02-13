@@ -73,7 +73,7 @@
       "kentaro@kentaro-desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
-          inherit inputs outputs;
+          inherit inputs outputs nix-vscode-extensions;
         };
         modules = [
           nixvim.homeModules.nixvim

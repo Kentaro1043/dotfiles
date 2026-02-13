@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
+  "explorer.compactFolders": false,
   "workbench.colorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.linux": "zsh",

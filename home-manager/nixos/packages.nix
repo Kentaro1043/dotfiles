@@ -12,5 +12,6 @@ lib.mkIf pkgs.stdenv.isLinux
     spotify
     joplin-desktop
     jetbrains.pycharm-oss
+    rpi-imager
   ];
 }

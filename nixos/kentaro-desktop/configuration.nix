@@ -43,6 +43,10 @@
     hostName = "kentaro-desktop";
     networkmanager.enable = true;
   };
+  services.avahi = {
+    enable = true;
+    openFirewall = true;
+  };
   time.timeZone = "Asia/Tokyo";
   i18n = {
     defaultLocale = "ja_JP.UTF-8";

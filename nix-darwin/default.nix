@@ -121,6 +121,7 @@
       "claude-code"
       "freelens"
       "pycharm"
+      "raspberry-pi-imager"
     ];
   };
 }

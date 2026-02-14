@@ -30,6 +30,7 @@
       qemu_full
       zstd
       prettier
+      e2fsprogs
 
       #########
       # Shell #

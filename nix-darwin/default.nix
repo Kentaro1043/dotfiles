@@ -122,6 +122,7 @@
       "freelens"
       "pycharm"
       "raspberry-pi-imager"
+      "krita"
     ];
   };
 }

@@ -14,6 +14,32 @@
           wire_api = "chat";
         };
       };
+      mcp_servers = {
+        context7 = {
+          command = "npx";
+          args = ["-y" "@upstash/context7-mcp"];
+        };
+        filesystem = {
+          command = "npx";
+          args = ["-y" "@modelcontextprotocol/server-filesystem" "/home/kentaro/source/repos"];
+        };
+        fetch = {
+          command = "uvx";
+          args = ["mcp-server-fetch"];
+        };
+        ddg-search = {
+          command = "uvx";
+          args = ["duckduckgo-mcp-server"];
+        };
+        sequential-thinking = {
+          command = "npx";
+          args = ["-y" "@modelcontextprotocol/server-sequential-thinking"];
+        };
+        serena = {
+          command = "uvx";
+          args = ["--from" "git+https://github.com/oraios/serena" "serena" "start-mcp-server" "--context" "ide" "--project-from-cwd"];
+        };
+      };
     };
   };
 }

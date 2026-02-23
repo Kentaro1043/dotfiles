@@ -6,11 +6,20 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "git.confirmSync": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,
   "conventionalCommits.promptFooter": false,
   "conventionalCommits.promptScopes": false,
   "redhat.telemetry.enabled": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  },
   "nix.formatterPath": "alejandra",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nixd",
@@ -28,11 +37,5 @@
     "https://raw.githubusercontent.com/continuedev/continue/refs/heads/main/extensions/vscode/config_schema.json": [
       ".continue/**/*.yaml"
     ]
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

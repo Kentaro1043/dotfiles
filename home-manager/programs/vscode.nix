@@ -20,38 +20,42 @@
     #};
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
-      extensions = with pkgs.vscode-extensions;
-        [
-          # Editor
-          dracula-theme.theme-dracula
-          pkief.material-icon-theme
-          eamodio.gitlens
+      extensions = with pkgs.nix-vscode-extensions.open-vsx; [
+        # Editor
+        dracula-theme.theme-dracula
+        pkief.material-icon-theme
+        eamodio.gitlens
+        vivaxy.vscode-conventional-commits
+        jetify.devbox
+        esbenp.prettier-vscode
 
-          # AI
-          continue.continue
-          # rooveterinaryinc.roo-cline
+        # AI
+        continue.continue
+        # rooveterinaryinc.roo-cline
+        qwenlm.qwen-code-vscode-ide-companion
+        sst-dev.opencode
 
-          # Platform
-          ms-kubernetes-tools.vscode-kubernetes-tools
+        # Platform
+        ms-kubernetes-tools.vscode-kubernetes-tools
 
-          # Languages
-          jnoortheen.nix-ide
-          llvm-vs-code-extensions.vscode-clangd
-          redhat.vscode-yaml
-          redhat.ansible
-          myriad-dreamin.tinymist
-          golang.go
-        ]
-        ++ [
-          pkgs.nix-vscode-extensions.vscode-marketplace.qwenlm.qwen-code-vscode-ide-companion
-          pkgs.nix-vscode-extensions.vscode-marketplace.sst-dev.opencode
-          pkgs.nix-vscode-extensions.vscode-marketplace.vivaxy.vscode-conventional-commits
-          pkgs.nix-vscode-extensions.vscode-marketplace.jetpack-io.devbox
-          pkgs.nix-vscode-extensions.vscode-marketplace.astral-sh.ty
-        ]
-        ++ [
-          pkgs.unstable.vscode-extensions.prettier.prettier-vscode # 2026-02-07現在、Unstableしかない
-        ];
+        # Languages
+        # Nix
+        jnoortheen.nix-ide
+        # C/C++
+        llvm-vs-code-extensions.vscode-clangd
+        # yaml
+        redhat.vscode-yaml
+        redhat.ansible
+        # Typst
+        myriad-dreamin.tinymist
+        # Go
+        golang.go
+        # Python
+        ms-python.python
+        ms-python.debugpy
+        ms-python.vscode-python-envs
+        astral-sh.ty
+      ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;
     };

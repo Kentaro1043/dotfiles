@@ -23,6 +23,7 @@
           "nvidia-x11" # unfreeRedistributable
           "steam" # unfreeRedistributable
           "steam-unwrapped" # unfreeRedistributable
+          "open-webui" # Open WebUI License
         ];
     };
   };
@@ -30,8 +31,7 @@
   imports = [
     ./hardware-configuration.nix
     ./programs
-    ./services/ollama.nix
-    ./services/tailscale.nix
+    ./services
   ];
 
   # OS

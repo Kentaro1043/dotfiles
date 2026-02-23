@@ -58,6 +58,12 @@
           "--project-from-cwd"
         ];
       };
+      codex = {
+        command = "codex";
+        args = [
+          "mcp-server"
+        ];
+      };
     };
   };
 }

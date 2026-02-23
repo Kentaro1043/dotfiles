@@ -172,6 +172,7 @@
     bluez
     kdePackages.bluez-qt
     kdePackages.bluedevil
+    kdePackages.alligator
   ];
   virtualisation.docker = {
     enable = true;

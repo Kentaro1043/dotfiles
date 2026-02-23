@@ -20,7 +20,6 @@
           "cuda_nvcc" # CUDA EULA
           "cuda_cccl" # CUDA EULA
           "libcublas" # CUDA EULA
-          "nvidia-x11" # unfreeRedistributable
           "steam" # unfreeRedistributable
           "steam-unwrapped" # unfreeRedistributable
           "open-webui" # Open WebUI License

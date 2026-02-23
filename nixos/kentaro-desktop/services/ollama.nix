@@ -7,13 +7,18 @@
     };
 
     loadModels = [
-      # OpenAI
+      # General
       "gpt-oss:20b-cloud"
       "gpt-oss:120b-cloud"
-
-      # Roo Code
-      "qwen3-coder:480b-cloud"
       "deepseek-v3.1:671b-cloud"
+      "qwen3.5:cloud"
+
+      # Coding
+      "qwen3-coder:480b-cloud"
+      "qwen3-coder-next:cloud"
+      "qwen2.5:1.5b"
+      "glm-5:cloud"
+      "kimi-k2.5:cloud"
 
       # Continue
       "llama3.1:8b"

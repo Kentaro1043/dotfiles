@@ -7,7 +7,7 @@
     enable = true;
     package =
       # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526
-      pkgs.vscodium.overrideAttrs (
+      pkgs.unstable.vscodium.overrideAttrs (
         final: prev: {
           preFixup =
             prev.preFixup

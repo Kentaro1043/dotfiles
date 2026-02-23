@@ -29,6 +29,12 @@
             "qwen3-coder-next:cloud" = {
               name = "qwen3-coder-next:cloud";
             };
+            "kimi-k2.5:cloud" = {
+              name = "kimi-k2.5:cloud";
+            };
+            "glm-5:cloud" = {
+              name = "glm-5:cloud";
+            };
           };
         };
       };

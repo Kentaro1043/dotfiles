@@ -35,7 +35,8 @@
   },
   "yaml.schemas": {
     "https://raw.githubusercontent.com/continuedev/continue/refs/heads/main/extensions/vscode/config_schema.json": [
-      ".continue/**/*.yaml"
+      ".continue/**/*.yaml",
+      "continue/**/*.yaml"
     ]
   }
 }

@@ -16,6 +16,20 @@ models:
       - chat
       - edit
       - apply
+  - name: gpt-oss 20B
+    provider: ollama
+    model: gpt-oss:20b-cloud
+    roles:
+      - chat
+      - edit
+      - apply
+  - name: gpt-oss 120B
+    provider: ollama
+    model: gpt-oss:120b-cloud
+    roles:
+      - chat
+      - edit
+      - apply
   - name: Qwen2.5-Coder 1.5B
     provider: ollama
     model: qwen2.5-coder:1.5b-base

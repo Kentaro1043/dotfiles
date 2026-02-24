@@ -12,6 +12,9 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,
   "conventionalCommits.promptFooter": false,

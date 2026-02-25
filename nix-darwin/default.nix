@@ -124,6 +124,7 @@
       "raspberry-pi-imager"
       "krita"
       "ollama-app"
+      "claude"
     ];
   };
 }

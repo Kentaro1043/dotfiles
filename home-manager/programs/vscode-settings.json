@@ -15,6 +15,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[ansible]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,
   "conventionalCommits.promptFooter": false,

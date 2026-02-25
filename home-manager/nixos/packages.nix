@@ -13,5 +13,6 @@ lib.mkIf pkgs.stdenv.isLinux
     joplin-desktop
     jetbrains.pycharm-oss
     rpi-imager
+    libreoffice
   ];
 }

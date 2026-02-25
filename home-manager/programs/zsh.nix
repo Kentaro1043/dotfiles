@@ -85,6 +85,18 @@ in {
         if [ -d /opt/homebrew ]; then
           eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
+
+        # git finder
+        function peco-src () {
+          local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")
+          if [ -n "$selected_dir" ]; then
+            BUFFER="cd $\{selected_dir\}"
+            zle accept-line
+          fi
+          zle clear-screen
+        }
+        zle -N peco-src
+        bindkey '^]' peco-src
       '';
     in
       lib.mkMerge [

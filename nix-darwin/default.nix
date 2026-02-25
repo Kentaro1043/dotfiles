@@ -123,6 +123,7 @@
       "pycharm"
       "raspberry-pi-imager"
       "krita"
+      "ollama-app"
     ];
   };
 }

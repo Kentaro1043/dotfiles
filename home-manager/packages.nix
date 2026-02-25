@@ -31,6 +31,7 @@
       zstd
       prettier
       e2fsprogs
+      peco
 
       #########
       # Shell #

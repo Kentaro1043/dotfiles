@@ -20,6 +20,7 @@
     #};
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
+      keybindings = builtins.fromJSON (builtins.readFile ./vscode-keybindings.json);
       extensions = with pkgs.nix-vscode-extensions.open-vsx; [
         # Editor
         dracula-theme.theme-dracula
@@ -56,16 +57,6 @@
         ms-python.debugpy
         ms-python.vscode-python-envs
         astral-sh.ty
-      ];
-      keybindings = [
-        {
-          key = "shift+enter";
-          command = "workbench.action.terminal.sendSequence";
-          args = {
-            text = "\u001b\r";
-          };
-          when = "terminalFocus";
-      }
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

@@ -18,6 +18,7 @@
   "[ansible]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "claudeCode.useTerminal": true,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,
   "conventionalCommits.promptFooter": false,

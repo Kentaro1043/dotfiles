@@ -57,6 +57,16 @@
         ms-python.vscode-python-envs
         astral-sh.ty
       ];
+      keybindings = [
+        {
+          key = "shift+enter";
+          command = "workbench.action.terminal.sendSequence";
+          args = {
+            text = "\u001b\r";
+          };
+          when = "terminalFocus";
+      }
+      ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;
     };

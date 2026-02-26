@@ -34,6 +34,7 @@
         # rooveterinaryinc.roo-cline
         qwenlm.qwen-code-vscode-ide-companion
         sst-dev.opencode
+        anthropic.claude-code
 
         # Platform
         ms-kubernetes-tools.vscode-kubernetes-tools

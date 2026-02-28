@@ -125,6 +125,7 @@
       "krita"
       "ollama-app"
       "claude"
+      "tablecruncher"
     ];
   };
 }

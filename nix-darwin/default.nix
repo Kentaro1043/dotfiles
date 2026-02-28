@@ -55,6 +55,7 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     nerd-fonts.jetbrains-mono
+    biz-ud-gothic
   ];
 
   homebrew = {

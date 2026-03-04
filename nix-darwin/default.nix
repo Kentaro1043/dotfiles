@@ -76,7 +76,6 @@
     ];
     casks = [
       "discord"
-      "visual-studio-code"
       "box-drive"
       "adobe-acrobat-reader"
       "slack"
@@ -119,9 +118,7 @@
       "netnewswire"
       "dbeaver-community"
       "medis"
-      "freelens"
       "pycharm"
-      "raspberry-pi-imager"
       "krita"
       "ollama-app"
       "claude"

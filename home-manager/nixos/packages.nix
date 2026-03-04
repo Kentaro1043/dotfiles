@@ -14,5 +14,6 @@ lib.mkIf pkgs.stdenv.isLinux
     jetbrains.pycharm-oss
     rpi-imager
     libreoffice
+    freelens-bin
   ];
 }

@@ -11,7 +11,7 @@
         ollama = {
           name = "ollama";
           base_url = "http://localhost:11434/v1";
-          wire_api = "chat";
+          wire_api = "responses";
         };
       };
       mcp_servers = {

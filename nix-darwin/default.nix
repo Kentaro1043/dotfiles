@@ -123,6 +123,7 @@
       "ollama-app"
       "claude"
       "tablecruncher"
+      "rustdesk"
     ];
   };
 }

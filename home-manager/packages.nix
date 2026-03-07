@@ -240,6 +240,9 @@
           osmosdr
           lora_sdr
         ];
+        extraPythonPackages = with gnuradio.python.pkgs; [
+          pyqt5
+        ];
       })
       rtl-sdr
       wfview

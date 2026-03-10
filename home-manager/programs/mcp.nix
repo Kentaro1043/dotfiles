@@ -56,6 +56,8 @@
           "--context"
           "ide"
           "--project-from-cwd"
+          "--enable-web-dashboard"
+          "false"
         ];
       };
       codex = {

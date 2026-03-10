@@ -1,4 +1,5 @@
 {
+  "update.mode": "none",
   "editor.formatOnSave": true,
   "explorer.compactFolders": false,
   "workbench.colorTheme": "Dracula Theme",
@@ -41,6 +42,8 @@
     }
   },
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/continuedev/continue/refs/heads/main/extensions/vscode/config_schema.json": ".continue/**/*.yaml"
+    "file:///Users/kentaro/.vscode-oss/extensions/continue.continue/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
   }
 }

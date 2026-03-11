@@ -33,7 +33,7 @@
         # AI
         continue.continue
         # rooveterinaryinc.roo-cline
-        qwenlm.qwen-code-vscode-ide-companion
+        # qwenlm.qwen-code-vscode-ide-companion
         sst-dev.opencode
         anthropic.claude-code
 

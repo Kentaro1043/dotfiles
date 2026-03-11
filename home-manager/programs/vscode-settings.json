@@ -44,6 +44,9 @@
   "yaml.schemas": {
     "file:///Users/kentaro/.vscode-oss/extensions/continue.continue/config-yaml-schema.json": [
       ".continue/**/*.yaml"
+    ],
+    "file:///home/kentaro/.vscode-oss/extensions/continue.continue/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
     ]
   }
 }

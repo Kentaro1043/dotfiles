@@ -77,7 +77,7 @@
     casks = [
       "discord"
       "box-drive"
-      "adobe-acrobat-reader"
+      "libreoffice"
       "slack"
       "obsidian"
       "unity-hub"

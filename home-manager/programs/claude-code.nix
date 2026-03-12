@@ -57,7 +57,7 @@
           "--context"
           "claude-code"
           "--project-from-cwd"
-          "--enable!-web-dashboard"
+          "--enable-web-dashboard"
           "false"
         ];
       };

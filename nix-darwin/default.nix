@@ -125,6 +125,7 @@
       "tablecruncher"
       "rustdesk"
       "zotero"
+      "joplin"
     ];
   };
 }

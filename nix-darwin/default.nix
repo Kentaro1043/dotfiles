@@ -124,6 +124,7 @@
       "claude"
       "tablecruncher"
       "rustdesk"
+      "zotero"
     ];
   };
 }

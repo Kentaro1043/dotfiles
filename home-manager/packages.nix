@@ -32,6 +32,8 @@
       prettier
       e2fsprogs
       peco
+      squashfs-tools-ng
+      libarchive
 
       #########
       # Shell #

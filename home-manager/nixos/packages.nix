@@ -15,5 +15,6 @@ lib.mkIf pkgs.stdenv.isLinux
     rpi-imager
     libreoffice
     freelens-bin
+    containerlab
   ];
 }

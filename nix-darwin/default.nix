@@ -126,6 +126,7 @@
       "rustdesk"
       "zotero"
       "joplin"
+      "freelens"
     ];
   };
 }

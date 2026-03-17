@@ -57,6 +57,7 @@
         ms-python.debugpy
         ms-python.vscode-python-envs
         astral-sh.ty
+        charliermarsh.ruff
         # Astro
         astro-build.astro-vscode
       ];

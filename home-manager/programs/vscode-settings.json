@@ -6,6 +6,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.cursorStyle": "line",
   "git.confirmSync": false,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

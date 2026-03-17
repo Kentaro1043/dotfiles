@@ -90,7 +90,7 @@ in {
         function peco-src () {
           local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")
           if [ -n "$selected_dir" ]; then
-            BUFFER="cd $\{selected_dir\}"
+            BUFFER="cd ''${selected_dir}"
             zle accept-line
           fi
           zle clear-screen

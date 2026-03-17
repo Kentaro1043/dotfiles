@@ -57,6 +57,8 @@
         ms-python.debugpy
         ms-python.vscode-python-envs
         astral-sh.ty
+        # Astro
+        astro-build.astro-vscode
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

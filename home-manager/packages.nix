@@ -174,6 +174,7 @@
       # python #
       ##########
       python314
+      python313Packages.huggingface-hub
       yapf
       virtualenv
 

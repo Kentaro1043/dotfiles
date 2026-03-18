@@ -11,5 +11,9 @@
       init.defaultBranch = "main";
       ghq.root = "~/source/repos";
     };
+    ignores = [
+      ".serena/"
+      ".ansible/.lock"
+    ];
   };
 }

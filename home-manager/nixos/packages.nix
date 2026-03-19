@@ -16,5 +16,6 @@ lib.mkIf pkgs.stdenv.isLinux
     libreoffice
     freelens-bin
     containerlab
+    devpod-desktop
   ];
 }

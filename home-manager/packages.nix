@@ -91,6 +91,7 @@
       age
       lazyssh
       lazysql
+      devpod
 
       ########
       # nvim #

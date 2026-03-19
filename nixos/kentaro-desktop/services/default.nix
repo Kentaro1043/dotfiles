@@ -2,6 +2,10 @@
   imports = [
     ./ollama.nix
     ./open-webui.nix
-    ./tailscale.nix
   ];
+
+  services = {
+    envfs.enable = true;
+    tailscale.enable = true;
+  };
 }

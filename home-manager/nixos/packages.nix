@@ -17,5 +17,6 @@ lib.mkIf pkgs.stdenv.isLinux
     freelens-bin
     containerlab
     devpod-desktop
+    mixxx
   ];
 }

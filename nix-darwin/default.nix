@@ -127,6 +127,7 @@
       "zotero"
       "joplin"
       "freelens"
+      "ungoogled-chromium"
     ];
   };
 }

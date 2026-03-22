@@ -60,6 +60,8 @@
         charliermarsh.ruff
         # Astro
         astro-build.astro-vscode
+        # toml
+        tamasfe.even-better-toml
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

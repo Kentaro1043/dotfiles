@@ -85,7 +85,6 @@
       "tailscale-app"
       "microsoft-office"
       "notion"
-      "google-chrome"
       "firefox"
       "postman"
       "wireshark-app"

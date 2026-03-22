@@ -20,6 +20,9 @@
   "[ansible]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "claudeCode.useTerminal": true,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,

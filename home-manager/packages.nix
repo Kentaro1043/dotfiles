@@ -97,6 +97,7 @@
       # nvim #
       ########
       # AstroNvim
+      neovim
       tree-sitter
       bottom
       ripgrep

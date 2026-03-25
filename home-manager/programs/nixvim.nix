@@ -1,6 +1,6 @@
 {...}: {
   programs.nixvim = {
-    enable = true;
+    enable = false;
 
     nixpkgs = {
       config = {

@@ -8,6 +8,10 @@
       };
     };
 
+    globals = {
+      mapleader = " ";
+    };
+
     plugins = {
       # UI
       noice.enable = true;

@@ -71,6 +71,13 @@
         identityFile = "~/.ssh/id_ed25519";
         addKeysToAgent = "yes";
         forwardAgent = true;
+        localForwards = [
+          {
+            bind.port = 61203;
+            host.address = "127.0.0.1";
+            host.port = 6443;
+          }
+        ];
       };
       "libra.tokyotech.org" = {
         user = "kentaro1043";
@@ -142,6 +149,13 @@
         identityFile = "~/.ssh/id_ed25519";
         addKeysToAgent = "yes";
         forwardAgent = true;
+        localForwards = [
+          {
+            bind.port = 64301;
+            host.address = "127.0.0.1";
+            host.port = 6443;
+          }
+        ];
       };
       "ict201.tokyotech.org" = {
         user = "kentaro1043";

@@ -8,8 +8,8 @@
       model_provider = "ollama";
       approval_policy = "untrusted";
       model_providers = {
-        ollama = {
-          name = "ollama";
+        ollama-custom = {
+          name = "ollama-custom";
           base_url = "http://localhost:11434/v1";
           wire_api = "responses";
         };

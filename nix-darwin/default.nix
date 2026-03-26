@@ -127,6 +127,7 @@
       "joplin"
       "freelens"
       "ungoogled-chromium"
+      "codex"
     ];
   };
 }

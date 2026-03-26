@@ -19,21 +19,9 @@
           command = "npx";
           args = ["-y" "@upstash/context7-mcp"];
         };
-        filesystem = {
-          command = "npx";
-          args = ["-y" "@modelcontextprotocol/server-filesystem" "/home/kentaro/source/repos"];
-        };
-        fetch = {
-          command = "uvx";
-          args = ["mcp-server-fetch"];
-        };
         ddg-search = {
           command = "uvx";
           args = ["duckduckgo-mcp-server"];
-        };
-        sequential-thinking = {
-          command = "npx";
-          args = ["-y" "@modelcontextprotocol/server-sequential-thinking"];
         };
         serena = {
           command = "uvx";
@@ -43,7 +31,7 @@
             "serena"
             "start-mcp-server"
             "--context"
-            "ide"
+            "codex"
             "--project-from-cwd"
             "--enable-web-dashboard"
             "false"

@@ -36,6 +36,9 @@
 
     # Codex
     codex.url = "github:openai/codex/rust-v0.116.0";
+
+    # OpenCode
+    opencode.url = "github:anomalyco/opencode/v1.3.2";
   };
 
   outputs = {

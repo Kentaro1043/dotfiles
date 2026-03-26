@@ -5,7 +5,6 @@
     settings = {
       theme = "dracula";
 
-      # Model
       provider = {
         ollama = {
           npm = "@ai-sdk/openai-compatible";
@@ -38,9 +37,11 @@
           };
         };
       };
-    };
-    themes = {
-      dracula = ./opencode-dracula.json;
+
+      permission = {
+        edit = "ask";
+        bash = "ask";
+      };
     };
     enableMcpIntegration = true;
   };

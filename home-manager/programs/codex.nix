@@ -4,9 +4,10 @@
     package = pkgs.codex-latest;
     settings = {
       model = "gpt-oss:120b-cloud";
-      review_model = "gpt-oss:20b-cloud";
+      model_context_window = 128000;
       model_provider = "ollama";
       approval_policy = "untrusted";
+      web_search = "live";
       model_providers = {
         ollama-custom = {
           name = "ollama-custom";
@@ -18,10 +19,6 @@
         context7 = {
           command = "npx";
           args = ["-y" "@upstash/context7-mcp"];
-        };
-        ddg-search = {
-          command = "uvx";
-          args = ["duckduckgo-mcp-server"];
         };
         serena = {
           command = "uvx";
@@ -36,6 +33,9 @@
             "--enable-web-dashboard"
             "false"
           ];
+        };
+        exa = {
+          url = "https://mcp.exa.ai/mcp";
         };
       };
     };

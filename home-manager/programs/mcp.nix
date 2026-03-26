@@ -9,12 +9,6 @@
           "@upstash/context7-mcp@latest"
         ];
       };
-      ddg-search = {
-        command = "uvx";
-        args = [
-          "duckduckgo-mcp-server"
-        ];
-      };
       serena = {
         command = "uvx";
         args = [
@@ -29,12 +23,26 @@
           "false"
         ];
       };
+      exa = {
+        command = "npx";
+        args = [
+          "-y"
+          "mcp-remote"
+          "https://mcp.exa.ai/mcp"
+        ];
+      };
       codex = {
         command = "codex";
         args = [
           "mcp-server"
         ];
       };
+      # ddg-search = {
+      #  command = "uvx";
+      #  args = [
+      #    "duckduckgo-mcp-server"
+      #  ];
+      #};
       # sequential-thinking = {
       #   command = "npx";
       #   args = [

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.codex = {
     enable = true;
-    package = pkgs.codex-bin;
+    package = pkgs.codex-rs;
     settings = {
       model = "gpt-oss:120b-cloud";
       review_model = "gpt-oss:20b-cloud";

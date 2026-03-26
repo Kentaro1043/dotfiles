@@ -33,6 +33,9 @@
 
     # nix-vscode-extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    # Codex
+    codex.url = "github:openai/codex/rust-v0.116.0";
   };
 
   outputs = {
@@ -45,6 +48,7 @@
     sops-nix,
     nixvim,
     nix-vscode-extensions,
+    codex,
     ...
   } @ inputs: let
     inherit (self) outputs;

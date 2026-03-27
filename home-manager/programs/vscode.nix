@@ -63,6 +63,8 @@
         astro-build.astro-vscode
         # toml
         tamasfe.even-better-toml
+        # JS/TS
+        biomejs.biome
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

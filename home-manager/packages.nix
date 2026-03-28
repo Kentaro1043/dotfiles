@@ -16,6 +16,7 @@
       nmap
       openssl
       coreutils-full
+      wget
 
       #########
       # Tools #

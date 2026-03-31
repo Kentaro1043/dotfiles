@@ -120,14 +120,12 @@
       "pycharm"
       "krita"
       "ollama-app"
-      "claude"
       "tablecruncher"
       "rustdesk"
       "zotero"
       "joplin"
       "freelens"
       "ungoogled-chromium"
-      "codex-app"
     ];
   };
 }

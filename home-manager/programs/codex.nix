@@ -1,11 +1,17 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.codex = {
     enable = true;
     package = pkgs.codex-latest;
+    # config.tomlがRead-Onlyだと困るので、activationで対応
+    /**
     settings = {
-      model = "gpt-oss:120b-cloud";
-      model_context_window = 128000;
-      model_provider = "ollama";
+      model = "gpt-5.4";
+      # model_context_window = 128000;
+      # model_provider = "ollama-custom";
       approval_policy = "untrusted";
       web_search = "live";
       model_providers = {
@@ -39,5 +45,12 @@
         };
       };
     };
+    */
   };
+  home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    $DRY_RUN_CMD mkdir -p $HOME/.codex
+    $DRY_RUN_CMD rm -f $HOME/.codex/config.toml
+    $DRY_RUN_CMD cp ${./codex-config.toml} $HOME/.codex/config.toml
+    $DRY_RUN_CMD chmod 644 $HOME/.codex/config.toml
+  '';
 }

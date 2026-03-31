@@ -1,0 +1,38 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+approval_policy = "untrusted"
+web_search = "live"
+
+[mcp_servers.context7]
+args = ["-y", "@upstash/context7-mcp"]
+command = "npx"
+
+[mcp_servers.exa]
+url = "https://mcp.exa.ai/mcp"
+
+[mcp_servers.serena]
+command = "uvx"
+args = [
+    "--from",
+    "git+https://github.com/oraios/serena",
+    "serena",
+    "start-mcp-server",
+    "--context",
+    "codex",
+    "--project-from-cwd",
+    "--enable-web-dashboard",
+    "false",
+]
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[tui]
+status_line = [
+    "model-with-reasoning",
+    "context-remaining",
+    "project-root",
+    "git-branch",
+    "five-hour-limit",
+    "weekly-limit",
+]

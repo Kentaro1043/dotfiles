@@ -27,6 +27,7 @@ in {
           "ssh"
           #"sudo"
           "git"
+          "gitfast"
           "git-auto-fetch"
           "gitignore"
           "git-prompt"

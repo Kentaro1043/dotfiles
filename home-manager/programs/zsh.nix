@@ -3,10 +3,10 @@
   pkgs,
   ...
 }: let
-  noto-fonts-cjk-sans-static = pkgs.unstable.noto-fonts-cjk-sans.override {
+  noto-fonts-cjk-sans-static = pkgs.noto-fonts-cjk-sans.override {
     static = true;
   };
-  noto-fonts-cjk-serif-static = pkgs.unstable.noto-fonts-cjk-serif.override {
+  noto-fonts-cjk-serif-static = pkgs.noto-fonts-cjk-serif.override {
     static = true;
   };
 in {

@@ -226,6 +226,7 @@
       helm-docs
       chart-testing
       kind
+      cloud-provider-kind
       kubeshark
       fluxcd
 

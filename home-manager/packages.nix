@@ -226,7 +226,7 @@
       helm-docs
       chart-testing
       kind
-      cloud-provider-kind
+      unstable.cloud-provider-kind
       kubeshark
       fluxcd
 

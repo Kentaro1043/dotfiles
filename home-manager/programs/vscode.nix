@@ -65,6 +65,8 @@
         tamasfe.even-better-toml
         # JS/TS
         biomejs.biome
+        # Vue.js
+        vue.volar
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

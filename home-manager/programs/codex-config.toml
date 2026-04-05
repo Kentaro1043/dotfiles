@@ -23,6 +23,10 @@ args = [
     "--enable-web-dashboard",
     "false",
 ]
+startup_timeout_sec = 30
+
+[mcp_servers.science-tokyo-syllabus]
+url = "https://syllabus.s.isct.ac.jp/mcp"
 
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"

@@ -5,7 +5,7 @@
 }: {
   programs.codex = {
     enable = true;
-    package = pkgs.codex-latest;
+    package = pkgs.codex-bin;
     # config.tomlがRead-Onlyだと困るので、activationで対応
     /**
     settings = {

@@ -177,6 +177,7 @@
     home-manager
     openvpn
     bluez
+    bubblewrap # Needed by Codex
     kdePackages.bluez-qt
     kdePackages.bluedevil
     kdePackages.alligator

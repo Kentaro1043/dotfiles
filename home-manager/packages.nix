@@ -17,7 +17,6 @@
       openssl
       coreutils-full
       wget
-      bubblewrap
 
       #########
       # Tools #

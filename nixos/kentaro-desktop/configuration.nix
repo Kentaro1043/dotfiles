@@ -178,6 +178,7 @@
     openvpn
     bluez
     bubblewrap # Needed by Codex
+    wireguard-tools
     kdePackages.bluez-qt
     kdePackages.bluedevil
     kdePackages.alligator

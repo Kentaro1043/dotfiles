@@ -256,7 +256,7 @@
       dump1090-fa
       #sdrangel
       #gqrx
-      #sdrpp
+      unstable.sdrpp
       #airspy
       # Driver
       hackrf

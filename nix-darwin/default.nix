@@ -126,6 +126,7 @@
       "joplin"
       "freelens"
       "ungoogled-chromium"
+      "logseq"
     ];
   };
 }

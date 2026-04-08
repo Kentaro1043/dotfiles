@@ -68,7 +68,7 @@
       # Version Managers
       devbox
       tenv
-      mise
+      unstable.mise
 
       # Git
       git

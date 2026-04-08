@@ -42,13 +42,16 @@
     hostName = "kentaro-desktop";
     networkmanager.enable = true;
 
-    firewall.allowedUDPPortRanges = [
-      # KDE Connect
-      {
-        from = 1714;
-        to = 1764;
-      }
-    ];
+    firewall = {
+      checkReversePath = false;
+      allowedUDPPortRanges = [
+        # KDE Connect
+        {
+          from = 1714;
+          to = 1764;
+        }
+      ];
+    };
   };
   services.avahi = {
     enable = true;

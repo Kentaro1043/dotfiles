@@ -127,6 +127,7 @@
       "freelens"
       "ungoogled-chromium"
       "logseq"
+      "qt-creator"
       "qt-design-studio"
     ];
   };

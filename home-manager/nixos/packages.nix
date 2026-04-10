@@ -19,5 +19,6 @@ lib.mkIf pkgs.stdenv.isLinux
     devpod-desktop
     mixxx
     qtcreator
+    sidequest
   ];
 }

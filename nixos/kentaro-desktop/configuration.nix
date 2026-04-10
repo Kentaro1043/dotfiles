@@ -186,8 +186,13 @@
     kdePackages.bluedevil
     kdePackages.alligator
   ];
-  virtualisation.docker = {
-    enable = true;
+  virtualisation = {
+    virtualbox.host = {
+      enable = true;
+    };
+    docker = {
+      enable = true;
+    };
   };
 
   nix.settings.experimental-features = "nix-command flakes";

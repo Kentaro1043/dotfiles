@@ -18,5 +18,6 @@ lib.mkIf pkgs.stdenv.isLinux
     containerlab
     devpod-desktop
     mixxx
+    qtcreator
   ];
 }

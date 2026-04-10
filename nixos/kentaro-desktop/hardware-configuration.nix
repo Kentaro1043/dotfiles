@@ -18,6 +18,11 @@
     };
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
+    blacklistedKernelModules = [
+      "dvb_usb_rtl28xxu"
+      "rtl2832"
+      "rtl2832_sdr"
+    ];
   };
 
   fileSystems."/" = {

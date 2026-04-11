@@ -1,16 +1,25 @@
 {
+  "nix.formatterPath": "alejandra",
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nixd",
   "nix.serverSettings": {
     "nixd": {
+      "formatting": {
+        "command": ["alejandra"]
+      },
+      "nixpkgs": {
+        "expr": "import (builtins.getFlake \"${workspaceFolder}\").inputs.nixpkgs { system = \"x86_64-linux\"; overlays = [ (builtins.getFlake \"${workspaceFolder}\").inputs.nix-vscode-extensions.overlays.default ]; }"
+      },
       "options": {
         "nixos": {
-          "expr": "(builtins.getFlake \"${workspaceFolder}\").nixosConfigurations.\"kentaro@kentaro-desktop\".options",
+          "expr": "(builtins.getFlake \"${workspaceFolder}\").nixosConfigurations.\"kentaro@kentaro-desktop\".options"
         },
         "home-manager": {
-          "expr": "(builtins.getFlake \"${workspaceFolder}\").homeConfigurations.\"kentaro@kentaro-desktop\".options",
+          "expr": "(builtins.getFlake \"${workspaceFolder}\").homeConfigurations.\"kentaro@kentaro-desktop\".options"
         },
         "nix-darwin": {
-          "expr": "(builtins.getFlake \"${workspaceFolder}\").darwinConfigurations.\"kentaro@kentaro-mac\".options",
-        },
+          "expr": "(builtins.getFlake \"${workspaceFolder}\").darwinConfigurations.\"kentaro@kentaro-mac\".options"
+        }
       }
     }
   }

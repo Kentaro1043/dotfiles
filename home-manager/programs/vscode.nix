@@ -67,6 +67,13 @@
         biomejs.biome
         # Vue.js
         vue.volar
+        # Java
+        vscjava.vscode-java-debug
+        vscjava.vscode-java-test
+        vscjava.vscode-maven
+        vscjava.vscode-gradle
+        vscjava.vscode-java-dependency
+        redhat.java
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

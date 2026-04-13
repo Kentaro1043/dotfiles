@@ -14,6 +14,7 @@
     ignores = [
       ".serena/"
       ".ansible/.lock"
+      ".codex"
     ];
   };
 }

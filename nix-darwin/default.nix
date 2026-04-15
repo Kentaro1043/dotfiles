@@ -129,6 +129,7 @@
       "logseq"
       "qt-creator"
       "qt-design-studio"
+      "claude"
     ];
   };
 }

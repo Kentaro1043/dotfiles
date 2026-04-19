@@ -20,5 +20,6 @@ lib.mkIf pkgs.stdenv.isLinux
     mixxx
     qtcreator
     sidequest
+    dbeaver-bin
   ];
 }

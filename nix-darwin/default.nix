@@ -70,8 +70,6 @@
       "Sikarugir-App/sikarugir"
     ];
     brews = [
-      "docker-machine"
-      "docker-machine-driver-vmware"
       "openvpn"
     ];
     casks = [
@@ -89,7 +87,6 @@
       "postman"
       "wireshark-app"
       "lens"
-      "docker-desktop"
       "gimp"
       "utm"
       "steam"
@@ -131,6 +128,7 @@
       "qt-design-studio"
       "claude"
       "chatgpt"
+      "rancher"
     ];
   };
 }

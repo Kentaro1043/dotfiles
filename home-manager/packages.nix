@@ -142,6 +142,7 @@
       #######
       postgresql
       sqlfluff
+      sqlite
 
       #########
       # C/C++ #

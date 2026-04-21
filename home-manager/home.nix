@@ -32,6 +32,7 @@
           "spotify" # unfree
           "claude-code" # unfree
           "vscode-extension-anthropic-claude-code" # unfree
+          "slack" # unfree
         ];
     };
   };

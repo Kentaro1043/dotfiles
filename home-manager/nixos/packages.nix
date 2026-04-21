@@ -21,5 +21,6 @@ lib.mkIf pkgs.stdenv.isLinux
     qtcreator
     sidequest
     dbeaver-bin
+    slack
   ];
 }

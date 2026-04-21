@@ -35,7 +35,7 @@
         # rooveterinaryinc.roo-cline
         # qwenlm.qwen-code-vscode-ide-companion
         sst-dev.opencode
-        # anthropic.claude-code # Unfree
+        anthropic.claude-code # Unfree
         # openai.chatgpt # Unfree
 
         # Platform

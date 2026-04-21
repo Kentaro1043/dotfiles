@@ -59,6 +59,9 @@
         ms-python.vscode-python-envs
         astral-sh.ty
         charliermarsh.ruff
+        # Jupyter
+        ms-toolsai.jupyter
+        ms-toolsai.jupyter-keymap
         # Astro
         astro-build.astro-vscode
         # toml

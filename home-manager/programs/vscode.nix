@@ -62,6 +62,7 @@
         # Jupyter
         ms-toolsai.jupyter
         ms-toolsai.jupyter-keymap
+        google.colab
         # Astro
         astro-build.astro-vscode
         # toml

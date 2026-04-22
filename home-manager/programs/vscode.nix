@@ -46,6 +46,7 @@
         jnoortheen.nix-ide
         # C/C++
         llvm-vs-code-extensions.vscode-clangd
+        vadimcn.vscode-lldb
         # yaml
         redhat.vscode-yaml
         redhat.ansible

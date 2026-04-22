@@ -177,7 +177,10 @@
       ##########
       # python #
       ##########
-      python314
+      (pkgs.python314.withPackages (python-pkgs:
+        with python-pkgs; [
+          pyyaml
+        ]))
       python313Packages.huggingface-hub
       yapf
       virtualenv

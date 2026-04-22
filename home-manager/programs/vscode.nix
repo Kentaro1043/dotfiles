@@ -40,6 +40,7 @@
 
         # Platform
         ms-kubernetes-tools.vscode-kubernetes-tools
+        formulahendry.code-runner
 
         # Languages
         # Nix

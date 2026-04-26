@@ -4,6 +4,7 @@
     ./codex.nix
     ./eza.nix
     ./git.nix
+    ./hyprland.nix
     ./lazygit.nix
     ./mcp.nix
     ./nixvim.nix

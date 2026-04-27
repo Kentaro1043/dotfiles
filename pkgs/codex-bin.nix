@@ -3,16 +3,18 @@
   fetchurl,
   stdenv,
 }: let
-  version = "0.121.0";
+  # アップデート時
+  # nix store prefetch-file --json https://github.com/openai/codex/releases/download/rust-v0.125.0/codex-aarch64-apple-darwin.tar.gz
+  version = "0.125.0";
 
   sources = {
     x86_64-linux = fetchurl {
       url = "https://github.com/openai/codex/releases/download/rust-v${version}/codex-x86_64-unknown-linux-musl.tar.gz";
-      hash = "sha256-J4xysD1OH2YbqCjBzPNuui+I2AdMcOPwMhHb+2MSc8Q=";
+      hash = "sha256-SiClOUOn5qDF+kRj1OR8WN2OVT7OveRVpBB+mQa/sAE=";
     };
     aarch64-darwin = fetchurl {
       url = "https://github.com/openai/codex/releases/download/rust-v${version}/codex-aarch64-apple-darwin.tar.gz";
-      hash = "sha256-YPcDnmOn3orkdBNqxvWT7BqRPh3coN9ZreH21utff9A=";
+      hash = "sha256-apJtwMuWOdNJtivtoZB8U8sTSXCefcnPxTJo9DjLdJ8=";
     };
   };
 

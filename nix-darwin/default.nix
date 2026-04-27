@@ -129,6 +129,7 @@
       "claude"
       "chatgpt"
       "rancher"
+      "codex-app"
     ];
   };
 }

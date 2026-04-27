@@ -32,6 +32,6 @@ lib.mkIf pkgs.stdenv.isLinux {
   };
 
   services = {
-    mako.enable = true;
+    mako.enable = false;
   };
 }

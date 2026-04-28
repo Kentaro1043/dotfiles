@@ -23,5 +23,6 @@ lib.mkIf pkgs.stdenv.isLinux
     dbeaver-bin
     slack
     vlc
+    ventoy
   ];
 }

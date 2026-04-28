@@ -22,5 +22,6 @@ lib.mkIf pkgs.stdenv.isLinux
     sidequest
     dbeaver-bin
     slack
+    vlc
   ];
 }

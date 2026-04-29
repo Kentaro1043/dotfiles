@@ -130,6 +130,7 @@
       "chatgpt"
       "rancher"
       "codex-app"
+      "warp"
     ];
   };
 }

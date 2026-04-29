@@ -42,6 +42,10 @@
         edit = "ask";
         bash = "ask";
       };
+
+      plugin = [
+        "@warp-dot-dev/opencode-warp"
+      ];
     };
     enableMcpIntegration = true;
   };

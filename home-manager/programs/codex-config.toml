@@ -40,3 +40,4 @@ status_line = [
     "five-hour-limit",
     "weekly-limit",
 ]
+notification_condition = "always"

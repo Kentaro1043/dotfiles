@@ -39,6 +39,9 @@
 
     # OpenCode
     opencode.url = "github:anomalyco/opencode/v1.3.2";
+
+    # nix-claude-code
+    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
   };
 
   outputs = {
@@ -51,6 +54,7 @@
     sops-nix,
     nixvim,
     nix-vscode-extensions,
+    nix-claude-code,
     codex,
     ...
   } @ inputs: let
@@ -80,7 +84,7 @@
       "kentaro@kentaro-desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
-          inherit inputs outputs nix-vscode-extensions;
+          inherit inputs outputs nix-vscode-extensions nix-claude-code;
         };
         modules = [
           nixvim.homeModules.nixvim
@@ -91,7 +95,7 @@
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
-          inherit inputs outputs nix-vscode-extensions;
+          inherit inputs outputs nix-vscode-extensions nix-claude-code;
         };
         modules = [
           nixvim.homeModules.nixvim

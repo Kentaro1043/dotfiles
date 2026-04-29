@@ -136,6 +136,7 @@
       #######
       alejandra
       nixd
+      cachix
 
       #######
       # SQL #

@@ -70,21 +70,10 @@
     overlays = import ./overlays {inherit inputs;};
 
     homeConfigurations = {
-      "kentaro@kentaro-win" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {
-          inherit inputs outputs;
-        };
-        modules = [
-          nixvim.homeModules.nixvim
-          ./home-manager/home.nix
-        ];
-      };
-
       "kentaro@kentaro-desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
-          inherit inputs outputs nix-vscode-extensions nix-claude-code;
+          inherit inputs outputs;
         };
         modules = [
           nixvim.homeModules.nixvim

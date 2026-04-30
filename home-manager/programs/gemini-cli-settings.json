@@ -1,0 +1,51 @@
+{
+  "general": {
+    "enableAutoUpdate": false,
+    "preferredEditor": "codium"
+  },
+  "ui": {
+    "theme": "Dracula"
+  },
+  "ide": {
+    "enabled": true,
+    "hasSeenNudge": true
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "mcpServers": {
+    "codex": {
+      "args": ["mcp-server"],
+      "command": "codex"
+    },
+    "context7": {
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "command": "npx"
+    },
+    "exa": {
+      "url": "https://mcp.exa.ai/mcp"
+    },
+    "serena": {
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide",
+        "--project-from-cwd",
+        "--enable-web-dashboard",
+        "false"
+      ],
+      "command": "uvx"
+    },
+    "science-tokyo-syllabus": {
+      "url": "https://syllabus.s.isct.ac.jp/mcp"
+    }
+  }
+}

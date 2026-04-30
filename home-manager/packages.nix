@@ -78,10 +78,6 @@
       lazygit
       ghq
 
-      # AI Tools
-      llm-agents.gemini-cli
-      llm-agents.qwen-code
-
       # Others
       atlas
       direnv
@@ -93,6 +89,11 @@
       lazyssh
       lazysql
       devpod
+
+      #############
+      # AI Agents #
+      #############
+      llm-agents.qwen-code
 
       ########
       # nvim #

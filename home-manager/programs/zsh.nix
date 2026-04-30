@@ -130,6 +130,9 @@ in {
         # known issue: https://github.com/typst/typst/issues/185
         export TYPST_FONT_PATHS=${noto-fonts-cjk-sans-static}/share/fonts/opentype/noto-cjk:${noto-fonts-cjk-serif-static}/share/fonts/opentype/noto-cjk
 
+        # Gemini CLI
+        export GEMINI_SANDBOX_IMAGE="gemini-my-sandbox:latest"
+
         # C/C++
         export PKG_CONFIG_PATH=${pkgs.libffi.dev}/lib/pkgconfig
 

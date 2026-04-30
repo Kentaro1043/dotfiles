@@ -82,6 +82,9 @@
         vscjava.vscode-gradle
         vscjava.vscode-java-dependency
         redhat.java
+        # Docker
+        docker.docker
+        exiasr.hadolint
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

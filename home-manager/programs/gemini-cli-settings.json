@@ -22,10 +22,6 @@
     "sandbox": "docker"
   },
   "mcpServers": {
-    "codex": {
-      "args": ["mcp-server"],
-      "command": "codex"
-    },
     "context7": {
       "args": ["-y", "@upstash/context7-mcp@latest"],
       "command": "npx"

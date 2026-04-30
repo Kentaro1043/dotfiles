@@ -1,5 +1,5 @@
 {
-  "$version": 2,
+  "$version": 3,
   "ide": {
     "hasSeenNudge": true
   },
@@ -18,25 +18,8 @@
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp@latest"]
     },
-    "fetch": {
-      "command": "uvx",
-      "args": ["mcp-server-fetch"]
-    },
-    "ddg-search": {
-      "command": "uvx",
-      "args": ["duckduckgo-mcp-server"]
-    },
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/home/kentaro/source/repos"
-      ]
+    "exa": {
+      "url": "https://mcp.exa.ai/mcp"
     },
     "serena": {
       "command": "uvx",

@@ -32,8 +32,9 @@
 
         # AI
         continue.continue
-        # rooveterinaryinc.roo-cline
-        # qwenlm.qwen-code-vscode-ide-companion
+        saoudrizwan.claude-dev # Cline
+        google.gemini-cli-vscode-ide-companion
+        qwenlm.qwen-code-vscode-ide-companion
         sst-dev.opencode
         anthropic.claude-code # Unfree
         # openai.chatgpt # Unfree

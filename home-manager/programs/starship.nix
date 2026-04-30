@@ -5,7 +5,7 @@
 
     # Downloaded preset from https://starship.rs/ja-JP/presets/bracketed-segments
     settings =
-      builtins.fromTOML (builtins.readFile ./bracketed-segments.toml)
+      builtins.fromTOML (builtins.readFile ./starship-bracketed-segments.toml)
       // {
         command_timeout = 1000;
 

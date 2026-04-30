@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.opencode = {
     enable = true;
-    package = pkgs.opencode-latest;
+    package = pkgs.llm-agents.opencode;
     settings = {
       theme = "dracula";
 

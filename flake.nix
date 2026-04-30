@@ -18,9 +18,6 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # NixOS-WSL
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
     # Determine Nix
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
 
@@ -34,14 +31,13 @@
     # nix-vscode-extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    # Codex
-    codex.url = "github:openai/codex/rust-v0.116.0";
+    # llm-agents
+    llm-agents.url = "github:numtide/llm-agents.nix";
+  };
 
-    # OpenCode
-    opencode.url = "github:anomalyco/opencode/v1.3.2";
-
-    # nix-claude-code
-    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
+  nixConfig = {
+    extra-substituters = ["https://cache.numtide.com"];
+    extra-trusted-public-keys = ["niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="];
   };
 
   outputs = {
@@ -49,13 +45,11 @@
     nixpkgs,
     home-manager,
     nix-darwin,
-    nixos-wsl,
     determinate,
     sops-nix,
     nixvim,
     nix-vscode-extensions,
-    nix-claude-code,
-    codex,
+    llm-agents,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -73,7 +67,7 @@
       "kentaro@kentaro-desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
-          inherit inputs outputs;
+          inherit inputs outputs nix-vscode-extensions llm-agents;
         };
         modules = [
           nixvim.homeModules.nixvim
@@ -84,7 +78,7 @@
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
-          inherit inputs outputs nix-vscode-extensions nix-claude-code;
+          inherit inputs outputs nix-vscode-extensions llm-agents;
         };
         modules = [
           nixvim.homeModules.nixvim

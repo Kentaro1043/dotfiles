@@ -3,7 +3,7 @@
   lib,
   pkgs,
   nix-vscode-extensions,
-  nix-claude-code,
+  llm-agents,
   ...
 }: {
   imports = [
@@ -21,7 +21,7 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
       nix-vscode-extensions.overlays.default
-      nix-claude-code.overlays.default
+      llm-agents.overlays.default
     ];
     config = {
       allowUnfree = false;

@@ -79,8 +79,8 @@
       ghq
 
       # AI Tools
-      unstable.gemini-cli
-      unstable.qwen-code
+      llm-agents.gemini-cli
+      llm-agents.qwen-code
 
       # Others
       atlas

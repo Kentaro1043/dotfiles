@@ -5,7 +5,7 @@
 }: {
   programs.codex = {
     enable = true;
-    package = pkgs.codex-bin;
+    package = pkgs.llm-agents.codex;
     # config.tomlがRead-Onlyだと困るので、activationで対応
     /**
     settings = {

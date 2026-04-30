@@ -18,6 +18,9 @@
       "selectedType": "oauth-personal"
     }
   },
+  "tools": {
+    "sandbox": "docker"
+  },
   "mcpServers": {
     "codex": {
       "args": ["mcp-server"],

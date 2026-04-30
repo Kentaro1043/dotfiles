@@ -17,7 +17,7 @@
     if ${pkgs.docker}/bin/docker info >/dev/null 2>&1; then
       $DRY_RUN_CMD ${pkgs.docker}/bin/docker build \
         --file "$HOME/.gemini/sandbox.Dockerfile" \
-        --build-arg CLI_VERSION_ARG=0.40.0 \
+        --build-arg CLI_VERSION_ARG=${pkgs.llm-agents.gemini-cli.version} \
         -t gemini-my-sandbox:latest \
         $HOME/.gemini
     else

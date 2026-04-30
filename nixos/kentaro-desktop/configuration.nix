@@ -44,6 +44,9 @@
 
     firewall = {
       checkReversePath = false;
+      trustedInterfaces = [
+        "docker0"
+      ];
       allowedUDPPortRanges = [
         # KDE Connect
         {

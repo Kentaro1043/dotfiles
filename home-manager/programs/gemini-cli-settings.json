@@ -19,7 +19,7 @@
     }
   },
   "tools": {
-    "sandbox": "docker"
+    "sandbox": false
   },
   "mcpServers": {
     "context7": {

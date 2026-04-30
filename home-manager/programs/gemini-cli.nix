@@ -8,6 +8,8 @@
     package = pkgs.llm-agents.gemini-cli;
   };
 
+  home.file.".gemini/sandbox.Dockerfile".source = ./gemini-cli.Dockerfile;
+
   home.activation.setupGeminiSetting = lib.hm.dag.entryAfter ["writeBoundary"] ''
     $DRY_RUN_CMD mkdir -p $HOME/.gemini
     $DRY_RUN_CMD rm -f $HOME/.gemini/settings.json

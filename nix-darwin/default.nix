@@ -124,13 +124,9 @@
       "joplin"
       "freelens"
       "ungoogled-chromium"
-      "logseq"
       "qt-creator"
       "qt-design-studio"
-      "claude"
-      "chatgpt"
       "rancher"
-      "codex-app"
       "warp"
     ];
   };

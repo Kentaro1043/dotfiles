@@ -1,4 +1,7 @@
 {
+  "json.schemaDownload.trustedDomains": {
+    "https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/schemas/settings.schema.json": true
+  },
   "nix.formatterPath": "alejandra",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nixd",

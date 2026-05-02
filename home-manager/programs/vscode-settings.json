@@ -41,6 +41,7 @@
   "conventionalCommits.promptFooter": false,
   "conventionalCommits.promptScopes": false,
   "redhat.telemetry.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "enabled"
   },

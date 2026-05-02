@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/schemas/settings.schema.json",
   "general": {
     "enableAutoUpdate": false,
     "preferredEditor": "codium"
@@ -10,16 +11,21 @@
     "enabled": true,
     "hasSeenNudge": true
   },
+  "model": {
+    "name": "gemini-3.1-pro-preview"
+  },
   "privacy": {
     "usageStatisticsEnabled": false
   },
   "security": {
+    "toolSandboxing": false,
     "auth": {
       "selectedType": "oauth-personal"
     }
   },
   "tools": {
-    "sandbox": false
+    "sandbox": "sandbox-exec",
+    "sandboxAllowedPaths": []
   },
   "mcpServers": {
     "context7": {
@@ -41,7 +47,10 @@
         "--enable-web-dashboard",
         "false"
       ],
-      "command": "uvx"
+      "command": "uvx",
+      "env": {
+        "UV_TOOL_DIR": "/tmp/uv-tools"
+      }
     },
     "science-tokyo-syllabus": {
       "url": "https://syllabus.s.isct.ac.jp/mcp"

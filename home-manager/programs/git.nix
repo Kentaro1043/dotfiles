@@ -15,6 +15,7 @@
       ".serena/"
       ".ansible/.lock"
       ".codex"
+      ".tmp"
     ];
   };
 }

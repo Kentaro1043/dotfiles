@@ -50,7 +50,7 @@
       "command": "uvx",
       "env": {
         "UV_TOOL_DIR": "./.tmp/uv/tool",
-        "UV_CACHE_DIR": "./.tmp/uv/tool"
+        "UV_CACHE_DIR": "./.tmp/uv/cache"
       }
     },
     "science-tokyo-syllabus": {

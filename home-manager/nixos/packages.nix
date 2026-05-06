@@ -24,5 +24,6 @@ lib.mkIf pkgs.stdenv.isLinux
     slack
     vlc
     woeusb-ng
+    wireshark
   ];
 }

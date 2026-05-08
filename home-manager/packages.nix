@@ -69,7 +69,7 @@
       devbox
       tenv
       unstable.mise
-      usage # Required for mise
+      unstable.usage # Required for mise
 
       # Git
       git

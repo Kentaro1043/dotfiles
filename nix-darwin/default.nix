@@ -128,6 +128,7 @@
       "qt-design-studio"
       "rancher"
       "warp"
+      "zed"
     ];
   };
 }

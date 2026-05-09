@@ -168,7 +168,12 @@
   users.users.kentaro = {
     isNormalUser = true;
     description = "Kentaro";
-    extraGroups = ["networkmanager" "wheel" "docker"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "dialout"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       #  thunderbird

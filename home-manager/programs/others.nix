@@ -14,6 +14,9 @@
       enableZshIntegration = true;
       enableBashIntegration = true;
     };
+    gpg = {
+      enable = true;
+    };
     helix = {
       enable = true;
       settings = {

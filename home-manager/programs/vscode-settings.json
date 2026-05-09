@@ -19,7 +19,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[compose]": {
+  "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {

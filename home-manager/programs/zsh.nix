@@ -158,6 +158,10 @@ in {
 
         # Rancher Desktop
         export PATH="$HOME/.rd/bin:$PATH"
+      ''
+      + ''
+        # Override all path configuration
+        export PATH="$HOME/.bin:$PATH"
       '';
   };
 }

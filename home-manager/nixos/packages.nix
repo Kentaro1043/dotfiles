@@ -9,9 +9,7 @@ lib.mkIf pkgs.stdenv.isLinux
     # GUI apps
     discord
     ghostty
-    spotify
-    joplin-desktop
-    jetbrains.pycharm-oss
+    unstable.jetbrains.pycharm
     rpi-imager
     libreoffice
     freelens-bin

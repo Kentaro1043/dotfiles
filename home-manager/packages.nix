@@ -175,7 +175,7 @@
       ##########
       # RISC-V #
       ##########
-      rars
+      # rars
 
       ##########
       # python #
@@ -202,7 +202,6 @@
       # Node #
       ########
       fnm
-      biome
       bun
       pnpm
       deno
@@ -210,9 +209,9 @@
       #########
       # Scala #
       #########
-      scala
-      scalafmt
-      metals
+      # scala
+      # scalafmt
+      # metals
 
       ########
       # yaml #
@@ -234,7 +233,6 @@
       helm-docs
       chart-testing
       kind
-      unstable.cloud-provider-kind
       kubeshark
       fluxcd
 

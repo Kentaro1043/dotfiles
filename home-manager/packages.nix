@@ -205,6 +205,7 @@
       biome
       bun
       pnpm
+      deno
 
       #########
       # Scala #

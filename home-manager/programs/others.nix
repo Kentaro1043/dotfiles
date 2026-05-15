@@ -34,9 +34,6 @@
       enableAlias = true;
       enableZshIntegration = true;
     };
-    sagemath = {
-      enable = true;
-    };
     sbt = {
       enable = true;
     };

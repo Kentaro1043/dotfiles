@@ -25,5 +25,6 @@ lib.mkIf pkgs.stdenv.isLinux
     vlc
     woeusb-ng
     wireshark
+    zen-browser-bin
   ];
 }

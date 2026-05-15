@@ -33,6 +33,10 @@
 
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
+
+    # zen-browser
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   nixConfig = {
@@ -50,6 +54,7 @@
     nixvim,
     nix-vscode-extensions,
     llm-agents,
+    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;

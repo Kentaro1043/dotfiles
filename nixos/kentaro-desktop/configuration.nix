@@ -139,10 +139,11 @@
   fonts = {
     fonts = with pkgs; [
       noto-fonts
-      noto-fonts-cjk-serif
       noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
       noto-fonts-monochrome-emoji
       nerd-fonts.jetbrains-mono
+      ipafont
     ];
     fontDir.enable = true;
     fontconfig = {

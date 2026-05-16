@@ -110,7 +110,6 @@
       "zen"
       "rekordbox"
       "ghostty"
-      "spotify"
       "cyberduck"
       "netnewswire"
       "dbeaver-community"

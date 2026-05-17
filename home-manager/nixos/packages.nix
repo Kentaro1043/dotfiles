@@ -24,5 +24,7 @@ lib.mkIf pkgs.stdenv.isLinux
     woeusb-ng
     wireshark
     zen-browser-bin
+    ardour
+    zrythm
   ];
 }

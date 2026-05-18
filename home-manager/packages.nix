@@ -35,6 +35,7 @@
       peco
       squashfs-tools-ng
       libarchive
+      socat
 
       #########
       # Shell #

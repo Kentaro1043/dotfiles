@@ -26,5 +26,6 @@ lib.mkIf pkgs.stdenv.isLinux
     zen-browser-bin
     ardour
     zrythm
+    usbutils
   ];
 }

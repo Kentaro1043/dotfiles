@@ -44,9 +44,6 @@
       enable = true;
       package = pkgs.uv;
     };
-    vesktop = {
-      enable = true;
-    };
     yt-dlp = {
       enable = true;
     };

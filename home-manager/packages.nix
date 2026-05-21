@@ -152,7 +152,6 @@
       # C/C++ #
       #########
       clang-tools
-      clang
       gcc
       libllvm
       lldb

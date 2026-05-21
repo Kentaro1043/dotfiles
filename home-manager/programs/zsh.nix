@@ -133,8 +133,8 @@ in {
         # Gemini CLI
         export GEMINI_SANDBOX_IMAGE="gemini-my-sandbox:latest"
 
-        # C/C++
-        export PKG_CONFIG_PATH=${pkgs.libffi.dev}/lib/pkgconfig
+        ## C/C++
+        #export PKG_CONFIG_PATH=${pkgs.libffi.dev}/lib/pkgconfig
 
         # Python
         export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
@@ -152,9 +152,9 @@ in {
         export CHROME_PATH="${pkgs.chromium}/bin/chromium"
       ''
       + lib.optionalString pkgs.stdenv.isDarwin ''
-        # C/C++ additional for macOS
-        export C_INCLUDE_PATH="${pkgs.apple-sdk_15}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$C_INCLUDE_PATH"
-        export CPLUS_INCLUDE_PATH="${pkgs.apple-sdk_15}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$CPLUS_INCLUDE_PATH"
+        ## C/C++ additional for macOS
+        #export C_INCLUDE_PATH="${pkgs.apple-sdk_15}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$C_INCLUDE_PATH"
+        #export CPLUS_INCLUDE_PATH="${pkgs.apple-sdk_15}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include:$CPLUS_INCLUDE_PATH"
 
         # Rancher Desktop
         export PATH="$HOME/.rd/bin:$PATH"

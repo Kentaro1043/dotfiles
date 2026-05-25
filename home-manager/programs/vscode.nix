@@ -85,6 +85,8 @@
         # Docker
         docker.docker
         exiasr.hadolint
+        # Terraform
+        opentofu.vscode-opentofu
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

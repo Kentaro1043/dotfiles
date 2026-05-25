@@ -3,7 +3,7 @@
     ./packages.nix
     ./services.nix
     ./programs.nix
-    ./wayland.nix
+    # ./wayland.nix
     # ./dconf.nix # for GNOME
   ];
 }

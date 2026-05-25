@@ -1,6 +1,6 @@
 {...}: {
   programs = {
-    hyprland.enable = true;
+    hyprland.enable = false;
     nix-ld.enable = true;
     steam = {
       enable = true;

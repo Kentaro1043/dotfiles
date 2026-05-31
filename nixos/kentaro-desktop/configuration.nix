@@ -193,6 +193,8 @@
     kdePackages.bluez-qt
     kdePackages.bluedevil
     kdePackages.alligator
+    openrazer-daemon
+    polychromatic
   ];
   virtualisation = {
     virtualbox.host = {

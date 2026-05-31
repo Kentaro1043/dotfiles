@@ -44,5 +44,11 @@
     graphics.enable = true;
     nvidia.open = true;
     bluetooth.enable = true;
+    openrazer = {
+      enable = true;
+      users = [
+        "kentaro"
+      ];
+    };
   };
 }

@@ -174,6 +174,7 @@
       "wheel"
       "docker"
       "dialout"
+      "wireshark"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [

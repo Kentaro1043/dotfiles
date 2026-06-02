@@ -7,5 +7,10 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+    wireshark = {
+      enable = true;
+      dumpcap.enable = true;
+      usbmon.enable = true;
+    };
   };
 }

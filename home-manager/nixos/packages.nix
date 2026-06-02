@@ -22,7 +22,6 @@ lib.mkIf pkgs.stdenv.isLinux
     slack
     vlc
     woeusb-ng
-    wireshark
     zen-browser-bin
     ardour
     zrythm

@@ -23,6 +23,9 @@
       "rtl2832"
       "rtl2832_sdr"
     ];
+    binfmt = {
+      emulatedSystems = ["armv7l-linux"];
+    };
   };
 
   fileSystems."/" = {

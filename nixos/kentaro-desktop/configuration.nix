@@ -197,6 +197,7 @@
     kdePackages.krdc
     openrazer-daemon
     polychromatic
+    wireshark
   ];
   virtualisation = {
     virtualbox.host = {

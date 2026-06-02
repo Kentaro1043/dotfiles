@@ -2,6 +2,7 @@
   imports = [
     ./ollama.nix
     ./open-webui.nix
+    ./udev.nix
   ];
 
   services = {

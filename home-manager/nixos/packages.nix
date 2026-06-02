@@ -27,5 +27,7 @@ lib.mkIf pkgs.stdenv.isLinux
     ardour
     zrythm
     usbutils
+    wineWow64Packages.stable
+    winetricks
   ];
 }

@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/schemas/settings.schema.json",
   "general": {
     "enableAutoUpdate": false,
-    "preferredEditor": "codium"
+    "preferredEditor": "vscodium"
   },
   "ui": {
     "theme": "Dracula"

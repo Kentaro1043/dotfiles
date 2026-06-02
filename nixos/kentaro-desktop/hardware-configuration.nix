@@ -25,6 +25,7 @@
     ];
     binfmt = {
       emulatedSystems = ["armv7l-linux"];
+      preferStaticEmulators = true;
     };
   };
 

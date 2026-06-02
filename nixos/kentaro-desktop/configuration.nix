@@ -193,6 +193,7 @@
     kdePackages.bluez-qt
     kdePackages.bluedevil
     kdePackages.alligator
+    kdePackages.krdc
     openrazer-daemon
     polychromatic
   ];

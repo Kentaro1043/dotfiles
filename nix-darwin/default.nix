@@ -128,6 +128,7 @@
       "rancher"
       "warp"
       "zed"
+      "raspberry-pi-imager"
     ];
   };
 }

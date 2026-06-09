@@ -189,7 +189,8 @@
     home-manager
     openvpn
     bluez
-    bubblewrap # Needed by Codex
+    bubblewrap
+    qemu # Needed by Codex
     wireguard-tools
     kdePackages.bluez-qt
     kdePackages.bluedevil

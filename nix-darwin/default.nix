@@ -64,7 +64,6 @@
     onActivation = {
       autoUpdate = true;
       upgrade = false;
-      cleanup = "zap";
     };
     taps = [
       "gcenx/wine"
@@ -128,6 +127,7 @@
       "rancher"
       "warp"
       "zed"
+      "raspberry-pi-imager"
     ];
   };
 }

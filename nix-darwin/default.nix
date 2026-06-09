@@ -64,7 +64,6 @@
     onActivation = {
       autoUpdate = true;
       upgrade = false;
-      cleanup = "zap";
     };
     taps = [
       "gcenx/wine"

@@ -34,18 +34,72 @@
   ];
 
   # OS
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelModules = [
+      "tun"
+    ];
   };
   networking = {
     hostName = "kentaro-desktop";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+
+      ensureProfiles.profiles = {
+        "br0" = {
+          connection = {
+            id = "br0";
+            type = "bridge";
+            interface-name = "br0";
+          };
+          bridge = {
+            stp = false;
+          };
+          ipv4 = {
+            method = "auto";
+          };
+          ipv6 = {
+            method = "auto";
+          };
+        };
+
+        "br0-port-eth" = {
+          connection = {
+            id = "br0-port-eth";
+            type = "ethernet";
+            interface-name = "enp4s0";
+            master = "br0";
+            slave-type = "bridge";
+          };
+        };
+
+        # QEMU VM用tapデバイス
+        "br0-port-tap" = {
+          connection = {
+            id = "br0-port-tap";
+            type = "tun";
+            interface-name = "tap0";
+            master = "br0";
+            slave-type = "bridge";
+          };
+          tun = {
+            mode = 2; # 1 for tun, 2 for tap
+            owner = 1000; # kentaro
+            pi = false;
+          };
+        };
+      };
+    };
 
     firewall = {
       checkReversePath = false;
       trustedInterfaces = [
         "docker0"
+        "br0"
+        "tap0"
       ];
       allowedUDPPortRanges = [
         # KDE Connect
@@ -137,7 +191,7 @@
 
   # Fonts
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
@@ -208,6 +262,17 @@
       enable = true;
     };
   };
+
+  # QEMU
+  security.wrappers.qemu-bridge-helper = {
+    setuid = true;
+    owner = "root";
+    group = "root";
+    source = "${pkgs.qemu}/libexec/qemu-bridge-helper";
+  };
+  environment.etc."qemu/bridge.conf".text = ''
+    allow br0
+  '';
 
   nix.settings = {
     trusted-users = [

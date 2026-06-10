@@ -86,6 +86,8 @@
         exiasr.hadolint
         # Terraform
         opentofu.vscode-opentofu
+        # GitHub Actions
+        github.vscode-github-actions
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

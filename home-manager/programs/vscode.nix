@@ -88,6 +88,8 @@
         opentofu.vscode-opentofu
         # GitHub Actions
         github.vscode-github-actions
+        # Markdown
+        davidanson.vscode-markdownlint
       ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

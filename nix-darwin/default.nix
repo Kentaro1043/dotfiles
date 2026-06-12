@@ -71,6 +71,8 @@
     ];
     brews = [
       "openvpn"
+      "i686-elf-gcc"
+      "nasm"
     ];
     casks = [
       "discord"

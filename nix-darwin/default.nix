@@ -130,6 +130,7 @@
       "warp"
       "zed"
       "raspberry-pi-imager"
+      "audacity"
     ];
   };
 }

@@ -96,6 +96,7 @@
       # AI Agents #
       #############
       llm-agents.qwen-code
+      llm-agents.antigravity-cli
 
       ########
       # nvim #

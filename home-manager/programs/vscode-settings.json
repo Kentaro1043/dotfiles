@@ -46,6 +46,9 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "claudeCode.useTerminal": true,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,

@@ -91,6 +91,7 @@
           github.vscode-github-actions
           # Markdown
           davidanson.vscode-markdownlint
+          marp-team.marp-vscode
         ]
         ++ [
           pkgs.nix-vscode-extensions.vscode-marketplace-release."3w36zj6".textlint

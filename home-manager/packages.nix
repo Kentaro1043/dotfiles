@@ -126,7 +126,7 @@
       # Kubernetes #
       ##############
       kubectl
-      helm
+      kubernetes-helm
 
       ##########
       # Docker #
@@ -160,6 +160,11 @@
       soapyrtlsdr
       soapyhackrf
       soapyremote
+
+      ###########
+      # Node.js #
+      ###########
+      nodejs
 
       ##########
       # kyopro #

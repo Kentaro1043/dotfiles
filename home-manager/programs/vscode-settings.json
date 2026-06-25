@@ -6,8 +6,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.tmp": true
+    "**/Thumbs.db": true
   },
   "explorer.compactFolders": false,
   "workbench.colorTheme": "Dracula Theme",

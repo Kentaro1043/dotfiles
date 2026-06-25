@@ -20,6 +20,12 @@
         addKeysToAgent = "yes";
       };
 
+      "kentaro-homelab" = {
+        hostName = "192.168.1.3";
+        port = 22;
+        user = "kentaro";
+        identityFile = "~/.ssh/id_ed25519";
+      };
       "gce.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";

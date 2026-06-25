@@ -34,12 +34,6 @@
       enableAlias = true;
       enableZshIntegration = true;
     };
-    sbt = {
-      enable = true;
-    };
-    tex-fmt = {
-      enable = true;
-    };
     uv = {
       enable = true;
       package = pkgs.uv;

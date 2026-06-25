@@ -76,9 +76,6 @@ in {
         # Disable zsh time
         disable -r time
 
-        # Enable fnm
-        eval "$(fnm env --use-on-cd --shell zsh)"
-
         # flux completion
         command -v flux >/dev/null && . <(flux completion zsh)
 
@@ -146,10 +143,6 @@ in {
         # Go
         export GOPATH="$HOME/source/go"
         export PATH="$GOPATH/bin:$PATH"
-      ''
-      + lib.optionalString pkgs.stdenv.isLinux ''
-        # Marp
-        export CHROME_PATH="${pkgs.chromium}/bin/chromium"
       ''
       + lib.optionalString pkgs.stdenv.isDarwin ''
         ## C/C++ additional for macOS

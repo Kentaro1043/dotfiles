@@ -30,7 +30,6 @@
       ssh-to-age
       qemu_full
       zstd
-      prettier
       e2fsprogs
       peco
       squashfs-tools-ng
@@ -43,7 +42,6 @@
       xterm
       chroma
       keychain
-      shellcheck
       jq
       fzf
       # zsh related
@@ -51,14 +49,6 @@
       zsh-you-should-use
       zsh-nix-shell
       nix-zsh-completions
-
-      #############
-      # Dev Tools #
-      #############
-      # Task runners
-      gnumake
-      xc
-      go-task
 
       # Cloud CLI
       google-cloud-sdk
@@ -81,10 +71,8 @@
       ghq
 
       # Others
-      atlas
       direnv
       envsubst
-      buf
       rclone
       sops
       age
@@ -122,19 +110,6 @@
       hash-identifier
       zsteg
 
-      ############
-      # markdown #
-      ############
-      markdownlint-cli
-      markdownlint-cli2
-
-      #########
-      # typst #
-      #########
-      typst
-      tinymist
-      typstyle
-
       #######
       # nix #
       #######
@@ -142,107 +117,11 @@
       nixd
       cachix
 
-      #######
-      # SQL #
-      #######
-      postgresql
-      sqlfluff
-      sqlite
-
-      #########
-      # C/C++ #
-      #########
-      clang-tools
-      gcc
-      libllvm
-      lldb
-      cmake
-      pkg-config
-      libconfig
-      spdlog
-      spdlog.dev
-      graphviz
-      fmt.dev
-      boost.out
-      boost.dev
-      ac-library.out
-      ac-library.dev
-      libxcrypt
-      libxml2.dev
-      libxslt.dev
-      libffi.out
-      libffi.dev
-      libffi.info
-
-      ##########
-      # RISC-V #
-      ##########
-      # rars
-
-      ##########
-      # python #
-      ##########
-      (pkgs.python314.withPackages (python-pkgs:
-        with python-pkgs; [
-          pyyaml
-        ]))
-      python313Packages.huggingface-hub
-      yapf
-      virtualenv
-
-      ########
-      # Rust #
-      ########
-      rustup
-
-      ########
-      # Java #
-      ########
-      jdk
-
-      ########
-      # Node #
-      ########
-      fnm
-      bun
-      pnpm
-      deno
-
-      #########
-      # Scala #
-      #########
-      # scala
-      # scalafmt
-      # metals
-
       ########
       # yaml #
       ########
-      yamllint
-      yamlfmt
       yq
 
-      ##############
-      # Kubernetes #
-      ##############
-      kubectl
-      kustomize
-      kustomize-sops
-      kubeconform
-      k3d
-      kubernetes-helm
-      kube-linter
-      helm-docs
-      chart-testing
-      kind
-      kubeshark
-      fluxcd
-
-      ##########
-      # Docker #
-      ##########
-      hadolint
-      dive
       lazydocker
 
       #######
@@ -278,49 +157,16 @@
       ##########
       online-judge-tools
       online-judge-template-generator
-
-      ########
-      # .NET #
-      ########
-      dotnet-sdk
-
-      ######
-      # Go #
-      ######
-      go
-      golangci-lint
-      goose
-      gotools
-      sqldef
-      evans
-
-      ###########
-      # Ansible #
-      ###########
-      ansible
-      ansible-lint
-      ansible-doctor
-      ansible-navigator
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       darwin.IOKitTools
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
-      # Macではlldbを使用
-      gdb
-
-      # marp
-      marp-cli
-      chromium
-
       # SDR(Macではhomebrewで入れる)
       cubicsdr
 
       # CTF
       burpsuite
-
-      # Other tools
-      unstable.protonplus
     ];
 
   # Enable font

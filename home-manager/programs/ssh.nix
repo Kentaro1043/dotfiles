@@ -10,58 +10,42 @@
     '';
     matchBlocks = {
       "*" = {
+        identityFile = "~/.ssh/id_ed25519";
         addKeysToAgent = "yes";
         forwardAgent = true;
       };
 
       "github.com" = {
         user = "git";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
       };
 
       "kentaro-homelab" = {
-        hostName = "192.168.1.3";
+        host = "kentaro-homelab";
+        hostname = "192.168.1.3";
         port = 22;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
       };
       "gce.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "oci.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "private.okenode1.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
       "private.okenode2.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
       "private.okenode3.kentaro1043.com" = {
         port = 50022;
         user = "kentaro";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
         proxyJump = "oci.kentaro1043.com";
       };
 
@@ -69,14 +53,10 @@
       "git.trap.jp" = {
         port = 2200;
         user = "git";
-        addKeysToAgent = "yes";
         identityFile = "~/.ssh/id_ed25519";
       };
       "c1-203.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
         localForwards = [
           {
             bind.port = 61203;
@@ -87,74 +67,15 @@
       };
       "libra.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "taki-ws1.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "taki-ws2.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "taki-ws3.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "taki-ws4.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "e505.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "s512.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
       };
       "w933.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "s323.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "m011.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
-      };
-      "s423.tokyotech.org" = {
-        user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "csc301.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
         localForwards = [
           {
             bind.port = 64301;
@@ -165,60 +86,36 @@
       };
       "ict201.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "ict202.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "ict203.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "sce311.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
+      };
+      "sce312.tokyotech.org" = {
+        user = "kentaro1043";
       };
       "las211.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "arc321.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "eee101.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
       "iee221.tokyotech.org" = {
         user = "kentaro1043";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
 
       # JA1YAD
       "sakura.musenken.net" = {
         port = 61178;
         user = "ubuntu";
-        identityFile = "~/.ssh/id_ed25519";
-        addKeysToAgent = "yes";
-        forwardAgent = true;
       };
     };
   };

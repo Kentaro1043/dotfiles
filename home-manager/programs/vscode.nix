@@ -95,6 +95,7 @@
         ]
         ++ [
           pkgs.nix-vscode-extensions.vscode-marketplace-release."3w36zj6".textlint
+          pkgs.nix-vscode-extensions.vscode-marketplace-release.openai.chatgpt
         ];
       enableExtensionUpdateCheck = false;
       enableMcpIntegration = true;

@@ -134,6 +134,7 @@
       "claude"
       "codex"
       "chatgpt"
+      "chatgpt-atlas"
     ];
   };
 }

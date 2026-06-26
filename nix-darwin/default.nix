@@ -131,6 +131,9 @@
       "zed"
       "raspberry-pi-imager"
       "audacity"
+      "claude"
+      "codex"
+      "chatgpt"
     ];
   };
 }

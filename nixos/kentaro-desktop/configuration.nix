@@ -45,6 +45,12 @@
   };
   networking = {
     hostName = "kentaro-desktop";
+    hosts = {
+      "192.168.1.3" = [
+        "oh-my-ytdl.kentaro1043.internal"
+        "traefik.kentaro1043.internal"
+      ];
+    };
     networkmanager = {
       enable = true;
 

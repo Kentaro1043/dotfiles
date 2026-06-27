@@ -39,6 +39,7 @@ extends = ":workspace"
 
 [permissions.local-workspace.filesystem]
 "/nix/store" = "read"
+"~/.cache/nix" = "write"
 "~/.cache/uv" = "write"
 "~/.codex/skills" = "read"
 "~/.local/share/uv" = "write"

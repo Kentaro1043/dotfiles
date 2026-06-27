@@ -1,6 +1,7 @@
 model = "gpt-5.5"
 model_reasoning_effort = "medium"
 approval_policy = "untrusted"
+default_permissions = "local-workspace"
 web_search = "live"
 
 [mcp_servers.context7]
@@ -31,6 +32,27 @@ startup_timeout_sec = 30
 
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
+
+[permissions.local-workspace]
+description = "Workspace access plus common local tool caches."
+extends = ":workspace"
+
+[permissions.local-workspace.filesystem]
+"/nix/store" = "read"
+"~/.cache/uv" = "write"
+"~/.codex/skills" = "read"
+"~/.local/share/uv" = "write"
+"~/.local/state/uv" = "write"
+"~/.ssh/conf.d" = "read"
+"~/.ssh/config" = "read"
+":slash_tmp" = "write"
+":tmpdir" = "write"
+"/private/tmp" = "write"
+"/private/var/folders" = "write"
+"/var/folders" = "write"
+
+[permissions.local-workspace.network]
+enabled = true
 
 [tui]
 status_line = [

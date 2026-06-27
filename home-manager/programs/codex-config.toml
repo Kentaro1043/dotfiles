@@ -10,6 +10,10 @@ command = "npx"
 [mcp_servers.exa]
 url = "https://mcp.exa.ai/mcp"
 
+[mcp_servers.grafana-trap]
+url = "https://s-grafana-mcp.trap.jp/mcp"
+env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
+
 [mcp_servers.serena]
 command = "uvx"
 args = [

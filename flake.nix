@@ -75,6 +75,7 @@
           inherit inputs outputs nix-vscode-extensions llm-agents;
         };
         modules = [
+          sops-nix.homeManagerModules.sops
           nixvim.homeModules.nixvim
           ./home-manager/home.nix
         ];
@@ -86,6 +87,7 @@
           inherit inputs outputs nix-vscode-extensions llm-agents;
         };
         modules = [
+          sops-nix.homeManagerModules.sops
           nixvim.homeModules.nixvim
           ./home-manager/home.nix
         ];

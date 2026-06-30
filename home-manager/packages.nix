@@ -59,7 +59,7 @@
       # Version Managers
       devbox
       tenv
-      unstable.mise
+      mise
       unstable.usage # Required for mise
 
       # Git
@@ -133,6 +133,21 @@
       ##########
       lazydocker
 
+      ###########
+      # Node.js #
+      ###########
+      nodejs
+
+      ##########
+      # kyopro #
+      ##########
+      online-judge-tools
+      online-judge-template-generator
+    ]
+    ++ lib.optionals pkgs.stdenv.isDarwin [
+      darwin.IOKitTools
+    ]
+    ++ lib.optionals pkgs.stdenv.isLinux [
       #######
       # SDR #
       #######
@@ -161,21 +176,6 @@
       soapyhackrf
       soapyremote
 
-      ###########
-      # Node.js #
-      ###########
-      nodejs
-
-      ##########
-      # kyopro #
-      ##########
-      online-judge-tools
-      online-judge-template-generator
-    ]
-    ++ lib.optionals pkgs.stdenv.isDarwin [
-      darwin.IOKitTools
-    ]
-    ++ lib.optionals pkgs.stdenv.isLinux [
       # SDR(Macではhomebrewで入れる)
       cubicsdr
 

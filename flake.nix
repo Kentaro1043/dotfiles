@@ -34,6 +34,10 @@
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
 
+    # mise
+    mise.url = "github:jdx/mise";
+    mise.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
     # zen-browser
     zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";

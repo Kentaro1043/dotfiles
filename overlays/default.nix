@@ -25,22 +25,22 @@
           configureFlags = (old.configureFlags or []) ++ ["--disable-nls"];
         })
       else prev.steghide;
-    mise = let
-      package = inputs.mise.packages.${prev.stdenv.hostPlatform.system}.mise;
-    in
-      if prev.stdenv.isDarwin
-      then
-        package.overrideAttrs (old: {
-          postPatch =
-            (old.postPatch or "")
-            + ''
-              substituteInPlace src/oci/layer.rs \
-                --replace-fail \
-                  $'    #[test]\n    fn preserve_metadata_dir_layer_keeps_special_permission_bits()' \
-                  $'    #[test]\n    #[ignore = "setuid bits are stripped in the Darwin Nix build sandbox"]\n    fn preserve_metadata_dir_layer_keeps_special_permission_bits()'
-            '';
-        })
-      else package;
+    #mise = let
+    #  package = inputs.mise.packages.${prev.stdenv.hostPlatform.system}.mise;
+    #in
+    #  if prev.stdenv.isDarwin
+    #  then
+    #    package.overrideAttrs (old: {
+    #      postPatch =
+    #        (old.postPatch or "")
+    #        + ''
+    #          substituteInPlace src/oci/layer.rs \
+    #            --replace-fail \
+    #              $'    #[test]\n    fn preserve_metadata_dir_layer_keeps_special_permission_bits()' \
+    #              $'    #[test]\n    #[ignore = "setuid bits are stripped in the Darwin Nix build sandbox"]\n    fn preserve_metadata_dir_layer_keeps_special_permission_bits()'
+    #        '';
+    #    })
+    #  else package;
     wfview = prev.wfview.overrideAttrs (old: {
       NIX_CFLAGS_COMPILE =
         (old.NIX_CFLAGS_COMPILE or "")

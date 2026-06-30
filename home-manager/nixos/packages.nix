@@ -28,5 +28,6 @@ lib.mkIf pkgs.stdenv.isLinux
     usbutils
     wineWow64Packages.stable
     winetricks
+    warp-terminal
   ];
 }

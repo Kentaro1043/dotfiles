@@ -133,9 +133,6 @@ in {
         ## C/C++
         #export PKG_CONFIG_PATH=${pkgs.libffi.dev}/lib/pkgconfig
 
-        # Python
-        export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
-
         # Node
         export BUN_INSTALL="$HOME/.bun"
         export PATH="$BUN_INSTALL/bin:$PATH"
@@ -143,6 +140,10 @@ in {
         # Go
         export GOPATH="$HOME/source/go"
         export PATH="$GOPATH/bin:$PATH"
+      ''
+      + lib.optionalString pkgs.stdenv.isLinux ''
+        # Python
+        export PYTHONPATH="${pkgs.gnuradio}/lib/python3.11/site-packages:${pkgs.gnuradioPackages.osmosdr}/lib/python3.11/site-packages"
       ''
       + lib.optionalString pkgs.stdenv.isDarwin ''
         ## C/C++ additional for macOS

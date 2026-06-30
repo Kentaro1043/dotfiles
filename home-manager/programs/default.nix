@@ -1,9 +1,9 @@
 {...}: {
   imports = [
+    ./antigravity-cli.nix
     ./claude-code.nix
     ./codex.nix
     ./eza.nix
-    ./gemini-cli.nix
     ./git.nix
     ./lazygit.nix
     ./mcp.nix

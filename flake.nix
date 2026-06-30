@@ -3,7 +3,7 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # for uhd
     nixpkgs-fix-uhd.url = "github:nixos/nixpkgs/4199f186ecc15a2a56db94152f855606728aeace";
@@ -11,11 +11,11 @@
     nixpkgs-fix-dump1090.url = "github:nixos/nixpkgs/9318efde7bb08b14d3e45f0ddc9fe4df8f936ad5";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # nix-darwin
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Determine Nix
@@ -26,7 +26,7 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     # nixvim
-    nixvim.url = "github:nix-community/nixvim/nixos-25.11";
+    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
 
     # nix-vscode-extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";

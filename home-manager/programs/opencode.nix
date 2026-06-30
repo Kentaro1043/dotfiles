@@ -2,9 +2,10 @@
   programs.opencode = {
     enable = true;
     package = pkgs.llm-agents.opencode;
-    settings = {
+    tui = {
       theme = "dracula";
-
+    };
+    settings = {
       provider = {
         ollama = {
           npm = "@ai-sdk/openai-compatible";

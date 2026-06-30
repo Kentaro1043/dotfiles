@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.open-webui = {
-    enable = true;
+    enable = false;
     package = pkgs.open-webui;
     port = 11111;
     environment = {

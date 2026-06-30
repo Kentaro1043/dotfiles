@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
     package =
       # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526
@@ -18,6 +18,7 @@
     #argvSettings = {
     #  "locale" = "ja";
     #};
+    argvSettings = builtins.fromJSON (builtins.readFile ./vscode-argv.json);
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
       keybindings = builtins.fromJSON (builtins.readFile ./vscode-keybindings.json);
@@ -101,6 +102,4 @@
       enableMcpIntegration = true;
     };
   };
-  # Runtime Config
-  home.file.".vscode-oss/argv.json".source = ./vscode-argv.json;
 }

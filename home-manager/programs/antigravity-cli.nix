@@ -1,9 +1,5 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
-  baseSettings = builtins.fromJSON (builtins.readFile ./gemini-cli-settings.json);
+{pkgs, ...}: let
+  baseSettings = builtins.fromJSON (builtins.readFile ./antigravity-cli-settings.json);
   darwinSettings =
     baseSettings
     // {
@@ -26,16 +22,12 @@
     if pkgs.stdenv.isDarwin
     then darwinSettings
     else baseSettings;
-  settingsJson = pkgs.writeText "gemini-cli-settings.json" (builtins.toJSON settings);
 in {
-  programs.gemini-cli = {
+  programs.antigravity-cli = {
     enable = true;
     package = pkgs.llm-agents.gemini-cli;
+    inherit settings;
   };
 
-  home.activation.setupGeminiSetting = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    $DRY_RUN_CMD mkdir -p $HOME/.gemini
-    $DRY_RUN_CMD cp ${settingsJson} $HOME/.gemini/settings.json
-    $DRY_RUN_CMD chmod 644 $HOME/.gemini/settings.json
-  '';
+  home.file.".gemini/settings.json".force = true;
 }

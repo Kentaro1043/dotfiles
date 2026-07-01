@@ -56,6 +56,9 @@ extends = ":workspace"
 enabled = true
 
 [tui]
+notifications = ["agent-turn-complete", "approval-requested"]
+notification_method = "auto"
+notification_condition = "always"
 status_line = [
     "model-with-reasoning",
     "context-remaining",
@@ -64,4 +67,3 @@ status_line = [
     "five-hour-limit",
     "weekly-limit",
 ]
-notification_condition = "always"

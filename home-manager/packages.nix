@@ -92,7 +92,6 @@
       # AstroNvim
       neovim
       tree-sitter
-      bottom
       ripgrep
 
       #######
@@ -106,7 +105,6 @@
       exiftool
       stegsolve
       binwalk
-      steghide
       hash-identifier
       zsteg
 
@@ -181,6 +179,7 @@
 
       # CTF
       burpsuite
+      steghide
     ];
 
   # Enable font

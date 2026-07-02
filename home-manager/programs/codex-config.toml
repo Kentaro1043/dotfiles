@@ -55,6 +55,10 @@ extends = ":workspace"
 [permissions.local-workspace.network]
 enabled = true
 
+[permissions.yolo]
+description = "Full local access equivalent to --yolo permissions."
+extends = ":danger-full-access"
+
 [tui]
 notifications = ["agent-turn-complete", "approval-requested"]
 notification_method = "auto"

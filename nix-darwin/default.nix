@@ -132,7 +132,7 @@
       "raspberry-pi-imager"
       "audacity"
       "claude"
-      "codex"
+      "codex-app"
       "chatgpt"
       "chatgpt-atlas"
     ];

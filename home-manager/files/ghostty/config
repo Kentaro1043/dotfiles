@@ -8,3 +8,6 @@ font-feature = -dlig
 font-size = 14
 
 cursor-style = bar
+
+# Ctrl + Shift + ; でフォントサイズを上げる
+keybind = ctrl+shift+semicolon=increase_font_size:1

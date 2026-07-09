@@ -29,5 +29,6 @@ lib.mkIf pkgs.stdenv.isLinux
     wineWow64Packages.stable
     winetricks
     warp-terminal
+    godot
   ];
 }

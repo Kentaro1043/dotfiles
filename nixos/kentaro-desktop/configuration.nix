@@ -3,7 +3,14 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  noto-fonts-cjk-sans-static = pkgs.noto-fonts-cjk-sans.override {
+    static = true;
+  };
+  noto-fonts-cjk-serif-static = pkgs.noto-fonts-cjk-serif.override {
+    static = true;
+  };
+in {
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
@@ -199,8 +206,8 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
+      noto-fonts-cjk-sans-static
+      noto-fonts-cjk-serif-static
       noto-fonts-monochrome-emoji
       nerd-fonts.jetbrains-mono
       ipafont

@@ -83,6 +83,7 @@
       "discord"
       "box-drive"
       "libreoffice"
+      "temurin@17"
       "slack"
       "unity-hub"
       "vlc"

@@ -34,6 +34,10 @@
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
 
+    # hermes-agent
+    hermes-agent.url = "github:NousResearch/hermes-agent";
+    hermes-agent.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
     # mise
     mise.url = "github:jdx/mise";
     mise.inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -100,6 +104,7 @@
 
     darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      specialArgs = {inherit inputs;};
       modules = [
         determinate.darwinModules.default
         ./nix-darwin

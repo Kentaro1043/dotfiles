@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   nix.enable = false;
 
   determinateNix.customSettings = {
@@ -38,6 +42,9 @@
       zsh
       bashInteractive
     ];
+    systemPackages = [
+      inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
   };
 
   programs = {
@@ -71,15 +78,12 @@
     ];
     brews = [
       "openvpn"
-      "i686-elf-gcc"
-      "nasm"
     ];
     casks = [
       "discord"
       "box-drive"
       "libreoffice"
       "slack"
-      "obsidian"
       "unity-hub"
       "vlc"
       "tailscale-app"
@@ -112,7 +116,6 @@
       "rekordbox"
       "ghostty"
       "cyberduck"
-      "netnewswire"
       "dbeaver-community"
       "medis"
       "pycharm"
@@ -121,11 +124,8 @@
       "tablecruncher"
       "rustdesk"
       "zotero"
-      "joplin"
       "freelens"
       "ungoogled-chromium"
-      "qt-creator"
-      "qt-design-studio"
       "rancher"
       "warp"
       "zed"
@@ -133,7 +133,6 @@
       "audacity"
       "claude"
       "codex-app"
-      "chatgpt"
       "chatgpt-atlas"
     ];
   };

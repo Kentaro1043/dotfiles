@@ -30,6 +30,6 @@ lib.mkIf pkgs.stdenv.isLinux
     winetricks
     warp-terminal
     godot
-    rustdesk
+    # rustdesk
   ];
 }

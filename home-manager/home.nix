@@ -38,6 +38,7 @@
           "slack" # unfree
           "pycharm" # unfree
           "warp-terminal" # unfree
+          "libsciter" # unfree, needed by rustdesk
         ];
     };
   };

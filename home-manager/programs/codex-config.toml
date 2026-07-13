@@ -1,6 +1,7 @@
-model = "gpt-5.5"
-model_reasoning_effort = "xhigh"
-approval_policy = "untrusted"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
 default_permissions = "local-workspace"
 web_search = "live"
 
@@ -54,10 +55,6 @@ extends = ":workspace"
 
 [permissions.local-workspace.network]
 enabled = true
-
-[permissions.yolo]
-description = "Full local access equivalent to --yolo permissions."
-extends = ":danger-full-access"
 
 [tui]
 notifications = ["agent-turn-complete", "approval-requested"]

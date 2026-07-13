@@ -77,7 +77,8 @@ in {
           connection = {
             id = "br0-port-eth";
             type = "ethernet";
-            interface-name = "enp4s0";
+            interface-name = "enp6s0";
+            autoconnect-priority = 100;
             master = "br0";
             slave-type = "bridge";
           };

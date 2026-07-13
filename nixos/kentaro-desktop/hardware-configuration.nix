@@ -16,17 +16,8 @@
       availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
       kernelModules = [];
     };
-    kernelModules = ["kvm-intel"];
+    kernelModules = [];
     extraModulePackages = [];
-    blacklistedKernelModules = [
-      "dvb_usb_rtl28xxu"
-      "rtl2832"
-      "rtl2832_sdr"
-    ];
-    binfmt = {
-      emulatedSystems = ["armv7l-linux"];
-      preferStaticEmulators = true;
-    };
   };
 
   fileSystems."/" = {
@@ -43,15 +34,5 @@
   swapDevices = [];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware = {
-    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    graphics.enable = true;
-    bluetooth.enable = true;
-    openrazer = {
-      enable = true;
-      users = [
-        "kentaro"
-      ];
-    };
-  };
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

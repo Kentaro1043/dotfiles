@@ -29,9 +29,11 @@ in {
   };
 
   imports = [
+    ./additional-hardware.nix
     ./hardware-configuration.nix
     ./programs
     ./services
+    ./storage.nix
   ];
 
   # OS

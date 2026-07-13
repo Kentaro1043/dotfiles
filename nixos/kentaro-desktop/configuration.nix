@@ -21,12 +21,6 @@ in {
       allowUnfree = false;
       allowUnfreePredicate = pkg:
         builtins.elem (lib.getName pkg) [
-          "nvidia-x11" # unfreeRedistributable
-          "nvidia-settings" # unfreeRedistributable
-          "cuda_cudart" # CUDA EULA
-          "cuda_nvcc" # CUDA EULA
-          "cuda_cccl" # CUDA EULA
-          "libcublas" # CUDA EULA
           "steam" # unfreeRedistributable
           "steam-unwrapped" # unfreeRedistributable
           "open-webui" # Open WebUI License
@@ -162,7 +156,7 @@ in {
   services.xserver = {
     enable = true;
     exportConfiguration = true;
-    videoDrivers = ["nvidia"];
+    videoDrivers = ["amdgpu"];
   };
 
   # Enable the GNOME Desktop Environment.

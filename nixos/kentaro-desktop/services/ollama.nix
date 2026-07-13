@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   services.ollama = {
     enable = false;
-    package = pkgs.ollama-cuda;
+    package = pkgs.ollama-rocm;
     environmentVariables = {
-      LD_LIBRARY_PATH = "${pkgs.linuxPackages.nvidia_x11}/lib:$LD_LIBRARY_PATH";
+      HSA_OVERRIDE_GFX_VERSION = "10.3.0";
     };
 
     loadModels = [

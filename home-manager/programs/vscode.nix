@@ -43,6 +43,7 @@
 
           # Platform
           ms-kubernetes-tools.vscode-kubernetes-tools
+          pkgs.nix-vscode-extensions.open-vsx-release."42crunch".vscode-openapi
 
           # Languages
           # Nix

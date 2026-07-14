@@ -14,6 +14,9 @@
       enableZshIntegration = true;
       enableBashIntegration = true;
     };
+    go = {
+      enable = true;
+    };
     gpg = {
       enable = true;
     };

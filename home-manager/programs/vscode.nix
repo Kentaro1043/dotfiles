@@ -94,6 +94,8 @@
           # Markdown
           davidanson.vscode-markdownlint
           marp-team.marp-vscode
+          # Godot
+          geequlim.godot-tools
         ]
         ++ [
           pkgs.nix-vscode-extensions.vscode-marketplace-release."3w36zj6".textlint

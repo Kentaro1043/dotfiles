@@ -21,6 +21,7 @@ in {
   programs.codex = {
     enable = true;
     package = codex;
+    context = ./AGENTS.md;
   };
   home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
     $DRY_RUN_CMD mkdir -p $HOME/.codex

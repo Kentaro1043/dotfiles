@@ -2,6 +2,7 @@
   programs.claude-code = {
     enable = true;
     package = pkgs.llm-agents.claude-code;
+    context = ./AGENTS.md;
     mcpServers = {
       context7 = {
         command = "npx";

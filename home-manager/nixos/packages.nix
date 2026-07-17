@@ -31,5 +31,6 @@ lib.mkIf pkgs.stdenv.isLinux
     warp-terminal
     godot
     # rustdesk
+    mission-center
   ];
 }

@@ -2,7 +2,14 @@
   inputs,
   pkgs,
   ...
-}: {
+}: let
+  noto-fonts-cjk-sans-static = pkgs.noto-fonts-cjk-sans.override {
+    static = true;
+  };
+  noto-fonts-cjk-serif-static = pkgs.noto-fonts-cjk-serif.override {
+    static = true;
+  };
+in {
   nix.enable = false;
 
   determinateNix.customSettings = {
@@ -60,8 +67,8 @@
   fonts.packages = with pkgs; [
     powerline-fonts
     noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
+    noto-fonts-cjk-sans-static
+    noto-fonts-cjk-serif-static
     nerd-fonts.jetbrains-mono
     biz-ud-gothic
   ];

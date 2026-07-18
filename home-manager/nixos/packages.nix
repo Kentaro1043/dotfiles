@@ -32,5 +32,6 @@ lib.mkIf pkgs.stdenv.isLinux
     godot
     # rustdesk
     mission-center
+    feishin
   ];
 }

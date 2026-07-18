@@ -1,8 +1,11 @@
 {
   pkgs,
   lib,
+  llm-agents,
   ...
-}: {
+}: let
+  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+in {
   home.packages = with pkgs;
     [
       ###########
@@ -83,8 +86,8 @@
       #############
       # AI Agents #
       #############
-      llm-agents.qwen-code
-      llm-agents.antigravity-cli
+      llmAgentPackages.qwen-code
+      llmAgentPackages.antigravity-cli
 
       ########
       # nvim #

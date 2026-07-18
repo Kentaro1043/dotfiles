@@ -1,7 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  llm-agents,
+  ...
+}: let
+  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+in {
   programs.opencode = {
     enable = true;
-    package = pkgs.llm-agents.opencode;
+    package = llmAgentPackages.opencode;
     tui = {
       theme = "dracula";
     };

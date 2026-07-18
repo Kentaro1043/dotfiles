@@ -2,8 +2,10 @@
   config,
   pkgs,
   lib,
+  llm-agents,
   ...
 }: let
+  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   grafanaTrapAuthorization =
     config.sops.secrets.codex-grafana-trap-authorization.path;
   codex =
@@ -12,7 +14,7 @@
       meta.mainProgram = "codex";
     } ''
       mkdir -p $out/bin
-      makeWrapper ${lib.getExe pkgs.llm-agents.codex} $out/bin/codex \
+      makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
         --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
 in {

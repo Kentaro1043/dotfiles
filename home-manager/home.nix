@@ -4,7 +4,6 @@
   lib,
   pkgs,
   nix-vscode-extensions,
-  llm-agents,
   ...
 }: {
   imports = [
@@ -22,7 +21,6 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
       nix-vscode-extensions.overlays.default
-      llm-agents.overlays.shared-nixpkgs
     ];
     config = {
       allowUnfree = false;

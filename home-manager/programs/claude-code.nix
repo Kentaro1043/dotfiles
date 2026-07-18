@@ -1,7 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  llm-agents,
+  ...
+}: let
+  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+in {
   programs.claude-code = {
     enable = true;
-    package = pkgs.llm-agents.claude-code;
+    package = llmAgentPackages.claude-code;
     context = ./AGENTS.md;
     mcpServers = {
       context7 = {

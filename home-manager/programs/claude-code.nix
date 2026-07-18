@@ -1,10 +1,4 @@
-{
-  pkgs,
-  llm-agents,
-  ...
-}: let
-  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+{llmAgentPackages, ...}: {
   programs.claude-code = {
     enable = true;
     package = llmAgentPackages.claude-code;

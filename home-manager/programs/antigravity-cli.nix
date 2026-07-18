@@ -1,9 +1,8 @@
 {
   pkgs,
-  llm-agents,
+  llmAgentPackages,
   ...
 }: let
-  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   baseSettings = builtins.fromJSON (builtins.readFile ./antigravity-cli-settings.json);
   darwinSettings =
     baseSettings

@@ -4,6 +4,7 @@
   lib,
   pkgs,
   nix-vscode-extensions,
+  llm-agents,
   ...
 }: {
   imports = [
@@ -58,6 +59,9 @@
   };
 
   programs.home-manager.enable = true;
+
+  _module.args.llmAgentPackages =
+    llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
 
   systemd.user.startServices = "sd-switch";
 

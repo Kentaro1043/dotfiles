@@ -1,11 +1,9 @@
 {
   pkgs,
   lib,
-  llm-agents,
+  llmAgentPackages,
   ...
-}: let
-  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+}: {
   home.packages = with pkgs;
     [
       ###########

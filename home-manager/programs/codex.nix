@@ -2,10 +2,9 @@
   config,
   pkgs,
   lib,
-  llm-agents,
+  llmAgentPackages,
   ...
 }: let
-  llmAgentPackages = llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   grafanaTrapAuthorization =
     config.sops.secrets.codex-grafana-trap-authorization.path;
   codex =

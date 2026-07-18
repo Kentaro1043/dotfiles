@@ -14,6 +14,15 @@ home-managerの設定更新
 home-manager switch --flake .#$USER@$(hostname | sed 's/\.local$//')
 ```
 
+#### Plasmaのアプリケーションメニューを更新
+
+Home ManagerでGUIアプリを追加したあと、Plasma 6のアプリケーションメニューに
+表示されない場合は、Plasmaへ現在の検索パスを反映してキャッシュを再構築する。
+
+```shell
+dbus-update-activation-environment --systemd XDG_DATA_DIRS PATH && kbuildsycoca6 --noincremental && systemctl --user restart plasma-plasmashell.service
+```
+
 ### Darwin
 
 nix-darwinの設定更新

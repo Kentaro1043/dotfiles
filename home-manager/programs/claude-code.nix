@@ -4,6 +4,16 @@
   llmAgentPackages,
   ...
 }: let
+  claudeCodeStatusline = pkgs.writeShellApplication {
+    name = "claude-code-statusline";
+    runtimeInputs = [
+      pkgs.coreutils
+      pkgs.gawk
+      pkgs.git
+      pkgs.jq
+    ];
+    text = builtins.readFile ./claude-code/statusline-command.sh;
+  };
   claudeCodeNotify = pkgs.writeShellApplication {
     name = "claude-code-notify";
     runtimeInputs =
@@ -84,37 +94,44 @@
     '';
   };
 in {
+  home.file.".claude/statusline-command.sh" = {
+    source = lib.getExe claudeCodeStatusline;
+    force = true;
+  };
+
   programs.claude-code = {
     enable = true;
     package = llmAgentPackages.claude-code;
     context = ./AGENTS.md;
-    settings.statusLine = {
-      type = "command";
-      command = "~/.claude/statusline-command.sh";
-    };
-    settings.hooks = {
-      PermissionRequest = [
-        {
-          matcher = "";
-          hooks = [
-            {
-              type = "command";
-              command = lib.getExe claudeCodeNotify;
-            }
-          ];
-        }
-      ];
-      Stop = [
-        {
-          matcher = "";
-          hooks = [
-            {
-              type = "command";
-              command = lib.getExe claudeCodeNotify;
-            }
-          ];
-        }
-      ];
+    settings = {
+      statusLine = {
+        type = "command";
+        command = "~/.claude/statusline-command.sh";
+      };
+      hooks = {
+        PermissionRequest = [
+          {
+            matcher = "";
+            hooks = [
+              {
+                type = "command";
+                command = lib.getExe claudeCodeNotify;
+              }
+            ];
+          }
+        ];
+        Stop = [
+          {
+            matcher = "";
+            hooks = [
+              {
+                type = "command";
+                command = lib.getExe claudeCodeNotify;
+              }
+            ];
+          }
+        ];
+      };
     };
     mcpServers = {
       context7 = {

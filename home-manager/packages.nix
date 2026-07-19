@@ -135,7 +135,7 @@
       ############
       # Database #
       ############
-      mysql-client
+      mariadb.client
 
       ###########
       # Node.js #

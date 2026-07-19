@@ -96,6 +96,7 @@
           marp-team.marp-vscode
           # Godot
           geequlim.godot-tools
+          eddiedover.gdscript-formatter-linter
         ]
         ++ [
           pkgs.nix-vscode-extensions.vscode-marketplace-release."3w36zj6".textlint

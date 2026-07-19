@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  llmAgentPackages,
   ...
 }: {
   home.packages = with pkgs;
@@ -83,8 +84,8 @@
       #############
       # AI Agents #
       #############
-      llm-agents.qwen-code
-      llm-agents.antigravity-cli
+      llmAgentPackages.qwen-code
+      llmAgentPackages.antigravity-cli
 
       ########
       # nvim #
@@ -135,6 +136,11 @@
       # Node.js #
       ###########
       nodejs
+
+      #########
+      # Godot #
+      #########
+      gdtoolkit_4
 
       ##########
       # kyopro #

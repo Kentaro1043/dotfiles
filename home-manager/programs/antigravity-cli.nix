@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  llmAgentPackages,
+  ...
+}: let
   baseSettings = builtins.fromJSON (builtins.readFile ./antigravity-cli-settings.json);
   darwinSettings =
     baseSettings
@@ -25,7 +29,7 @@
 in {
   programs.antigravity-cli = {
     enable = true;
-    package = pkgs.llm-agents.gemini-cli;
+    package = llmAgentPackages.gemini-cli;
     inherit settings;
   };
 

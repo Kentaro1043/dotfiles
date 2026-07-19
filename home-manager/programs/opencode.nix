@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{llmAgentPackages, ...}: {
   programs.opencode = {
     enable = true;
-    package = pkgs.llm-agents.opencode;
+    package = llmAgentPackages.opencode;
     tui = {
       theme = "dracula";
     };

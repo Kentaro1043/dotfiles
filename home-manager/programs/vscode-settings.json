@@ -48,6 +48,9 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[gdscript]": {
+    "editor.defaultFormatter": "EddieDover.gdscript-formatter-linter"
+  },
   "claudeCode.useTerminal": true,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptBody": false,

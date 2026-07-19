@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  llmAgentPackages,
   ...
 }: let
   claudeCodeNotify = pkgs.writeShellApplication {
@@ -85,7 +86,7 @@
 in {
   programs.claude-code = {
     enable = true;
-    package = pkgs.llm-agents.claude-code;
+    package = llmAgentPackages.claude-code;
     context = ./AGENTS.md;
     settings.hooks = {
       PermissionRequest = [

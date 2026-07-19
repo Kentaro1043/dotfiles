@@ -22,7 +22,6 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
       nix-vscode-extensions.overlays.default
-      llm-agents.overlays.default
     ];
     config = {
       allowUnfree = false;
@@ -60,6 +59,9 @@
   };
 
   programs.home-manager.enable = true;
+
+  _module.args.llmAgentPackages =
+    llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
 
   systemd.user.startServices = "sd-switch";
 

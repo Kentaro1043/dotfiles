@@ -52,13 +52,26 @@
       esac
 
       if [[ "$(uname -s)" == "Darwin" ]]; then
+        activate="com.mitchellh.ghostty"
+        if [[ "''${TERM_PROGRAM:-}" == "vscode" || -n "''${VSCODE_GIT_IPC_HANDLE:-}" ]]; then
+          activate="com.vscodium"
+        elif [[ "''${TERMINAL_EMULATOR:-}" == "JetBrains-JediTerm" ]]; then
+          activate="com.jetbrains.pycharm"
+        elif [[ "''${TERM_PROGRAM:-}" == "WarpTerminal" || -n "''${WARP_IS_LOCAL_SHELL_SESSION:-}" ]]; then
+          activate="dev.warp.Warp-Stable"
+        elif [[ "''${TERM_PROGRAM:-}" == "Apple_Terminal" ]]; then
+          activate="com.apple.Terminal"
+        elif [[ "''${TERM_PROGRAM:-}" == "iTerm.app" ]]; then
+          activate="com.googlecode.iterm2"
+        fi
+
         terminal-notifier \
           -title "$title" \
           -subtitle "$project" \
           -message "$body" \
           -sound "$sound" \
           -group "claude-code-$session" \
-          -activate "com.mitchellh.ghostty"
+          -activate "$activate"
       else
         notify-send \
           --app-name="Claude Code" \

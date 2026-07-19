@@ -25,43 +25,52 @@
       ++ lib.optionals pkgs.stdenv.isLinux [pkgs.libnotify];
     text = builtins.readFile ./claude-code-notify.sh;
   };
+  claudeCodeSettings = {
+    statusLine = {
+      type = "command";
+      command = "~/.claude/statusline-command.sh";
+    };
+    hooks = {
+      PermissionRequest = [
+        {
+          matcher = "";
+          hooks = [
+            {
+              type = "command";
+              command = lib.getExe claudeCodeNotify;
+            }
+          ];
+        }
+      ];
+      Stop = [
+        {
+          matcher = "";
+          hooks = [
+            {
+              type = "command";
+              command = lib.getExe claudeCodeNotify;
+            }
+          ];
+        }
+      ];
+    };
+  };
+  claudeCodeSettingsFile =
+    (pkgs.formats.json {}).generate "claude-code-settings.json" claudeCodeSettings;
 in {
   home.file.".claude/statusline-command.sh".source = lib.getExe claudeCodeStatusline;
+
+  home.activation.setupClaudeCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    $DRY_RUN_CMD mkdir -p $HOME/.claude
+    $DRY_RUN_CMD rm -f $HOME/.claude/settings.json
+    $DRY_RUN_CMD cp ${claudeCodeSettingsFile} $HOME/.claude/settings.json
+    $DRY_RUN_CMD chmod 644 $HOME/.claude/settings.json
+  '';
 
   programs.claude-code = {
     enable = true;
     package = llmAgentPackages.claude-code;
     context = ./AGENTS.md;
-    settings = {
-      statusLine = {
-        type = "command";
-        command = "~/.claude/statusline-command.sh";
-      };
-      hooks = {
-        PermissionRequest = [
-          {
-            matcher = "";
-            hooks = [
-              {
-                type = "command";
-                command = lib.getExe claudeCodeNotify;
-              }
-            ];
-          }
-        ];
-        Stop = [
-          {
-            matcher = "";
-            hooks = [
-              {
-                type = "command";
-                command = lib.getExe claudeCodeNotify;
-              }
-            ];
-          }
-        ];
-      };
-    };
     mcpServers = {
       context7 = {
         command = "npx";

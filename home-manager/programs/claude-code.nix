@@ -88,6 +88,10 @@ in {
     enable = true;
     package = llmAgentPackages.claude-code;
     context = ./AGENTS.md;
+    settings.statusLine = {
+      type = "command";
+      command = "~/.claude/statusline-command.sh";
+    };
     settings.hooks = {
       PermissionRequest = [
         {

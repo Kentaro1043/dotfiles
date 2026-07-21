@@ -59,7 +59,7 @@ enabled = true
 [tui]
 notifications = ["agent-turn-complete", "approval-requested"]
 notification_method = "auto"
-notification_condition = "always"
+notification_condition = "unfocused"
 status_line = [
     "model-with-reasoning",
     "context-remaining",

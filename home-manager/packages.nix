@@ -132,6 +132,11 @@
       ##########
       lazydocker
 
+      ############
+      # Database #
+      ############
+      mariadb.client
+
       ###########
       # Node.js #
       ###########

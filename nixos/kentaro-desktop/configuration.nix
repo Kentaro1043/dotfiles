@@ -267,6 +267,7 @@ in {
     openrazer-daemon
     polychromatic
     wireshark
+    wayvr
   ];
   virtualisation = {
     virtualbox.host = {

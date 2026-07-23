@@ -1,5 +1,9 @@
 {...}: {
   programs = {
+    alvr = {
+      enable = true;
+      openFirewall = true;
+    };
     hyprland.enable = false;
     nix-ld.enable = true;
     steam = {

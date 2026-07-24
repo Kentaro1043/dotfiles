@@ -9,6 +9,8 @@
     "**/Thumbs.db": true
   },
   "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "workbench.colorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.linux": "zsh",

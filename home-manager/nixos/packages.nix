@@ -33,5 +33,6 @@ lib.mkIf pkgs.stdenv.isLinux
     # rustdesk
     mission-center
     feishin
+    obs-studio
   ];
 }

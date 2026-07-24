@@ -25,9 +25,9 @@ in {
 
     defaults = {
       dock = {
-        autohide = true;
+        autohide = false;
         show-recents = false;
-        orientation = "bottom";
+        orientation = "left";
       };
 
       NSGlobalDomain.AppleShowAllExtensions = true;

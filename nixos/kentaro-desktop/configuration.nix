@@ -277,6 +277,9 @@ in {
       enable = true;
     };
   };
+  security.pki.certificateFiles = [
+    ./homelab-root-ca.crt
+  ];
 
   # QEMU
   security.wrappers.qemu-bridge-helper = {

@@ -9,6 +9,7 @@
     ./mcp.nix
     ./nixvim.nix
     ./opencode.nix
+    ./rclone.nix
     ./ssh.nix
     ./starship.nix
     ./vim.nix

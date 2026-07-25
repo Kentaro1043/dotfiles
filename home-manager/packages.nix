@@ -74,7 +74,6 @@
       # Others
       direnv
       envsubst
-      rclone
       sops
       age
       lazyssh

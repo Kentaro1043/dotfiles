@@ -35,8 +35,7 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
 
     # hermes-agent
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-    hermes-agent.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    hermes-agent.url = "github:NousResearch/hermes-agent/v2026.7.20";
 
     # mise
     mise.url = "github:jdx/mise";
@@ -48,8 +47,14 @@
   };
 
   nixConfig = {
-    extra-substituters = ["https://cache.numtide.com"];
-    extra-trusted-public-keys = ["niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="];
+    extra-substituters = [
+      "https://cache.numtide.com"
+      "https://hermes-agent.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+      "hermes-agent.cachix.org-1:jN3pjR50Mxi4SESKC/FIMNM6/LCosvPk2VUwzVvebzU="
+    ];
   };
 
   outputs = {

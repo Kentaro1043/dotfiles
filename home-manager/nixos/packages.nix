@@ -34,5 +34,6 @@ lib.mkIf pkgs.stdenv.isLinux
     mission-center
     feishin
     obs-studio
+    shotcut
   ];
 }

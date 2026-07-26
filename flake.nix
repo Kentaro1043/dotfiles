@@ -117,15 +117,6 @@
     };
 
     nixosConfigurations = {
-      "kentaro@kentaro-win" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          ./nixos/kentaro-win/configuration.nix
-          determinate.nixosModules.default
-          sops-nix.nixosModules.sops
-        ];
-      };
       "kentaro@kentaro-desktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};

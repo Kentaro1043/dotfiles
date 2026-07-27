@@ -85,7 +85,6 @@
       #############
       llmAgentPackages.qwen-code
       llmAgentPackages.antigravity-cli
-      hermes-desktop
 
       ########
       # nvim #

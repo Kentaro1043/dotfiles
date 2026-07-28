@@ -25,6 +25,7 @@ lib.mkIf pkgs.stdenv.isLinux
     zen-browser-bin
     ardour
     zrythm
+    surge-XT
     usbutils
     wineWow64Packages.stable
     winetricks

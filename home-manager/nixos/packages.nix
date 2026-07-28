@@ -36,5 +36,6 @@ lib.mkIf pkgs.stdenv.isLinux
     obs-studio
     shotcut
     hermes-desktop
+    ardour
   ];
 }

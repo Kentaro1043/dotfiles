@@ -35,5 +35,6 @@ lib.mkIf pkgs.stdenv.isLinux
     feishin
     obs-studio
     shotcut
+    hermes-desktop
   ];
 }

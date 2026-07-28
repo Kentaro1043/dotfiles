@@ -150,7 +150,6 @@ in {
       "claude"
       "codex-app"
       "chatgpt-atlas"
-      "godot"
     ];
   };
 }

@@ -157,6 +157,11 @@
       darwin.IOKitTools
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
+      #############
+      # AI Agents #
+      #############
+      cua-driver
+
       #######
       # SDR #
       #######

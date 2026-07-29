@@ -37,5 +37,6 @@ lib.mkIf pkgs.stdenv.isLinux
     obs-studio
     shotcut
     hermes-desktop
+    x42-avldrums
   ];
 }

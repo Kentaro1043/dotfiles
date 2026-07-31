@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./activation.nix
+    ./openrazer.nix
     ./packages.nix
     ./services.nix
     ./programs.nix

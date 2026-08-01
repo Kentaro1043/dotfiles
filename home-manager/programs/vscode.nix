@@ -31,6 +31,7 @@
           vivaxy.vscode-conventional-commits
           jetify.devbox
           esbenp.prettier-vscode
+          mathematic.vscode-pdf
 
           # AI
           continue.continue

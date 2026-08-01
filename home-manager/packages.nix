@@ -23,6 +23,7 @@
       # Tools #
       #########
       imagemagick
+      poppler-utils
       libwebp
       fftw
       ffmpeg-full
@@ -140,6 +141,15 @@
       # Node.js #
       ###########
       nodejs
+
+      ##########
+      # Python #
+      ##########
+      (python3.withPackages (pythonPackages: [
+        pythonPackages.pdfplumber
+        pythonPackages.pypdf
+        pythonPackages.reportlab
+      ]))
 
       #########
       # Godot #

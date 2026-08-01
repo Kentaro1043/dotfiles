@@ -38,5 +38,6 @@ lib.mkIf pkgs.stdenv.isLinux
     shotcut
     hermes-desktop
     x42-avldrums
+    chromium
   ];
 }

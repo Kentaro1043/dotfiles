@@ -34,6 +34,12 @@
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
 
+    # Codex skills
+    codex-skills = {
+      url = "github:openai/skills";
+      flake = false;
+    };
+
     # cua
     cua.url = "github:trycua/cua";
 

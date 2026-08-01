@@ -17,7 +17,13 @@
       makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
         --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
-  skillNames = ["pdf"];
+  skillNames = [
+    "jupyter-notebook"
+    "openai-docs"
+    "pdf"
+    "playwright"
+    "screenshot"
+  ];
 in {
   sops.secrets.codex-grafana-trap-authorization = {};
 

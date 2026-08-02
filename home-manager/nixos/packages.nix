@@ -3,21 +3,25 @@
   lib,
   ...
 }: let
-  pycharmXWayland = pkgs.symlinkJoin {
-    name = "pycharm-xwayland";
-    paths = [pkgs.unstable.jetbrains.pycharm];
-    nativeBuildInputs = [pkgs.makeWrapper];
-    postBuild = ''
-      wrapProgram "$out/bin/pycharm" \
-        --add-flags "-Dawt.toolkit.name=XToolkit"
-    '';
-  };
+  wrapJetBrainsIdeForXWayland = package: executable:
+    pkgs.symlinkJoin {
+      name = "${executable}-xwayland";
+      paths = [package];
+      nativeBuildInputs = [pkgs.makeWrapper];
+      postBuild = ''
+        wrapProgram "$out/bin/${executable}" \
+          --add-flags "-Dawt.toolkit.name=XToolkit"
+      '';
+    };
+  ideaXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.idea "idea";
+  pycharmXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.pycharm "pycharm";
 in
   lib.mkIf pkgs.stdenv.isLinux {
     home.packages = with pkgs; [
       # GUI apps
       discord
       ghostty
+      ideaXWayland
       pycharmXWayland
       rpi-imager
       libreoffice

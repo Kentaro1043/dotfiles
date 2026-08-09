@@ -108,7 +108,10 @@
     };
 
     darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
-      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      pkgs = import nixpkgs {
+        system = "aarch64-darwin";
+        overlays = [outputs.overlays.unstable-packages];
+      };
       specialArgs = {inherit inputs;};
       modules = [
         determinate.darwinModules.default

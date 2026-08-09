@@ -58,6 +58,7 @@ in {
       bashInteractive
     ];
     systemPackages = [
+      pkgs.unstable.ardour
       # inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };

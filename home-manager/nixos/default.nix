@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./activation.nix
     ./packages.nix
     ./services.nix
     ./programs.nix

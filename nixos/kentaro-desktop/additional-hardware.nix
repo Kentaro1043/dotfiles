@@ -17,6 +17,7 @@
     bluetooth.enable = true;
     openrazer = {
       enable = true;
+      batteryNotifier.enable = false;
       users = ["kentaro"];
     };
   };

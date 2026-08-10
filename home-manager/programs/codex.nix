@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   llmAgentPackages,
   ...
 }: let
@@ -16,6 +17,13 @@
       makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
         --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
+  skillNames = [
+    "jupyter-notebook"
+    "openai-docs"
+    "pdf"
+    "playwright"
+    "screenshot"
+  ];
 in {
   sops.secrets.codex-grafana-trap-authorization = {};
 
@@ -24,6 +32,16 @@ in {
     package = codex;
     context = ./AGENTS.md;
   };
+
+  home.file = lib.listToAttrs (
+    map (name:
+      lib.nameValuePair ".codex/skills/${name}" {
+        source = inputs.codex-skills + "/skills/.curated/${name}";
+        force = true;
+      })
+    skillNames
+  );
+
   home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
     $DRY_RUN_CMD mkdir -p $HOME/.codex
     $DRY_RUN_CMD rm -f $HOME/.codex/config.toml

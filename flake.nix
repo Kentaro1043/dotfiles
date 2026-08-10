@@ -34,6 +34,15 @@
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
 
+    # Codex skills
+    codex-skills = {
+      url = "github:openai/skills";
+      flake = false;
+    };
+
+    # cua
+    cua.url = "github:trycua/cua";
+
     # hermes-agent
     hermes-agent.url = "github:NousResearch/hermes-agent/v2026.7.20";
 

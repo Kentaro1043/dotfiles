@@ -23,6 +23,7 @@
       # Tools #
       #########
       imagemagick
+      poppler-utils
       libwebp
       fftw
       ffmpeg-full
@@ -141,6 +142,15 @@
       ###########
       nodejs
 
+      ##########
+      # Python #
+      ##########
+      (python3.withPackages (pythonPackages: [
+        pythonPackages.pdfplumber
+        pythonPackages.pypdf
+        pythonPackages.reportlab
+      ]))
+
       #########
       # Godot #
       #########
@@ -156,6 +166,11 @@
       darwin.IOKitTools
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
+      #############
+      # AI Agents #
+      #############
+      cua-driver
+
       #######
       # SDR #
       #######

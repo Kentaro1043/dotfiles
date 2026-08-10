@@ -1,4 +1,17 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
+  # VSCodium cannot remove Nix-managed extension symlinks, leaving stale entries
+  # in .obsolete. Also, package = null prevents Home Manager from rebuilding the
+  # mutable extension cache when the declared extensions change.
+  home.activation.resetVscodiumExtensionCache = lib.hm.dag.entryAfter ["linkGeneration"] ''
+    $DRY_RUN_CMD rm -f \
+      "$HOME/.vscode-oss/extensions/.obsolete" \
+      "$HOME/.vscode-oss/extensions/extensions.json"
+  '';
+
   programs.vscodium = {
     enable = true;
     # VSCodium itself is installed by the OS-specific configuration.

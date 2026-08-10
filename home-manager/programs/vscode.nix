@@ -32,6 +32,7 @@
           # openai.chatgpt # Unfree
 
           # Platform
+          jeanp413.open-remote-ssh
           ms-kubernetes-tools.vscode-kubernetes-tools
           pkgs.nix-vscode-extensions.open-vsx-release."42crunch".vscode-openapi
 

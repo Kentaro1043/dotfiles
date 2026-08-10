@@ -1,19 +1,8 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.vscodium = {
     enable = true;
-    package =
-      # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526
-      pkgs.unstable.vscodium.overrideAttrs (
-        final: prev: {
-          preFixup =
-            prev.preFixup
-            + "gappsWrapperArgs+=( --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.gcc.cc.lib]} )";
-        }
-      );
+    # VSCodium itself is installed by the OS-specific configuration.
+    package = null;
     # Don't work
     #argvSettings = {
     #  "locale" = "ja";

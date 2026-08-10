@@ -59,6 +59,7 @@ in {
     ];
     systemPackages = [
       pkgs.unstable.ardour
+      pkgs.unstable.vscodium
       # inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };

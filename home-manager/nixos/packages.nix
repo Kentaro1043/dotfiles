@@ -15,6 +15,15 @@
     };
   ideaXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.idea "idea";
   pycharmXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.pycharm "pycharm";
+  vscodium =
+    # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526
+    pkgs.unstable.vscodium.overrideAttrs (
+      _final: prev: {
+        preFixup =
+          prev.preFixup
+          + "gappsWrapperArgs+=( --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.gcc.cc.lib]} )";
+      }
+    );
 in
   lib.mkIf pkgs.stdenv.isLinux {
     home.packages = with pkgs; [
@@ -52,5 +61,6 @@ in
       hermes-desktop
       x42-avldrums
       chromium
+      vscodium
     ];
   }

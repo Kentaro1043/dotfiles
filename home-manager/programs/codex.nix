@@ -18,11 +18,16 @@
         --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
   skillNames = [
+    "gh-address-comments"
+    "gh-fix-ci"
     "jupyter-notebook"
     "openai-docs"
     "pdf"
     "playwright"
     "screenshot"
+    "security-best-practices"
+    "security-threat-model"
+    "yeet"
   ];
 in {
   sops.secrets.codex-grafana-trap-authorization = {};

@@ -84,6 +84,7 @@
       #############
       # AI Agents #
       #############
+      mcp-grafana
       llmAgentPackages.qwen-code
       llmAgentPackages.antigravity-cli
 

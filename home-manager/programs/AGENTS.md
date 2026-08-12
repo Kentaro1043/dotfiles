@@ -2,13 +2,16 @@
 
 ## Git Commit
 
-機能の実装や修正が完了した段階で Git Commit を行ってください。
-Conventional Commits 規約と Gitmoji を使用し、コミットメッセージは日本語で書いてください。
+Commit指示は、以下の3通りからいずれかを行います。
+
+- Commit,Pushしない
+- Commitのみを行い、Pushはしない(デフォルト)
+- yeetスキルを用いてPRを作成する
+
+Git Commitを行う場合は、Conventional Commits規約とGitmojiを使用し、コミットメッセージは日本語で書いてください。
 例を以下に示します。
 
 > feat: ✨ 新規機能を実装
-
-ただし、ワークスペースがGitリポジトリでない場合は、Commitの必要はありません。
 
 ## フォーマッタ・リンタ
 

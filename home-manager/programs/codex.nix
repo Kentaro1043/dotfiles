@@ -6,8 +6,6 @@
   llmAgentPackages,
   ...
 }: let
-  grafanaCloudServiceAccountToken =
-    config.sops.secrets.codex-grafana-cloud-service-account-token.path;
   grafanaTrapAuthorization =
     config.sops.secrets.codex-grafana-trap-authorization.path;
   codex =
@@ -17,8 +15,7 @@
     } ''
       mkdir -p $out/bin
       makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
-        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi' \
-        --run 'if [ -r "${grafanaCloudServiceAccountToken}" ]; then export GRAFANA_SERVICE_ACCOUNT_TOKEN="$(cat "${grafanaCloudServiceAccountToken}")"; fi'
+        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
   skillNames = [
     "gh-address-comments"
@@ -33,7 +30,6 @@
     "yeet"
   ];
 in {
-  sops.secrets.codex-grafana-cloud-service-account-token = {};
   sops.secrets.codex-grafana-trap-authorization = {};
 
   programs.codex = {

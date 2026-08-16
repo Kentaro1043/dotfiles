@@ -13,12 +13,9 @@ command = "npx"
 url = "https://mcp.exa.ai/mcp"
 
 [mcp_servers.grafana-cloud]
-command = "mcp-grafana"
-env_vars = ["GRAFANA_SERVICE_ACCOUNT_TOKEN"]
-startup_timeout_sec = 30
-
-[mcp_servers.grafana-cloud.env]
-GRAFANA_URL = "https://kentaro1043.grafana.net"
+url = "https://mcp.grafana.com/mcp"
+auth = "oauth"
+http_headers = { "X-Grafana-URL" = "https://kentaro1043.grafana.net" }
 
 [mcp_servers.grafana-trap-sakura]
 url = "https://s-grafana-mcp.trap.jp/mcp"

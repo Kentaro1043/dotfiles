@@ -144,6 +144,8 @@
       # Node.js #
       ###########
       nodejs
+      yarn
+      pnpm
 
       ##########
       # Python #

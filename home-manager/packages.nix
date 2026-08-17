@@ -128,6 +128,7 @@
       kubectl
       kubernetes-helm
       minikube
+      skaffold
 
       ##########
       # Docker #

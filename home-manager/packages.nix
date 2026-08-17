@@ -127,6 +127,7 @@
       ##############
       kubectl
       kubernetes-helm
+      minikube
 
       ##########
       # Docker #

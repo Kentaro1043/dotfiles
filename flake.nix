@@ -95,6 +95,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
           inherit inputs outputs nix-vscode-extensions llm-agents;
+          username = "kentaro";
         };
         modules = [
           sops-nix.homeManagerModules.sops
@@ -107,6 +108,20 @@
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
           inherit inputs outputs nix-vscode-extensions llm-agents;
+          username = "kentaro";
+        };
+        modules = [
+          sops-nix.homeManagerModules.sops
+          nixvim.homeModules.nixvim
+          ./home-manager/home.nix
+        ];
+      };
+
+      "intern600@kentaro-hatena" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        extraSpecialArgs = {
+          inherit inputs outputs nix-vscode-extensions llm-agents;
+          username = "intern600";
         };
         modules = [
           sops-nix.homeManagerModules.sops

@@ -5,6 +5,7 @@
   pkgs,
   nix-vscode-extensions,
   llm-agents,
+  username,
   ...
 }: {
   imports = [
@@ -44,11 +45,11 @@
   };
 
   home = {
-    username = "kentaro";
+    inherit username;
     homeDirectory =
       if pkgs.stdenv.isDarwin
-      then "/Users/kentaro"
-      else "/home/kentaro";
+      then "/Users/${username}"
+      else "/home/${username}";
   };
 
   sops = {

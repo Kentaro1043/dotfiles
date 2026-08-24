@@ -1,4 +1,5 @@
 {
+  inputs,
   lib,
   pkgs,
   llmAgentPackages,
@@ -57,8 +58,20 @@
   };
   claudeCodeSettingsFile =
     (pkgs.formats.json {}).generate "claude-code-settings.json" claudeCodeSettings;
+  skillNames = import ./agent-skills.nix;
 in {
-  home.file.".claude/statusline-command.sh".source = lib.getExe claudeCodeStatusline;
+  home.file =
+    {
+      ".claude/statusline-command.sh".source = lib.getExe claudeCodeStatusline;
+    }
+    // lib.listToAttrs (
+      map (name:
+        lib.nameValuePair ".claude/skills/${name}" {
+          source = inputs.codex-skills + "/skills/.curated/${name}";
+          force = true;
+        })
+      skillNames
+    );
 
   home.activation.setupClaudeCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
     $DRY_RUN_CMD mkdir -p $HOME/.claude

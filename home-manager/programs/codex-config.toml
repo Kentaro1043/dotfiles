@@ -25,6 +25,9 @@ env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
 url = "https://grafana-mcp.trap.jp/mcp"
 env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
 
+[mcp_servers.science-tokyo-syllabus]
+url = "https://syllabus.s.isct.ac.jp/mcp"
+
 [mcp_servers.serena]
 command = "uvx"
 args = [

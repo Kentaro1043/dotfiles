@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  llmAgentPackages,
   ...
 }: let
   wrapJetBrainsIdeForXWayland = package: executable:
@@ -28,6 +29,7 @@ in
   lib.mkIf pkgs.stdenv.isLinux {
     home.packages = with pkgs; [
       # GUI apps
+      llmAgentPackages.chatgpt
       discord
       ghostty
       ideaXWayland

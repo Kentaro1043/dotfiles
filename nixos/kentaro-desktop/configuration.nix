@@ -106,6 +106,7 @@ in {
 
     firewall = {
       checkReversePath = false;
+      allowedTCPPorts = [8080];
       trustedInterfaces = [
         "docker0"
         "br0"

@@ -151,7 +151,7 @@ in {
       "audacity"
       "claude"
       "codex-app"
-      "chatgpt-atlas"
+      "brave-browser"
     ];
   };
 }

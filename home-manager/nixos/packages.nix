@@ -74,5 +74,6 @@ in
       x42-avldrums
       chromium
       vscodium
+      brave
     ];
   }

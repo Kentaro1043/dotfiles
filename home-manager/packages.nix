@@ -57,6 +57,7 @@
       awscli2
       oci-cli
       minio-client
+      mdx-cli
 
       # Version Managers
       devbox

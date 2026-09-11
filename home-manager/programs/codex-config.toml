@@ -22,6 +22,10 @@ env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
 url = "https://grafana-mcp.trap.jp/mcp"
 env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
 
+[mcp_servers.grafana-work]
+command = "@grafanaWorkCommand@"
+startup_timeout_sec = 60
+
 [mcp_servers.science-tokyo-syllabus]
 url = "https://syllabus.s.isct.ac.jp/mcp"
 

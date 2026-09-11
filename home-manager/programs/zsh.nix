@@ -103,6 +103,10 @@ in {
       ];
 
     shellAliases = {
+      # Codex accounts
+      codex-me = "CODEX_HOME=$HOME/.codex codex";
+      codex-work = "CODEX_HOME=$HOME/.codex-work codex";
+
       # kyopro
       ojt = "oj test --gnu-time time";
       ojs = "oj test --gnu-time time && oj submit main.cpp --yes";

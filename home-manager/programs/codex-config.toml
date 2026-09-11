@@ -6,6 +6,9 @@ cli_auth_credentials_store = "file"
 default_permissions = "local-workspace"
 web_search = "live"
 
+[features]
+worktrees = true
+
 [mcp_servers.grafana-cloud]
 url = "https://mcp.grafana.com/mcp"
 auth = "oauth"

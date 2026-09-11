@@ -133,6 +133,7 @@ in {
       "zen"
       "rekordbox"
       "ghostty"
+      "cmux"
       "cyberduck"
       "dbeaver-community"
       "medis"

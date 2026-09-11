@@ -6,13 +6,6 @@ cli_auth_credentials_store = "file"
 default_permissions = "local-workspace"
 web_search = "live"
 
-[mcp_servers.context7]
-args = ["-y", "@upstash/context7-mcp"]
-command = "npx"
-
-[mcp_servers.exa]
-url = "https://mcp.exa.ai/mcp"
-
 [mcp_servers.grafana-cloud]
 url = "https://mcp.grafana.com/mcp"
 auth = "oauth"
@@ -28,21 +21,6 @@ env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
 
 [mcp_servers.science-tokyo-syllabus]
 url = "https://syllabus.s.isct.ac.jp/mcp"
-
-[mcp_servers.serena]
-command = "uvx"
-args = [
-    "--from",
-    "git+https://github.com/oraios/serena",
-    "serena",
-    "start-mcp-server",
-    "--context",
-    "codex",
-    "--project-from-cwd",
-    "--enable-web-dashboard",
-    "false",
-]
-startup_timeout_sec = 30
 
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"

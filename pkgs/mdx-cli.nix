@@ -1,19 +1,14 @@
 {
   lib,
-  fetchFromGitHub,
   python313Packages,
+  src,
 }:
 python313Packages.buildPythonApplication rec {
   pname = "mdx-cli";
   version = "2.1.1";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "aida0710";
-    repo = "mdx-cli";
-    tag = "v${version}";
-    hash = "sha256-12YvQSjDrwJx+7T71oNHf6QYo+GddmS6Dx3C+0Vyvl8=";
-  };
+  inherit src;
 
   build-system = with python313Packages; [hatchling];
 

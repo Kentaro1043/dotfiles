@@ -355,6 +355,23 @@
         "type": "github"
       }
     },
+    "mdx-cli": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788788251,
+        "narHash": "sha256-12YvQSjDrwJx+7T71oNHf6QYo+GddmS6Dx3C+0Vyvl8=",
+        "owner": "aida0710",
+        "repo": "mdx-cli",
+        "rev": "3e922808a19936b5cc741b5cbdf5a9863497d4b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aida0710",
+        "ref": "v2.1.1",
+        "repo": "mdx-cli",
+        "type": "github"
+      }
+    },
     "mise": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -740,6 +757,7 @@
         "hermes-agent": "hermes-agent",
         "home-manager": "home-manager",
         "llm-agents": "llm-agents",
+        "mdx-cli": "mdx-cli",
         "mise": "mise",
         "nix-darwin": "nix-darwin",
         "nix-vscode-extensions": "nix-vscode-extensions",

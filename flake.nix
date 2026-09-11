@@ -40,6 +40,12 @@
       flake = false;
     };
 
+    # mdx-cli
+    mdx-cli = {
+      url = "github:aida0710/mdx-cli/v2.1.1";
+      flake = false;
+    };
+
     # cua
     cua.url = "github:trycua/cua";
 

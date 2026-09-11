@@ -58,19 +58,19 @@
   };
   claudeCodeSettingsFile =
     (pkgs.formats.json {}).generate "claude-code-settings.json" claudeCodeSettings;
-  skillNames = import ./agent-skills.nix;
+  skills = import ./agent-skills.nix {inherit inputs;};
 in {
   home.file =
     {
       ".claude/statusline-command.sh".source = lib.getExe claudeCodeStatusline;
     }
     // lib.listToAttrs (
-      map (name:
-        lib.nameValuePair ".claude/skills/${name}" {
-          source = inputs.codex-skills + "/skills/.curated/${name}";
+      map (skill:
+        lib.nameValuePair ".claude/skills/${skill.name}" {
+          inherit (skill) source;
           force = true;
         })
-      skillNames
+      skills
     );
 
   home.activation.setupClaudeCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''

@@ -17,7 +17,7 @@
       makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
         --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
     '';
-  skillNames = import ./agent-skills.nix;
+  skills = import ./agent-skills.nix {inherit inputs;};
 in {
   sops.secrets.codex-grafana-trap-authorization = {};
 
@@ -28,12 +28,12 @@ in {
   };
 
   home.file = lib.listToAttrs (
-    map (name:
-      lib.nameValuePair ".codex/skills/${name}" {
-        source = inputs.codex-skills + "/skills/.curated/${name}";
+    map (skill:
+      lib.nameValuePair ".codex/skills/${skill.name}" {
+        inherit (skill) source;
         force = true;
       })
-    skillNames
+    skills
   );
 
   home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''

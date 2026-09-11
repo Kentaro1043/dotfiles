@@ -59,7 +59,7 @@ in
       zen-browser-bin
       ardour
       zrythm
-      surge-XT
+      surge-xt
       usbutils
       wineWow64Packages.stable
       winetricks
@@ -74,5 +74,6 @@ in
       x42-avldrums
       chromium
       vscodium
+      brave
     ];
   }

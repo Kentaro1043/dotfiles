@@ -191,6 +191,14 @@ in {
   # Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.pam.loginLimits = [
+    {
+      domain = "kentaro";
+      type = "-";
+      item = "memlock";
+      value = "unlimited";
+    }
+  ];
   services.pipewire = {
     enable = true;
     alsa.enable = true;

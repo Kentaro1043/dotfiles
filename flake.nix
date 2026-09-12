@@ -45,7 +45,7 @@
 
     # mdx-cli
     mdx-cli = {
-      url = "github:aida0710/mdx-cli/v2.1.1";
+      url = "github:aida0710/mdx-cli/v2.2.0";
       flake = false;
     };
 

@@ -378,16 +378,16 @@
     "mdx-cli": {
       "flake": false,
       "locked": {
-        "lastModified": 1788788251,
-        "narHash": "sha256-12YvQSjDrwJx+7T71oNHf6QYo+GddmS6Dx3C+0Vyvl8=",
+        "lastModified": 1789191087,
+        "narHash": "sha256-Bv1NQi6UROOrCLV2LyKZQT0NcM8o+YeLu0Xdq6iC+t8=",
         "owner": "aida0710",
         "repo": "mdx-cli",
-        "rev": "3e922808a19936b5cc741b5cbdf5a9863497d4b5",
+        "rev": "bdbaad9ca1923a9dde81353c402bd2ab260cf39f",
         "type": "github"
       },
       "original": {
         "owner": "aida0710",
-        "ref": "v2.1.1",
+        "ref": "v2.2.0",
         "repo": "mdx-cli",
         "type": "github"
       }

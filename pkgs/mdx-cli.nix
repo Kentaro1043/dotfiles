@@ -5,7 +5,7 @@
 }:
 python313Packages.buildPythonApplication rec {
   pname = "mdx-cli";
-  version = "2.1.1";
+  version = "2.2.0";
   pyproject = true;
 
   inherit src;

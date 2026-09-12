@@ -60,18 +60,6 @@ in
       ardour
       zrythm
       surge-xt
-      # Audio plugins
-      calf
-      dexed
-      dragonfly-reverb
-      geonkick
-      # helmコマンドはKubernetes版を優先する。
-      (lib.lowPrio helm)
-      lsp-plugins
-      sfizz
-      x42-plugins
-      yoshimi
-      zam-plugins
       usbutils
       wineWow64Packages.stable
       winetricks

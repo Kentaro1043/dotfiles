@@ -60,6 +60,17 @@ in
       ardour
       zrythm
       surge-xt
+      # Audio plugins
+      calf
+      dexed
+      dragonfly-reverb
+      geonkick
+      helm
+      lsp-plugins
+      sfizz
+      x42-plugins
+      yoshimi
+      zam-plugins
       usbutils
       wineWow64Packages.stable
       winetricks

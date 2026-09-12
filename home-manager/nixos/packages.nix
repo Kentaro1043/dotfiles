@@ -65,7 +65,8 @@ in
       dexed
       dragonfly-reverb
       geonkick
-      helm
+      # helmコマンドはKubernetes版を優先する。
+      (lib.lowPrio helm)
       lsp-plugins
       sfizz
       x42-plugins

@@ -34,6 +34,9 @@
     # llm-agents
     llm-agents.url = "github:numtide/llm-agents.nix";
 
+    # herdr
+    herdr.url = "github:herdrdev/herdr/v0.9.0";
+
     # Codex skills
     codex-skills = {
       url = "github:openai/skills";

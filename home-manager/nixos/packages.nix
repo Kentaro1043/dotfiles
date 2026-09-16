@@ -47,6 +47,9 @@ in
       rpi-imager
       libreoffice
       freelens-bin
+      flybywire-installer
+      littlenavmap
+      protontricks
       containerlab
       devpod-desktop
       mixxx

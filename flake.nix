@@ -5,6 +5,8 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-26.05-darwin";
+    nixpkgs-darwin-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # for uhd
     nixpkgs-fix-uhd.url = "github:nixos/nixpkgs/4199f186ecc15a2a56db94152f855606728aeace";
     # for dump1090-fa
@@ -16,7 +18,7 @@
 
     # nix-darwin
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
 
     # Determine Nix
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
@@ -78,6 +80,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-darwin,
     home-manager,
     nix-darwin,
     determinate,
@@ -95,7 +98,13 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = forAllSystems (system: let
+      pkgs =
+        if nixpkgs.lib.hasSuffix "-darwin" system
+        then nixpkgs-darwin
+        else nixpkgs;
+    in
+      pkgs.legacyPackages.${system}.alejandra);
 
     overlays = import ./overlays {inherit inputs;};
 
@@ -114,7 +123,7 @@
       };
 
       "kentaro@kentaro-mac" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        pkgs = nixpkgs-darwin.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
           inherit inputs outputs nix-vscode-extensions llm-agents;
           username = "kentaro";
@@ -127,7 +136,7 @@
       };
 
       "intern600@kentaro-hatena" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        pkgs = nixpkgs-darwin.legacyPackages.aarch64-darwin;
         extraSpecialArgs = {
           inherit inputs outputs nix-vscode-extensions llm-agents;
           username = "intern600";
@@ -141,7 +150,7 @@
     };
 
     darwinConfigurations."kentaro@kentaro-mac" = nix-darwin.lib.darwinSystem {
-      pkgs = import nixpkgs {
+      pkgs = import nixpkgs-darwin {
         system = "aarch64-darwin";
         overlays = [outputs.overlays.unstable-packages];
       };

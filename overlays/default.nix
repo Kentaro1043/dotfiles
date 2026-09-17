@@ -56,9 +56,14 @@
   };
 
   unstable-packages = final: _prev: {
-    unstable = import inputs.nixpkgs-unstable {
-      system = final.stdenv.hostPlatform.system;
-      config = final.config;
-    };
+    unstable =
+      import (
+        if final.stdenv.isDarwin
+        then inputs.nixpkgs-darwin-unstable
+        else inputs.nixpkgs-unstable
+      ) {
+        system = final.stdenv.hostPlatform.system;
+        config = final.config;
+      };
   };
 }

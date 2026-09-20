@@ -45,7 +45,6 @@ in {
           "dotnet"
           "fnm"
           "gh"
-          "kube-ps1"
           "terraform"
           "themes"
           "fzf"

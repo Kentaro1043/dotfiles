@@ -10,21 +10,24 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | キー | 内容 |
 | --- | --- |
 | `litellm-api-key` | homelabのLiteLLMで発行したVirtual Key（またはMaster Key） |
-| `grafana-trap-sakura-url` | traP SakuraのGrafana本体のURL（MCPのURLではない） |
-| `grafana-trap-sakura-service-account-token` | 同環境のGrafanaサービスアカウントトークン（`Bearer `なし） |
-| `grafana-trap-conoha-url` | traP ConoHaのGrafana本体のURL（MCPのURLではない） |
-| `grafana-trap-conoha-service-account-token` | 同環境のGrafanaサービスアカウントトークン（`Bearer `なし） |
+| `codex-grafana-trap-authorization` | traPの2環境共通のBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
 | `codex-grafana-work-url` | 既存のWork用Grafana URLを継続使用 |
 | `codex-grafana-work-service-account-token` | 既存のWork用トークンを継続使用 |
 
-旧 `codex-grafana-trap-authorization` は使用しないため削除できる。
+traP用に追加した `grafana-trap-{sakura,conoha}-url` と
+`grafana-trap-{sakura,conoha}-service-account-token` は不要。
+既存の `codex-grafana-trap-authorization` を継続使用する。
 LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要はない。
 
 共有MCPはGrafana Cloud・Work・traP Sakura・traP ConoHa・Science Tokyoシラバスの5件。
 OpenCodeとVSCodeはMCP Integrationから参照する。
-Grafanaの定義は `home-manager/programs/grafana-mcp.nix` にまとめ、WorkとtraPは
+Grafanaの定義は `home-manager/programs/grafana-mcp.nix` にまとめ、Workは
 sopsのURL・トークンでローカルの `uvx mcp-grafana` を起動する。
-Codexは別のTOMLを引き続き書き込み可能な通常ファイルとして配置し、同じ起動スクリプトを使用する。
+traPは既存の `https://s-grafana-mcp.trap.jp/mcp`（Sakura）と
+`https://grafana-mcp.trap.jp/mcp`（ConoHa）にBasic認証で接続する。
+OpenCodeはsopsファイルからAuthorizationヘッダーを読み、Codexは起動時に同じ値を
+`CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION` へ読み込む。
+Codexは別のTOMLを引き続き書き込み可能な通常ファイルとして配置する。
 
 Grafana CloudはOAuthを継続使用する。OpenCode側のログインは
 `opencode mcp auth grafana-cloud` で行う（[OpenCode公式ドキュメント](https://opencode.ai/docs/mcp-servers/#authenticating)）。

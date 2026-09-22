@@ -6,8 +6,6 @@
 }: let
   secretPrefixes = {
     work = "codex-grafana-work";
-    trap-sakura = "grafana-trap-sakura";
-    trap-conoha = "grafana-trap-conoha";
   };
   commands = lib.mapAttrs (name: prefix:
     lib.getExe (pkgs.writeShellApplication {
@@ -24,10 +22,14 @@
 in {
   _module.args.grafanaMcpCommands = commands;
 
-  sops.secrets = lib.listToAttrs (lib.concatMap (prefix: [
-    (lib.nameValuePair "${prefix}-url" {})
-    (lib.nameValuePair "${prefix}-service-account-token" {})
-  ]) (lib.attrValues secretPrefixes));
+  sops.secrets =
+    lib.listToAttrs (lib.concatMap (prefix: [
+      (lib.nameValuePair "${prefix}-url" {})
+      (lib.nameValuePair "${prefix}-service-account-token" {})
+    ]) (lib.attrValues secretPrefixes))
+    // {
+      codex-grafana-trap-authorization = {};
+    };
 
   programs.mcp.servers =
     lib.mapAttrs' (name: command:
@@ -36,6 +38,14 @@ in {
       })
     commands
     // {
+      grafana-trap-sakura = {
+        url = "https://s-grafana-mcp.trap.jp/mcp";
+        headers.Authorization = "{file:${config.sops.secrets.codex-grafana-trap-authorization.path}}";
+      };
+      grafana-trap-conoha = {
+        url = "https://grafana-mcp.trap.jp/mcp";
+        headers.Authorization = "{file:${config.sops.secrets.codex-grafana-trap-authorization.path}}";
+      };
       grafana-cloud = {
         url = "https://mcp.grafana.com/mcp";
         headers."X-Grafana-URL" = "https://kentaro1043.grafana.net";

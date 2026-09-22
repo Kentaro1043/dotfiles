@@ -1,4 +1,5 @@
 {
+  config,
   grafanaMcpCommands,
   pkgs,
   lib,
@@ -8,10 +9,20 @@
 }: let
   codexConfig = pkgs.writeText "codex-config.toml" (
     builtins.replaceStrings
-    ["@grafanaWorkCommand@" "@grafanaTrapSakuraCommand@" "@grafanaTrapConohaCommand@"]
-    [grafanaMcpCommands.work grafanaMcpCommands.trap-sakura grafanaMcpCommands.trap-conoha]
+    ["@grafanaWorkCommand@"]
+    [grafanaMcpCommands.work]
     (builtins.readFile ./codex-config.toml)
   );
+  grafanaTrapAuthorization = config.sops.secrets.codex-grafana-trap-authorization.path;
+  codex =
+    pkgs.runCommand "codex-with-mcp-auth" {
+      nativeBuildInputs = [pkgs.makeWrapper];
+      meta.mainProgram = "codex";
+    } ''
+      mkdir -p $out/bin
+      makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
+        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(${pkgs.coreutils}/bin/cat "${grafanaTrapAuthorization}")"; fi'
+    '';
   codexHomes = [
     ".codex"
     ".codex-work"
@@ -20,7 +31,7 @@
 in {
   programs.codex = {
     enable = true;
-    package = llmAgentPackages.codex;
+    package = codex;
     context = ./AGENTS.md;
   };
 

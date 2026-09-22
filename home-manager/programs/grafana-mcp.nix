@@ -28,7 +28,7 @@ in {
       (lib.nameValuePair "${prefix}-service-account-token" {})
     ]) (lib.attrValues secretPrefixes))
     // {
-      codex-grafana-trap-authorization = {};
+      grafana-mcp-trap-authorization = {};
     };
 
   programs.mcp.servers =
@@ -40,11 +40,11 @@ in {
     // {
       grafana-trap-sakura = {
         url = "https://s-grafana-mcp.trap.jp/mcp";
-        headers.Authorization = "{file:${config.sops.secrets.codex-grafana-trap-authorization.path}}";
+        headers.Authorization = "{file:${config.sops.secrets.grafana-mcp-trap-authorization.path}}";
       };
       grafana-trap-conoha = {
         url = "https://grafana-mcp.trap.jp/mcp";
-        headers.Authorization = "{file:${config.sops.secrets.codex-grafana-trap-authorization.path}}";
+        headers.Authorization = "{file:${config.sops.secrets.grafana-mcp-trap-authorization.path}}";
       };
       grafana-cloud = {
         url = "https://mcp.grafana.com/mcp";

@@ -13,7 +13,7 @@
     [grafanaMcpCommands.work]
     (builtins.readFile ./codex-config.toml)
   );
-  grafanaTrapAuthorization = config.sops.secrets.codex-grafana-trap-authorization.path;
+  grafanaTrapAuthorization = config.sops.secrets.grafana-mcp-trap-authorization.path;
   codex =
     pkgs.runCommand "codex-with-mcp-auth" {
       nativeBuildInputs = [pkgs.makeWrapper];
@@ -21,7 +21,7 @@
     } ''
       mkdir -p $out/bin
       makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
-        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(${pkgs.coreutils}/bin/cat "${grafanaTrapAuthorization}")"; fi'
+        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export GRAFANA_MCP_TRAP_AUTHORIZATION="$(${pkgs.coreutils}/bin/cat "${grafanaTrapAuthorization}")"; fi'
     '';
   codexHomes = [
     ".codex"

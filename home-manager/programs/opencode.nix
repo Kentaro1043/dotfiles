@@ -7,33 +7,49 @@
     };
     settings = {
       provider = {
-        ollama = {
+        litellm = {
           npm = "@ai-sdk/openai-compatible";
-          name = "Ollama";
+          name = "LiteLLM";
           options = {
-            baseURL = "http://localhost:11434/v1";
+            baseURL = "https://litellm.internal.kentaro1043.com/v1";
+            apiKey = "{env:LITELLM_API_KEY}";
           };
           models = {
-            "qwen3-coder:480b-cloud" = {
-              name = "qwen3-coder:480b-cloud";
+            "gemini-3.8-flash" = {
+              name = "gemini-3.8-flash";
             };
-            "deepseek-v3.1:671b-cloud" = {
-              name = "deepseek-v3.1:671b-cloud";
+            "gemini-3.5-flash-lite" = {
+              name = "gemini-3.5-flash-lite";
             };
-            "gpt-oss:20b-cloud" = {
-              name = "gpt-oss:20b-cloud";
+            "gemma-4-31b-it" = {
+              name = "gemma-4-31b-it";
             };
-            "gpt-oss:120b-cloud" = {
-              name = "gpt-oss:120b-cloud";
+            "gemma-4-26b-a4b-it" = {
+              name = "gemma-4-26b-a4b-it";
             };
-            "qwen3-coder-next:cloud" = {
-              name = "qwen3-coder-next:cloud";
+            "qwen3.8-27b" = {
+              name = "qwen3.8-27b";
             };
-            "kimi-k2.5:cloud" = {
-              name = "kimi-k2.5:cloud";
+            "glm-5.2" = {
+              name = "glm-5.2";
             };
-            "glm-5:cloud" = {
-              name = "glm-5:cloud";
+            "gpt-oss-20b" = {
+              name = "gpt-oss-20b";
+            };
+            "gpt-oss-120b" = {
+              name = "gpt-oss-120b";
+            };
+            "nemotron-3-super-120b-a12b" = {
+              name = "nemotron-3-super-120b-a12b";
+            };
+            "nemotron-3-ultra-550b-a55b" = {
+              name = "nemotron-3-ultra-550b-a55b";
+            };
+            "nemotron-3.5-lightning" = {
+              name = "nemotron-3.5-lightning";
+            };
+            "north-mini-code" = {
+              name = "north-mini-code";
             };
           };
         };

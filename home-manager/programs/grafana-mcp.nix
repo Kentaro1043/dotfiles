@@ -5,7 +5,7 @@
   ...
 }: let
   secretPrefixes = {
-    work = "codex-grafana-work";
+    work = "grafana-mcp-work";
   };
   commands = lib.mapAttrs (name: prefix:
     lib.getExe (pkgs.writeShellApplication {

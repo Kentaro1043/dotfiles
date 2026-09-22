@@ -11,12 +11,14 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | --- | --- |
 | `litellm-api-key` | homelabのLiteLLMで発行したVirtual Key（またはMaster Key） |
 | `grafana-mcp-trap-authorization` | traPの2環境共通のBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
-| `codex-grafana-work-url` | 既存のWork用Grafana URLを継続使用 |
-| `codex-grafana-work-service-account-token` | 既存のWork用トークンを継続使用 |
+| `grafana-mcp-work-url` | Work用Grafana本体のURL |
+| `grafana-mcp-work-service-account-token` | Work用Grafanaサービスアカウントトークン（`Bearer `なし） |
 
 traP用に追加した `grafana-trap-{sakura,conoha}-url` と
 `grafana-trap-{sakura,conoha}-service-account-token` は不要。
 `codex-grafana-trap-authorization` の値を `grafana-mcp-trap-authorization` に移行する。
+Work用も `codex-grafana-work-url` と `codex-grafana-work-service-account-token` の値を、
+それぞれ上記の `grafana-mcp-work-*` キーに移行する。
 LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要はない。
 
 共有MCPはGrafana Cloud・Work・traP Sakura・traP ConoHa・Science Tokyoシラバスの5件。

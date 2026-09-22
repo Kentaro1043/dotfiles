@@ -15,12 +15,12 @@ auth = "oauth"
 http_headers = { "X-Grafana-URL" = "https://kentaro1043.grafana.net" }
 
 [mcp_servers.grafana-trap-sakura]
-url = "https://s-grafana-mcp.trap.jp/mcp"
-env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
+command = "@grafanaTrapSakuraCommand@"
+startup_timeout_sec = 60
 
 [mcp_servers.grafana-trap-conoha]
-url = "https://grafana-mcp.trap.jp/mcp"
-env_http_headers = { "Authorization" = "CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION" }
+command = "@grafanaTrapConohaCommand@"
+startup_timeout_sec = 60
 
 [mcp_servers.grafana-work]
 command = "@grafanaWorkCommand@"

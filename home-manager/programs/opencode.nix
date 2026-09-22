@@ -1,4 +1,10 @@
-{llmAgentPackages, ...}: {
+{
+  config,
+  llmAgentPackages,
+  ...
+}: {
+  sops.secrets.litellm-api-key = {};
+
   programs.opencode = {
     enable = true;
     package = llmAgentPackages.opencode;
@@ -12,7 +18,7 @@
           name = "LiteLLM";
           options = {
             baseURL = "https://litellm.internal.kentaro1043.com/v1";
-            apiKey = "{env:LITELLM_API_KEY}";
+            apiKey = "{file:${config.sops.secrets.litellm-api-key.path}}";
           };
           models = {
             "gemini-3.8-flash" = {

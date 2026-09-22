@@ -1,51 +1,26 @@
 {
-  config,
+  grafanaMcpCommands,
   pkgs,
   lib,
   inputs,
   llmAgentPackages,
   ...
 }: let
-  grafanaTrapAuthorization =
-    config.sops.secrets.codex-grafana-trap-authorization.path;
-  grafanaWork = pkgs.writeShellApplication {
-    name = "codex-mcp-grafana-work";
-    runtimeInputs = [pkgs.coreutils pkgs.uv];
-    text = ''
-      GRAFANA_URL="$(cat ${lib.escapeShellArg config.sops.secrets.codex-grafana-work-url.path})"
-      GRAFANA_SERVICE_ACCOUNT_TOKEN="$(cat ${lib.escapeShellArg config.sops.secrets.codex-grafana-work-service-account-token.path})"
-      export GRAFANA_URL GRAFANA_SERVICE_ACCOUNT_TOKEN
-      exec uvx mcp-grafana
-    '';
-  };
   codexConfig = pkgs.writeText "codex-config.toml" (
     builtins.replaceStrings
-    ["@grafanaWorkCommand@"]
-    [(lib.getExe grafanaWork)]
+    ["@grafanaWorkCommand@" "@grafanaTrapSakuraCommand@" "@grafanaTrapConohaCommand@"]
+    [grafanaMcpCommands.work grafanaMcpCommands.trap-sakura grafanaMcpCommands.trap-conoha]
     (builtins.readFile ./codex-config.toml)
   );
-  codex =
-    pkgs.runCommand "codex-with-mcp-auth" {
-      nativeBuildInputs = [pkgs.makeWrapper];
-      meta.mainProgram = "codex";
-    } ''
-      mkdir -p $out/bin
-      makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
-        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export CODEX_MCP_GRAFANA_TRAP_AUTHORIZATION="$(cat "${grafanaTrapAuthorization}")"; fi'
-    '';
   codexHomes = [
     ".codex"
     ".codex-work"
   ];
   skills = import ./agent-skills.nix {inherit inputs;};
 in {
-  sops.secrets.codex-grafana-trap-authorization = {};
-  sops.secrets.codex-grafana-work-url = {};
-  sops.secrets.codex-grafana-work-service-account-token = {};
-
   programs.codex = {
     enable = true;
-    package = codex;
+    package = llmAgentPackages.codex;
     context = ./AGENTS.md;
   };
 

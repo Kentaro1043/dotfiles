@@ -89,7 +89,6 @@
       mcp-grafana
       inputs.herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
       llmAgentPackages.qwen-code
-      llmAgentPackages.antigravity-cli
 
       ########
       # nvim #

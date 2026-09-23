@@ -1,8 +1,11 @@
 {
+  inputs,
+  lib,
   pkgs,
   llmAgentPackages,
   ...
 }: let
+  skills = import ./agent-skills.nix {inherit inputs;};
   baseSettings = builtins.fromJSON (builtins.readFile ./antigravity-cli-settings.json);
   darwinSettings =
     baseSettings
@@ -29,9 +32,10 @@
 in {
   programs.antigravity-cli = {
     enable = true;
-    package = llmAgentPackages.gemini-cli;
+    package = llmAgentPackages.antigravity-cli;
     inherit settings;
+    enableMcpIntegration = true;
+    context.AGENTS = ./AGENTS.md;
+    skills = lib.listToAttrs (map (skill: lib.nameValuePair skill.name skill.source) skills);
   };
-
-  home.file.".gemini/settings.json".force = true;
 }

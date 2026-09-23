@@ -60,9 +60,10 @@ notifications = ["agent-turn-complete", "approval-requested"]
 notification_method = "auto"
 notification_condition = "unfocused"
 status_line = [
+    "thread-name",
+    "project-root",
     "model-with-reasoning",
     "context-remaining",
-    "project-root",
     "git-branch",
     "pull-request-number",
     "five-hour-limit",

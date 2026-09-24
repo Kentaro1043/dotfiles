@@ -12,7 +12,7 @@
     "hasSeenNudge": true
   },
   "model": {
-    "name": "gemini-3.1-pro-preview"
+    "name": "gemini-3.8-flush"
   },
   "context": {
     "fileName": ["AGENTS.md"]

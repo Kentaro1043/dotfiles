@@ -35,7 +35,7 @@ in {
       dock = {
         autohide = false;
         show-recents = false;
-        orientation = "left";
+        orientation = "bottom";
       };
 
       NSGlobalDomain.AppleShowAllExtensions = true;

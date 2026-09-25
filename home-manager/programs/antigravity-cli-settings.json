@@ -11,9 +11,7 @@
     "enabled": true,
     "hasSeenNudge": true
   },
-  "model": {
-    "name": "gemini-3.8-flush"
-  },
+  "model": "Gemini 3.8 Flash (Medium)",
   "context": {
     "fileName": ["AGENTS.md"]
   },
@@ -31,32 +29,6 @@
     "sandboxAllowedPaths": []
   },
   "mcpServers": {
-    "context7": {
-      "args": ["-y", "@upstash/context7-mcp@latest"],
-      "command": "npx"
-    },
-    "exa": {
-      "url": "https://mcp.exa.ai/mcp"
-    },
-    "serena": {
-      "args": [
-        "--from",
-        "git+https://github.com/oraios/serena",
-        "serena",
-        "start-mcp-server",
-        "--context",
-        "ide",
-        "--project-from-cwd",
-        "--enable-web-dashboard",
-        "false"
-      ],
-      "command": "uvx",
-      "env": {
-        "UV_TOOL_DIR": "./.tmp/uv/tool",
-        "UV_CACHE_DIR": "./.tmp/uv/cache",
-        "SERENA_HOME": "./.tmp/serena"
-      }
-    },
     "science-tokyo-syllabus": {
       "url": "https://syllabus.s.isct.ac.jp/mcp"
     }

@@ -153,6 +153,7 @@ in {
       "claude"
       "codex-app"
       "brave-browser"
+      "github"
     ];
   };
 }

@@ -47,7 +47,6 @@ in {
       WorkingDirectory = config.home.homeDirectory;
       Environment = [
         "CODEX_HOME=${config.home.homeDirectory}/.codex"
-        "PATH=${lib.makeBinPath (with pkgs; [bash gh git nix nodejs uv])}:${config.home.profileDirectory}/bin:/run/current-system/sw/bin"
       ];
       ExecStart = "${lib.getExe config.programs.codex.package} app-server --remote-control --listen unix://";
       Restart = "on-failure";

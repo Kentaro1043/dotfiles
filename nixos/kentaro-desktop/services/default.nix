@@ -8,5 +8,11 @@
   services = {
     envfs.enable = true;
     tailscale.enable = true;
+    wivrn = {
+      enable = true;
+      openFirewall = true;
+      highPriority = true;
+      steam.importOXRRuntimes = true;
+    };
   };
 }

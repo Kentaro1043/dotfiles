@@ -34,6 +34,26 @@ Codexは別のTOMLを引き続き書き込み可能な通常ファイルとし�
 Grafana CloudはOAuthを継続使用する。OpenCode側のログインは
 `opencode mcp auth grafana-cloud` で行う（[OpenCode公式ドキュメント](https://opencode.ai/docs/mcp-servers/#authenticating)）。
 
+## Codex Remote（NixOS）
+
+`kentaro-desktop` では `codex-app-server.service` が起動時から常駐する。
+Home ManagerのCodexパッケージ・`~/.codex` の設定と認証を共有し、
+homelabと同じ `app-server --remote-control --listen unix://` で起動する。
+先にHome Managerを反映し、`codex login` でChatGPTアカウントにログインしてから
+NixOSを反映する。
+
+```shell
+home-manager switch --flake .#kentaro@kentaro-desktop
+codex login
+sudo nixos-rebuild switch --impure --flake .#kentaro@kentaro-desktop
+systemctl status codex-app-server
+```
+
+Remoteとのペアリングコードは `codex remote-control pair` で取得する。
+このマシン上のCLIから常駐サーバーを使う場合は `codex --remote unix://` を実行する。
+ログは `journalctl -u codex-app-server -f` で確認できる。
+認証を変更した場合は `sudo systemctl restart codex-app-server` で再起動する。
+
 ## Tasks
 
 [![xc compatible](https://xcfile.dev/badge.svg)](https://xcfile.dev)

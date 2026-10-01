@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./codex.nix
     ./ollama.nix
     ./open-webui.nix
     ./udev.nix

@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  environment.etc."wivrn/config.json".text = builtins.toJSON {
+    openvr-compat-path = "${pkgs.xrizer}/lib/xrizer";
+  };
+
   imports = [
     ./ollama.nix
     ./open-webui.nix

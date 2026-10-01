@@ -18,7 +18,7 @@
     tailscale.enable = true;
     wivrn = {
       enable = true;
-      package = inputs.nixpkgs-wivrn.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wivrn;
+      package = pkgs.callPackage "${inputs.nixpkgs-wivrn}/pkgs/by-name/wi/wivrn/package.nix" {};
       openFirewall = true;
       highPriority = true;
       steam.importOXRRuntimes = true;

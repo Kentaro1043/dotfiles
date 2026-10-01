@@ -36,23 +36,26 @@ Grafana CloudはOAuthを継続使用する。OpenCode側のログインは
 
 ## Codex Remote（NixOS）
 
-`kentaro-desktop` では `codex-app-server.service` が起動時から常駐する。
-Home ManagerのCodexパッケージ・`~/.codex` の設定と認証を共有し、
+LinuxではHome Managerが `codex-app-server.service` をユーザーサービスとして管理する。
+ログイン時に起動し、Home ManagerのCodexパッケージ・`~/.codex` の設定と認証を共有して、
 homelabと同じ `app-server --remote-control --listen unix://` で起動する。
-先にHome Managerを反映し、`codex login` でChatGPTアカウントにログインしてから
-NixOSを反映する。
+Home Managerを反映し、`codex login` でChatGPTアカウントにログインしてから再起動する。
 
 ```shell
 home-manager switch --flake .#kentaro@kentaro-desktop
 codex login
-sudo nixos-rebuild switch --impure --flake .#kentaro@kentaro-desktop
-systemctl status codex-app-server
+systemctl --user restart codex-app-server
+systemctl --user status codex-app-server
 ```
 
 Remoteとのペアリングコードは `codex remote-control pair` で取得する。
 このマシン上のCLIから常駐サーバーを使う場合は `codex --remote unix://` を実行する。
-ログは `journalctl -u codex-app-server -f` で確認できる。
-認証を変更した場合は `sudo systemctl restart codex-app-server` で再起動する。
+ログは `journalctl --user -u codex-app-server -f` で確認できる。
+認証を変更した場合は `systemctl --user restart codex-app-server` で再起動する。
+
+以前のNixOSシステムサービスを反映済みの場合は、先に
+`sudo systemctl stop codex-app-server` を実行し、NixOSを再反映して削除してから
+Home Managerを反映する。
 
 ## Tasks
 

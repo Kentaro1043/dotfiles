@@ -154,6 +154,7 @@ in {
       "codex-app"
       "brave-browser"
       "github"
+      "joplin"
     ];
   };
 }

@@ -6,13 +6,13 @@
 }: let
   package = pkgs.writeShellApplication {
     name = "mcp-joplin";
-    runtimeInputs = [pkgs.coreutils pkgs.uv];
+    runtimeInputs = [pkgs.coreutils pkgs.nodejs];
     text = ''
       token="$(cat ${lib.escapeShellArg config.sops.secrets.joplin-api-token.path})"
       case "$token" in
         ""|*[!0-9a-fA-F]*) echo "Invalid Joplin API token" >&2; exit 1 ;;
       esac
-      exec uvx mcp-proxy --transport streamablehttp "http://127.0.0.1:41184/mcp?token=$token"
+      exec npx --yes mcp-remote@0.1.38 "http://127.0.0.1:41184/mcp?token=$token" --allow-http
     '';
   };
 in {

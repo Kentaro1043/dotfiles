@@ -38,10 +38,10 @@ GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶�
 | `mcp-grafana-cloud` | Grafana CloudへOAuthで接続 |
 | `mcp-joplin` | ローカルJoplinのMCPへ接続 |
 
-リモートGrafanaには [mcp-remote](https://github.com/punkpeye/mcp-remote) のstdioブリッジを使う。
+リモートGrafanaとJoplinには [mcp-remote](https://github.com/punkpeye/mcp-remote) のstdioブリッジを使う。
 初回起動時にnpmパッケージを取得し、CloudはブラウザでOAuth認証する。
 認証キャッシュは `~/.mcp-auth` に保存され、Codexの既存OAuth認証とは別にログインが必要。
-WorkとJoplinも初回起動時にuvがパッケージを取得する。
+Joplinも初回起動時にnpmパッケージを取得する。Workはuvでパッケージを取得する。
 Joplinの定義は `home-manager/programs/mcp-joplin.nix` に置く。
 トークンは起動時にsopsの復号先から読み、ハーネスの設定ファイルには埋め込まない。
 Joplin本体で `http://127.0.0.1:41184/mcp` が利用可能になっている必要がある。

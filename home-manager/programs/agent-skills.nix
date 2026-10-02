@@ -22,4 +22,8 @@ in
       name = "mdx-cli";
       source = inputs.mdx-cli + "/skills/mdx-cli";
     }
+    {
+      name = "yomiyasu";
+      source = inputs.yomiyasu + "/skills/yomiyasu";
+    }
   ]

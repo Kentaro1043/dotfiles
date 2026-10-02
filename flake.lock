@@ -851,6 +851,7 @@
         "nixpkgs-wivrn": "nixpkgs-wivrn",
         "nixvim": "nixvim",
         "sops-nix": "sops-nix",
+        "yomiyasu": "yomiyasu",
         "zen-browser": "zen-browser"
       }
     },
@@ -998,6 +999,22 @@
       "original": {
         "owner": "pyproject-nix",
         "repo": "uv2nix",
+        "type": "github"
+      }
+    },
+    "yomiyasu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790909101,
+        "narHash": "sha256-dZc9NRFBTl4tEKfSLAIE77smW50M5dEbzn5vzTXduRk=",
+        "owner": "nanaism",
+        "repo": "yomiyasu",
+        "rev": "e5c6a8443a427726a472e2e560fc8679125ea2b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nanaism",
+        "repo": "yomiyasu",
         "type": "github"
       }
     },

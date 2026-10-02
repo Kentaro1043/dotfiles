@@ -46,6 +46,11 @@
       flake = false;
     };
 
+    yomiyasu = {
+      url = "github:nanaism/yomiyasu";
+      flake = false;
+    };
+
     # mdx-cli
     mdx-cli = {
       url = "github:aida0710/mdx-cli/v2.2.0";

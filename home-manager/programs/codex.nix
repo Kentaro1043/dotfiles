@@ -71,25 +71,28 @@ in {
     codexHomes
   );
 
-  home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["sops-nix"] (
+  home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["sops-nix" "setupLaunchAgents"] (
     lib.concatMapStringsSep "\n" (codexHome: ''
-            $DRY_RUN_CMD mkdir -p "$HOME/${codexHome}"
-      $DRY_RUN_CMD rm -f "$HOME/${codexHome}/config.toml"
+      $DRY_RUN_CMD mkdir -p "$HOME/${codexHome}"
       if [ -z "$DRY_RUN_CMD" ]; then
         umask 077
-        if [ -r ${lib.escapeShellArg joplinToken} ]; then
-          token="$(${pkgs.coreutils}/bin/cat ${lib.escapeShellArg joplinToken})"
-        else
-          token="$(SOPS_AGE_KEY_FILE=${lib.escapeShellArg config.sops.age.keyFile} \
-            ${lib.getExe pkgs.sops} decrypt --extract '["joplin-api-token"]' \
-            ${config.sops.defaultSopsFile})"
-        fi
+        for attempt in $(${pkgs.coreutils}/bin/seq 1 30); do
+          [ -r ${lib.escapeShellArg joplinToken} ] && break
+          ${pkgs.coreutils}/bin/sleep 1
+        done
+        [ -r ${lib.escapeShellArg joplinToken} ] || {
+          echo "Joplin API token is unavailable from sops-nix" >&2
+          exit 1
+        }
+        token="$(${pkgs.coreutils}/bin/cat ${lib.escapeShellArg joplinToken})"
         case "$token" in
           ""|*[!0-9a-fA-F]*) echo "Invalid Joplin API token" >&2; exit 1 ;;
         esac
+        temporary="$(${pkgs.coreutils}/bin/mktemp "$HOME/${codexHome}/config.toml.XXXXXX")"
         ${pkgs.gnused}/bin/sed "s/@joplinToken@/$token/g" \
-          ${codexConfig} > "$HOME/${codexHome}/config.toml"
-        chmod 600 "$HOME/${codexHome}/config.toml"
+          ${codexConfig} > "$temporary"
+        chmod 600 "$temporary"
+        ${pkgs.coreutils}/bin/mv -f "$temporary" "$HOME/${codexHome}/config.toml"
       fi
     '')
     codexHomes

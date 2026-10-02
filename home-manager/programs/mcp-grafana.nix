@@ -7,7 +7,7 @@
   secretPrefixes = {
     work = "grafana-mcp-work";
   };
-  workPackages = lib.mapAttrs (name: prefix:
+  localPackages = lib.mapAttrs (name: prefix:
     pkgs.writeShellApplication {
       name = "mcp-grafana-${name}";
       runtimeInputs = [pkgs.coreutils pkgs.uv];
@@ -42,7 +42,7 @@
     trap-sakura = "https://s-grafana-mcp.trap.jp/mcp";
     trap-conoha = "https://grafana-mcp.trap.jp/mcp";
   };
-  packages = workPackages // remotePackages;
+  packages = localPackages // remotePackages;
 in {
   home.packages = lib.attrValues packages;
 

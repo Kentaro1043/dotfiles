@@ -77,15 +77,20 @@ in {
       $DRY_RUN_CMD rm -f "$HOME/${codexHome}/config.toml"
       if [ -z "$DRY_RUN_CMD" ]; then
         umask 077
-        ${pkgs.python3}/bin/python3 ${./codex-config.py} \
-          ${codexConfig} \
-          ${lib.escapeShellArg joplinToken} \
-          "$HOME/${codexHome}/config.toml" \
-          ${config.sops.defaultSopsFile} \
-          ${lib.escapeShellArg config.sops.age.keyFile} \
-          ${lib.getExe pkgs.sops}
-              chmod 600 "$HOME/${codexHome}/config.toml"
-            fi
+        if [ -r ${lib.escapeShellArg joplinToken} ]; then
+          token="$(${pkgs.coreutils}/bin/cat ${lib.escapeShellArg joplinToken})"
+        else
+          token="$(SOPS_AGE_KEY_FILE=${lib.escapeShellArg config.sops.age.keyFile} \
+            ${lib.getExe pkgs.sops} decrypt --extract '["joplin-api-token"]' \
+            ${config.sops.defaultSopsFile})"
+        fi
+        case "$token" in
+          ""|*[!0-9a-fA-F]*) echo "Invalid Joplin API token" >&2; exit 1 ;;
+        esac
+        ${pkgs.gnused}/bin/sed "s/@joplinToken@/$token/g" \
+          ${codexConfig} > "$HOME/${codexHome}/config.toml"
+        chmod 600 "$HOME/${codexHome}/config.toml"
+      fi
     '')
     codexHomes
   );

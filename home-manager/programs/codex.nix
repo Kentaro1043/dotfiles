@@ -14,6 +14,7 @@
     (builtins.readFile ./codex-config.toml)
   );
   grafanaTrapAuthorization = config.sops.secrets.grafana-mcp-trap-authorization.path;
+  joplinToken = config.sops.secrets.joplin-api-token.path;
   codex =
     pkgs.runCommand "codex-with-mcp-auth" {
       nativeBuildInputs = [pkgs.makeWrapper];
@@ -29,6 +30,8 @@
   ];
   skills = import ./agent-skills.nix {inherit inputs;};
 in {
+  sops.secrets.joplin-api-token = {};
+
   programs.codex = {
     enable = true;
     package = codex;
@@ -68,12 +71,21 @@ in {
     codexHomes
   );
 
-  home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] (
+  home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["sops-nix"] (
     lib.concatMapStringsSep "\n" (codexHome: ''
-      $DRY_RUN_CMD mkdir -p "$HOME/${codexHome}"
+            $DRY_RUN_CMD mkdir -p "$HOME/${codexHome}"
       $DRY_RUN_CMD rm -f "$HOME/${codexHome}/config.toml"
-      $DRY_RUN_CMD cp ${codexConfig} "$HOME/${codexHome}/config.toml"
-      $DRY_RUN_CMD chmod 644 "$HOME/${codexHome}/config.toml"
+      if [ -z "$DRY_RUN_CMD" ]; then
+        umask 077
+        ${pkgs.python3}/bin/python3 ${./codex-config.py} \
+          ${codexConfig} \
+          ${lib.escapeShellArg joplinToken} \
+          "$HOME/${codexHome}/config.toml" \
+          ${config.sops.defaultSopsFile} \
+          ${lib.escapeShellArg config.sops.age.keyFile} \
+          ${lib.getExe pkgs.sops}
+              chmod 600 "$HOME/${codexHome}/config.toml"
+            fi
     '')
     codexHomes
   );

@@ -13,6 +13,7 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | `grafana-mcp-trap-authorization` | traPの2環境共通のBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
 | `grafana-mcp-work-url` | Work用Grafana本体のURL |
 | `grafana-mcp-work-service-account-token` | Work用Grafanaサービスアカウントトークン（`Bearer `なし） |
+| `joplin-api-token` | Joplinの `api.token`。CodexのローカルMCP接続に使用 |
 
 traP用に追加した `grafana-trap-{sakura,conoha}-url` と
 `grafana-trap-{sakura,conoha}-service-account-token` は不要。
@@ -30,6 +31,8 @@ traPは既存の `https://s-grafana-mcp.trap.jp/mcp`（Sakura）と
 OpenCodeはsopsファイルからAuthorizationヘッダーを読み、Codexは起動時に同じ値を
 `GRAFANA_MCP_TRAP_AUTHORIZATION` へ読み込む。
 Codexは別のTOMLを引き続き書き込み可能な通常ファイルとして配置する。
+Joplin MCPは `http://127.0.0.1:41184/mcp` に接続する。Home Manager反映時に
+復号したトークンをCodex設定のURLへ埋め込み、設定ファイルの権限を600にする。
 
 Grafana CloudはOAuthを継続使用する。OpenCode側のログインは
 `opencode mcp auth grafana-cloud` で行う（[OpenCode公式ドキュメント](https://opencode.ai/docs/mcp-servers/#authenticating)）。

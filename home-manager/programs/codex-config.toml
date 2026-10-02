@@ -29,6 +29,10 @@ startup_timeout_sec = 60
 [mcp_servers.science-tokyo-syllabus]
 url = "https://syllabus.s.isct.ac.jp/mcp"
 
+[mcp_servers.joplin]
+url = "http://127.0.0.1:41184/mcp?token=@joplinToken@"
+enabled = true
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
 

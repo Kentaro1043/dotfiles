@@ -1,28 +1,32 @@
 {
   config,
-  grafanaMcpCommands,
   pkgs,
   lib,
   inputs,
   llmAgentPackages,
   ...
 }: let
-  codexConfig = pkgs.writeText "codex-config.toml" (
-    builtins.replaceStrings
-    ["@grafanaWorkCommand@"]
-    [grafanaMcpCommands.work]
-    (builtins.readFile ./codex-config.toml)
-  );
-  grafanaTrapAuthorization = config.sops.secrets.grafana-mcp-trap-authorization.path;
-  codex =
-    pkgs.runCommand "codex-with-mcp-auth" {
-      nativeBuildInputs = [pkgs.makeWrapper];
-      meta.mainProgram = "codex";
-    } ''
-      mkdir -p $out/bin
-      makeWrapper ${lib.getExe llmAgentPackages.codex} $out/bin/codex \
-        --run 'if [ -r "${grafanaTrapAuthorization}" ]; then export GRAFANA_MCP_TRAP_AUTHORIZATION="$(${pkgs.coreutils}/bin/cat "${grafanaTrapAuthorization}")"; fi'
-    '';
+  mcpConfig = (pkgs.formats.toml {}).generate "codex-mcp.toml" {
+    mcp_servers = lib.mapAttrs (_: server:
+      (lib.optionalAttrs (server.enabled != null) {inherit (server) enabled;})
+      // (
+        if server.command != null
+        then {
+          inherit (server) command args env;
+          startup_timeout_sec = 60;
+        }
+        else {
+          inherit (server) url;
+          http_headers = server.headers;
+        }
+      ))
+    config.programs.mcp.servers;
+  };
+  codexConfig = pkgs.runCommand "codex-config.toml" {} ''
+    cat ${./codex-config.toml} > "$out"
+    echo >> "$out"
+    cat ${mcpConfig} >> "$out"
+  '';
   codexHomes = [
     ".codex"
     ".codex-work"
@@ -31,7 +35,7 @@
 in {
   programs.codex = {
     enable = true;
-    package = codex;
+    package = llmAgentPackages.codex;
     context = ./AGENTS.md;
   };
 
@@ -69,23 +73,12 @@ in {
   );
 
   home.activation.setupCodexConfig = lib.hm.dag.entryAfter ["writeBoundary"] (
-    ''
-      if [ -z "$DRY_RUN_CMD" ]; then
-        token="$(SOPS_AGE_KEY_FILE=${lib.escapeShellArg config.sops.age.keyFile} \
-          ${lib.getExe pkgs.sops} decrypt --extract '["joplin-api-token"]' \
-          ${config.sops.defaultSopsFile})"
-        case "$token" in
-          ""|*[!0-9a-fA-F]*) echo "Invalid Joplin API token" >&2; exit 1 ;;
-        esac
-      fi
-    ''
-    + lib.concatMapStringsSep "\n" (codexHome: ''
+    lib.concatMapStringsSep "\n" (codexHome: ''
       $DRY_RUN_CMD mkdir -p "$HOME/${codexHome}"
       if [ -z "$DRY_RUN_CMD" ]; then
         umask 077
         temporary="$(${pkgs.coreutils}/bin/mktemp "$HOME/${codexHome}/config.toml.XXXXXX")"
-        ${pkgs.gnused}/bin/sed "s/@joplinToken@/$token/g" \
-          ${codexConfig} > "$temporary"
+        ${pkgs.coreutils}/bin/cat ${codexConfig} > "$temporary"
         chmod 600 "$temporary"
         ${pkgs.coreutils}/bin/mv -f "$temporary" "$HOME/${codexHome}/config.toml"
       fi

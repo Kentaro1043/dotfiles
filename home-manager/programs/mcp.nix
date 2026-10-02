@@ -1,5 +1,5 @@
 {...}: {
-  imports = [./grafana-mcp.nix];
+  imports = [./grafana-mcp.nix ./joplin-mcp.nix];
 
   programs.mcp = {
     enable = true;

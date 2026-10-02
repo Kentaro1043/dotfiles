@@ -9,30 +9,6 @@ web_search = "live"
 [features]
 worktrees = true
 
-[mcp_servers.grafana-cloud]
-url = "https://mcp.grafana.com/mcp"
-auth = "oauth"
-http_headers = { "X-Grafana-URL" = "https://kentaro1043.grafana.net" }
-
-[mcp_servers.grafana-trap-sakura]
-url = "https://s-grafana-mcp.trap.jp/mcp"
-env_http_headers = { "Authorization" = "GRAFANA_MCP_TRAP_AUTHORIZATION" }
-
-[mcp_servers.grafana-trap-conoha]
-url = "https://grafana-mcp.trap.jp/mcp"
-env_http_headers = { "Authorization" = "GRAFANA_MCP_TRAP_AUTHORIZATION" }
-
-[mcp_servers.grafana-work]
-command = "@grafanaWorkCommand@"
-startup_timeout_sec = 60
-
-[mcp_servers.science-tokyo-syllabus]
-url = "https://syllabus.s.isct.ac.jp/mcp"
-
-[mcp_servers.joplin]
-url = "http://127.0.0.1:41184/mcp?token=@joplinToken@"
-enabled = true
-
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
 

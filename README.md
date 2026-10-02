@@ -13,7 +13,7 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | `grafana-mcp-trap-authorization` | traPの2環境共通のBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
 | `grafana-mcp-work-url` | Work用Grafana本体のURL |
 | `grafana-mcp-work-service-account-token` | Work用Grafanaサービスアカウントトークン（`Bearer `なし） |
-| `joplin-api-token` | Joplinの `api.token`。CodexのローカルMCP接続に使用 |
+| `joplin-api-token` | Joplinの `api.token`。共通のローカルMCP接続に使用 |
 
 traP用に追加した `grafana-trap-{sakura,conoha}-url` と
 `grafana-trap-{sakura,conoha}-service-account-token` は不要。
@@ -22,20 +22,29 @@ Work用も `codex-grafana-work-url` と `codex-grafana-work-service-account-toke
 それぞれ上記の `grafana-mcp-work-*` キーに移行する。
 LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要はない。
 
-共有MCPはGrafana Cloud・Work・traP Sakura・traP ConoHa・Science Tokyoシラバスの5件。
+共有MCPはGrafana Cloud・Work・traP Sakura・traP ConoHa・Joplin・Science Tokyoシラバスの6件。
 OpenCodeとVSCodeはMCP Integrationから参照する。
-Grafanaの定義は `home-manager/programs/grafana-mcp.nix` にまとめ、Workは
-sopsのURL・トークンでローカルの `uvx mcp-grafana` を起動する。
-traPは既存の `https://s-grafana-mcp.trap.jp/mcp`（Sakura）と
-`https://grafana-mcp.trap.jp/mcp`（ConoHa）にBasic認証で接続する。
-OpenCodeはsopsファイルからAuthorizationヘッダーを読み、Codexは起動時に同じ値を
-`GRAFANA_MCP_TRAP_AUTHORIZATION` へ読み込む。
-Codexは別のTOMLを引き続き書き込み可能な通常ファイルとして配置する。
-Joplin MCPは `http://127.0.0.1:41184/mcp` に接続する。Home Manager反映時に
-復号したトークンをCodex設定のURLへ埋め込み、設定ファイルの権限を600にする。
+CodexのMCP設定も `programs.mcp.servers` から生成し、通常ファイルとして配置する。
 
-Grafana CloudはOAuthを継続使用する。OpenCode側のログインは
-`opencode mcp auth grafana-cloud` で行う（[OpenCode公式ドキュメント](https://opencode.ai/docs/mcp-servers/#authenticating)）。
+Grafanaの定義・認証・起動コマンドは `home-manager/programs/grafana-mcp.nix` に集約する。
+Home Manager反映後、stdio MCPを起動できるハーネスでは次のコマンドを登録できる。
+GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶対パスを指定する。
+
+| コマンド | 接続先 |
+| --- | --- |
+| `mcp-grafana-work` | sopsのURL・サービスアカウントトークンで `uvx mcp-grafana` を起動 |
+| `mcp-grafana-trap-sakura` | Sakuraの既存MCPへBasic認証で接続 |
+| `mcp-grafana-trap-conoha` | ConoHaの既存MCPへBasic認証で接続 |
+| `mcp-grafana-cloud` | Grafana CloudへOAuthで接続 |
+| `mcp-joplin` | ローカルJoplinのMCPへ接続 |
+
+リモートGrafanaには [mcp-remote](https://github.com/punkpeye/mcp-remote) のstdioブリッジを使う。
+初回起動時にnpmパッケージを取得し、CloudはブラウザでOAuth認証する。
+認証キャッシュは `~/.mcp-auth` に保存され、Codexの既存OAuth認証とは別にログインが必要。
+WorkとJoplinも初回起動時にuvがパッケージを取得する。
+Joplinの定義は `home-manager/programs/joplin-mcp.nix` に置く。
+トークンは起動時にsopsの復号先から読み、ハーネスの設定ファイルには埋め込まない。
+Joplin本体で `http://127.0.0.1:41184/mcp` が利用可能になっている必要がある。
 
 ## Codex Remote（NixOS）
 

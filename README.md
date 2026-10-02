@@ -26,7 +26,7 @@ LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要�
 OpenCodeとVSCodeはMCP Integrationから参照する。
 CodexのMCP設定も `programs.mcp.servers` から生成し、通常ファイルとして配置する。
 
-Grafanaの定義・認証・起動コマンドは `home-manager/programs/grafana-mcp.nix` に集約する。
+Grafanaの定義・認証・起動コマンドは `home-manager/programs/mcp-grafana.nix` に集約する。
 Home Manager反映後、stdio MCPを起動できるハーネスでは次のコマンドを登録できる。
 GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶対パスを指定する。
 
@@ -42,7 +42,7 @@ GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶�
 初回起動時にnpmパッケージを取得し、CloudはブラウザでOAuth認証する。
 認証キャッシュは `~/.mcp-auth` に保存され、Codexの既存OAuth認証とは別にログインが必要。
 WorkとJoplinも初回起動時にuvがパッケージを取得する。
-Joplinの定義は `home-manager/programs/joplin-mcp.nix` に置く。
+Joplinの定義は `home-manager/programs/mcp-joplin.nix` に置く。
 トークンは起動時にsopsの復号先から読み、ハーネスの設定ファイルには埋め込まない。
 Joplin本体で `http://127.0.0.1:41184/mcp` が利用可能になっている必要がある。
 

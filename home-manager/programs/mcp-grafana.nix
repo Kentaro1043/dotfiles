@@ -19,30 +19,33 @@
       '';
     })
   secretPrefixes;
-  remotePackages = lib.mapAttrs (name: url:
+  cloudPackages = {
+    cloud = pkgs.writeShellApplication {
+      name = "mcp-grafana-cloud";
+      runtimeInputs = [pkgs.nodejs];
+      text = ''
+        exec npx --yes mcp-remote@0.1.38 https://mcp.grafana.com/mcp \
+          --header 'X-Grafana-URL:https://kentaro1043.grafana.net'
+      '';
+    };
+  };
+  trapPackages = lib.mapAttrs (name: url:
     pkgs.writeShellApplication {
       name = "mcp-grafana-${name}";
       runtimeInputs = [pkgs.coreutils pkgs.nodejs];
-      text =
-        if name == "cloud"
-        then ''
-          exec npx --yes mcp-remote@0.1.38 ${lib.escapeShellArg url} \
-            --header 'X-Grafana-URL:https://kentaro1043.grafana.net'
-        ''
-        else ''
-          GRAFANA_MCP_AUTHORIZATION="$(cat ${lib.escapeShellArg config.sops.secrets.grafana-mcp-trap-authorization.path})"
-          export GRAFANA_MCP_AUTHORIZATION
-          # mcp-remote側で環境変数を展開する。
-          # shellcheck disable=SC2016
-          exec npx --yes mcp-remote@0.1.38 ${lib.escapeShellArg url} \
-            --header 'Authorization:''${GRAFANA_MCP_AUTHORIZATION}'
-        '';
+      text = ''
+        GRAFANA_MCP_AUTHORIZATION="$(cat ${lib.escapeShellArg config.sops.secrets.grafana-mcp-trap-authorization.path})"
+        export GRAFANA_MCP_AUTHORIZATION
+        # mcp-remote側で環境変数を展開する。
+        # shellcheck disable=SC2016
+        exec npx --yes mcp-remote@0.1.38 ${lib.escapeShellArg url} \
+          --header 'Authorization:''${GRAFANA_MCP_AUTHORIZATION}'
+      '';
     }) {
-    cloud = "https://mcp.grafana.com/mcp";
     trap-sakura = "https://s-grafana-mcp.trap.jp/mcp";
     trap-conoha = "https://grafana-mcp.trap.jp/mcp";
   };
-  packages = localPackages // remotePackages;
+  packages = localPackages // cloudPackages // trapPackages;
 in {
   home.packages = lib.attrValues packages;
 

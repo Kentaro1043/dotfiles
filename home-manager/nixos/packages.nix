@@ -78,5 +78,6 @@ in
       chromium
       vscodium
       brave
+      spotify
     ];
   }

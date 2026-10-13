@@ -152,6 +152,7 @@ in {
       "audacity"
       "claude"
       "codex-app"
+      "opencode-desktop"
       "brave-browser"
       "github"
       "joplin"

@@ -38,7 +38,7 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
 
     # herdr
-    herdr.url = "github:herdrdev/herdr/v0.9.0";
+    herdr.url = "github:herdrdev/herdr/v0.9.3";
 
     # Codex skills
     codex-skills = {
@@ -61,7 +61,7 @@
     cua.url = "github:trycua/cua";
 
     # hermes-agent
-    hermes-agent.url = "github:NousResearch/hermes-agent/v2026.7.20";
+    hermes-agent.url = "github:NousResearch/hermes-agent/v0.21.7";
 
     # mise
     mise.url = "github:jdx/mise";

@@ -32,7 +32,7 @@
           "stegsolve" # Cronos License
           "burpsuite" # unfree
           "discord" # unfree
-          "idea" # unfree
+          "intellij-idea" # unfree
           "spotify" # unfree
           "claude-code" # unfree
           "vscode-extension-anthropic-claude-code" # unfree

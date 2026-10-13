@@ -83,6 +83,23 @@ in {
           eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
 
+        function codex-chat () {
+          local day_dir="$HOME/Documents/Codex/$(date +%F)"
+          local chat_dir="$day_dir/new-chat"
+          local -i chat_number=1
+          mkdir -p -- "$day_dir" || return
+          while ! mkdir -- "$chat_dir" 2>/dev/null; do
+            if [[ ! -e "$chat_dir" && ! -L "$chat_dir" ]]; then
+              print -u2 -- "チャットフォルダを作成できません: $chat_dir"
+              return 1
+            fi
+            (( chat_number += 1 ))
+            chat_dir="$day_dir/new-chat-$chat_number"
+          done
+          mkdir -p -- "$chat_dir/work" "$chat_dir/outputs" || return
+          command codex --cd "$chat_dir" "$@"
+        }
+
         # git finder
         function peco-src () {
           local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")
@@ -105,6 +122,8 @@ in {
       # Codex accounts
       codex-me = "CODEX_HOME=$HOME/.codex codex";
       codex-work = "CODEX_HOME=$HOME/.codex-work codex";
+      codex-chat-me = "CODEX_HOME=$HOME/.codex codex-chat";
+      codex-chat-work = "CODEX_HOME=$HOME/.codex-work codex-chat";
 
       # kyopro
       ojt = "oj test --gnu-time time";

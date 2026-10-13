@@ -24,7 +24,7 @@
           --add-flags "-Dawt.toolkit.name=XToolkit"
       '';
     };
-  ideaXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.idea "idea";
+  ideaXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.intellij-idea "intellij-idea";
   pycharmXWayland = wrapJetBrainsIdeForXWayland pkgs.unstable.jetbrains.pycharm "pycharm";
   vscodium =
     # https://github.com/continuedev/continue/issues/821#issuecomment-3227673526

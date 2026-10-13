@@ -10,7 +10,7 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | キー | 内容 |
 | --- | --- |
 | `litellm-api-key` | homelabのLiteLLMで発行したVirtual Key（またはMaster Key） |
-| `grafana-mcp-trap-authorization` | traPの2環境共通のBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
+| `grafana-mcp-trap-authorization` | traP SakuraのBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
 | `grafana-mcp-work-url` | Work用Grafana本体のURL |
 | `grafana-mcp-work-service-account-token` | Work用Grafanaサービスアカウントトークン（`Bearer `なし） |
 | `joplin-api-token` | Joplinの `api.token`。共通のローカルMCP接続に使用 |
@@ -22,7 +22,7 @@ Work用も `codex-grafana-work-url` と `codex-grafana-work-service-account-toke
 それぞれ上記の `grafana-mcp-work-*` キーに移行する。
 LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要はない。
 
-共有MCPはGrafana Cloud・Work・traP Sakura・traP ConoHa・Joplin・Science Tokyoシラバスの6件。
+共有MCPはGrafana Cloud・Work・traP Sakura・Joplin・Science Tokyoシラバスの5件。
 OpenCodeとVSCodeはMCP Integrationから参照する。
 CodexのMCP設定も `programs.mcp.servers` から生成し、通常ファイルとして配置する。
 
@@ -34,7 +34,6 @@ GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶�
 | --- | --- |
 | `mcp-grafana-work` | sopsのURL・サービスアカウントトークンで `uvx mcp-grafana` を起動 |
 | `mcp-grafana-trap-sakura` | Sakuraの既存MCPへBasic認証で接続 |
-| `mcp-grafana-trap-conoha` | ConoHaの既存MCPへBasic認証で接続 |
 | `mcp-grafana-cloud` | Grafana CloudへOAuthで接続 |
 | `mcp-joplin` | ローカルJoplinのMCPへ接続 |
 

@@ -43,7 +43,6 @@
       '';
     }) {
     trap-sakura = "https://s-grafana-mcp.trap.jp/mcp";
-    trap-conoha = "https://grafana-mcp.trap.jp/mcp";
   };
   packages = localPackages // cloudPackages // trapPackages;
 in {

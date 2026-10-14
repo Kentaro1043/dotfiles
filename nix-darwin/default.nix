@@ -156,6 +156,7 @@ in {
       "brave-browser"
       "github"
       "joplin"
+      "spotify"
     ];
   };
 }

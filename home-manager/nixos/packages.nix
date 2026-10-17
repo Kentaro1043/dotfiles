@@ -43,9 +43,8 @@ in
       libreoffice
       slack
       vlc
-      usbutilswineWow64Packages.stable
       winetricks
-      rustdesk
+      # rustdesk
       obs-studio
       shotcut
       chromium

@@ -47,7 +47,7 @@
     };
 
     yomiyasu = {
-      url = "github:nanaism/yomiyasu";
+      url = "github:nanaism/yomiyasu/v2.0.1";
       flake = false;
     };
 

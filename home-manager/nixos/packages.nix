@@ -68,6 +68,7 @@ in
       vscodium
       llmAgentPackages.opencode2-desktop
       # chatgpt
+      github-desktop
 
       # Game
       flybywire-installer

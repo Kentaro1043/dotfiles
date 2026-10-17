@@ -11,7 +11,7 @@ in {
 
   programs.opencode = {
     enable = true;
-    package = llmAgentPackages.opencode;
+    package = llmAgentPackages.opencode2;
     context = ./AGENTS.md;
     skills = lib.listToAttrs (map (skill: lib.nameValuePair skill.name skill.source) skills);
     tui = {

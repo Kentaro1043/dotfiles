@@ -79,5 +79,6 @@ in
       vscodium
       brave
       spotify
+      llmAgentPackages.opencode2-desktop
     ];
   }

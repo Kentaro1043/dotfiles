@@ -38,47 +38,50 @@
 in
   lib.mkIf pkgs.stdenv.isLinux {
     home.packages = with pkgs; [
-      # GUI apps
-      chatgpt
+      # General
       discord
+      libreoffice
+      slack
+      vlc
+      usbutilswineWow64Packages.stable
+      winetricks
+      rustdesk
+      obs-studio
+      shotcut
+      chromium
+      brave
+      spotify
+
+      # Development
       ghostty
       ideaXWayland
       pycharmXWayland
       rpi-imager
-      libreoffice
       freelens-bin
+      containerlab
+      devpod-desktop
+      qtcreator
+      dbeaver-bin
+      woeusb-ng
+      warp-terminal
+      godot
+      hermes-desktop
+      vscodium
+      llmAgentPackages.opencode2-desktop
+      # chatgpt
+
+      # Game
       flybywire-installer
       littlenavmap
       protontricks
-      containerlab
-      devpod-desktop
-      mixxx
-      qtcreator
       sidequest
-      dbeaver-bin
-      slack
-      vlc
-      woeusb-ng
-      zen-browser-bin
+
+      # Music
+      mixxx
       ardour
       zrythm
       surge-xt
-      usbutils
-      wineWow64Packages.stable
-      winetricks
-      warp-terminal
-      godot
-      # rustdesk
-      mission-center
       feishin
-      obs-studio
-      shotcut
-      hermes-desktop
       x42-avldrums
-      chromium
-      vscodium
-      brave
-      spotify
-      llmAgentPackages.opencode2-desktop
     ];
   }

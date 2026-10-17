@@ -73,7 +73,6 @@ in {
       };
 
       plugin = [
-        "@warp-dot-dev/opencode-warp"
       ];
     };
     enableMcpIntegration = true;

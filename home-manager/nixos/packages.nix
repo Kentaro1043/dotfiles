@@ -67,7 +67,7 @@ in
       hermes-desktop
       vscodium
       llmAgentPackages.opencode2-desktop
-      # chatgpt
+      chatgpt
       github-desktop
 
       # Game

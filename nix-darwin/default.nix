@@ -157,6 +157,7 @@ in {
       "github"
       "joplin"
       "spotify"
+      "t3-code"
     ];
   };
 }

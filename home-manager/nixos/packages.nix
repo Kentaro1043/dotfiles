@@ -69,6 +69,8 @@ in
       llmAgentPackages.opencode2-desktop
       chatgpt
       github-desktop
+      llmAgentPackages.orca
+      llmAgentPackages.t3code-desktop
 
       # Game
       flybywire-installer

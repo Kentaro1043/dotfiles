@@ -158,6 +158,7 @@ in {
       "joplin"
       "spotify"
       "t3-code"
+      "tigervnc"
     ];
   };
 }

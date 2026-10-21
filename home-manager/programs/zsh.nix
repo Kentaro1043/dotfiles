@@ -100,6 +100,20 @@ in {
           command codex --cd "$chat_dir" "$@"
         }
 
+        function codex-work-app () {
+          local profile_dir="$HOME/.codex-work/desktop-profile"
+          if [[ ! -d /Applications/ChatGPT.app ]]; then
+            print -u2 -- "ChatGPT.app が見つかりません: /Applications/ChatGPT.app"
+            return 1
+          fi
+          mkdir -p -- "$profile_dir" || return
+          /usr/bin/open -n \
+            --env "CODEX_HOME=$HOME/.codex-work" \
+            --env "CODEX_ELECTRON_USER_DATA_PATH=$profile_dir" \
+            /Applications/ChatGPT.app \
+            --args "--user-data-dir=$profile_dir"
+        }
+
         # git finder
         function peco-src () {
           local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")

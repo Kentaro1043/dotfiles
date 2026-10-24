@@ -24,6 +24,14 @@
         Port = 22;
         User = "kentaro";
       };
+      "homelab-codex" = {
+        HostName = "192.168.1.3";
+        Port = 32222;
+        User = "codex";
+        IdentityFile = "~/.ssh/id_ed25519";
+        IdentitiesOnly = true;
+        ForwardAgent = true;
+      };
       "gce.kentaro1043.com" = {
         Port = 50022;
         User = "kentaro";

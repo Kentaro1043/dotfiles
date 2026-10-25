@@ -85,5 +85,6 @@ in
       surge-xt
       feishin
       x42-avldrums
+      strawberry
     ];
   }

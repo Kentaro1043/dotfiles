@@ -46,6 +46,7 @@ status_line = [
     "context-remaining",
     "git-branch",
     "pull-request-number",
+    "branch-changes",
     "five-hour-limit",
     "weekly-limit",
 ]

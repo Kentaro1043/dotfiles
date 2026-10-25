@@ -86,5 +86,6 @@ in
       feishin
       x42-avldrums
       strawberry
+      freac
     ];
   }

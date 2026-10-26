@@ -45,6 +45,13 @@ Joplinの定義は `home-manager/programs/mcp-joplin.nix` に置く。
 トークンは起動時にsopsの復号先から読み、ハーネスの設定ファイルには埋め込まない。
 Joplin本体で `http://127.0.0.1:41184/mcp` が利用可能になっている必要がある。
 
+## 仕事用アプリの起動
+
+Home Manager反映後、zshで `codex-work-app` を実行する。
+macOSでは `/Applications/ChatGPT.app`、Linuxでは `chatgpt` コマンドを起動する。
+仕事用の設定・認証には `~/.codex-work`、アプリのプロファイルには
+`~/.codex-work/desktop-profile` を使う。
+
 ## Codex Remote（NixOS）
 
 LinuxではHome Managerが `codex-app-server.service` をユーザーサービスとして管理する。

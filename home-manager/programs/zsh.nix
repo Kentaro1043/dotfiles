@@ -102,16 +102,34 @@ in {
 
         function codex-work-app () {
           local profile_dir="$HOME/.codex-work/desktop-profile"
-          if [[ ! -d /Applications/ChatGPT.app ]]; then
-            print -u2 -- "ChatGPT.app が見つかりません: /Applications/ChatGPT.app"
-            return 1
-          fi
-          mkdir -p -- "$profile_dir" || return
-          /usr/bin/open -n \
-            --env "CODEX_HOME=$HOME/.codex-work" \
-            --env "CODEX_ELECTRON_USER_DATA_PATH=$profile_dir" \
-            /Applications/ChatGPT.app \
-            --args "--user-data-dir=$profile_dir"
+          case "$OSTYPE" in
+            darwin*)
+              if [[ ! -d /Applications/ChatGPT.app ]]; then
+                print -u2 -- "ChatGPT.app が見つかりません: /Applications/ChatGPT.app"
+                return 1
+              fi
+              mkdir -p -- "$profile_dir" || return
+              /usr/bin/open -n \
+                --env "CODEX_HOME=$HOME/.codex-work" \
+                --env "CODEX_ELECTRON_USER_DATA_PATH=$profile_dir" \
+                /Applications/ChatGPT.app \
+                --args "--user-data-dir=$profile_dir" "$@"
+              ;;
+            linux*)
+              if ! command -v chatgpt >/dev/null 2>&1; then
+                print -u2 -- "chatgpt コマンドが見つかりません"
+                return 1
+              fi
+              mkdir -p -- "$profile_dir" || return
+              CODEX_HOME="$HOME/.codex-work" \
+                CODEX_ELECTRON_USER_DATA_PATH="$profile_dir" \
+                command chatgpt "--user-data-dir=$profile_dir" "$@"
+              ;;
+            *)
+              print -u2 -- "未対応のOSです: $OSTYPE"
+              return 1
+              ;;
+          esac
         }
 
         # git finder

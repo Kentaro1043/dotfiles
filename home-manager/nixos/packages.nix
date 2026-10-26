@@ -87,5 +87,6 @@ in
       x42-avldrums
       strawberry
       freac
+      geonkick
     ];
   }

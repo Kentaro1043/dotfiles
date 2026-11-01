@@ -307,16 +307,16 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1790708764,
-        "narHash": "sha256-uu452Xe23pSvFk7w7fKPjiaqY5QenUIljao2SFAxpc0=",
+        "lastModified": 1791993401,
+        "narHash": "sha256-N7e7oCKxeCoxek6UT8Lweq16rSsQQi34QMb7C2iNpm8=",
         "owner": "herdrdev",
         "repo": "herdr",
-        "rev": "7b116c05bfda646af39d2524c54e70c751f57ee8",
+        "rev": "2ecf19a92fc3a7fff75b6ce3655ef04f4625ec01",
         "type": "github"
       },
       "original": {
         "owner": "herdrdev",
-        "ref": "v0.9.3",
+        "ref": "v0.9.5",
         "repo": "herdr",
         "type": "github"
       }
@@ -413,16 +413,16 @@
     "mdx-cli": {
       "flake": false,
       "locked": {
-        "lastModified": 1791615054,
-        "narHash": "sha256-SbshvWnFsExr9vjm4Ho7+U7dK9aNMgqOr7ihecFf4ww=",
+        "lastModified": 1793019803,
+        "narHash": "sha256-iKWWcBAGuHN3aoosmamEPd9aU1Xc8BZEOPNMksI58Ms=",
         "owner": "aida0710",
         "repo": "mdx-cli",
-        "rev": "d6f24b7b62eceb60bbd15a83e1544f98864ff4c1",
+        "rev": "d7039f492bf76d4f3dfeaeac645e7d6f332b06ce",
         "type": "github"
       },
       "original": {
         "owner": "aida0710",
-        "ref": "v2.3.1",
+        "ref": "v2.4.0",
         "repo": "mdx-cli",
         "type": "github"
       }
@@ -1045,16 +1045,16 @@
     "yomiyasu": {
       "flake": false,
       "locked": {
-        "lastModified": 1792198911,
-        "narHash": "sha256-GuCSFIHzkQwpKhB06jihweDitz6WWYj6xKDdmd9HG/s=",
+        "lastModified": 1793326902,
+        "narHash": "sha256-9cGUSvLgc1+996i3lWQuQm1aTWOxSY6fbS9+vn5aElw=",
         "owner": "nanaism",
         "repo": "yomiyasu",
-        "rev": "1bc21f9c8e6a55fc4ccd5a2c7dfe78a7b0d814c5",
+        "rev": "29d67ccb05e370b5958d72920a9cd1aa829dee80",
         "type": "github"
       },
       "original": {
         "owner": "nanaism",
-        "ref": "v2.0.1",
+        "ref": "v2.5.0",
         "repo": "yomiyasu",
         "type": "github"
       }

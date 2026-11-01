@@ -38,7 +38,7 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
 
     # herdr
-    herdr.url = "github:herdrdev/herdr/v0.9.3";
+    herdr.url = "github:herdrdev/herdr/v0.9.5";
 
     # Codex skills
     codex-skills = {
@@ -47,13 +47,13 @@
     };
 
     yomiyasu = {
-      url = "github:nanaism/yomiyasu/v2.0.1";
+      url = "github:nanaism/yomiyasu/v2.5.0";
       flake = false;
     };
 
     # mdx-cli
     mdx-cli = {
-      url = "github:aida0710/mdx-cli/v2.3.1";
+      url = "github:aida0710/mdx-cli/v2.4.0";
       flake = false;
     };
 

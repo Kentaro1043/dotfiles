@@ -159,6 +159,7 @@ in {
       "spotify"
       "t3-code"
       "tigervnc"
+      "herdr-app"
     ];
   };
 }

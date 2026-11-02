@@ -4,16 +4,6 @@
   llmAgentPackages,
   ...
 }: let
-  chatgpt = pkgs.symlinkJoin {
-    name = "chatgpt-${llmAgentPackages.chatgpt.version}";
-    paths = [llmAgentPackages.chatgpt];
-    nativeBuildInputs = [pkgs.makeWrapper];
-    postBuild = ''
-      # PlasmaとアプリのQtプラグインが混在するのを防ぐ。
-      wrapProgram "$out/bin/chatgpt" --unset QT_PLUGIN_PATH
-    '';
-    inherit (llmAgentPackages.chatgpt) meta;
-  };
   wrapJetBrainsIdeForXWayland = package: executable:
     pkgs.symlinkJoin {
       name = "${executable}-xwayland";
@@ -66,9 +56,12 @@ in
       godot
       hermes-desktop
       vscodium
-      llmAgentPackages.opencode2-desktop
-      chatgpt
       github-desktop
+
+      # LLM Agent
+      llmAgentPackages.herdr-app
+      llmAgentPackages.herdr-core
+      llmAgentPackages.opencode2-desktop
       llmAgentPackages.orca
       llmAgentPackages.t3code-desktop
 

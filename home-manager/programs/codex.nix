@@ -26,6 +26,20 @@
     cat ${./codex-config.toml} > "$out"
     echo >> "$out"
     cat ${mcpConfig} >> "$out"
+    cat >> "$out" <<'EOF'
+
+    [[hooks.UserPromptSubmit]]
+    [[hooks.UserPromptSubmit.hooks]]
+    type = "command"
+    command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
+    timeout = 20
+
+    [[hooks.PreToolUse]]
+    [[hooks.PreToolUse.hooks]]
+    type = "command"
+    command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
+    timeout = 20
+    EOF
   '';
   codexHomes = [
     ".codex"

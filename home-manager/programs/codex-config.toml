@@ -1,40 +1,11 @@
-model = "gpt-6.1-sol"
+model = "gpt-6.1-terra"
 model_reasoning_effort = "low"
-plan_mode_reasoning_effort = "high"
+plan_mode_reasoning_effort = "medium"
 approval_policy = "on-request"
 approvals_reviewer = "auto_review"
 cli_auth_credentials_store = "file"
 default_permissions = "local-workspace"
 web_search = "live"
-
-[features]
-worktrees = true
-
-[notice.model_migrations]
-"gpt-5.3-codex" = "gpt-5.4"
-
-[permissions.local-workspace]
-description = "Workspace access plus common local tool caches."
-extends = ":workspace"
-
-[permissions.local-workspace.filesystem]
-"/nix/store" = "read"
-"~/.cache/nix" = "write"
-"~/.cache/uv" = "write"
-"~/.codex/skills" = "read"
-"~/.codex-work/skills" = "read"
-"~/.local/share/uv" = "write"
-"~/.local/state/uv" = "write"
-"~/.ssh/conf.d" = "read"
-"~/.ssh/config" = "read"
-":slash_tmp" = "write"
-":tmpdir" = "write"
-"/private/tmp" = "write"
-"/private/var/folders" = "write"
-"/var/folders" = "write"
-
-[permissions.local-workspace.network]
-enabled = true
 
 [tui]
 notifications = ["agent-turn-complete", "approval-requested"]
@@ -51,3 +22,34 @@ status_line = [
     "five-hour-limit",
     "weekly-limit",
 ]
+
+[features]
+worktrees = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[permissions.local-workspace]
+description = "Workspace access plus common local file and directory."
+extends = ":workspace"
+
+[permissions.local-workspace.filesystem]
+":workspace_roots" = "write"
+":slash_tmp" = "write"
+":tmpdir" = "write"
+"/nix/store" = "read"
+"~/.cache/nix" = "write"
+"~/.cache/uv" = "write"
+"~/.local/share/uv" = "write"
+"~/.local/state/uv" = "write"
+"~/.codex/skills" = "read"
+"~/.codex-work/skills" = "read"
+"~/.ssh/conf.d" = "read"
+"~/.ssh/config" = "read"
+"~/.ssh/id_ed25519.pub" = "read"
+"/private/tmp" = "write"
+"/private/var/folders" = "write"
+"/var/folders" = "write"
+
+[permissions.local-workspace.network]
+enabled = true

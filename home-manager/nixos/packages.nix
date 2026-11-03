@@ -40,6 +40,7 @@ in
       chromium
       brave
       spotify
+      thunderbird
 
       # Development
       ghostty

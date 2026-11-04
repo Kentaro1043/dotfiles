@@ -22,25 +22,28 @@
       ))
     config.programs.mcp.servers;
   };
-  codexConfig = pkgs.runCommand "codex-config.toml" {} ''
-    cat ${./codex-config.toml} > "$out"
-    echo >> "$out"
-    cat ${mcpConfig} >> "$out"
-    cat >> "$out" <<'EOF'
+  codexConfig = withLimitCheck:
+    pkgs.runCommand "codex-config.toml" {} (''
+        cat ${./codex-config.toml} > "$out"
+        echo >> "$out"
+        cat ${mcpConfig} >> "$out"
+      ''
+      + lib.optionalString withLimitCheck ''
+        cat >> "$out" <<'EOF'
 
-    [[hooks.UserPromptSubmit]]
-    [[hooks.UserPromptSubmit.hooks]]
-    type = "command"
-    command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
-    timeout = 20
+        [[hooks.UserPromptSubmit]]
+        [[hooks.UserPromptSubmit.hooks]]
+        type = "command"
+        command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
+        timeout = 20
 
-    [[hooks.PreToolUse]]
-    [[hooks.PreToolUse.hooks]]
-    type = "command"
-    command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
-    timeout = 20
-    EOF
-  '';
+        [[hooks.PreToolUse]]
+        [[hooks.PreToolUse.hooks]]
+        type = "command"
+        command = "${pkgs.python3}/bin/python3 ${./codex-limit-check.py} ${lib.getExe config.programs.codex.package}"
+        timeout = 20
+        EOF
+      '');
   codexHomes = [
     ".codex"
     ".codex-work"
@@ -92,7 +95,7 @@ in {
       if [ -z "$DRY_RUN_CMD" ]; then
         umask 077
         temporary="$(${pkgs.coreutils}/bin/mktemp "$HOME/${codexHome}/config.toml.XXXXXX")"
-        ${pkgs.coreutils}/bin/cat ${codexConfig} > "$temporary"
+        ${pkgs.coreutils}/bin/cat ${codexConfig (codexHome == ".codex")} > "$temporary"
         chmod 600 "$temporary"
         ${pkgs.coreutils}/bin/mv -f "$temporary" "$HOME/${codexHome}/config.toml"
       fi

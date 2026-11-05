@@ -4,8 +4,8 @@ import subprocess
 import sys
 import time
 
-FIVE_HOUR_REMAINING_PERCENT = 3
-WEEKLY_REMAINING_PERCENT = 1
+FIVE_HOUR_REMAINING_PERCENT = 0
+WEEKLY_REMAINING_PERCENT = 0
 
 
 def check():

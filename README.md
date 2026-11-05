@@ -10,37 +10,27 @@ based on [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-star
 | キー | 内容 |
 | --- | --- |
 | `litellm-api-key` | homelabのLiteLLMで発行したVirtual Key（またはMaster Key） |
-| `grafana-mcp-trap-authorization` | traP SakuraのBasic認証ヘッダー全体（`Basic <base64(username:password)>`） |
-| `grafana-mcp-work-url` | Work用Grafana本体のURL |
-| `grafana-mcp-work-service-account-token` | Work用Grafanaサービスアカウントトークン（`Bearer `なし） |
 | `joplin-api-token` | Joplinの `api.token`。共通のローカルMCP接続に使用 |
 
-traP用に追加した `grafana-trap-{sakura,conoha}-url` と
-`grafana-trap-{sakura,conoha}-service-account-token` は不要。
-`codex-grafana-trap-authorization` の値を `grafana-mcp-trap-authorization` に移行する。
-Work用も `codex-grafana-work-url` と `codex-grafana-work-service-account-token` の値を、
-それぞれ上記の `grafana-mcp-work-*` キーに移行する。
 LiteLLM側の各モデル提供元のAPIキーをdotfilesに追加する必要はない。
 
 共有MCPはGrafana Cloud・Work・traP Sakura・Joplin・Science Tokyoシラバスの5件。
 OpenCodeとVSCodeはMCP Integrationから参照する。
 CodexのMCP設定も `programs.mcp.servers` から生成し、通常ファイルとして配置する。
 
-Grafanaの定義・認証・起動コマンドは `home-manager/programs/mcp-grafana.nix` に集約する。
+Grafanaの定義・認証・起動コマンドは `home-manager/programs/mcp.nix` に集約する。
 Home Manager反映後、stdio MCPを起動できるハーネスでは次のコマンドを登録できる。
 GUIからPATHを参照できない場合は `~/.nix-profile/bin/` 以下の絶対パスを指定する。
 
 | コマンド | 接続先 |
 | --- | --- |
-| `mcp-grafana-work` | sopsのURL・サービスアカウントトークンで `uvx mcp-grafana` を起動 |
-| `mcp-grafana-trap-sakura` | Sakuraの既存MCPへBasic認証で接続 |
-| `mcp-grafana-cloud` | Grafana CloudへOAuthで接続 |
+| `mcp-grafana-work` | LiteLLM経由でWorkのGrafana MCPへ接続 |
+| `mcp-grafana-trap-sakura` | LiteLLM経由でtraPのGrafana MCPへ接続 |
+| `mcp-grafana-cloud` | LiteLLM経由でGrafana Cloud MCPへ接続 |
 | `mcp-joplin` | ローカルJoplinのMCPへ接続 |
 
-リモートGrafanaとJoplinには [mcp-remote](https://github.com/punkpeye/mcp-remote) のstdioブリッジを使う。
-初回起動時にnpmパッケージを取得し、CloudはブラウザでOAuth認証する。
-認証キャッシュは `~/.mcp-auth` に保存され、Codexの既存OAuth認証とは別にログインが必要。
-Joplinも初回起動時にnpmパッケージを取得する。Workはuvでパッケージを取得する。
+GrafanaとJoplinには [mcp-remote](https://github.com/punkpeye/mcp-remote) のstdioブリッジを使う。
+初回起動時にnpmパッケージを取得する。Grafanaの認証にはLiteLLMのAPIキーを使う。
 Joplinの定義は `home-manager/programs/mcp-joplin.nix` に置く。
 トークンは起動時にsopsの復号先から読み、ハーネスの設定ファイルには埋め込まない。
 Joplin本体で `http://127.0.0.1:41184/mcp` が利用可能になっている必要がある。

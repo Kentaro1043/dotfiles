@@ -53,7 +53,7 @@ def check():
                 (10080, WEEKLY_REMAINING_PERCENT),
             ):
                 window = windows[duration]
-                if window["usedPercent"] > 100 - remaining:
+                if window["usedPercent"] >= 100 - remaining:
                     return f"Codex usage limit: {duration} minute window used {window['usedPercent']}%; resets at {window.get('resetsAt')}."
             return None
         raise RuntimeError("rate limits unavailable")

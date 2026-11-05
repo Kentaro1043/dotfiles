@@ -4,9 +4,9 @@
   pkgs,
   ...
 }: let
-  grafanaPackages = lib.mapAttrs (name: url:
+  remotePackages = lib.mapAttrs (name: url:
     pkgs.writeShellApplication {
-      name = "mcp-grafana-${name}";
+      name = "mcp-${name}";
       runtimeInputs = [pkgs.coreutils pkgs.nodejs];
       text = ''
         LITELLM_API_KEY="$(cat ${lib.escapeShellArg config.sops.secrets.litellm-api-key.path})"
@@ -16,24 +16,25 @@
           --allow-http --header 'Authorization:Bearer ''${LITELLM_API_KEY}'
       '';
     }) {
-    cloud = "https://llm.internal.kentaro1043.com/grafana-cloud/mcp";
-    trap = "https://llm.internal.kentaro1043.com/grafana-trap/mcp";
-    work = "https://llm.internal.kentaro1043.com/grafana-work/mcp";
+    grafana-cloud = "https://llm.internal.kentaro1043.com/grafana-cloud/mcp";
+    grafana-trap = "https://llm.internal.kentaro1043.com/grafana-trap/mcp";
+    grafana-work = "https://llm.internal.kentaro1043.com/grafana-work/mcp";
+    traq = "https://llm.internal.kentaro1043.com/traq/mcp";
   };
 in {
   imports = [./mcp-joplin.nix];
 
-  home.packages = lib.attrValues grafanaPackages;
+  home.packages = lib.attrValues remotePackages;
   sops.secrets.litellm-api-key = {};
 
   programs.mcp = {
     enable = true;
     servers =
       lib.mapAttrs' (name: package:
-        lib.nameValuePair "grafana-${name}" {
+        lib.nameValuePair name {
           command = lib.getExe package;
         })
-      grafanaPackages
+      remotePackages
       // {science-tokyo-syllabus.url = "https://syllabus.s.isct.ac.jp/mcp";};
   };
 }

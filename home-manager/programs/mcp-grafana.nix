@@ -19,32 +19,22 @@
       '';
     })
   secretPrefixes;
-  cloudPackages = {
-    cloud = pkgs.writeShellApplication {
-      name = "mcp-grafana-cloud";
-      runtimeInputs = [pkgs.nodejs];
-      text = ''
-        exec npx --yes mcp-remote@0.1.38 https://mcp.grafana.com/mcp \
-          --header 'X-Grafana-URL:https://kentaro1043.grafana.net'
-      '';
-    };
-  };
-  trapPackages = lib.mapAttrs (name: url:
+  remotePackages = lib.mapAttrs (name: url:
     pkgs.writeShellApplication {
       name = "mcp-grafana-${name}";
       runtimeInputs = [pkgs.coreutils pkgs.nodejs];
       text = ''
-        GRAFANA_MCP_AUTHORIZATION="$(cat ${lib.escapeShellArg config.sops.secrets.grafana-mcp-trap-authorization.path})"
-        export GRAFANA_MCP_AUTHORIZATION
-        # mcp-remote側で環境変数を展開する。
+        LITELLM_API_KEY="$(cat ${lib.escapeShellArg config.sops.secrets.litellm-api-key.path})"
+        export LITELLM_API_KEY
         # shellcheck disable=SC2016
         exec npx --yes mcp-remote@0.1.38 ${lib.escapeShellArg url} \
-          --header 'Authorization:''${GRAFANA_MCP_AUTHORIZATION}'
+          --allow-http --header 'Authorization:Bearer ''${LITELLM_API_KEY}'
       '';
     }) {
-    trap-sakura = "https://s-grafana-mcp.trap.jp/mcp";
+    cloud = "http://litellm.internal.kentaro1043.com/grafana-cloud/mcp";
+    trap-sakura = "http://litellm.internal.kentaro1043.com/grafana-trap/mcp";
   };
-  packages = localPackages // cloudPackages // trapPackages;
+  packages = localPackages // remotePackages;
 in {
   home.packages = lib.attrValues packages;
 
@@ -54,7 +44,7 @@ in {
       (lib.nameValuePair "${prefix}-service-account-token" {})
     ]) (lib.attrValues secretPrefixes))
     // {
-      grafana-mcp-trap-authorization = {};
+      litellm-api-key = {};
     };
 
   programs.mcp.servers = lib.mapAttrs' (name: package:

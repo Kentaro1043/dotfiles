@@ -16,9 +16,9 @@
           --allow-http --header 'Authorization:Bearer ''${LITELLM_API_KEY}'
       '';
     }) {
-    cloud = "https://litellm.internal.kentaro1043.com/grafana-cloud/mcp";
-    trap = "https://litellm.internal.kentaro1043.com/grafana-trap/mcp";
-    work = "https://litellm.internal.kentaro1043.com/grafana-work/mcp";
+    cloud = "https://llm.internal.kentaro1043.com/grafana-cloud/mcp";
+    trap = "https://llm.internal.kentaro1043.com/grafana-trap/mcp";
+    work = "https://llm.internal.kentaro1043.com/grafana-work/mcp";
   };
 in {
   imports = [./mcp-joplin.nix];

@@ -286,7 +286,7 @@ in {
     };
   };
   security.pki.certificateFiles = [
-    ./homelab-root-ca.crt
+    ../../certs/homelab-root-ca.crt
   ];
 
   # QEMU

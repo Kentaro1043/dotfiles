@@ -11,6 +11,7 @@
       text = ''
         LITELLM_API_KEY="$(cat ${lib.escapeShellArg config.sops.secrets.litellm-api-key.path})"
         export LITELLM_API_KEY
+        export NODE_EXTRA_CA_CERTS=${../../certs/homelab-root-ca.crt}
         # shellcheck disable=SC2016
         exec npx --yes mcp-remote@0.1.38 ${lib.escapeShellArg url} \
           --allow-http --header 'Authorization:Bearer ''${LITELLM_API_KEY}'

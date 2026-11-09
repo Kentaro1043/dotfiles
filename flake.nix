@@ -61,7 +61,7 @@
     cua.url = "github:trycua/cua";
 
     # hermes-agent
-    hermes-agent.url = "github:NousResearch/hermes-agent/v0.22.5";
+    hermes-agent.url = "github:NousResearch/hermes-agent/v0.23.0";
 
     # mise
     mise.url = "github:jdx/mise";

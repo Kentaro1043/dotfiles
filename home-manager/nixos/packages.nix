@@ -41,6 +41,7 @@ in
       brave
       spotify
       thunderbird
+      llmAgentPackages.chatgpt
 
       # Development
       ghostty

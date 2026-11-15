@@ -47,7 +47,7 @@
     };
 
     yomiyasu = {
-      url = "github:nanaism/yomiyasu/v2.5.0";
+      url = "github:nanaism/yomiyasu/v3.1.0";
       flake = false;
     };
 
@@ -61,7 +61,7 @@
     cua.url = "github:trycua/cua";
 
     # hermes-agent
-    hermes-agent.url = "github:NousResearch/hermes-agent/v0.23.0";
+    hermes-agent.url = "github:NousResearch/hermes-agent/v0.23.1";
 
     # mise
     mise.url = "github:jdx/mise";

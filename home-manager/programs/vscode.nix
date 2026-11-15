@@ -66,6 +66,7 @@
           tamasfe.even-better-toml
           # JS/TS
           biomejs.biome
+          oxc.oxc-vscode
           # Vue.js
           vue.volar
           # Java

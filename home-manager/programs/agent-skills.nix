@@ -1,11 +1,4 @@
-{lib, ...}: {
-  home.activation.removeOrcaComputerUseAlias = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    aliasPath="$HOME/.agents/skills/computer-use"
-    if [ -L "$aliasPath" ] && [ "$(readlink "$aliasPath")" = "orca-computer-use" ]; then
-      $DRY_RUN_CMD rm "$aliasPath"
-    fi
-  '';
-
+{...}: {
   programs.agent-skills = {
     enable = true;
 

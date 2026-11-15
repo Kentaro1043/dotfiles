@@ -1,19 +1,14 @@
 {
   config,
-  inputs,
-  lib,
   llmAgentPackages,
   ...
-}: let
-  skills = import ./agent-skills.nix {inherit inputs;};
-in {
+}: {
   sops.secrets.litellm-api-key = {};
 
   programs.opencode = {
     enable = true;
     package = llmAgentPackages.opencode2;
     context = ./AGENTS.md;
-    skills = lib.listToAttrs (map (skill: lib.nameValuePair skill.name skill.source) skills);
     tui = {
       theme = "dracula";
     };

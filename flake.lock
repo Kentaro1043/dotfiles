@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "agent-skills": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794456227,
+        "narHash": "sha256-qu7S1arVl+Q6H/yZhJ2VdeDY/kBxY8mK8m6U49M0alk=",
+        "owner": "Kyure-A",
+        "repo": "agent-skills-nix",
+        "rev": "93a02cb60eda167de8c5baa085e4a2bcfc71b885",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kyure-A",
+        "repo": "agent-skills-nix",
+        "type": "github"
+      }
+    },
     "bdwgc": {
       "flake": false,
       "locked": {
@@ -797,6 +817,22 @@
         "type": "github"
       }
     },
+    "orca-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794733574,
+        "narHash": "sha256-PiU9+Z6cx+bt9bdyIrffwP5fRmC2ZiifoRKFq9j0i+s=",
+        "owner": "stablyai",
+        "repo": "orca",
+        "rev": "fbeb88d6f62f35a7ec2ff6b27178d4de6e192a72",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stablyai",
+        "repo": "orca",
+        "type": "github"
+      }
+    },
     "pyproject-build-systems": {
       "inputs": {
         "nixpkgs": [
@@ -849,6 +885,7 @@
     },
     "root": {
       "inputs": {
+        "agent-skills": "agent-skills",
         "codex-skills": "codex-skills",
         "cua": "cua",
         "determinate": "determinate",
@@ -868,7 +905,9 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-wivrn": "nixpkgs-wivrn",
         "nixvim": "nixvim",
+        "orca-skills": "orca-skills",
         "sops-nix": "sops-nix",
+        "vercel-skills": "vercel-skills",
         "yomiyasu": "yomiyasu",
         "zen-browser": "zen-browser"
       }
@@ -1017,6 +1056,22 @@
       "original": {
         "owner": "pyproject-nix",
         "repo": "uv2nix",
+        "type": "github"
+      }
+    },
+    "vercel-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794525922,
+        "narHash": "sha256-ADvbHoiYUSsvXAjEGKwE4cAjnl1Fk3ztr2UthP/dLHM=",
+        "owner": "vercel-labs",
+        "repo": "skills",
+        "rev": "b716f9dc2ba36b6aa8f0080615e5a3a6caeac63b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vercel-labs",
+        "repo": "skills",
         "type": "github"
       }
     },

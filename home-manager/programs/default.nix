@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./agent-skills.nix
     ./codex.nix
     ./eza.nix
     ./git.nix

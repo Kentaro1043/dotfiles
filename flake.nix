@@ -40,6 +40,19 @@
     # herdr
     herdr.url = "github:herdrdev/herdr/v0.9.5";
 
+    agent-skills.url = "github:Kyure-A/agent-skills-nix";
+    agent-skills.inputs.nixpkgs.follows = "nixpkgs";
+
+    vercel-skills = {
+      url = "github:vercel-labs/skills";
+      flake = false;
+    };
+
+    orca-skills = {
+      url = "github:stablyai/orca";
+      flake = false;
+    };
+
     # Codex skills
     codex-skills = {
       url = "github:openai/skills";
@@ -122,6 +135,7 @@
           username = "kentaro";
         };
         modules = [
+          inputs.agent-skills.homeManagerModules.default
           sops-nix.homeManagerModules.sops
           nixvim.homeModules.nixvim
           ./home-manager/home.nix
@@ -135,6 +149,7 @@
           username = "kentaro";
         };
         modules = [
+          inputs.agent-skills.homeManagerModules.default
           sops-nix.homeManagerModules.sops
           nixvim.homeModules.nixvim
           ./home-manager/home.nix
@@ -148,6 +163,7 @@
           username = "intern600";
         };
         modules = [
+          inputs.agent-skills.homeManagerModules.default
           sops-nix.homeManagerModules.sops
           nixvim.homeModules.nixvim
           ./home-manager/home.nix

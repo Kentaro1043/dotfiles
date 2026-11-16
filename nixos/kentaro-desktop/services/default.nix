@@ -18,7 +18,14 @@
     tailscale.enable = true;
     wivrn = {
       enable = true;
-      package = pkgs.callPackage "${inputs.nixpkgs-wivrn}/pkgs/by-name/wi/wivrn/package.nix" {};
+      package = (pkgs.callPackage "${inputs.nixpkgs-wivrn}/pkgs/by-name/wi/wivrn/package.nix" {}).overrideAttrs (old: {
+        monado = old.monado.overrideAttrs (monado: {
+          postPatch = monado.postPatch + ''
+            patch -p1 < ${./patches/wivrn-layer-flags-quirk.patch}
+            patch -p1 < ${./patches/wivrn-fs2020-quirk.patch}
+          '';
+        });
+      });
       openFirewall = true;
       highPriority = true;
       steam.importOXRRuntimes = true;

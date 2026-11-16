@@ -160,7 +160,6 @@ in {
       "t3-code"
       "tigervnc"
       "herdr-app"
-      "thunderbird"
     ];
   };
 }

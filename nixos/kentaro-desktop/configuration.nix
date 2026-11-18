@@ -163,6 +163,12 @@ in {
     videoDrivers = ["amdgpu"];
   };
 
+  services.udev.extraRules = ''
+    SUBSYSTEM=="drm", KERNEL=="card[0-9]", KERNELS=="0000:03:00.0", SYMLINK+="dri/kwin-amd"
+    SUBSYSTEM=="drm", KERNEL=="card[0-9]", KERNELS=="0000:00:02.0", SYMLINK+="dri/kwin-intel"
+  '';
+  environment.sessionVariables.KWIN_DRM_DEVICES = "/dev/dri/kwin-amd:/dev/dri/kwin-intel";
+
   # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
   environment.etc."xdg/powerdevilrc".text = ''

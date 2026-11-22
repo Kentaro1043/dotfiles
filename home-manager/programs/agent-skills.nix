@@ -3,6 +3,7 @@
     enable = true;
 
     sources = {
+      local.path = ../../skills;
       codex = {
         input = "codex-skills";
         subdir = "skills/.curated";
@@ -40,6 +41,7 @@
       "screenshot"
       "security-best-practices"
       "security-threat-model"
+      "sites-local"
       "yeet"
       "yomiyasu"
     ];

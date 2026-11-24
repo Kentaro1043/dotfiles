@@ -60,22 +60,26 @@
       "orchestration"
 
       # mattpocock / engineering
+      # model-invoked
       "code-review"
       "codebase-design"
       "diagnosing-bugs"
       "domain-modeling"
-      "grill-with-docs"
-      "implement"
       "pr"
       "prototype"
       "research"
       "tdd"
       "wizard"
+      # user-invoked
+      "grill-with-docs"
+      "implement"
 
       # mattpocock / productivity
-      "grill-me"
+      # model-invoked
       "grilling"
       "writing-for-agents"
+      # user-invoked
+      "grill-me"
     ];
 
     targets.agents = {

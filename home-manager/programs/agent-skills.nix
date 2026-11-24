@@ -24,32 +24,59 @@
         input = "orca-skills";
         subdir = "skills";
       };
-      mattpocock = {
+      mattpocock-engineering = {
         input = "mattpocock-skills";
-        subdir = "skills";
-        filter.nameRegex = "(engineering|in-progress|misc|productivity)/[^/]+";
+        subdir = "skills/engineering";
+      };
+      mattpocock-productivity = {
+        input = "mattpocock-skills";
+        subdir = "skills/productivity";
       };
     };
 
     skills.enable = [
-      "find-skills"
+      # local
+      "sites-local"
+
+      # codex
       "jupyter-notebook"
-      "mdx-cli"
       "openai-docs"
+      "pdf"
+      "playwright"
+      "yeet"
+
+      # mdx
+      "mdx-cli"
+
+      # yomiyasu
+      "yomiyasu"
+
+      # vercel
+      "find-skills"
+
+      # orca
       "orca-cli"
       "orca-computer-use"
       "orchestration"
-      "pdf"
-      "playwright"
-      "sites-local"
-      "yeet"
-      "yomiyasu"
-    ];
 
-    skills.explicit.grilling = {
-      from = "mattpocock";
-      path = "productivity/grilling";
-    };
+      # mattpocock / engineering
+      "code-review"
+      "codebase-design"
+      "diagnosing-bugs"
+      "domain-modeling"
+      "grill-with-docs"
+      "implement"
+      "pr"
+      "prototype"
+      "research"
+      "tdd"
+      "wizard"
+
+      # mattpocock / productivity
+      "grill-me"
+      "grilling"
+      "writing-for-agents"
+    ];
 
     targets.agents = {
       enable = true;

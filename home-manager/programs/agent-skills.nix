@@ -33,8 +33,6 @@
 
     skills.enable = [
       "find-skills"
-      "gh-address-comments"
-      "gh-fix-ci"
       "jupyter-notebook"
       "mdx-cli"
       "openai-docs"
@@ -43,9 +41,6 @@
       "orchestration"
       "pdf"
       "playwright"
-      "screenshot"
-      "security-best-practices"
-      "security-threat-model"
       "sites-local"
       "yeet"
       "yomiyasu"

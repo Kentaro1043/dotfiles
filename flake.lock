@@ -429,6 +429,22 @@
         "type": "github"
       }
     },
+    "mattpocock-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1795095298,
+        "narHash": "sha256-fc5+qmchp1IQ/rQP1olWKC1eC4VdYhaB7YYzC3+JBe0=",
+        "owner": "mattpocock",
+        "repo": "skills",
+        "rev": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mattpocock",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "mdx-cli": {
       "flake": false,
       "locked": {
@@ -893,6 +909,7 @@
         "hermes-agent": "hermes-agent",
         "home-manager": "home-manager_2",
         "llm-agents": "llm-agents",
+        "mattpocock-skills": "mattpocock-skills",
         "mdx-cli": "mdx-cli",
         "mise": "mise",
         "nix-darwin": "nix-darwin",

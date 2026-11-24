@@ -53,6 +53,11 @@
       flake = false;
     };
 
+    mattpocock-skills = {
+      url = "github:mattpocock/skills";
+      flake = false;
+    };
+
     # Codex skills
     codex-skills = {
       url = "github:openai/skills";

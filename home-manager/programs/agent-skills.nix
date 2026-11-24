@@ -24,12 +24,17 @@
         input = "orca-skills";
         subdir = "skills";
       };
+      mattpocock = {
+        input = "mattpocock-skills";
+        subdir = "skills/productivity";
+      };
     };
 
     skills.enable = [
       "find-skills"
       "gh-address-comments"
       "gh-fix-ci"
+      "grilling"
       "jupyter-notebook"
       "mdx-cli"
       "openai-docs"

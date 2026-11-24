@@ -26,7 +26,8 @@
       };
       mattpocock = {
         input = "mattpocock-skills";
-        subdir = "skills/productivity";
+        subdir = "skills";
+        filter.nameRegex = "(engineering|in-progress|misc|productivity)/[^/]+";
       };
     };
 
@@ -34,7 +35,6 @@
       "find-skills"
       "gh-address-comments"
       "gh-fix-ci"
-      "grilling"
       "jupyter-notebook"
       "mdx-cli"
       "openai-docs"
@@ -50,6 +50,11 @@
       "yeet"
       "yomiyasu"
     ];
+
+    skills.explicit.grilling = {
+      from = "mattpocock";
+      path = "productivity/grilling";
+    };
 
     targets.agents = {
       enable = true;
